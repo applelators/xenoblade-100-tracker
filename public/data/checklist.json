@@ -1,0 +1,373 @@
+{
+  "meta": {
+    "game": "Xenoblade Chronicles: Definitive Edition",
+    "version": "0.1.0",
+    "scope": "Missable spine (full 100% data loaded progressively). Quests, unique monsters, heart-to-hearts, locking-region landmarks, Colony 6 occupants, missable achievements.",
+    "spoilerPolicy": "Cutoffs anchored to region locks + approximate chapter numbers. No boss/cutscene/plot names. Trust the in-game stopwatch (timer) icon over any guide.",
+    "links": {
+      "timedQuestFaq": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/62899",
+      "shulkLinkGuide": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "fandomQuestsByArea": "https://xenoblade.fandom.com/wiki/Quest_(XC1)#Quests_by_Area"
+    },
+    "confidenceLegend": {
+      "high": "Cross-confirmed across multiple sources.",
+      "verify": "Single source or uncertain detail (esp. exact chapter numbers / completeness). Double-check in-game via the timer icon and against ShulkLink/Fandom."
+    }
+  },
+
+  "cutoffs": [
+    {
+      "id": "co-colony9-nic",
+      "order": 1,
+      "chapterAnchor": "Early game",
+      "label": "Before you invite Nic to Colony 6",
+      "note": "A couple of Colony 9 things lock once Nic relocates to Colony 6 reconstruction.",
+      "confidence": "high"
+    },
+    {
+      "id": "co-colony6-reconstruction",
+      "order": 2,
+      "chapterAnchor": "Mid game",
+      "label": "Before Colony 6 reconstruction begins (the Refugee Camp empties out)",
+      "note": "Completing the choice quest 'To Colony 6!' / 'The Road Home' moves the refugees and expires the Refugee Camp timer quests. Finish all stopwatch (timer) quests in the camp first.",
+      "confidence": "high"
+    },
+    {
+      "id": "co-sword-valley",
+      "order": 3,
+      "chapterAnchor": "Late game (~Ch. 13 — verify)",
+      "label": "Before Sword Valley & Galahad Fortress lock",
+      "note": "These military areas become inaccessible when the story moves you on. Exact chapter to confirm in-game.",
+      "confidence": "verify"
+    },
+    {
+      "id": "co-mechonis-field",
+      "order": 4,
+      "chapterAnchor": "Late game (~Ch. 14–15 — verify)",
+      "label": "Before Mechonis Field & Agniratha lock",
+      "note": "Includes the Fallen Arm machina settlements' quests and all Agniratha terminal quests. Large area — verify completeness against Fandom.",
+      "confidence": "verify"
+    },
+    {
+      "id": "co-final-point-of-no-return",
+      "order": 5,
+      "chapterAnchor": "Near the end (~end of Ch. 15 — verify)",
+      "label": "THE BIG ONE — before Central Factory, Alcamoth & Frontier Village lock",
+      "note": "The major point-of-no-return. The largest single batch of missable quests (Alcamoth especially). Clear everything here before the story takes you to the final region.",
+      "confidence": "high"
+    }
+  ],
+
+  "areas": [
+    {
+      "id": "area-colony9",
+      "name": "Colony 9",
+      "reachableAnchor": "Start of game",
+      "locksAt": null,
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "quests": [
+          { "id": "q-old-soldiers-test", "label": "The Old Soldier's Test", "missable": true, "timed": false, "note": "Only unlocks if you tell Dionysus “He's too old for that girl.” Easy to lock yourself out via dialogue choice.", "confidence": "high" }
+        ],
+        "other": [
+          { "id": "o-colony9-brave-protectors", "label": "Talk to all 9 Defence Force soldiers (achievement: The Brave Protectors)", "missable": true, "expiresAt": "co-colony9-nic", "note": "Speak with Andreas, Dorothy, Kantz, Emmy Leater, Miller, Minnie, Monica, Nic, Raoul before inviting Nic to Colony 6.", "confidence": "high" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-refugee-camp",
+      "name": "Refugee Camp (Bionis' Leg)",
+      "reachableAnchor": "Mid game, after Bionis' Leg opens",
+      "locksAt": "co-colony6-reconstruction",
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "quests": [
+          { "id": "q-decision-colony6", "label": "DECISION: 'To Colony 6!' ↔ 'The Road Home'", "missable": true, "timed": true, "mutexWith": null, "note": "This choice quest is the trigger. Completing EITHER starts reconstruction and expires every other camp timer quest — do it LAST.", "confidence": "high" },
+          { "id": "q-emergency-treatment", "label": "Emergency Treatment", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-being-good-grandfather", "label": "Being a Good Grandfather", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-a-thoughtful-idea", "label": "A Thoughtful Idea", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-a-dash-of-colour", "label": "A Dash of Colour", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-imaginations-tempered", "label": "Imaginations Tempered", "missable": true, "timed": true, "mutexWith": "q-spirits-raised", "note": "Mutually exclusive with 'Spirits Raised' — pick one.", "confidence": "high" },
+          { "id": "q-spirits-raised", "label": "Spirits Raised", "missable": true, "timed": true, "mutexWith": "q-imaginations-tempered", "note": "Mutually exclusive with 'Imaginations Tempered' — pick one.", "confidence": "high" },
+          { "id": "q-thieving-monsters", "label": "Thieving Monsters", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-the-greedy-monster", "label": "The Greedy Monster", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-save-the-girl", "label": "Save the Girl!", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-monster-quest-2", "label": "Monster Quest 2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-monster-quest-3-1", "label": "Monster Quest 3 - Part 1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-monster-quest-3-2", "label": "Monster Quest 3 - Part 2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-challenge-1-1", "label": "Challenge 1 - Part 1", "missable": true, "timed": true, "confidence": "verify" },
+          { "id": "q-challenge-1-2", "label": "Challenge 1 - Part 2", "missable": true, "timed": true, "confidence": "verify" },
+          { "id": "q-challenge-2-1", "label": "Challenge 2 - Part 1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-challenge-2-2", "label": "Challenge 2 - Part 2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-material-quest-1", "label": "Material Quest 1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-material-quest-2", "label": "Material Quest 2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-material-quest-3", "label": "Material Quest 3", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-material-quest-4", "label": "Material Quest 4", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-collection-quest-1", "label": "Collection Quest 1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-collection-quest-2", "label": "Collection Quest 2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-search-quest-1", "label": "Search Quest 1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-search-quest-2", "label": "Search Quest 2", "missable": true, "timed": true, "confidence": "high" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-sword-valley-galahad",
+      "name": "Sword Valley / Galahad Fortress",
+      "reachableAnchor": "Late game",
+      "locksAt": "co-sword-valley",
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "quests": [
+          { "id": "q-secure-dolgan-outpost", "label": "Secure Dolgan Outpost", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-secure-enalda-control-base", "label": "Secure Enalda Control Base", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-3rd-gate-front-line", "label": "3rd Gate Front Line", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-secure-the-radio-tower", "label": "Secure the Radio Tower", "missable": true, "timed": true, "confidence": "high" }
+        ],
+        "uniqueMonsters": [
+          { "id": "um-prudent-purson", "label": "Prudent Purson (Lv. 49)", "missable": true, "confidence": "high" },
+          { "id": "um-tranquil-morax", "label": "Tranquil Morax (Lv. 50)", "missable": true, "confidence": "high" },
+          { "id": "um-defective-ipos", "label": "Defective Ipos (Lv. 50)", "missable": true, "confidence": "high" },
+          { "id": "um-fate-labolas", "label": "Fate Labolas (Lv. 51)", "missable": true, "confidence": "high" },
+          { "id": "um-benevolent-aim", "label": "Benevolent Aim (Lv. 51)", "missable": true, "confidence": "high" },
+          { "id": "um-kamikaze-bune", "label": "Kamikaze Bune (Lv. 53)", "missable": true, "confidence": "high" },
+          { "id": "um-lightning-ronove", "label": "Lightning Ronove (Lv. 55)", "missable": true, "confidence": "high" },
+          { "id": "um-mischievous-naberius", "label": "Mischievous Naberius (Lv. 57)", "missable": true, "confidence": "high" },
+          { "id": "um-glacier-acon", "label": "Glacier Acon (Lv. 52)", "missable": true, "confidence": "high" },
+          { "id": "um-precious-retrato", "label": "Precious Retrato (Lv. 53)", "missable": true, "confidence": "high" },
+          { "id": "um-glorious-jurom", "label": "Glorious Jurom (Lv. 55)", "missable": true, "confidence": "high" }
+        ],
+        "collectopaedia": [
+          { "id": "col-sword-valley", "label": "Sword Valley Collectopaedia — fill before lock", "missable": true, "note": "Some collectables here may be tradeable later, but grab them now to be safe.", "confidence": "verify" },
+          { "id": "col-galahad-fortress", "label": "Galahad Fortress Collectopaedia — fill before lock", "missable": true, "note": "Some collectables here may be tradeable later, but grab them now to be safe.", "confidence": "verify" }
+        ],
+        "other": [
+          { "id": "o-anti-mechon-driver", "label": "Equipment skin: Anti-Mechon Driver (Sword Valley supply shop)", "missable": true, "note": "Cosmetic skin — only matters if you want every appearance.", "confidence": "verify" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-mechonis-field",
+      "name": "Mechonis Field",
+      "reachableAnchor": "Late game",
+      "locksAt": "co-mechonis-field",
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "uniqueMonsters": [
+          { "id": "um-amorous-arca", "label": "Amorous Arca (Lv. 57)", "missable": true, "confidence": "high" },
+          { "id": "um-infernal-crocell", "label": "Infernal Crocell (Lv. 58)", "missable": true, "confidence": "high" },
+          { "id": "um-destroyer-salvacion", "label": "Destroyer Salvacion (Lv. 59)", "missable": true, "confidence": "high" },
+          { "id": "um-revolutionary-bifrons", "label": "Revolutionary Bifrons (Lv. 60)", "missable": true, "confidence": "high" },
+          { "id": "um-commander-oracion", "label": "Commander Oracion (Lv. 61)", "missable": true, "confidence": "high" }
+        ],
+        "collectopaedia": [
+          { "id": "col-mechonis-field", "label": "Mechonis Field Collectopaedia — fill before lock", "missable": true, "note": "Grab before the area locks to be safe.", "confidence": "verify" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-fallen-arm-machina",
+      "name": "Fallen Arm — Machina settlements",
+      "reachableAnchor": "Late game",
+      "locksAt": "co-mechonis-field",
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "quests": [
+          { "id": "q-history-of-mechonis", "label": "The History of Mechonis", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-history-of-the-capital", "label": "The History of the Capital", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-weapon-just-for-me", "label": "A Weapon Just For Me", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-for-my-loved-one", "label": "For My Loved One…", "missable": true, "timed": true, "mutexWith": "q-to-my-loved-one", "note": "Pairs with 'To My Loved One...' — verify whether both are obtainable.", "confidence": "verify" },
+          { "id": "q-to-my-loved-one", "label": "To My Loved One...", "missable": true, "timed": true, "mutexWith": "q-for-my-loved-one", "confidence": "verify" },
+          { "id": "q-best-boots", "label": "Best Boots", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-machina-monster-quest", "label": "Monster Quest (Machina Refuge)", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-machina-challenge-1", "label": "Challenge Quest 1 (Machina Refuge)", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-machina-challenge-2", "label": "Challenge Quest 2 (Machina Refuge)", "missable": true, "timed": true, "confidence": "high" }
+        ],
+        "other": [
+          { "id": "o-hidden-village-shop", "label": "Equipment from the Hidden Village shop", "missable": true, "note": "Cosmetic/equipment — only if you want everything.", "confidence": "verify" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-agniratha",
+      "name": "Agniratha",
+      "reachableAnchor": "Late game",
+      "locksAt": "co-mechonis-field",
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "quests": [
+          { "id": "q-civil-protection-1-1", "label": "Civil Protection 1-1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-civil-protection-1-2", "label": "Civil Protection 1-2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-civil-protection-1-3", "label": "Civil Protection 1-3", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-civil-protection-2-1", "label": "Civil Protection 2-1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-civil-protection-2-2", "label": "Civil Protection 2-2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-civil-protection-2-3", "label": "Civil Protection 2-3", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-military-status-1-1", "label": "Military Status 1-1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-military-status-1-2", "label": "Military Status 1-2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-military-status-2-1", "label": "Military Status 2-1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-military-status-2-2", "label": "Military Status 2-2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-agniratha-beautification-1", "label": "Agniratha Beautification 1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-agniratha-beautification-2", "label": "Agniratha Beautification 2", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-telethia-investigation-1", "label": "Telethia Investigation 1", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-telethia-investigation-2", "label": "Telethia Investigation 2", "missable": true, "timed": true, "confidence": "high" }
+        ],
+        "uniqueMonsters": [
+          { "id": "um-vagabond-allocer", "label": "Vagabond Allocer (Lv. 63)", "missable": true, "confidence": "high" },
+          { "id": "um-experienced-tristan", "label": "Experienced Tristan (Lv. 64)", "missable": true, "confidence": "high" },
+          { "id": "um-destructive-bors", "label": "Destructive Bors (Lv. 64)", "missable": true, "confidence": "high" },
+          { "id": "um-soothed-aglovale", "label": "Soothed Aglovale (Lv. 65)", "missable": true, "confidence": "high" },
+          { "id": "um-meditative-varla", "label": "Meditative Varla (Lv. 65)", "missable": true, "confidence": "high" },
+          { "id": "um-sentimental-flamral", "label": "Sentimental Flamral (Lv. 66)", "missable": true, "confidence": "high" },
+          { "id": "um-wrathful-orobas", "label": "Wrathful Orobas (Lv. 67)", "missable": true, "confidence": "high" },
+          { "id": "um-wise-gremory", "label": "Wise Gremory (Lv. 68)", "missable": true, "confidence": "high" }
+        ],
+        "collectopaedia": [
+          { "id": "col-agniratha", "label": "Agniratha Collectopaedia — fill before lock", "missable": true, "note": "Grab before the area locks to be safe.", "confidence": "verify" }
+        ],
+        "other": [
+          { "id": "o-cloister-key", "label": "Cloister Key — unlocks a secret area", "missable": true, "note": "Obtained after completing all 14 Agniratha terminal quests above.", "confidence": "high" },
+          { "id": "o-central-tower-shop", "label": "Shop items: Machina Cannon, Machina Biter II (Central Tower)", "missable": true, "note": "Equipment — only if you want everything.", "confidence": "verify" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-central-factory",
+      "name": "Central Factory",
+      "reachableAnchor": "Near the end",
+      "locksAt": "co-final-point-of-no-return",
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "quests": [
+          { "id": "q-eliminate-the-backup", "label": "Eliminate the Backup!", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-roof-battle", "label": "Roof Battle", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-daring-assault", "label": "Daring Assault", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-new-weapon", "label": "New Weapon", "missable": true, "timed": true, "confidence": "high" }
+        ],
+        "uniqueMonsters": [
+          { "id": "um-mild-florence", "label": "Mild Florence (Lv. 58)", "missable": true, "confidence": "high" },
+          { "id": "um-faithful-lancelot", "label": "Faithful Lancelot (Lv. 59)", "missable": true, "confidence": "high" },
+          { "id": "um-beautiful-vagul", "label": "Beautiful Vagul (Lv. 60)", "missable": true, "confidence": "high" },
+          { "id": "um-synchronized-gaheris", "label": "Synchronized Gaheris (Lv. 61)", "missable": true, "confidence": "high" },
+          { "id": "um-balanced-palamedes", "label": "Balanced Palamedes (Lv. 62)", "missable": true, "confidence": "high" },
+          { "id": "um-sinful-lamorak", "label": "Sinful Lamorak (Lv. 63)", "missable": true, "confidence": "high" },
+          { "id": "um-venerable-focalor", "label": "Venerable Focalor (Lv. 64)", "missable": true, "confidence": "high" },
+          { "id": "um-temporal-gawain", "label": "Temporal Gawain (Lv. 65)", "missable": true, "confidence": "high" },
+          { "id": "um-magestic-mordred", "label": "Magestic Mordred (Lv. 70)", "missable": true, "confidence": "high" }
+        ],
+        "collectopaedia": [
+          { "id": "col-central-factory", "label": "Central Factory Collectopaedia — fill before lock", "missable": true, "note": "Grab before the area locks to be safe.", "confidence": "verify" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-alcamoth",
+      "name": "Alcamoth",
+      "reachableAnchor": "Mid–late game (largest missable batch at the final cutoff)",
+      "locksAt": "co-final-point-of-no-return",
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "quests": [
+          { "id": "q-the-deciphering-machine", "label": "The Deciphering Machine", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-a-necessary-upgrade", "label": "A Necessary Upgrade", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-talias-research", "label": "Talia's Research", "missable": true, "timed": true, "mutexWith": "q-investigating-satorl", "note": "Mutually exclusive with 'Investigating Satorl' (Satorl Marsh).", "confidence": "high" },
+          { "id": "q-bring-back-my-son", "label": "Bring Back My Son!", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-teaching-materials", "label": "Teaching Materials", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-brave-actions", "label": "Brave Actions", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-protect-the-capital", "label": "Protect the Capital!", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-how-do-they-feel", "label": "How Do They Feel?", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-how-do-i-feel", "label": "How Do I Feel?", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-together-forever", "label": "Together Forever", "missable": true, "timed": true, "mutexWith": "q-i-love-you-no-matter-what", "note": "Mutually exclusive with 'I Love You No Matter What'.", "confidence": "high" },
+          { "id": "q-i-love-you-no-matter-what", "label": "I Love You No Matter What", "missable": true, "timed": true, "mutexWith": "q-together-forever", "confidence": "high" },
+          { "id": "q-a-friend-in-need", "label": "A Friend in Need", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-preparing-for-adventure", "label": "Preparing for Adventure (Parts 1–3)", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-adventurers-in-peril", "label": "Adventurers in Peril", "missable": true, "timed": true, "mutexWith": "q-the-missing-partner", "note": "Mutually exclusive with 'The Missing Partner'.", "confidence": "high" },
+          { "id": "q-the-missing-partner", "label": "The Missing Partner", "missable": true, "timed": true, "mutexWith": "q-adventurers-in-peril", "note": "Mutually exclusive with 'Adventurers in Peril'. Area placement to verify against Fandom.", "confidence": "verify" },
+          { "id": "q-building-bridges", "label": "Building Bridges", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-believing-again", "label": "Believing Again", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-starlight-seeker", "label": "Starlight Seeker", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-starlight-gazer", "label": "Starlight Gazer", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-back-pain", "label": "Back Pain", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-looking-for-gold-bugs", "label": "Looking for Gold Bugs", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-losing-taste-for-alcohol", "label": "Losing the Taste for Alcohol", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-looking-for-a-lost-son", "label": "Looking for a Lost Son", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-looking-for-a-lost-daughter", "label": "Looking for a Lost Daughter", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-going-out-to-play", "label": "Going Out to Play", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-alcamoth-generic-blocks", "label": "Generic quest blocks: Monster Quest 1–4 (Parts 1–3), Challenge 1–4, Material Quest 1–4, Collection Quest 1–4, Search Quest 1–4", "missable": true, "timed": true, "note": "Large batch of timed filler quests — verify exact count against Fandom; clear them all before the final cutoff.", "confidence": "verify" },
+          { "id": "o-melias-imperial-staff", "label": "Weapon skin: Melia's Imperial Staff (from Kallian, Audience Chamber)", "missable": true, "timed": false, "note": "Cosmetic — only if you want every appearance. Also tied to the Colony 6 / refugee timeline; grab early.", "confidence": "verify" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-frontier-village",
+      "name": "Frontier Village",
+      "reachableAnchor": "Mid–late game",
+      "locksAt": "co-final-point-of-no-return",
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "quests": [
+          { "id": "q-dangerous-ambition", "label": "Dangerous Ambition", "missable": true, "timed": true, "note": "Part of a missable questline — do the chain in order.", "confidence": "high" },
+          { "id": "q-find-the-kingpin", "label": "Find the Kingpin", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-adviser-hunt", "label": "Adviser Hunt", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-gather-information", "label": "Gather Information", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-evidence-collection", "label": "Evidence Collection", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-destroying-the-city-trade", "label": "Destroying the City Trade", "missable": true, "timed": true, "confidence": "high" },
+          { "id": "q-getting-a-members-card", "label": "Getting a Member's Card", "missable": true, "timed": true, "confidence": "high" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-satorl-marsh",
+      "name": "Satorl Marsh",
+      "reachableAnchor": "Mid game",
+      "locksAt": null,
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "quests": [
+          { "id": "q-investigating-satorl", "label": "Investigating Satorl", "missable": true, "timed": false, "mutexWith": "q-talias-research", "note": "Mutually exclusive with 'Talia's Research' (Alcamoth).", "confidence": "high" }
+        ]
+      }
+    },
+
+    {
+      "id": "area-valak-mountain",
+      "name": "Valak Mountain",
+      "reachableAnchor": "Mid game",
+      "locksAt": null,
+      "shulkLinkSection": "https://gamefaqs.gamespot.com/switch/272738-xenoblade-chronicles-definitive-edition/faqs/76615",
+      "sections": {
+        "other": [
+          { "id": "o-mumkhars-razor", "label": "Mumkhar's Razor (Easter-egg weapon)", "missable": true, "note": "Tradeable from Kurralth while on Valak Mountain. Easy to miss.", "confidence": "verify" }
+        ]
+      }
+    }
+  ],
+
+  "mutexPairs": [
+    { "a": "q-imaginations-tempered", "b": "q-spirits-raised", "label": "Imaginations Tempered ↔ Spirits Raised" },
+    { "a": "q-decision-colony6", "b": null, "label": "To Colony 6! ↔ The Road Home (the reconstruction trigger choice)" },
+    { "a": "q-together-forever", "b": "q-i-love-you-no-matter-what", "label": "Together Forever ↔ I Love You No Matter What" },
+    { "a": "q-adventurers-in-peril", "b": "q-the-missing-partner", "label": "Adventurers in Peril ↔ The Missing Partner" },
+    { "a": "q-talias-research", "b": "q-investigating-satorl", "label": "Talia's Research ↔ Investigating Satorl" },
+    { "a": null, "b": null, "label": "Miss Sweetness Showdown (Berryjammy) ↔ Miss Sweetness Showdown (Ma'crish)" },
+    { "a": null, "b": null, "label": "The Melody of Happiness ↔ Dream of a Poet" },
+    { "a": null, "b": null, "label": "Medical Advancements ↔ Let's Make Fillings!" }
+  ],
+
+  "achievements": [
+    { "id": "ach-heartwarming", "label": "Heartwarming — complete a Heart-to-Heart optimally", "missable": false, "note": "Not truly missable (H2Hs are repeatable), but tracked here so you don't forget.", "confidence": "high" },
+    { "id": "ach-heartbreaking", "label": "Heartbreaking — complete a Heart-to-Heart poorly", "missable": false, "note": "Deliberately pick the bad option once.", "confidence": "high" },
+    { "id": "ach-brave-protectors", "label": "The Brave Protectors — talk to all 9 Colony 9 Defence Force soldiers", "missable": true, "expiresAt": "co-colony9-nic", "note": "Must be done before inviting Nic to Colony 6. See Colony 9.", "confidence": "high" }
+  ],
+
+  "futureConnected": [
+    { "id": "fc-placeholder", "label": "Future Connected (epilogue) — separate completion list", "missable": false, "note": "Post-main-story expansion. Its quests/collectibles are tracked on their own once you reach it. To be populated.", "confidence": "verify" }
+  ]
+}
