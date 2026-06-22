@@ -102,6 +102,95 @@ module.exports = {
         "Otharon, Juju and Dickson leave the party at the Sororal Statues — that's when Colony 6 reconstruction opens for business.",
         "Easy 'Cosmic Killer Combo' record here via a lucky multi-link chain attack."
       ]
+    },
+    "4.1": {
+      notaBene: ["Pure tutorial — you can't lose. Use Monado Enchant on the Mechon and finish the boss (Mechon M82) with Buster around 50% HP."]
+    },
+    "4.2": {
+      landmarks: ["Mechon Wreckage Site", "Main Entrance", "Ether Light", "Gem Man's Stall", "Central Plaza", "Fortress Entrance", "Outlook Park", "Tephra Cave Entrance"],
+      locations: ["Commercial District", "Military District", "Weapon Dev. Lab", "Dunban's House", "Tephra Hill"],
+      records: ["First Steps — your first trial (Mechon Wreckage Site)", "Back-Stabber — first Back Slash from behind", "Let's Fight — first burst affinity challenge", "Turn It Up! — a party member reaches high tension"],
+      notaBene: ["Fiora is only playable until the upcoming cutscene.", "Hold off on quests for now — story events are coming that make it awkward."]
+    },
+    "4.3": {
+      landmarks: ["Tephra Path", "Mag Mell Ruins", "Rear Entrance", "Cylinder Hangar"],
+      locations: ["Caterpile Nest", "Warehouse 2"],
+      records: ["A Corner Of The World — trial (Mag Mell Ruins)", "Skip It — first skip-travel", "That Hits The Slot — set up your party's gear"],
+      notaBene: ["Visit the Gem Man for a Strength Up II + HP Up II gem.", "Do NOT sell Reyn's Scrap Driver — it can't be replaced.", "Just run from the unique monster in the hallway past Mag Mell Ruins for now."]
+    },
+    "4.4": {
+      locations: ["Anti-Air Battery 1", "Residential District"],
+      records: ["Making Waves — land in the water", "Critical Thinking — score a critical hit", "Come On, Cheer Up! — revive after the leader is incapacitated", "Go Team! — your first chain attack"],
+      notaBene: ["First real boss: Metal Face (Lv. 10). Stage 2 needs topple-locking via a chain attack (Enchant first): Stream Edge → Wild Down → Steel Strike, then ~25% HP in red arts / Buster."]
+    },
+    "4.5": {
+      landmarks: ["Spring Of Grief", "Vilia Lake", "Leg Pass", "Raginar Canyon Path", "Refugee Camp", "Kamos Guidepost"],
+      locations: ["Tephra Cavern", "Arachno Queen's Nest", "Kneecap Hill", "Gaur Plain", "Rho Oasis"],
+      records: ["Titan's Gift — farm your first ether crystals", "Learning The Craft — first gem craft", "Blossoming Friendship — reach green party affinity", "Bug Off — defeat 30 insects"],
+      notaBene: ["Boss: Arachno Queen (Lv. 12) — focus her with arts; use Shield (leveled ≥ her talent art) when a vision warns of it.", "Sharla joins (your first healer). Quick-travel returns after you reach the camp's north marker."]
+    },
+    "4.11": {
+      landmarks: ["Main Entrance", "Reconstruction HQ"],
+      locations: ["Hope Farm"],
+      notaBene: ["Reconstruction begins here — finish ALL Refugee Camp ⏱ timed quests first.", "After Lv.1 development you get an Ultra Small Reactor (for the Gem Man's quest) and street lights."]
+    },
+    "4.12": {
+      landmarks: ["Upper Trachea"], locations: ["Third Lung"],
+      notaBene: ["Can't collect or fight anything on this visit — straight run-through to Makna Forest."]
+    },
+    "4.13": {
+      landmarks: ["Makna Path", "Agni Tablet", "Lakeside", "Divine Sanctuary", "Seahorse Islet", "Waypoint Beacon", "Nopon Arch", "Twisted Tree Gate", "Village Entrance", "Sparkling Pool"],
+      locations: ["Bridge One", "Bridge Two", "Bridge Three", "Sap Cave", "Eks' Watering Hole", "Contaminated Area"],
+      records: ["One Step Further — learn an intermediate art from a manual", "Time For New Glasses — telethia fight", "Trailblazer — discover Seahorse Islet"],
+      notaBene: ["Buy & learn ALL the art manuals from the Ether Light shop (Colony 9) for an edge.", "Melia joins after the telethia fight — start her party affinity (pair with Sharla for an upcoming quest)."]
+    },
+    "4.14": {
+      landmarks: ["Sacred Altar", "Nopon Tower", "Entry Bridge", "Pollen Works", "Riki's House", "Chief's Residence", "Prophecy Hut", "Contemplation Terrace"],
+      locations: ["Central Plaza", "Kyn Shopping Street", "Orb Storage Level", "Pollen Orb Storehouse", "Middle Housing Level", "Pollen Works Level", "Archaeology Level", "Archaeology Center", "Top Housing Level", "Underground Store", "Nopon Kitchen", "Mysterious Sanctuary", "Apex Lake", "Reservoir"],
+      records: ["Know So Many Nopon! — register every nopon in Frontier Village", "Honorary Nopon — 3-star affinity with the central Bionis", "Clearing The Air — (Popularity Premonition quest)"],
+      affinitySteps: [
+        "Register every nopon to unlock 'Know So Many Nopon!': Berryjammy (Contemplation Terrace, night), Pelupelu (downstairs from there, night), Kiriku (by the Sacred Altar, day), Yusa & Npa (Underground Store, day), Pachipa (Archaeology Center upper, 1200), Tuzu (Archaeology Center lower), Gadada (Pollen Works, day), Gowago (near Riki's House, night), Minana (Kyn Shopping Street, day), Norara (lower-level clearing, west), Hoko (platform SE of Chief's Residence, day), Pokapoka (east Sacred Plaza, night), Medi (Kyn Shopping Street, night), Puko (Kyn Shopping Street, sunny), Miko (Prophecy Hut, day), Lalapa (Chief's Residence, day), Dabidabi (balcony up from Chief's Residence, night), Adidi (Reservoir NE shore). Just trade with Bana (save his quest).",
+        "Speak Deki at 12:00 → yellow 'old friend' (Deki/Migaga); Kokora at 15:00 → yellow 'grannypon' (Kokora/Migaga); Kofuko at 03:00 → yellow 'grampypon' (Kokora/Kofuko).",
+        "Speak Tati at 03:00 → yellow 'both working' (Tati/Npa) and yellow 'happy family' (Tati/Kiriku).",
+        "Speak Pachipa at 12:00 → orange 'worried dad' (Pachipa/Gerugu).",
+        "Speak Rono at 00:00 → green 'happy for him' (Rono/Leku); Modamo → yellow 'sweet fanatics' (Modamo/Rono).",
+        "Return to Traveller's Rest (Bionis' Leg) — speak Batubatu → yellow 'uncle/niece' (Batubatu/Pepa).",
+        "Central Plaza — speak Rasha → yellow 'jealous' (Rasha/Tati)."
+      ],
+      notaBene: ["Frontier Village has the most errata in the game — huge for character growth.", "Boss: Leonne Telethia (Lv. 36) at the Decayed Forest — suggested party Melia / Sharla / Riki."]
+    },
+    "4.15": {
+      landmarks: ["Latael Shore", "Hovering Reef 1", "Showdown Cliff", "Syrath Lighthouse", "Centre Gate"],
+      locations: ["Hovering Reef 2", "Hovering Reef 3", "Hovering Reef 4"]
+    },
+    "4.16": {
+      landmarks: ["Main Entrance", "Imperial Palace", "Great Hall", "Ascension Hall", "Audience Chamber", "Whitewing Palace"],
+      locations: ["Melifica Road", "Sky Terrace"],
+      records: ["Globetrotter — discover Ascension Hall"]
+    },
+    "4.17": {
+      landmarks: ["Tomb Approach", "Sealed Chamber", "Ceremony Hall", "Tomb Robber Pool", "Valley Of Emperors", "Tower of Trials: Bridge"],
+      locations: ["Hall Of Spirits", "Hall Of Trials", "Second Treasury"],
+      records: ["The Final Step — use the art book from the Second Treasury"]
+    },
+    "4.18": {
+      landmarks: ["High Entia Transporter", "Prison Gate", "Prison Terrace", "Central Seal Island", "Khatorl Seal Island", "Soltnar Seal Island", "Ether Plant", "Faras Cave"],
+      locations: ["Hovering Reef 5", "Hovering Reef 6", "Hovering Reef 7", "Hovering Reef 8", "Hovering Reef 9", "Hovering Reef 10", "Ether Crystal Deposit", "Hode Refuge", "Bionis' Occipital", "Sleeping Dragon Isle", "Anu Shore", "Secluded Island", "Kromar Coast", "Central Hall", "Great Canyon"],
+      records: ["Jaws Of Defeat — (Khatorl seal release)"],
+      notaBene: ["No collectables or unique monsters on this first visit.", "After Zanza's release: Monado arts level up to X, and faced Mechon can now be damaged like normal Mechon (topple or Enchant)."]
+    },
+    "4.19": {
+      landmarks: ["Fountain of Eternity", "Fountain of Hope", "Revelation Hall"],
+      locations: ["Repaired Bridge Four"],
+      notaBene: ["⚠ Get Melia's Imperial Staff from Kallian at Ascension Hall — her best non-endgame weapon."]
+    },
+    "4.20": {
+      notaBene: ["Roughly the halfway mark of the game.", "Almost everything here is ⏱ TIMED — clear it ALL now (it's forfeit at a later point of no return)."]
+    },
+    "4.21": {
+      landmarks: ["Zokhed Pass", "Befalgar Pedestal", "Hallow Bone", "Nopon Camp", "Antol Den", "Sealed Tower", "Harict Chapel", "Lava Cave", "La Luz Church", "Three Sage Summit", "Nofol Tower", "Bionis' Wrist"],
+      locations: ["Kana Peak", "Bagnar Snowfield", "Apis Lair", "Valak Peak", "Bionis' Right Elbow", "Url Crevasse", "Chilkin Lair", "Mechonis Wound", "Nagul Waterfall", "Jakt Geyser", "Great Glacier", "Ignia Hill", "Serik Waterfall", "Agul Mountain Range"],
+      notaBene: ["Boss: Mumkhar (Lv. 48) at Nofol Tower — topple/daze repeatedly.", "Equip Quick Step gems before the ice chutes/slides."]
     }
   },
 
@@ -281,6 +370,216 @@ module.exports = {
     "4.10:Q117": { location: "Sororal Statues", objective: "Collect the Radiant Offerings — White (Basin Cave), Rainbow (Altar of Fate), Dull (Dark Swamp island), Blue (SW Igna Territory).", strategy: "Story quest." },
     "4.10:UM30": { location: "Altar of Fate base, SE." },
     "4.10:UM31": { location: "SW Igna Territory.", strategy: "Guards the Blue Radiant for the ceremony." },
-    "4.10:UM32": { location: "Daksha Shrine (Bionis' Leg)." }
+    "4.10:UM32": { location: "Daksha Shrine (Bionis' Leg)." },
+
+    // ---- 4.2 story ----
+    "4.2:Q1": { giver: "Story", location: "Outlook Park", objective: "Find Shulk at Outlook Park and offer him the food." },
+
+    // ---- 4.11: Opening Colony 6 ----
+    "4.11:Q118a": { giver: "Otharon", location: "Main Entrance (Colony 6)", objective: "Defeat Black Smoke Hox + 6 White Smoke Hox (Raguel Bridge), then report to Juju at the Refugee Camp.", rewards: "12000G, 550 EXP, AP Up I, EXP Up I" },
+    "4.11:Q118b": { giver: "Dulland", location: "Colony 6", objective: "Same as 'To Colony 6!' — but it's only offered much later. Do 'To Colony 6!' now." },
+    "4.11:Q119": { giver: "Jan", location: "Colony 9", objective: "Defeat Elder Gragus in Makna Forest (by the Nopon Arch), then report to Jan.", rewards: "5800G, 5000 EXP, Dawn Staff", strategy: "Prereq: Jan/Minnie link + tell Dionysus 'he's too old for the girl'." },
+    "4.11:Q120": { giver: "Anna", location: "Reconstruction HQ, day", objective: "Speak with Kikori (near Nikita, by the Drainage Control Room), then report to Anna.", rewards: "4200G, 680 EXP, Pierce Resistance II" },
+    "4.11:Q121": { giver: "Satata", location: "Reconstruction HQ, day", objective: "Collect the Mushroom Cap at the Mining Base (Ether Mine).", rewards: "4200G, 700 EXP, Iron Armour, Iron Leggings" },
+    "4.11:Q122": { giver: "Satata", location: "Colony 6", objective: "Cast the Mushroom Cap from the Divine Sanctuary in Makna Forest (reachable at §4.13).", rewards: "6500G, 850 EXP, Jungle Shoes" },
+    "4.11:Q123": { giver: "Olga", location: "Reconstruction HQ, night", objective: "Collect 1 Chew Radish (Colony 9), 2 Red Durian (Bionis' Leg), 1 Sirius Anemone (Colony 6).", rewards: "3600G, 620 EXP, Recovery Up II" },
+    "4.11:Q124": { giver: "Gorman", location: "Reconstruction HQ, night", objective: "Collect the Divine Rock from the Spiral Valley summit (do 'Making A New Path' first for the route).", rewards: "4400G, 680 EXP, Spike III" },
+    "4.11:Q125": { giver: "Gorman", location: "Colony 6", objective: "Collect 3 Dynamite sticks from the Ether Mine (Test Pits 2, 3, 4), then report.", rewards: "—" },
+    "4.11:Q126": { giver: "Ewan", location: "Reconstruction HQ, night", objective: "Speak with Satata, Olga, Gorman, Anna, then report.", rewards: "3500G, 620 EXP, Bleed Defense III", strategy: "Prereq: the 'Spirits Raised' path was chosen." },
+    "4.11:Q127": { giver: "Ewan", location: "Colony 6", objective: "Defeat Elegant Marin (Glowmoss Lake, Ether Mine) or the Hungry Volff (south of Place of Judgement, Satorl).", rewards: "3700G, 650 EXP, Daze Tension III" },
+    "4.11:Q128": { giver: "Matryona", location: "Reconstruction HQ, night", objective: "Collect a Lake Drop (Raguel Lake) or Nasty Weed (Satorl) → Matryona → give painting to Ewan → Matryona.", rewards: "4500G, 700 EXP", strategy: "Guide: lake drop → green 'likes'." },
+    "4.11:Q129": { giver: "Gem Man", location: "Colony 9", objective: "Develop Colony 6 to Lv.1 and collect the Ultra Small Reactor, then report.", rewards: "1000 EXP, Mobile Furnace" },
+    "4.11:Q130": { giver: "Desirée", location: "Colony 9", objective: "Hear her story, then choose a career path for her.", rewards: "8000G, 4500 EXP, Swep gear, Phulk's Pessimism skill tree", mutexWhy: "No clear winner (the two routes score equal). Guide leans SOLDIER — it preserves Betty's friendship with Desirée over Betty's one-sided crush on Kenny Rohan." },
+
+    // ---- 4.13: Makna Forest ----
+    "4.13:Q131": { giver: "Nopon Merchant", location: "Agni Tablet", objective: "Defeat 5 Jungle Quadwings (Nopon Arch / hill north of Agni Tablet).", rewards: "15000G" },
+    "4.13:Q132": { giver: "Nopon Merchant", location: "Agni Tablet", objective: "Defeat 2 Makna Feris (Waypoint Beacon).", rewards: "9600G" },
+    "4.13:Q133": { giver: "Nopon Merchant", location: "Agni Tablet", objective: "Defeat 2 Makna Ansels (Eks' Watering Hole, near the bridges).", rewards: "8500G" },
+    "4.13:Q134": { giver: "Nopon Merchant", location: "Agni Tablet", objective: "Defeat 3 Makna Eks (Eks' Watering Hole).", rewards: "12000G" },
+    "4.13:Q135": { giver: "Story", location: "Nopon Arch", objective: "Collect Water Ether Crystals at the Lakeside, then return to the Nopon Arch." },
+    "4.13:UM33": { location: "Nopon Arch — climb the ramp to the right (watch the quadwings)." },
+
+    // ---- 4.14: Frontier Village ----
+    "4.14:Q136": { giver: "Story", location: "Frontier Village", objective: "Obtain the Warrior Gnasher (weapon shop, Kyn Shopping Street) and Sabre Gloves (armor shop, Sacred Altar) for Riki." },
+    "4.14:Q137": { giver: "Nopon Merchant", location: "Agni Tablet (Makna)", objective: "Defeat Shimmering Forte.", rewards: "25000G" },
+    "4.14:UM34": { location: "Makna Forest — NW of Twisted Tree Gate.", condition: "Hot day (a high-level Bargus Nebula nearby indicates it)." },
+    "4.14:Q138": { giver: "Nopon Villager", location: "East of Nopon Tower, night (climb the tree trunk)", objective: "Defeat 3 Itmos Upa (NW alcove of Eks' Watering Hole).", rewards: "12500G" },
+    "4.14:Q139": { giver: "Nopon Villager", location: "Frontier Village", objective: "Defeat 2 Wahpol Sardi (same river as Part 1).", rewards: "11000G" },
+    "4.14:Q140": { giver: "Nopon Villager", location: "Frontier Village", objective: "Defeat 1 Vanaes Nebula (same location, while raining).", rewards: "7500G" },
+    "4.14:Q141": { giver: "Nopon Villager", location: "Sacred Altar, day", objective: "Defeat 3 Terra Olugas (SE of Twisted Tree Gate).", rewards: "10000G" },
+    "4.14:Q142": { giver: "Nopon Villager", location: "Sacred Altar, day", objective: "Defeat 2 Ammos Orlugas (Precipice Bridge).", rewards: "13000G" },
+    "4.14:Q143": { giver: "Frontier Villager", location: "Sacred Altar, day", objective: "Defeat 3 Arena Orlugas (Precipice Bridge).", rewards: "9000G" },
+    "4.14:Q144": { giver: "Nopon Villager", location: "North of the Reservoir stairs, bottom floor, day", objective: "Defeat Agile Albarto.", rewards: "23000G" },
+    "4.14:UM35": { location: "Makna Forest — Seahorse Islet (go SW to the riverbank; lure it to the bank)." },
+    "4.14:Q145": { giver: "Nopon Villager", location: "Archaeology Center, night", objective: "Defeat Lazy Bluco (Yellow Flower Grove).", rewards: "29000G" },
+    "4.14:UM36": { location: "Makna Forest — Yellow Flower Grove.", condition: "Night only" },
+    "4.14:Q146": { giver: "Nopon Villager", location: "Kyn Shopping Street, night", objective: "Collect 2 Cool Potatoes (Colony 9).", rewards: "5000G" },
+    "4.14:Q147": { giver: "Nopon Villager", location: "SE of Nopon Tower, lower level, day", objective: "Collect 2 Pure Cherries (Makna Forest).", rewards: "10500G" },
+    "4.14:Q148": { giver: "Nopon Villager", location: "Chief's Residence SE platform, night", objective: "Collect 4 Ash Foxes (Makna Forest).", rewards: "7500G" },
+    "4.14:Q149": { giver: "Nopon Villager", location: "Contemplation Terrace, day", objective: "Collect 5 Venomous Lizards (Makna; trade Minana).", rewards: "9000G" },
+    "4.14:Q150": { giver: "Nopon Villager", location: "West of Nopon Tower, day", objective: "Collect 2 Magic Stones (Deinos at Waypoint Junction / Twisted Tree Gate).", rewards: "8000G" },
+    "4.14:Q151": { giver: "Nopon Villager", location: "North of the Armour Shop, Sacred Altar, night", objective: "Collect 5 Fancy Orluga Masks (Sabulum Orluga, Precipice Bridge).", rewards: "12000G" },
+    "4.14:Q152": { giver: "Nopon Villager", location: "Prophecy Hut, night", objective: "Collect 3 Upa Ember (Itmos Upa, Eks' Watering Hole NW / Seahorse Islet riverbank).", rewards: "16500G" },
+    "4.14:Q153": { giver: "Nopon Villager", location: "Balcony downstairs from Pollen Works, day", objective: "Find the Flower Bracelet (east of Nopon Tower, lower floor, NW).", rewards: "5000G, 3000 EXP" },
+    "4.14:Q154": { giver: "Nopon Villager", location: "One flight down from the Archaeology Center, night", objective: "Find the Deinos Hook (SE corner of the Contemplation Terrace).", rewards: "4000G, 1600 EXP" },
+    "4.14:Q155": { giver: "Nopon Villager", location: "Underground Store, night (jump the ledge)", objective: "Find the Shiny Ball (one flight up from the Archaeology Center, NW plateau).", rewards: "3800G, 1800 EXP" },
+    "4.14:Q156": { giver: "Leku", location: "Landing up from Riki's House, day", objective: "Collect 10 Peachy Leg Joints (Deinos in Makna / trade Bana).", rewards: "3200G, 800 EXP, Chill Defense IV", strategy: "Prereq: Kilaki registered." },
+    "4.14:Q157": { giver: "Leku", location: "Frontier Village", objective: "Speak with Lupa, Modamo and Pepa, then report to Leku.", rewards: "3800G, 950 EXP, Blaze Defense IV" },
+    "4.14:Q158": { giver: "Kilaki", location: "Frontier Village", objective: "Collect 2 Tasty Ansel Wings (Makna Ansel, Eks' Watering Hole / trade Bana).", rewards: "4300G, 1100 EXP, Poison Defense IV, Kilaki's Note" },
+    "4.14:Q158b": { giver: "Leku", location: "Frontier Village", objective: "Defeat Obsessive Galgaron, then report to Leku.", rewards: "5500G, 1500 EXP, Panther Gloves" },
+    "4.14:UM37": { location: "Makna Forest — Hode Lair interior (deep in the cave).", condition: "Only during 'Beat Kilaki To It!'", strategy: "Clear reinforcements; fight away from sunrise (it summons more)." },
+    "4.14:Q159": { giver: "Leku", location: "Frontier Village", objective: "Speak with Pepa or Lupa (Leku's fiancée) → fetch their item → report.", rewards: "11000G, 2800 EXP, Shell Boots", mutexWhy: "Guide picks PEPA — it preserves the ability to build a green Pachipa/Pepa link, which Lupa forfeits." },
+    "4.14:Q160": { giver: "Modamo", location: "Frontier Village", objective: "Defeat 5 Inferno Deinos + 5 Plasma Deinos (Twisted Tree Gate).", rewards: "7500G, 2000 EXP, Jungle Top, Jungle Bottoms" },
+    "4.14:Q161": { giver: "Rono", location: "Pollen Works, night (Shulk in the lead)", objective: "Get the mixer materials → Wep. Dev. Lab → deliver to Rono.", rewards: "3800G, 1200 EXP, Good Footing IV" },
+    "4.14:Q162": { giver: "Rono", location: "Frontier Village", objective: "Collect 2 Generic Shafts (Mechon M64) + 2 Generic Blades (Mechon M53), both on Maguel Road.", rewards: "—" },
+    "4.14:Q163": { giver: "Pepa", location: "Frontier Village", objective: "Collect 6 Enigma Lotus (Makna), 4 Happy Rabbit (trade Arnault), 3 Love Crane (Ether Mine / Glowmoss Lake).", rewards: "5200G, 1050 EXP, Jungle Cap", strategy: "Completion → trial 'Honorary Nopon'." },
+    "4.14:Q164": { giver: "Kokora", location: "Nopon Tower, day", objective: "Speak Abada → collect 3 Shield Bug (Makna / trade Miko) → Abada → Kokora.", rewards: "3600G, 950 EXP, Sky Cap", strategy: "Prereq: Deki registered." },
+    "4.14:Q165": { giver: "Kofuko", location: "Armour Shop, night", objective: "Collect 8 Kelp Mushrooms (Makna Forest).", rewards: "1000G, 1150 EXP, Jungle Gloves, Bleed Attack II" },
+    "4.14:Q166": { giver: "Migaga", location: "Sacred Altar, day", objective: "Repair the time mushrooms (Kyn Shopping Street / upstairs from Pollen Works / up from the Chief's Residence) → Migaga.", rewards: "4000G, 1150 EXP, Agility Down III" },
+    "4.14:Q167": { giver: "Migaga", location: "Frontier Village", objective: "Speak with Kofuko (triggers the brew quest).", rewards: "3500G, 1000 EXP, Sky Gloves, Aerial Cloak II", strategy: "⚠ SELL all your Walnut Grapes first (a glitch forces them if in stock)." },
+    "4.14:Q168": { giver: "Kofuko", location: "Frontier Village", objective: "Collect 4 Walnut Grapes (Bionis' Leg) OR 2 Bitter Kiwi (Makna).", rewards: "3400G, 850 EXP, Sky Shoes, Terrain Defense II", mutexWhy: "Use BITTER KIWI → blue 'happily married'. Walnut Grapes → red 'rocky marriage'." },
+    "4.14:Q169": { giver: "Pipiki", location: "West of Sacred Altar, day", objective: "Speak Tati (Nopon Kitchen, night) → collect 3 Hode Camouflage (Bois Hode, Precipice Bridge).", rewards: "5800G, 2000 EXP, Panther Top" },
+    "4.14:Q170": { giver: "Dobadoba", location: "Pollen Orb Storehouse, day", objective: "Collect 5 Yellow Pollen (Yellow Flower Grove).", rewards: "5000G, 1500 EXP, Panther Bottoms, First Attack Plus III" },
+    "4.14:Q171": { giver: "Deki", location: "Frontier Village", objective: "Collect 2 Green Eluca Juice (Makna Eluca, Yellow Flower Grove) → Abada → Deki.", rewards: "4200G, 1000 EXP, Night Vision IV" },
+    "4.14:Q172": { giver: "Tati", location: "Frontier Village", objective: "Gather the musical collectables (Things That Hum + Things That Rumble) → Tati.", rewards: "10000G, 6500 EXP, Climb Armour, Climb Leggings, Quick Step III" },
+    "4.14:Q173": { giver: "Tati", location: "Frontier Village", objective: "Collect 2 Humming Plum (Bionis' Leg), 2 Humming Cabbage (Satorl), 2 Humming Cat (Satorl), 2 Humming Nettle (Makna)." },
+    "4.14:Q174": { giver: "Tati", location: "Frontier Village", objective: "Collect 2 Rumble Stoneflies (Tephra), 2 Rumble Coal (Ether Mine), 2 Rumble Part (Satorl), 2 Rumble Box (Frontier Village)." },
+    "4.14:Q175": { giver: "Rasha", location: "Sacred Plaza SW, day", objective: "Collect Filtered Water (Sparkling Pool, day) → Cherri → Rasha.", rewards: "6000G, 2100 EXP, Buff Time Plus II", strategy: "Prereq: Cherri registered." },
+    "4.14:Q176": { giver: "Rasha", location: "Frontier Village", objective: "Defeat 5 Makna Eluca (Yellow Flower Grove) → Cherri → Rasha.", rewards: "3200G, 900 EXP, Mist Gel/Cream/Sandals" },
+    "4.14:Q177": { giver: "Lupa", location: "Frontier Village", objective: "Get the nopon-potion materials (Secret Elixir Ingredients) → Lupa → deliver the potion to Satata (Colony 6) → Lupa.", rewards: "3300G, 1200 EXP, Panther Shoes" },
+    "4.14:Q178": { giver: "Lupa", location: "Frontier Village", objective: "Collect 5 Hades Beetle (Makna / trade Abada), 3 All-Seeing Eyes (Jungle Quadwings, Nopon Arch), 2 Potent Brog Poison (Poison Brog, Dark Swamp)." },
+    "4.14:Q179": { giver: "Nopon Villager", location: "Kyn Shopping Street, day", objective: "Defeat Breezy Zolos.", rewards: "26000G" },
+    "4.14:UM38": { location: "Makna Forest — north of the Windmill Pavilion.", strategy: "Your first counter-spike UM: use Purge + topple via chain. Reyn tanks, Sharla heals." },
+    "4.14:Q180": { giver: "Surprise Quest", location: "Colony 6", objective: "Defeat 3 Mechon M56 Armor Units (west of the Pod Depot).", rewards: "3000G, 1500 EXP" },
+    "4.14:Q181": { giver: "Werner", location: "Butterfly Gardens, east of Reconstruction HQ", objective: "Collect 6 Flier Wings (Clima Fliers, north of Misty Path) + 7 Flier Straws (Fine Fliers, near Jacob's Rock).", rewards: "4000G, 620 EXP, Nopol Boots" },
+    "4.14:Q182": { giver: "Narine", location: "Tranquil Square SW (Shulk in the lead)", objective: "Raise Shulk/Reyn to blue → Narine; then purple → Paola; then raise two female members (Melia + Sharla) to purple.", rewards: "200G, 20000 EXP, Daze Plus IV", strategy: "Prereq: Paola registered." },
+    "4.14:Q183": { giver: "Liliana", location: "Main Entrance, day (Colony 9)", objective: "Collect the message in a bottle (Agora Shore, NW cave) → Sonia.", rewards: "4000G, 500 EXP, Swimming Oil" },
+    "4.14:UM39": { location: "Colony 9 — Agora Shore, NW cave.", strategy: "Topple-lock; clear the brog/antol first." },
+    "4.14:UM40a": { location: "Colony 9 — Agora Shore.", strategy: "Clear the baby armu first; topple her if she bolts for the water (resets the fight)." },
+    "4.14:UM40b": { location: "Colony 9 — Hazzai Cape.", condition: "Night only" },
+    "4.14:UM41": { location: "Colony 9 — cave in the cliff east of Cliff Lake." },
+    "4.14:UM42": { location: "Colony 9 — cave in the cliff east of Cliff Lake.", strategy: "Very agile — stack Agility Up gems." },
+    "4.14:UM43": { location: "Satorl Marsh — Exile Fortress interior.", strategy: "Clear his allies first; keep him toppled." },
+    "4.14:Q184a": { giver: "Zukazu", location: "SW Tranquil Square, night (Colony 9)", objective: "Collect a Red Pollen Orb (Nopon Refuge) → Zukazu.", rewards: "2500G, 3000 EXP, Jungle Top" },
+    "4.14:Q184b": { giver: "Jiroque", location: "Tranquil Square park, night", objective: "Collect a Red Pollen Orb (Nopon Refuge) → Jiroque.", rewards: "7500G, 1500 EXP, Jungle Bottoms", mutexWhy: "Guide picks ZUKAZU (Q184a) — it enables an otherwise-impossible link and the brothers reach a blue link." },
+    "4.14:Q185a": { giver: "Jiroque", location: "Colony 9", objective: "Collect 3 Quality Antol Jaws (Cliff Lake), 4 Black Iris (Makna), 2 Forget-You-Not (Satorl / Colony 6 Lv.1 special).", rewards: "(see guide)" },
+    "4.14:Q185b": { giver: "Zukazu", location: "Colony 9", objective: "Collect 3 Maternal Armu Milk (trade Zukazu) → Zukazu → return the Old Ring to Marcia → Zukazu." },
+    "4.14:Q186": { giver: "Emmy Leater", location: "North Military District (Colony 9)", objective: "Find a Nopon Claymore or a Carbo Shield.", rewards: "3300G, 600 EXP", strategy: "Guide leans Nopon Claymore (marginally better Colony 9 area affinity)." },
+    "4.14:HTH7b": { location: "Sparkling Pool", gainChoices: "You may be correct. // Are you sure?!" },
+
+    // ---- 4.15: Eryth Sea ----
+    "4.15:UM44": { location: "Eryth Sea — Hovering Reef 1." },
+    "4.15:HTH8b": { location: "Hovering Reef 2", gainChoices: "I like flowers too. // She'd be so happy!" },
+
+    // ---- 4.16: Alcamoth ----
+    "4.16:Q187": { giver: "Story", location: "Alcamoth", objective: "Speak with the citizen on Hovering Reef 4, then rescue the worker (defeat 3 Defensive Kromar at the Ether Crystal Deposit)." },
+
+    // ---- 4.17: High Entia Tomb ----
+    "4.17:UM45": { location: "High Entia Tomb — Second Treasury." },
+
+    // ---- 4.18: Prison Island & Approach ----
+    "4.18:Q188": { giver: "Story", location: "Eryth Sea", objective: "Open the sister gates Khatorl and Soltnar." },
+    "4.18:Q189": { giver: "Story", location: "Eryth Sea", objective: "Release the seals on Khatorl Seal Island and Soltnar Seal Island." },
+    "4.18:UM46": { location: "Eryth Sea — Soltnar Seal Island." },
+    "4.18:UM47": { location: "Eryth Sea — Khatorl Seal Island." },
+
+    // ---- 4.19: Mid-Game Loose Ends ----
+    "4.19:Q190": { giver: "Nopon Researcher", location: "East of the Pod Landing Site (Makna Forest)", objective: "Collect 5 Hode Planks (Hyle Hode, Precipice Bridge) + 3 Rhogul Axe Crest (Mist Rhogul, Barren Moor, day).", rewards: "3000G, 4400 EXP, Jaw Nibbler" },
+
+    // ---- 4.20: Alcamoth & Eryth Sea Errata (all ⏱ TIMED) ----
+    "4.20:Q191a": { giver: "Lighthouse Keeper", location: "Interior of Syrath Lighthouse", objective: "Defeat 5 Palti Kromar (Soltnar Seal Island).", rewards: "13000G" },
+    "4.20:Q192": { giver: "Lighthouse Keeper", location: "Interior of Syrath Lighthouse", objective: "Defeat 5 Maleza Kromar (Hovering Reef 8).", rewards: "15000G" },
+    "4.20:Q193": { giver: "Lighthouse Keeper", location: "Interior of Syrath Lighthouse", objective: "Defeat Flabbergasted Gerome.", rewards: "32000G" },
+    "4.20:UM48": { location: "Eryth Sea — Hovering Reef 5 lower level (jump through the central cavity; lure it to a shore).", strategy: "Ether-based party — physical damage is nearly pointless." },
+    "4.20:Q194": { giver: "Alcamoth Citizen", location: "Syrath Lighthouse, 2nd floor", objective: "Collect 3 Hiln Coin Purse (Eryth Hiln, Latael Shore) + 5 Doomsday Poppy (Eryth).", rewards: "12000G" },
+    "4.20:Q195": { giver: "Alcamoth Citizen", location: "Syrath Lighthouse, 2nd floor", objective: "Collect 3 Pink Asparagus, 3 Andos Antenna, 3 Old Dragon Spine (trade Jarak at the Ether Plant).", rewards: "20000G" },
+    "4.20:Q196": { giver: "Jarack", location: "Ether Plant", objective: "Complete the attached sub-missions, then report to Jarack.", rewards: "7700G, 4700 EXP, Shell Leggings" },
+    "4.20:Q197": { giver: "Jarack", location: "Ether Plant", objective: "Defeat Funeral Gorza.", strategy: "Sub-mission of Trouble At The Plant." },
+    "4.20:UM49": { location: "Eryth Sea — inner cave of the Hode Refuge." },
+    "4.20:Q198": { giver: "Jarack", location: "Ether Plant", objective: "Collect 3 Luxury Hode Wood (Unine Hode, Showdown Cliff) → repair the broken turbine → Jarack." },
+    "4.20:Q199": { giver: "Jarack", location: "Ether Plant", objective: "Defeat 2 Confusion Ekidno (Ether Plant), then find Jarack on the lower level.", rewards: "5400G, 3000 EXP" },
+    "4.20:Q200": { giver: "Shalen", location: "Syrath Lighthouse, 2nd floor (Melia in the lead)", objective: "Defeat 3 Decay Ekindo (night, 2nd floor).", rewards: "5700G, 3800 EXP, Nightglow Staff, unlocks Melia's Reticence skill tree" },
+    "4.20:Q201": { giver: "Alcamoth Citizen", location: "South of the shop on Melifica Road, day", objective: "Collect 2 Lexos Beard (Racti Lexos, Soltnar Seal Island; trade Talonyth).", rewards: "22000G" },
+    "4.20:Q202": { giver: "Alcamoth Citizen", location: "South of the shop on Melifica Road, day", objective: "Defeat 5 Cruz Paguls (Latael Shore).", rewards: "16000G" },
+    "4.20:Q203": { giver: "Alcamoth Citizen", location: "Melifica Road, day", objective: "Defeat 3 Eryth Ansel (Syrath Lighthouse, day, clear weather).", rewards: "14500G" },
+    "4.20:Q204": { giver: "Alcamoth Citizen", location: "Melifica Road, day", objective: "Defeat 2 Cicconia Ekidno (Hovering Reef 10).", rewards: "17000G" },
+    "4.20:Q205": { giver: "Alcamoth Imperial Guard", location: "Imperial Palace landmark, night", objective: "Defeat 3 Chloro Laia (Syrath Lighthouse, night).", rewards: "14000G" },
+    "4.20:Q206": { giver: "Alcamoth Imperial Guard", location: "Imperial Palace landmark, night", objective: "Defeat 5 Stella Eks (Anu Shore).", rewards: "22500G" },
+    "4.20:Q207": { giver: "Alcamoth Imperial Guard", location: "Imperial Palace landmark, night", objective: "Defeat 1 Racti Lexos (Soltnar Seal Island).", rewards: "27000G" },
+    "4.20:Q208": { giver: "Alcamoth Citizen", location: "North bridge, Melifica Road", objective: "Defeat 5 Unine Hodes (Showdown Cliff).", rewards: "18000G" },
+    "4.20:Q209": { giver: "Alcamoth Citizen", location: "North bridge, Melifica Road", objective: "Defeat 2 Toccos Orluga (Khatorl Seal Island).", rewards: "25000G" },
+    "4.20:Q210": { giver: "Alcamoth Citizen", location: "North bridge, Melifica Road", objective: "Defeat 1 Pelargos Ekidno (Khatorl Seal Island, night, building summit).", rewards: "28000G" },
+    "4.20:Q211": { giver: "Alcamoth Imperial Guard", location: "Ascension Hall, night", objective: "Defeat 3 Somati Kromar (Soltnar Seal Island).", rewards: "18000G" },
+    "4.20:Q212": { giver: "Alcamoth Imperial Guard", location: "Ascension Hall, night", objective: "Defeat 4 Tussock Kromar (Soltnar Seal Island).", rewards: "18000G" },
+    "4.20:Q213": { giver: "Alcamoth Imperial Guard", location: "Ascension Hall, night", objective: "Defeat 5 Otol Kromar (Soltnar Seal Island).", rewards: "15000G" },
+    "4.20:Q214": { giver: "Alcamoth Citizen", location: "SE of the Fountain of Hope, night", objective: "Defeat Proper Bandaz.", rewards: "45000G" },
+    "4.20:UM50": { location: "Eryth Sea — Secluded Island, NW shore.", condition: "Nights with shooting stars only" },
+    "4.20:Q215": { giver: "Alcamoth Citizen", location: "NE of the Fountain of Eternity, night (by a lake)", objective: "Defeat Tempestuous Edegia.", rewards: "38000G" },
+    "4.20:UM51": { location: "Eryth Sea — NW Hovering Reef 10.", condition: "Night only" },
+    "4.20:Q216": { giver: "Alcamoth Citizen", location: "Great Hall, NE hallway, day", objective: "Defeat Peeling Kircheis.", rewards: "35000G" },
+    "4.20:UM52": { location: "Eryth Sea — Hovering Reef 7.", strategy: "Has friends but is a pushover — physical party." },
+    "4.20:Q217": { giver: "Alcamoth Citizen", location: "NE of the Fountain of Eternity, day", objective: "Defeat Lightspeed Sonid.", rewards: "50000G" },
+    "4.20:UM53": { location: "Eryth Sea — Anu Shore upper plateau, west.", strategy: "Highly agile + counter-spike — use Purge or topple." },
+    "4.20:Q218": { giver: "Alcamoth Citizen", location: "Base of the escalator NE of the Fountain of Eternity, day", objective: "Find the Merchant's Gift (under the escalator, bear NW — a red ball).", rewards: "11000G, 2500 EXP" },
+    "4.20:Q219": { giver: "Alcamoth Citizen", location: "NW of the Fountain of Hope, night", objective: "Find the Mother's Necklace (north from the Imperial Palace, down the stairs, far end of the garden street).", rewards: "12000G, 2000 EXP" },
+    "4.20:Q220": { giver: "Alcamoth Citizen", location: "SE of the Fountain of Hope, night", objective: "Find a silver ring (Great Hall, SE 'four o'clock' hallway, at the end).", rewards: "9000G, 3000 EXP" },
+    "4.20:Q221": { giver: "Alcamoth Citizen", location: "NW of the Fountain of Hope (smaller fountain), night", objective: "Find the Health Amulet (Fountain of Hope, east wall then north, SE corner of the bottom floor).", rewards: "10000G, 2800 EXP" },
+    "4.20:Q222": { giver: "Alcamoth Citizen", location: "Across the south Melifica Road bridge, first transport hub, day", objective: "Collect 3 Gold Burdock (Eryth Sea; great rate at Faras Cave).", rewards: "15000G" },
+    "4.20:Q223": { giver: "Alcamoth Citizen", location: "East of the Main Entrance under the escalator, day", objective: "Collect 2 White Tails (Eryth Sea).", rewards: "22000G" },
+    "4.20:Q224": { giver: "Alcamoth Citizen", location: "Fountain of Hope, day", objective: "Collect 5 Stardrops (Alcamoth, better at night).", rewards: "22500G" },
+    "4.20:Q225": { giver: "Alcamoth Citizen", location: "South of the Imperial Palace, night", objective: "Collect 2 Spiral Lamps (High Entia Tomb).", rewards: "21000G" },
+    "4.20:Q226": { giver: "Alcamoth Citizen", location: "NE of the Main Entrance (second fountain), day", objective: "Collect 2 Glossy Grady Fans (Lunar Grady, Latael Shore water).", rewards: "20000G" },
+    "4.20:Q227": { giver: "Alcamoth Citizen", location: "North Melifica Road, by the transport pods, day", objective: "Collect 5 Orluga Grass Skirts (Terra Orluga, Village Entrance).", rewards: "23500G" },
+    "4.20:Q228": { giver: "Alcamoth Imperial Guard", location: "SE of the Main Entrance, day", objective: "Collect 3 Orluga Slacks (Tocca Orluga, Khatorl Seal Island).", rewards: "27000G" },
+    "4.20:Q229": { giver: "Vol'aren", location: "East of the Fountain of Hope, day", objective: "Find Atael (NE corner of the lower city), then report.", rewards: "6750G, 2300 EXP, Tension Swing III" },
+    "4.20:Q230": { giver: "Vol'aren", location: "Alcamoth", objective: "Find Cian (NE of the Fountain of Hope, day), then report.", rewards: "7200G, 2500 EXP, Strength Up IV", strategy: "Completion → trial 'Neural Network'." },
+    "4.20:Q231": { giver: "Teelan", location: "Melifica Road, day, next to the central escalator", objective: "Collect 9 Gold Caterpillars (Tephra Cave; Caterpile Nest / Leg Pass).", rewards: "8100G, 1950 EXP, Fall Defense II" },
+    "4.20:Q232": { giver: "Galdo", location: "Great Hall, downstairs of the Ascension Hall transporter, night", objective: "Defeat 6 Archer Hodes (Showdown Cliff), then report.", rewards: "5500G, 1800 EXP, Bind II", strategy: "Prereq: Lar'shen registered." },
+    "4.20:Q233": { giver: "Merisa", location: "North side of Melifica Road, day", objective: "Find Mir'leiz (Hovering Reef 1), then report.", rewards: "3500G, 1800 EXP, Weapon Power IV", strategy: "Prereq: Mir'leiz registered." },
+    "4.20:Q234": { giver: "Ruthan", location: "South of the Imperial Palace, night", objective: "Collect 6 Sturdy Armour (Flavel Andos, Hovering Reef 1; trade Jer'ell).", rewards: "5500G, 1500 EXP, Slow Resist III" },
+    "4.20:Q235": { giver: "Scarlen", location: "East of the Main Entrance, night", objective: "Speak with Rozael and Ricoth (Fountain of Eternity, night), then report.", rewards: "3800G, 1300 EXP, Spike Defense II" },
+    "4.20:Q236": { giver: "Scarlen", location: "Alcamoth", objective: "Speak with Ricoth or Rozael first (it picks the sequel), then the rejected friend → Scarlen.", rewards: "4200G, 1700 EXP", mutexWhy: "Speak ROZAEL first — that sequel later yields a green link with Galvin, vs a red link on the Ricoth path." },
+    "4.20:Q237a": { giver: "Scarlen", location: "Alcamoth", objective: "Speak with Rozael, then report.", rewards: "4800G, 2100 EXP, Physical Protect IV", strategy: "Prereq: Rozael chosen in Q236." },
+    "4.20:Q237b": { giver: "Scarlen", location: "Alcamoth", objective: "Speak with Ricoth, then report.", rewards: "4800G, 2100 EXP, Ether Protect IV", mutexWhy: "Guide picks the Rozael line (Q236 → Q237a 'Together Forever') for the stronger affinity chart." },
+    "4.20:Q238": { giver: "Lecrough", location: "Base of the Ascension Hall stairs, day", objective: "Defeat 6 Eryth Hiln (Latael Shore), then report.", rewards: "7500G, 2500 EXP, Arts Stealth III", strategy: "Prereq: Galvin registered." },
+    "4.20:Q239": { giver: "Zain", location: "Fountain of Eternity, day", objective: "Collect Kasharpa Water (Kasharpa Falls), Statue Water (NE of Sororal Statues), Makna Water (Great Makna Falls) → Zain.", rewards: "4200G, 1600 EXP, Str/Ether/Agility Up III", strategy: "Prereq: Kurralth registered (trial: Friend Of The World)." },
+    "4.20:Q240": { giver: "Kurralth", location: "Alcamoth", objective: "Find the Chalk Container (Anu Shore, upper area), then report.", rewards: "4700G, 1800 EXP, Muscle/Ether Defense Up III", strategy: "Completion → trial 'Honorary High Entia'." },
+    "4.20:Q241": { giver: "Zain", location: "Alcamoth", objective: "Collect Orthlus' Liver (Lakebed Orthlus, Agora Shore), then report.", rewards: "6600G, 2500 EXP, Mithril Gear/Gauntlets/Boots" },
+    "4.20:UM54": { location: "Colony 9 — Agora Shore.", condition: "Will NOT respawn" },
+    "4.20:Q242": { giver: "Nelo", location: "SE of the Fountain of Hope, night", objective: "Collect 5 Pagul Hot Pot (Cruz Pagul, Latael Shore) + 2 Feris Blood (Waypoint Beacon; trade Gadada).", rewards: "4750G, 1800 EXP, Confuse Resist III" },
+    "4.20:Q243": { giver: "Popipo", location: "NE of the Main Entrance, day", objective: "Speak Baroba (Main Entrance) → 5 Ether Roses (Satorl) → Baroba → Popipo.", rewards: "6400G, 1600 EXP, Paralysis Resist III" },
+    "4.20:Q244": { giver: "Naroth", location: "North of the shop on Melifica Road, day", objective: "Collect 5 Green Diode (High Entia Tomb, near the Tower of Trials Bridge) + 3 Astas Remote Units (Hover Astas, High Entia Tomb).", rewards: "6500G, 1800 EXP, Shell Gauntlets" },
+    "4.20:Q245": { giver: "Talia", location: "South of the Imperial Palace, night", objective: "Defeat Dramatic Gogol (Place of Judgement), then report to Talia (temporarily at Satorl Marsh).", rewards: "6800G, 2250 EXP, Ether Defense Up IV, Arts Seal Resist III", mutexWhy: "Do TALIA'S RESEARCH now — its mutex twin 'Investigating Satorl' (post-core) gives NO affinity benefit, and these links can't be gained any other way." },
+    "4.20:Q246": { giver: "Mir'leiz", location: "Alcamoth", objective: "Speak Caul (N of Imperial Palace, 18:00) → 3 Murky Eluca Water (Perna Eluca, Latael Shore; trade Jarack) → Caul → Mir'leiz.", rewards: "4300G, 2000 EXP, Shell Boots" },
+    "4.20:Q247": { giver: "Mir'leiz", location: "Alcamoth", objective: "Speak Lecrough, complete the conjunctive quest, defeat 2 Buono Nebulae (Latael Shore / Hovering Reef 5) → Lecrough → Mir'leiz.", rewards: "5600G, 2400 EXP, Unbeatable III" },
+    "4.20:Q248": { giver: "Lecrough", location: "Alcamoth", objective: "Defeat 2 Bono Nebulae (Hovering Reef 1 or 4).", rewards: "4400G, 2100 EXP, Panther Top, Panther Shoes" },
+    "4.20:Q249": { giver: "Elior", location: "Alcamoth", objective: "Speak Miriall → 2 Silver Eks Plate (Stella Eks, Hovering Reef 7) → Miriall → take Miriall's Telescope to Elior.", rewards: "5600G, 2000 EXP, Daze Resist III" },
+    "4.20:Q250": { giver: "Elior", location: "Alcamoth", objective: "Speak Kaleka → get the Attachment Part (Second Treasury) → Kaleka → take the Stronger Telescope back to Elior.", rewards: "6900G, 2700 EXP, Amethyst Leggings" },
+    "4.20:HTH9": { location: "Contemplation Terrace", gainChoices: "I'll be honest...not really. // As all wise rulers do." },
+    "4.20:HTH10": { location: "Prophecy Hut", gainChoices: "They're delivered from on high? // You mean...you?" },
+    "4.20:HTH11": { location: "Valley of Emperors (ledge off the SE bridge)", gainChoices: "Let's go take a look. // Mind sharing it with us?" },
+    "4.20:HTH12": { location: "Melifica Road (cross the NE bridge, left, two transporter pads down)", condition: "Night only", gainChoices: "Of course I do! // Yes, I do." },
+
+    // ---- 4.21: Valak Mountain (finishes Part 1) ----
+    "4.21:Q251": { giver: "Nopon Merchant", location: "Zokhed Pass", objective: "Defeat 2 Monta Moramora (Bionis' Right Elbow, day).", rewards: "23000G" },
+    "4.21:Q252": { giver: "Nopon Merchant", location: "Zokhed Pass", objective: "Defeat 5 Sparas Paguls (Nagul Waterfall).", rewards: "25500G" },
+    "4.21:Q253": { giver: "Nopon Merchant", location: "Zokhed Pass", objective: "Defeat 3 Bow Chilkins (near the Hallow Bone / Bagnar Snowfield).", rewards: "28000G" },
+    "4.21:Q254": { giver: "Nopon Merchant", location: "Zokhed Pass", objective: "Defeat 1 Sensa Lexos (NE of the Hallow Bone, day).", rewards: "30000G" },
+    "4.21:UM55": { location: "Valak Mountain — Befalgar Pedestal.", strategy: "Use an ether-based party." },
+    "4.21:Q255": { giver: "Nopon Researcher", location: "Nopon Camp", objective: "Defeat 5 Poleaxe Chilkins (Url Crevasse / Bagnar Snowfield) + 5 Ent Antols (south of the Hallow Bone, via the Chilkin Lair) → researcher.", rewards: "10000G, 3300 EXP, Spike Defense IV, Chill Defense IV, Paralysis Resist IV" },
+    "4.21:Q256": { giver: "Nopon Researcher", location: "Nopon Camp", objective: "Observe the vistas from Befalgar Pedestal and Kana Peak's summit → report (the 'better view' answer is inconsequential).", rewards: "11500G, 3800 EXP, Chill Defense V" },
+    "4.21:Q257": { giver: "Story", location: "Harict Chapel", objective: "Obtain the Magma Rock (defeat Conflagrant Roxael in the Lava Cave)." },
+    "4.21:UM56": { location: "Valak Mountain — Lava Cave.", condition: "Only during 'The Magma Rock'; will not respawn", strategy: "Spam Down+ZR to keep the AI out of the lava; ether party damages from range." },
+    "4.21:Q258": { giver: "Nopon Researcher", location: "Great Glacier", objective: "Defeat 4 Cunning Chilkin (right behind you), then report.", rewards: "13800G, 5000 EXP, Heavy Gear, Heavy Armor" },
+    "4.21:Q259": { giver: "Nopon Researcher", location: "Upper level via the Jakt Geyser, then east", objective: "Collect 3 Hox Flints (Porcu Hox, Lava Cave), 2 Antol Fire Pouches (Ent Antol, Mechonis Wound), 1 Feris Aged Ale (Noto Feris, Lava Cave).", rewards: "12000G, 4500 EXP, Heavy Leggings" },
+    "4.21:Q260": { giver: "Dakuku", location: "Nopon Camp", objective: "Investigate the Chilkin Lair, then report to Dakuku.", rewards: "15000G, 3200 EXP, Blaze Defense V, Daze Resist II" },
+    "4.21:Q261": { giver: "Dakuku", location: "Nopon Camp (Dunban in the lead)", objective: "Defeat Barbaric Sitiri and Banquet Vassago (both in the Antol Den), then report.", rewards: "21000G, 8500 EXP, Snaer Striker, Stellar Gear/Gauntlets, unlocks Dunban's Obstinance skill tree" },
+    "4.21:UM57": { location: "Valak Mountain — Antol Den.", strategy: "Talent art dazes + knocks back — Daze Resist gems, stay off the cliff edge; save first." },
+    "4.21:UM58": { location: "Valak Mountain — Antol Den (inside a large Bonterra Pod, SW corner; use Lure to hatch it).", condition: "Will not respawn" },
+    "4.21:UM59a": { location: "Valak Mountain — south of the Sealed Tower." },
+    "4.21:UM59b": { location: "Valak Mountain — Url Crevasse.", condition: "Clear weather, nights only" },
+    "4.21:UM60": { location: "Valak Mountain — Ignia Hill, NE corner.", condition: "Night only", strategy: "Area spike — spike-defense gems / Purge / topple-lock (clear allies first)." },
+    "4.21:UM61": { location: "Valak Mountain — land bridge south of Ignia Hill.", condition: "Night only" },
+    "4.21:UM62": { location: "Valak Mountain — Lava Cave, NW lava lake (west side of the room).", strategy: "Ether-based party is most effective." }
   }
 };

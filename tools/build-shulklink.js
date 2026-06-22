@@ -845,8 +845,8 @@ sections.forEach((s) => {
     if (d) { Object.assign(it, d); it.detailed = true; enriched++; }
   });
   // make landmarks / locations / records checkable items (stable ids by index)
-  s.landmarks = (s.landmarks || []).map((x, i) => ({ id: `wlm-${s.id}-${i}`, label: "“" + x + "”", missable: false, confidence: "high" }));
-  s.locations = (s.locations || []).map((x, i) => ({ id: `wloc-${s.id}-${i}`, label: "“" + x + "”", missable: false, confidence: "high" }));
+  s.landmarks = (s.landmarks || []).map((x, i) => ({ id: `wlm-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
+  s.locations = (s.locations || []).map((x, i) => ({ id: `wloc-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
   s.records = (s.records || []).map((x, i) => ({ id: `wrec-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
 });
 
@@ -870,7 +870,7 @@ data.arcs = ARCS;
 // ---- attach + write ---------------------------------------------------------
 data.pointsOfNoReturn = PONR;
 data.walkthrough = sections;
-data.meta.version = "0.4.0";
+data.meta.version = "0.5.0";
 data.meta.sourceOfTruth = "ShulkLink0624 GameFAQs walkthrough (faqs/76615) — structure + factual data only, no prose. 40 chronological sections (4.1–4.40) with quest/UM/HTH numbering and 5 points of no return.";
 
 fs.writeFileSync(FILE, JSON.stringify(data, null, 2) + "\n");
