@@ -63,10 +63,14 @@ party affinity links, cosmetic skins as a category, Time Attacks, NG+-only items
 ## Status / TODO
 
 - [x] App shell + missable spine dataset (quests, monsters, mutex pairs, cutoffs, achievements)
-- [ ] Bulk-load full Collectopaedia (all areas) + all landmarks for map completion
-- [ ] Populate Future Connected list
+- [x] Bulk-load full Collectopaedia (all areas) + all Locations/Landmarks for map completion
+- [x] Future Connected (Bionis' Shoulder + Alcamoth-FC collectables; 43 quests + 12 Ponspectors)
+- [ ] Heart-to-Hearts list per area (not yet populated — the two H2H achievements are covered)
 - [ ] Pin exact chapter numbers for each cutoff (currently `verify` where uncertain)
+- [ ] Verify Agniratha Locations (source returned corrupt data) + Prison Island lock status
 - [ ] Optional: D1 cross-device sync (seam already in `worker.js` + `store.js`)
+
+Regenerate bulk data anytime with: `node tools/build-data.js`
 
 ## Architecture
 
