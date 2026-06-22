@@ -88,7 +88,7 @@
     // flat list of walkthrough items (quests/ums/hths/colony6) for progress counting
     WALK_ITEMS = [];
     (DATA.walkthrough || []).forEach((s) => {
-      ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
+      ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records", "affinitySteps"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
     });
   }
 
@@ -365,7 +365,7 @@
       walkBlock("🏅 Records to unlock", s.records, "rec"),
       walkBlock("Heart-to-Hearts", s.hths, "hth"),
       walkBlock("Colony 6 Development", s.colony6, "c6"),
-      refList("💞 Improve area affinity — steps", s.affinitySteps),
+      walkBlock("💞 Improve area affinity — steps", s.affinitySteps, "aff"),
       refList("📝 Nota Bene", s.notaBene, { cls: "nb" })
     ]);
     const col2 = el("div", { class: "wcol" }, [walkBlock("Quests", s.quests, "q")]);

@@ -1,7 +1,7 @@
 {
   "meta": {
     "game": "Xenoblade Chronicles: Definitive Edition",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "scope": "Full 100%: missable spine + full Collectopaedia + all landmarks/locations + Future Connected. Non-missable bulk data tagged confidence high (Game8-sourced); double-check completeness against the in-game map %.",
     "spoilerPolicy": "Cutoffs anchored to region locks + approximate chapter numbers. No boss/cutscene/plot names. Trust the in-game stopwatch (timer) icon over any guide.",
     "links": {
@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -6515,6 +6515,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -6672,6 +6673,7 @@
         "Fiora is only playable until the upcoming cutscene.",
         "Hold off on quests for now — story events are coming that make it awkward."
       ],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -6751,6 +6753,7 @@
         "Do NOT sell Reyn's Scrap Driver — it can't be replaced.",
         "Just run from the unique monster in the hallway past Mag Mell Ruins for now."
       ],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -6809,6 +6812,7 @@
         "First real boss: Metal Face (Lv. 10). Stage 2 needs topple-locking via a chain attack (Enchant first): Stream Edge → Wild Down → Steel Strike, then ~25% HP in red arts / Buster."
       ],
       "landmarks": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -6923,6 +6927,7 @@
         "Boss: Arachno Queen (Lv. 12) — focus her with arts; use Shield (leveled ≥ her talent art) when a vision warns of it.",
         "Sharla joins (your first healer). Quick-travel returns after you reach the camp's north marker."
       ],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -8949,6 +8954,7 @@
         "Item Vision: on collecting an early Bionis' Leg collectable (e.g. Moth Crawler / Sour Gooseberry) a gray vision flags that you'll need several of that item — they're then marked in your inventory until you hit the count.",
         "Arts palette fills up around Lv. 16 (Reyn learns a 9th art) — you can only equip 8, so swap via the Arts submenu."
       ],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -9278,27 +9284,132 @@
         }
       ],
       "affinitySteps": [
-        "Speak with Dionysus at 12:00 → yellow 'tea friends' (Dionysus/Marcia).",
-        "Speak with Marcia at 12:00 → yellow 'interest' (Marcia/Liliana).",
-        "Speak with Jolele (Tranquil Square HtH street, right side, night) at 22:00 → blue 'fine grandson' (Jolele/Niranira); registers Jolele.",
-        "Speak with Jolele again at 00:00 → green 'grandson's pal' (Jolele/Lukas).",
-        "Speak with Betty → green 'big fan' (Betty/Kenny Rohan).",
-        "Register Narine by trading (SW of Tranquil Square, day) — don't take her quest yet.",
-        "Military District entrance, night — speak with Arnault, answer 'You should ask her yourself' → orange 'together/apart' (Arnault/Françoise).",
-        "Speak with Leopold → link with Arnault depends on your Financial Planning route (yellow 'fan' for the frame route / blue 'extreme fan' for the investigate route).",
-        "Register Cheryl by trading (Gem Man's Stall NE balcony, overlooking Central Plaza).",
-        "Speak with Minnie (sentry at the kids' bridge, 03:00) → orange 'idler/achiever' (Minnie/Monica); registers Minnie.",
-        "Speak with Jan (SE wall of the Military District, day) → yellow 'late bloomer?' (Jan/Minnie); registers Jan (trial: Fifty Fine Friends).",
-        "Speak with Gorman → yellow 'divorced' (Gorman/Arda).",
-        "Speak with Anna at 15:00 → yellow 'mother's friend' (Olga/Anna).",
-        "Speak with Olga → yellow 'understanding' (Olga/Ewan).",
-        "Speak with Nikita at 11:00 → green 'fine engineer' (Nikita/Satata).",
-        "Speak with Zukazu (SW Tranquil Square, night, by a tree) → orange 'hostility' (Zukazu/Marcia); registers Zukazu (trial: Spider's Web).",
-        "Register the remaining Colony 9 military: Kantz (north Military District, day), Oleksiy (Gem Man's Stall, night, NE under the building), Meifimeifi (center Military District, night), Nic (enclosed garrison north of Meifimeifi, night) — registering Nic unlocks the trial 'The Brave Protectors'.",
-        "Register Perrine (Weapon Dev Lab entrance, sunset).",
-        "Speak with Shura (Ether Light, night) → green 'good boss' (Shura/Erik).",
-        "Register Peppino (HtH street, night, tree hangout ~4 buildings down).",
-        "Register Rosemary (east of the Gem Man's Stall, night) and Werner (Mechon Wreckage Site)."
+        {
+          "id": "waff-4.7-0",
+          "label": "Speak with Dionysus at 12:00 → yellow 'tea friends' (Dionysus/Marcia).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-1",
+          "label": "Speak with Marcia at 12:00 → yellow 'interest' (Marcia/Liliana).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-2",
+          "label": "Speak with Jolele (Tranquil Square HtH street, right side, night) at 22:00 → blue 'fine grandson' (Jolele/Niranira); registers Jolele.",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-3",
+          "label": "Speak with Jolele again at 00:00 → green 'grandson's pal' (Jolele/Lukas).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-4",
+          "label": "Speak with Betty → green 'big fan' (Betty/Kenny Rohan).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-5",
+          "label": "Register Narine by trading (SW of Tranquil Square, day) — don't take her quest yet.",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-6",
+          "label": "Military District entrance, night — speak with Arnault, answer 'You should ask her yourself' → orange 'together/apart' (Arnault/Françoise).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-7",
+          "label": "Speak with Leopold → link with Arnault depends on your Financial Planning route (yellow 'fan' for the frame route / blue 'extreme fan' for the investigate route).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-8",
+          "label": "Register Cheryl by trading (Gem Man's Stall NE balcony, overlooking Central Plaza).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-9",
+          "label": "Speak with Minnie (sentry at the kids' bridge, 03:00) → orange 'idler/achiever' (Minnie/Monica); registers Minnie.",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-10",
+          "label": "Speak with Jan (SE wall of the Military District, day) → yellow 'late bloomer?' (Jan/Minnie); registers Jan (trial: Fifty Fine Friends).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-11",
+          "label": "Speak with Gorman → yellow 'divorced' (Gorman/Arda).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-12",
+          "label": "Speak with Anna at 15:00 → yellow 'mother's friend' (Olga/Anna).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-13",
+          "label": "Speak with Olga → yellow 'understanding' (Olga/Ewan).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-14",
+          "label": "Speak with Nikita at 11:00 → green 'fine engineer' (Nikita/Satata).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-15",
+          "label": "Speak with Zukazu (SW Tranquil Square, night, by a tree) → orange 'hostility' (Zukazu/Marcia); registers Zukazu (trial: Spider's Web).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-16",
+          "label": "Register the remaining Colony 9 military: Kantz (north Military District, day), Oleksiy (Gem Man's Stall, night, NE under the building), Meifimeifi (center Military District, night), Nic (enclosed garrison north of Meifimeifi, night) — registering Nic unlocks the trial 'The Brave Protectors'.",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-17",
+          "label": "Register Perrine (Weapon Dev Lab entrance, sunset).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-18",
+          "label": "Speak with Shura (Ether Light, night) → green 'good boss' (Shura/Erik).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-19",
+          "label": "Register Peppino (HtH street, night, tree hangout ~4 buildings down).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.7-20",
+          "label": "Register Rosemary (east of the Gem Man's Stall, night) and Werner (Mechon Wreckage Site).",
+          "missable": false,
+          "confidence": "high"
+        }
       ],
       "records": [
         {
@@ -9439,6 +9550,7 @@
         }
       ],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -9653,6 +9765,7 @@
           "confidence": "high"
         }
       ],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -10210,6 +10323,7 @@
         "Easy 'Cosmic Killer Combo' record here via a lucky multi-link chain attack."
       ],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -10524,6 +10638,7 @@
         "After Lv.1 development you get an Ultra Small Reactor (for the Gem Man's quest) and street lights."
       ],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -10560,6 +10675,7 @@
         "Can't collect or fight anything on this visit — straight run-through to Makna Forest."
       ],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -10795,6 +10911,7 @@
         "Buy & learn ALL the art manuals from the Ether Light shop (Colony 9) for an edge.",
         "Melia joins after the telethia fight — start her party affinity (pair with Sharla for an upcoming quest)."
       ],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -12038,13 +12155,48 @@
         }
       ],
       "affinitySteps": [
-        "Register every nopon to unlock 'Know So Many Nopon!': Berryjammy (Contemplation Terrace, night), Pelupelu (downstairs from there, night), Kiriku (by the Sacred Altar, day), Yusa & Npa (Underground Store, day), Pachipa (Archaeology Center upper, 1200), Tuzu (Archaeology Center lower), Gadada (Pollen Works, day), Gowago (near Riki's House, night), Minana (Kyn Shopping Street, day), Norara (lower-level clearing, west), Hoko (platform SE of Chief's Residence, day), Pokapoka (east Sacred Plaza, night), Medi (Kyn Shopping Street, night), Puko (Kyn Shopping Street, sunny), Miko (Prophecy Hut, day), Lalapa (Chief's Residence, day), Dabidabi (balcony up from Chief's Residence, night), Adidi (Reservoir NE shore). Just trade with Bana (save his quest).",
-        "Speak Deki at 12:00 → yellow 'old friend' (Deki/Migaga); Kokora at 15:00 → yellow 'grannypon' (Kokora/Migaga); Kofuko at 03:00 → yellow 'grampypon' (Kokora/Kofuko).",
-        "Speak Tati at 03:00 → yellow 'both working' (Tati/Npa) and yellow 'happy family' (Tati/Kiriku).",
-        "Speak Pachipa at 12:00 → orange 'worried dad' (Pachipa/Gerugu).",
-        "Speak Rono at 00:00 → green 'happy for him' (Rono/Leku); Modamo → yellow 'sweet fanatics' (Modamo/Rono).",
-        "Return to Traveller's Rest (Bionis' Leg) — speak Batubatu → yellow 'uncle/niece' (Batubatu/Pepa).",
-        "Central Plaza — speak Rasha → yellow 'jealous' (Rasha/Tati)."
+        {
+          "id": "waff-4.14-0",
+          "label": "Register every nopon to unlock 'Know So Many Nopon!': Berryjammy (Contemplation Terrace, night), Pelupelu (downstairs from there, night), Kiriku (by the Sacred Altar, day), Yusa & Npa (Underground Store, day), Pachipa (Archaeology Center upper, 1200), Tuzu (Archaeology Center lower), Gadada (Pollen Works, day), Gowago (near Riki's House, night), Minana (Kyn Shopping Street, day), Norara (lower-level clearing, west), Hoko (platform SE of Chief's Residence, day), Pokapoka (east Sacred Plaza, night), Medi (Kyn Shopping Street, night), Puko (Kyn Shopping Street, sunny), Miko (Prophecy Hut, day), Lalapa (Chief's Residence, day), Dabidabi (balcony up from Chief's Residence, night), Adidi (Reservoir NE shore). Just trade with Bana (save his quest).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.14-1",
+          "label": "Speak Deki at 12:00 → yellow 'old friend' (Deki/Migaga); Kokora at 15:00 → yellow 'grannypon' (Kokora/Migaga); Kofuko at 03:00 → yellow 'grampypon' (Kokora/Kofuko).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.14-2",
+          "label": "Speak Tati at 03:00 → yellow 'both working' (Tati/Npa) and yellow 'happy family' (Tati/Kiriku).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.14-3",
+          "label": "Speak Pachipa at 12:00 → orange 'worried dad' (Pachipa/Gerugu).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.14-4",
+          "label": "Speak Rono at 00:00 → green 'happy for him' (Rono/Leku); Modamo → yellow 'sweet fanatics' (Modamo/Rono).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.14-5",
+          "label": "Return to Traveller's Rest (Bionis' Leg) — speak Batubatu → yellow 'uncle/niece' (Batubatu/Pepa).",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "waff-4.14-6",
+          "label": "Central Plaza — speak Rasha → yellow 'jealous' (Rasha/Tati).",
+          "missable": false,
+          "confidence": "high"
+        }
       ],
       "records": [
         {
@@ -12163,6 +12315,7 @@
         }
       ],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -12254,6 +12407,7 @@
           "confidence": "high"
         }
       ],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -12346,6 +12500,7 @@
           "confidence": "high"
         }
       ],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -12572,6 +12727,7 @@
         "No collectables or unique monsters on this first visit.",
         "After Zanza's release: Monado arts level up to X, and faced Mechon can now be damaged like normal Mechon (topple or Enchant)."
       ],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -12660,6 +12816,7 @@
         "⚠ Get Melia's Imperial Staff from Kallian at Ascension Hall — her best non-endgame weapon."
       ],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -13868,6 +14025,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -14344,6 +14502,7 @@
         "Equip Quick Step gems before the ice chutes/slides."
       ],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc1"
     },
     {
@@ -15025,6 +15184,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -15158,6 +15318,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -15254,6 +15415,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -15702,6 +15864,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -15947,6 +16110,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -16145,6 +16309,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -16443,6 +16608,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -16593,6 +16759,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -16625,6 +16792,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -16657,6 +16825,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc2"
     },
     {
@@ -17101,6 +17270,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc3"
     },
     {
@@ -17120,6 +17290,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc3"
     },
     {
@@ -17210,6 +17381,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc3"
     },
     {
@@ -17316,6 +17488,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc3"
     },
     {
@@ -17888,6 +18061,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc3"
     },
     {
@@ -18072,6 +18246,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc3"
     },
     {
@@ -18137,6 +18312,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc3"
     },
     {
@@ -18568,6 +18744,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc3"
     },
     {
@@ -18588,6 +18765,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "affinitySteps": [],
       "arc": "arc3"
     }
   ],
