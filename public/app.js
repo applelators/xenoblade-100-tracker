@@ -17,6 +17,22 @@
     futureConnected: "Future Connected"
   };
   const CATEGORY_ORDER = ["quests", "uniqueMonsters", "heartToHearts", "landmarks", "collectopaedia", "colony6", "other"];
+  // "Critical" missables shown upfront; collectables/landmarks tuck behind a collapsible.
+  const CRITICAL_CATS = new Set(["quests", "uniqueMonsters", "heartToHearts", "colony6", "other", "achievements"]);
+
+  function splitCritical(entries) {
+    const crit = [], comp = [];
+    entries.forEach((e) => (CRITICAL_CATS.has(e.category) ? crit : comp).push(e));
+    return { crit, comp };
+  }
+  function completionDetails(comp) {
+    if (!comp.length) return null;
+    const done = comp.filter((e) => Store.isChecked(e.item.id)).length;
+    return el("details", { class: "completion" }, [
+      el("summary", null, [`📦 Collectables & landmarks to grab before lock — ${done}/${comp.length}`]),
+      el("div", { class: "items" }, comp.map(itemRow))
+    ]);
+  }
 
   let DATA = null;
   let CUTOFF_BY_ID = {};
@@ -145,6 +161,7 @@
     });
     const cutoff = CUTOFF_BY_ID[earliest.cid];
     const items = pending.filter((e) => effectiveCutoff(e.item, e.area) === earliest.cid);
+    const { crit, comp } = splitCritical(items);
 
     return el("div", { class: "panel expires-next" }, [
       el("div", { class: "panel-title", text: "⏱ Expires next — finish before you move on" }),
@@ -153,7 +170,8 @@
         cutoff ? el("span", { class: "chip", text: cutoff.chapterAnchor }) : null
       ]),
       cutoff && cutoff.note ? el("div", { class: "muted", text: cutoff.note }) : null,
-      el("div", { class: "expires-list" }, items.map((e) => itemRow(e)))
+      crit.length ? el("div", { class: "expires-list" }, crit.map((e) => itemRow(e))) : null,
+      completionDetails(comp)
     ]);
   }
 
@@ -183,6 +201,7 @@
       rendered++;
       const cutoff = CUTOFF_BY_ID[cid];
       const done = entries.filter((e) => Store.isChecked(e.item.id)).length;
+      const { crit, comp } = splitCritical(entries);
       const head = el("div", { class: "cutoff-card" }, [
         el("div", { class: "cutoff-head" }, [
           el("strong", { text: cutoff ? cutoff.label : "Choice / one-time missables (no region deadline)" }),
@@ -190,7 +209,8 @@
           el("span", { class: "count", text: `${done}/${entries.length}` })
         ]),
         cutoff && cutoff.note ? el("div", { class: "muted", text: cutoff.note }) : null,
-        el("div", { class: "items" }, entries.map(itemRow))
+        crit.length ? el("div", { class: "items" }, crit.map(itemRow)) : null,
+        completionDetails(comp)
       ]);
       wrap.appendChild(head);
     });

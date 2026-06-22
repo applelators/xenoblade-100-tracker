@@ -110,6 +110,12 @@ a { color: var(--accent); }
 .flash { animation: flash 1.6s ease; }
 @keyframes flash { 0%, 100% { background: transparent; } 25% { background: #3a2f55; } }
 
+details.completion { margin-top: 8px; border-top: 1px dashed var(--line); padding-top: 6px; }
+details.completion > summary { cursor: pointer; color: var(--accent2); font-size: 13px; font-weight: 600; padding: 4px 0; list-style: none; }
+details.completion > summary::-webkit-details-marker { display: none; }
+details.completion > summary::before { content: "▸ "; }
+details.completion[open] > summary::before { content: "▾ "; }
+
 .reveal-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 14px 0; padding: 12px; background: var(--bg2); border: 1px dashed var(--line); border-radius: var(--radius); }
 .empty { padding: 16px; text-align: center; }
 
