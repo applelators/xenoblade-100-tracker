@@ -291,10 +291,19 @@
       item.condition || item.gainChoices || item.mutexWhy || item.affinity;
     if (!hasRich) return null;
     // always-visible detail grid (no disclosure); faded by CSS when the item is checked
-    return el("div", { class: "qfields" }, rows.map(([k, v]) =>
-      el("div", { class: "qf" + (k === "Why this pick" ? " why" : "") }, [
-        el("span", { class: "qf-k", text: k }), el("span", { class: "qf-v", text: v })
-      ])));
+    return el("div", { class: "qfields" }, rows.map(([k, v]) => {
+      let vcell;
+      if (k === "Gain choices") {
+        // one dialogue choice per line
+        const parts = String(v).split("//").map((x) => x.trim()).filter(Boolean);
+        vcell = el("span", { class: "qf-v choices" }, parts.map((p) => el("span", { class: "choice", text: p })));
+      } else {
+        vcell = el("span", { class: "qf-v", text: v });
+      }
+      return el("div", { class: "qf" + (k === "Why this pick" ? " why" : "") }, [
+        el("span", { class: "qf-k", text: k }), vcell
+      ]);
+    }));
   }
   function walkRow(item, kind) {
     const checked = Store.isChecked(item.id);

@@ -115,6 +115,8 @@ a { color: var(--accent); }
 .qf-k { color: var(--muted); font-size: 11.5px; white-space: nowrap; }
 .qf-v { font-size: 12.5px; line-height: 1.4; }
 .qf.why .qf-k, .qf.why .qf-v { color: #d6b4ff; }
+.qf-v.choices .choice { display: block; }
+.qf-v.choices .choice::before { content: "› "; color: var(--muted); }
 /* fade the details once the item is checked off */
 .item.done .qfields { opacity: .35; transition: opacity .15s ease; }
 .item .qfields { transition: opacity .15s ease; }
