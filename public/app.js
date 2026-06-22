@@ -39,6 +39,7 @@
   let CUTOFF_ORDER = {};      // id -> order index
   let ALL_ENTRIES = [];       // { item, area, category }
   let WALK_ITEMS = [];        // flat walkthrough items (for progress)
+  let CHECK_LINKS = {};       // id -> [partner ids] across datasets (for dedup)
 
   // ---------- helpers ----------
   function $(sel, root) { return (root || document).querySelector(sel); }
@@ -127,12 +128,21 @@
         (links[b] = links[b] || []).push(a);
       }
     });
+    CHECK_LINKS = links;
     Store.setLinks(links);
   }
 
   function progress(predicate) {
     let total = 0, done = 0;
-    const count = (item) => { if (!predicate(item)) return; total++; if (Store.isChecked(item.id)) done++; };
+    const counted = new Set(); // dedupe linked twins so each pair counts once
+    const count = (item) => {
+      if (!predicate(item)) return;
+      if (counted.has(item.id)) return;
+      counted.add(item.id);
+      (CHECK_LINKS[item.id] || []).forEach((p) => counted.add(p));
+      total++;
+      if (Store.isChecked(item.id)) done++;
+    };
     ALL_ENTRIES.forEach(({ item }) => count(item));
     WALK_ITEMS.forEach(count);
     return { total, done, pct: total ? Math.round((done / total) * 100) : 0 };
