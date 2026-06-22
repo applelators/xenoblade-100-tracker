@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -9742,6 +9742,23 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "guide": [
+        {
+          "id": "wgs-4.8-0",
+          "step": "From the Bionis' Leg, head south through the Bask Cave Passage into the Colony 6 region. Unlock Watchpoint Junction, go northeast to Supply Road, then speak with Daza (the Nopon) at the big gate.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.8-1",
+          "step": "Do Daza's quests — Proof of Status (take the elevator down to Splintered Path and grab the Nopon Coin) and Safety First — to earn his trust.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.8-2",
+          "step": "When you're done, quick-travel to the Drainage Outlet and head south into the Ether Mine.",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.8-0",
@@ -9772,7 +9789,6 @@
       ],
       "records": [],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -9837,6 +9853,28 @@
       ],
       "colony6": [],
       "notes": [],
+      "guide": [
+        {
+          "id": "wgs-4.9-0",
+          "step": "Enter the Ether Mine. Work down through the Test Pits and lifts (Drainage Tunnel → Test Pits → Mining Base) toward the Central Pit, banking landmarks as you go.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.9-1",
+          "step": "Descend the Central Pit via the lifts and the rotating clock-device platforms. At the bottom, boss: {{Xord (Lv. 25)}} — build party gauge on his adds and topple-lock him (chain Break → Wild Down → extend).",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.9-2",
+          "step": "Climb back up and hit the Freight Elevator's start button for a rematch with a weaker {{Xord}}.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.9-3",
+          "step": "After escaping the mine you're thrown into a forced fight; reinforcements arrive to help. Then grab the Pod Depot and Misty Path, and head south to the next region, Satorl Marsh.",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.9-0",
@@ -9988,7 +10026,6 @@
         }
       ],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -10405,6 +10442,37 @@
       ],
       "colony6": [],
       "notes": [],
+      "guide": [
+        {
+          "id": "wgs-4.10-0",
+          "step": "Enter Satorl Marsh at Kelsher Wetlands and head south. Find the Nopon Merchant Camp and pick up their quests.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.10-1",
+          "step": "Explore the marsh — Crown Tree, Silent Obelisk, Glowing Obelisk, the Igna Territory and Exile Fortress (it's gorgeous at night).",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.10-2",
+          "step": "Do the Ancient Ceremony: gather the four Radiant Offerings (Q117 — Basin Cave, Altar of Fate, Dark Swamp, Igna Territory), then use the Adulthood Emblem at the Sororal Statues and defeat the {{Satorl Guardian (Lv. 28)}}.",
+          "notes": [
+            {
+              "id": "wgn-4.10-2-0",
+              "text": "Some party members leave at the Sororal Statues — this is when Colony 6 reconstruction opens for business."
+            },
+            {
+              "id": "wgn-4.10-2-1",
+              "text": "Easy 'Cosmic Killer Combo' record here via a lucky multi-link chain attack."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.10-3",
+          "step": "Climb to the Statue Summit, then quick-travel to Watchpoint Junction to begin Colony 6 development (§4.11).",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.10-0",
@@ -10547,7 +10615,6 @@
       ],
       "records": [],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -10835,6 +10902,38 @@
       "notes": [
         "⚠ POINT OF NO RETURN: completing 'To Colony 6!' / 'The Road Home' immigrates the Bionis' Leg residents and LOCKS every ⏱ Refugee Camp timed quest. Finish them first."
       ],
+      "guide": [
+        {
+          "id": "wgs-4.11-0",
+          "step": "⚠ Before you do anything here: make sure every Refugee Camp ⏱ timed quest is finished — the next step locks them for good.",
+          "notes": [
+            {
+              "id": "wgn-4.11-0-0",
+              "text": "Reconstruction begins here — completing 'To Colony 6!' immigrates the refugees and locks the camp's timed quests."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.11-1",
+          "step": "Quick-travel to Watchpoint Junction, go south through the now-open gate to Colony 6's Main Entrance, and complete 'To Colony 6!' (Q118a) with Otharon to open reconstruction.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.11-2",
+          "step": "Start developing Colony 6 with Juju (Housing / Commerce / Nature / Special to Lv. 1) and work the new Colony 6 quests.",
+          "notes": [
+            {
+              "id": "wgn-4.11-2-0",
+              "text": "After Lv. 1 development you get an Ultra Small Reactor (used for the Gem Man's quest) and street lights."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.11-3",
+          "step": "When done, return to the Statue Summit and head northwest into the Bionis' Interior.",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.11-0",
@@ -10863,7 +10962,6 @@
       ],
       "records": [],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -10879,6 +10977,23 @@
       "colony6": [],
       "notes": [
         "No collectables or monsters obtainable on this visit — straight run-through."
+      ],
+      "guide": [
+        {
+          "id": "wgs-4.12-0",
+          "step": "A short run-through with nothing to collect or fight. From the Statue Summit, head northwest into the Bionis' Interior.",
+          "notes": [
+            {
+              "id": "wgn-4.12-0-0",
+              "text": "You can't pick up collectables or fight anything on this visit — just pass through."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.12-1",
+          "step": "Follow the path through the Third Lung, ride the geyser up to the Upper Trachea, and continue into the next region, Makna Forest.",
+          "notes": []
+        }
       ],
       "landmarks": [
         {
@@ -10901,7 +11016,6 @@
       ],
       "records": [],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -11013,6 +11127,38 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "guide": [
+        {
+          "id": "wgs-4.13-0",
+          "step": "Arrive at Makna Path and head to the Agni Tablet (there's a shop and a quest-giving merchant).",
+          "notes": [
+            {
+              "id": "wgn-4.13-0-0",
+              "text": "Buy and learn ALL the art manuals from Colony 9's Ether Light shop for a real power boost."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.13-1",
+          "step": "Explore the forest — Lakeside, the numbered bridges, Divine Sanctuary, Eks' Watering Hole, Sap Cave.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.13-2",
+          "step": "Story: at the Nopon Arch, do 'Mystery Girl Rescue' (Q135) — collect Water Ether Crystals at the Lakeside and return. A telethia ambush follows; use your new Purge art.",
+          "notes": [
+            {
+              "id": "wgn-4.13-2-0",
+              "text": "Melia joins after this fight — start building her party affinity (pair her with Sharla for an upcoming quest)."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.13-3",
+          "step": "Finish exploring what you can, then head to the Village Entrance to enter Frontier Village.",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.13-0",
@@ -11138,7 +11284,6 @@
         "Melia joins after the telethia fight — start her party affinity (pair with Sharla for an upcoming quest)."
       ],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12245,6 +12390,33 @@
         }
       ],
       "notes": [],
+      "guide": [
+        {
+          "id": "wgs-4.14-0",
+          "step": "Riki joins, and this is the biggest errata hub in the game. First, do the heropon errand (Q136): grab his weapon and armour.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.14-1",
+          "step": "Grind out the huge quest list in the Quests column, and register every nopon (see the affinity steps) for the 'Know So Many Nopon!' trial.",
+          "notes": [
+            {
+              "id": "wgn-4.14-1-0",
+              "text": "Frontier Village has more side content than any other area — great for character growth."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.14-2",
+          "step": "When you're ready for the story, head to the Decayed Forest (SE Makna) and defeat the boss, {{Leonne Telethia (Lv. 36)}} (suggested party: Melia / Sharla / Riki).",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.14-3",
+          "step": "Afterward, speak with Melia (up the stairs from the Chief's Residence), then take the transporter from the Contemplation Terrace to Eryth Sea.",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.14-0",
@@ -12449,7 +12621,6 @@
         "Frontier Village has the most errata in the game — huge for character growth.",
         "Boss: Leonne Telethia (Lv. 36) at the Decayed Forest — suggested party Melia / Sharla / Riki."
       ],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12490,6 +12661,18 @@
       ],
       "colony6": [],
       "notes": [],
+      "guide": [
+        {
+          "id": "wgs-4.15-0",
+          "step": "A short region. From Latael Shore, hop the transporters across the Hovering Reefs (1 → 2 → 3 → 4) and grab the Syrath Lighthouse.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.15-1",
+          "step": "Return to Hovering Reef 2 and take the transporter to the Centre Gate, then continue into Alcamoth, the High Entia capital.",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.15-0",
@@ -12544,7 +12727,6 @@
       ],
       "records": [],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12576,6 +12758,23 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "guide": [
+        {
+          "id": "wgs-4.16-0",
+          "step": "You arrive with only Melia in your party, so skip side quests for now. Move forward through the Imperial Palace → Great Hall → Ascension Hall → Audience Chamber for a run of story cutscenes.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.16-1",
+          "step": "You'll be asked to rescue a worker on Eryth Sea (Q187): quick-travel to Syrath Lighthouse, take the transporters to the Ether Crystal Deposit, and defeat the Defensive Kromar.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.16-2",
+          "step": "Return and rest at Whitewing Palace to advance the story into the High Entia Tomb.",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.16-0",
@@ -12637,7 +12836,6 @@
         }
       ],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12664,6 +12862,23 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "guide": [
+        {
+          "id": "wgs-4.17-0",
+          "step": "Quick-travel to the Center Gate and take the deck transporter to the High Entia Tomb.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.17-1",
+          "step": "You play the early rooms solo as Melia — approach the gaps to form light bridges, and clear the forced fights. The rest of the party joins via a trapdoor; work both groups east to the Ceremony Hall.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.17-2",
+          "step": "Boss: {{Solidium Telethia and Tyrea (Lv. 38)}} — fight one at a time, Purge the telethia's aura, and topple Tyrea to damage her.",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.17-0",
@@ -12731,7 +12946,6 @@
         }
       ],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12803,6 +13017,38 @@
       "colony6": [],
       "notes": [
         "No collectables/unique monsters on this first visit."
+      ],
+      "guide": [
+        {
+          "id": "wgs-4.18-0",
+          "step": "After the tomb, head to the Imperial Villa (transporter off the Great Hall) for story, then the plot sends you back to Eryth Sea.",
+          "notes": [
+            {
+              "id": "wgn-4.18-0-0",
+              "text": "No collectables or unique monsters on this first Prison Island visit."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.18-1",
+          "step": "Open the path to Prison Island — release the Khatorl and Soltnar seals (Q188/Q189): ride the reef transporters, climb the two seal towers, and clear the kromar unique monsters guarding them.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.18-2",
+          "step": "Take the central transporter to Prison Island, cross to the Great Canyon, and proceed to the boss: {{Metal Face (Lv. 42)}} — build Shulk's talent gauge and Enchant.",
+          "notes": [
+            {
+              "id": "wgn-4.18-2-0",
+              "text": "After the big Prison Island event, your Monado arts unlock up to level X and faced Mechon can be damaged like regular Mechon (topple or Enchant)."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.18-3",
+          "step": "When you regain control, head for Valak Mountain via the Makna transporter (Pod Landing Site → Valak Pass).",
+          "notes": []
+        }
       ],
       "landmarks": [
         {
@@ -12959,7 +13205,6 @@
         "After Zanza's release: Monado arts level up to X, and faced Mechon can now be damaged like normal Mechon (topple or Enchant)."
       ],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -13016,6 +13261,23 @@
       "notes": [
         "⚠ Get Melia's Imperial Staff from Kallian at Ascension Hall (her best non-endgame weapon)."
       ],
+      "guide": [
+        {
+          "id": "wgs-4.19-0",
+          "step": "A short cleanup stop. ⚠ First, get Melia's Imperial Staff from Kallian at Ascension Hall — her best mid-game weapon.",
+          "notes": [
+            {
+              "id": "wgn-4.19-0-0",
+              "text": "Don't skip the Imperial Staff — it's a big upgrade for Melia."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.19-1",
+          "step": "Do 'Bridge Repair' (Q190) in Makna to finish that region's map, push Colony 6 development to Lv. 3, and recruit a few new residents (Perrine, etc.).",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.19-0",
@@ -13049,7 +13311,6 @@
       ],
       "records": [],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -14251,6 +14512,28 @@
       "notes": [
         "⚠ Almost everything here is ⏱ TIMED — these quests are permanently FORFEIT at a later-game point of no return. Clear them all now."
       ],
+      "guide": [
+        {
+          "id": "wgs-4.20-0",
+          "step": "Pure errata — but ⚠ almost everything here is ⏱ TIMED and is forfeit at a later point of no return, so clear it ALL now.",
+          "notes": [
+            {
+              "id": "wgn-4.20-0-0",
+              "text": "You're roughly halfway through the game at this point."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.20-1",
+          "step": "Work the Eryth Sea quests first (the Syrath Lighthouse keeper, and Jarack at the Ether Plant), then the big Alcamoth quest list (Citizens and Imperial Guards), plus the heart-to-hearts.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.20-2",
+          "step": "There's no new region to push here — once the Quests column is clear, continue to Valak Mountain (§4.21) if you haven't already.",
+          "notes": []
+        }
+      ],
       "notaBene": [
         "Roughly the halfway mark of the game.",
         "Almost everything here is ⏱ TIMED — clear it ALL now (it's forfeit at a later point of no return)."
@@ -14259,7 +14542,6 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {
@@ -14571,6 +14853,33 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "guide": [
+        {
+          "id": "wgs-4.21-0",
+          "step": "Explore the snowy mountain from Zokhed Pass via the ascending and descending trails, grabbing landmarks (Befalgar Pedestal, Hallow Bone, Nopon Camp, Three Sage Summit).",
+          "notes": [
+            {
+              "id": "wgn-4.21-0-0",
+              "text": "Equip Quick Step gems before the ice chutes and slides."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.21-1",
+          "step": "Story: get the Magma Rock (Q257) — defeat {{Conflagrant Roxael}} in the Lava Cave — and use it to melt the frozen Harict Chapel door.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.21-2",
+          "step": "At Nofol Tower, boss: {{Mumkhar (Lv. 48)}} — topple or daze him repeatedly. Then head west to the Bionis' Wrist to finish the region's map.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.21-3",
+          "step": "⚠ That completes Part 1. The next region begins the second third of the story — reveal Part 2 only when you're ready for later-game spoilers.",
+          "notes": []
+        }
+      ],
       "landmarks": [
         {
           "id": "wlm-4.21-0",
@@ -14737,7 +15046,6 @@
       ],
       "records": [],
       "affinitySteps": [],
-      "guide": [],
       "arc": "arc1"
     },
     {

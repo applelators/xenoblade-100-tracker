@@ -90,7 +90,7 @@
     WALK_ITEMS = [];
     (DATA.walkthrough || []).forEach((s) => {
       ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records", "affinitySteps"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
-      (s.guide || []).forEach((g) => { WALK_ITEMS.push(g); (g.notes || []).forEach((n) => WALK_ITEMS.push(n)); });
+      (s.guide || []).forEach((g) => WALK_ITEMS.push(g)); // steps count; Nota Bene sub-notes don't
     });
 
     buildCheckLinks();
@@ -367,24 +367,21 @@
     if (last < text.length) out.push(document.createTextNode(text.slice(last)));
     return out;
   }
-  // a checkable route step (numbered) with optional checkable Nota-Bene sub-bullets
+  // a checkable route step (numbered) with display-only Nota-Bene sub-bullets
+  // (notes aren't checkable but cross out together with their parent step)
   function routeStep(g) {
     const checked = Store.isChecked(g.id);
-    const stepRow = el("label", { class: "rstep" + (checked ? " done" : "") }, [
+    const stepRow = el("label", { class: "rstep" }, [
       el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (e) => { Store.setChecked(g.id, e.target.checked); render(); } }),
       el("span", { class: "rstep-text" }, parseSpoilers(g.step))
     ]);
     const kids = [stepRow];
     if (g.notes && g.notes.length) {
-      kids.push(el("ul", { class: "rnotes" }, g.notes.map((n) => {
-        const nc = Store.isChecked(n.id);
-        return el("li", null, [el("label", { class: "rnote" + (nc ? " done" : "") }, [
-          el("input", { type: "checkbox", ...(nc ? { checked: "checked" } : {}), onchange: (e) => { Store.setChecked(n.id, e.target.checked); render(); } }),
-          el("span", { class: "rnote-text" }, [document.createTextNode("📝 "), ...parseSpoilers(n.text)])
-        ])]);
-      })));
+      kids.push(el("ul", { class: "rnotes" }, g.notes.map((n) =>
+        el("li", { class: "rnote" }, [el("span", { class: "rnote-text" }, [document.createTextNode("📝 "), ...parseSpoilers(n.text)])])
+      )));
     }
-    return el("li", null, kids);
+    return el("li", { class: "rli" + (checked ? " done" : "") }, kids);
   }
   function walkRow(item, kind) {
     const checked = Store.isChecked(item.id);
