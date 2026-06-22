@@ -833,6 +833,19 @@ S.notes.push("HTH35 'The Legend Of The Spider' — use the BAD choices once here
 S = sec("4.40", "The Endgame: Memory Space", "Prison Island / Memory Space", { ponrTrigger: "ponr-memory-space",
   notes: ["⚠ FINAL POINT OF NO RETURN — the Memory Space transporter. Finish everything first.", "⚠ Keep Shulk's Miqol replica Monado equipped during the final boss (it cannot be re-made, even in NG+). The True Monado you earn also cannot be duplicated."] });
 
+// ---- merge per-item + per-section detail fields ----------------------------
+let DETAILS = { items: {}, sections: {} };
+try { DETAILS = require("./shulklink-details.js"); } catch (e) { console.warn("(no shulklink-details.js — base data only)"); }
+let enriched = 0;
+sections.forEach((s) => {
+  const sd = DETAILS.sections[s.id];
+  if (sd) ["landmarks", "locations", "affinitySteps", "records", "notaBene"].forEach((k) => { if (sd[k]) s[k] = sd[k]; });
+  [...s.quests, ...s.ums, ...s.hths].forEach((it) => {
+    const d = DETAILS.items[s.id + ":" + it.code];
+    if (d) { Object.assign(it, d); it.detailed = true; enriched++; }
+  });
+});
+
 // ---- story Parts (spoiler gates) -------------------------------------------
 // Sections are pushed in chronological order, so we gate by their index range.
 const ARCS = [
@@ -859,3 +872,4 @@ data.meta.sourceOfTruth = "ShulkLink0624 GameFAQs walkthrough (faqs/76615) — s
 fs.writeFileSync(FILE, JSON.stringify(data, null, 2) + "\n");
 const tot = sections.reduce((a, s) => a + s.quests.length + s.ums.length + s.hths.length + s.colony6.length, 0);
 console.log(`Wrote ${FILE}\nSections: ${sections.length} | Quests: ${sections.reduce((a,s)=>a+s.quests.length,0)} | UMs: ${sections.reduce((a,s)=>a+s.ums.length,0)} | HTHs: ${sections.reduce((a,s)=>a+s.hths.length,0)} | Colony6: ${sections.reduce((a,s)=>a+s.colony6.length,0)} | total walkthrough items: ${tot}`);
+console.log(`Detail-enriched items: ${enriched}`);

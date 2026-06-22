@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -6542,7 +6542,10 @@
           "affinity": "Yellow",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Outlook Park",
+          "gainChoices": "You and Dunban... // Kind of.",
+          "detailed": true
         }
       ],
       "colony6": [],
@@ -6609,7 +6612,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Tephra Cave Entrance",
+          "objective": "Defeat 1 Willow Bunniv in Tephra Cave (near its entrance).",
+          "rewards": "1000G",
+          "strategy": "Completes your first non-story quest (trial: Problem Solved!).",
+          "detailed": true
         },
         {
           "id": "wq-46-q3-monster-quest-4-part-2",
@@ -6621,7 +6630,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Tephra Cave Entrance",
+          "objective": "Defeat 2 Singing Brogs (south of the Mag Mell Ruins).",
+          "rewards": "1500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q4-monster-quest-4-part-3",
@@ -6633,7 +6647,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Tephra Cave Entrance",
+          "objective": "Defeat 5 Mell Lizards (hallway between Rear Entrance and Warehouse 2).",
+          "rewards": "1200G",
+          "detailed": true
         },
         {
           "id": "wq-46-q5-collection-quest-1",
@@ -6645,7 +6664,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "South of Ether Light, daytime",
+          "objective": "Collect 2 Rabbit Diodes (Colony 9).",
+          "rewards": "500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q6-challenge-2",
@@ -6657,7 +6681,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "North of Ether Light, daytime",
+          "objective": "Defeat Verdant Bluchal near Anti-Air Battery 1.",
+          "rewards": "1800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q7-collection-quest-4",
@@ -6669,7 +6698,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "Tranquil Square heart-to-heart street, daytime",
+          "objective": "Collect 1 Giant Hornet (Colony 9).",
+          "rewards": "300G",
+          "detailed": true
         },
         {
           "id": "wq-46-q8-collection-quest-3",
@@ -6681,7 +6715,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "Tranquil Square HtH street shop, daytime",
+          "objective": "Collect 2 Rainbow Zirconia (trade Dionysis, or in the water below Outlook Park).",
+          "rewards": "800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q9-material-quest-3",
@@ -6693,7 +6732,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "East of the Gem Man's stall, daytime",
+          "objective": "Collect 2 Vang Teeth (Little Vangs at night, west of the Main Entrance).",
+          "rewards": "800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q10-monster-quest-3-part-1",
@@ -6705,7 +6749,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "East of the Gem Man's stall, daytime",
+          "objective": "Defeat 2 Hand Bunnits (Tephra Hill, the south path from the Main Entrance).",
+          "rewards": "800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q11-monster-quest-3-part-2",
@@ -6717,7 +6766,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "East of the Gem Man's stall, daytime",
+          "objective": "Defeat 2 Beach Krabbles (southern shore of Anti-Air Battery 1).",
+          "rewards": "1000G",
+          "detailed": true
         },
         {
           "id": "wq-46-q12-monster-quest-3-part-3",
@@ -6729,7 +6783,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "East of the Gem Man's stall, daytime",
+          "objective": "Defeat 2 Wood Bunnits (Tephra Hill, just past the Hand Bunnits).",
+          "rewards": "800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q13-monster-quest-3-part-4",
@@ -6741,7 +6800,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "East of the Gem Man's stall, daytime",
+          "objective": "Defeat 3 Light Skeeters (north part of Anti-Air Battery 1).",
+          "rewards": "600G",
+          "detailed": true
         },
         {
           "id": "wq-46-q14-material-quest-4",
@@ -6753,7 +6817,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "North of Tranquil Square, night",
+          "objective": "Collect 1 Yolkless Flamii Egg (Lake Flamii, Anti-Air Battery 1 north shore).",
+          "rewards": "1000G",
+          "detailed": true
         },
         {
           "id": "wq-46-q15-monster-quest-2-part-1",
@@ -6765,7 +6834,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Entrance of Military District, daytime",
+          "objective": "Defeat 2 Lake Flamii (Anti-Air Battery 1, north shore).",
+          "rewards": "800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q16-monster-quest-2-part-2",
@@ -6777,7 +6851,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Entrance of Military District, daytime",
+          "objective": "Defeat 1 Baby Armu (Anti-Air Battery 1, north shore).",
+          "rewards": "1500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q17-monster-quest-2-part-3",
@@ -6789,7 +6868,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Entrance of Military District, daytime",
+          "objective": "Defeat 2 Stone Krabbles (Hazzai Cape — high-level area, use stealth/daytime).",
+          "rewards": "800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q18-challenge-1",
@@ -6801,7 +6885,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Center of the east wall, Military District, daytime",
+          "objective": "Defeat Evil Rhanagrot.",
+          "rewards": "1800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q19-challenge-3",
@@ -6813,7 +6902,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Entrance of Military District, night",
+          "objective": "Defeat Lake Magdalena.",
+          "rewards": "3000G",
+          "detailed": true
         },
         {
           "id": "wq-46-q20-monster-quest-1-part-1",
@@ -6825,7 +6919,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "North Military District, night",
+          "objective": "Defeat 2 Ridge Antols (south coast of Anti-Air Battery 1, night).",
+          "rewards": "800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q21-monster-quest-1-part-2",
@@ -6837,7 +6936,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "North Military District, night",
+          "objective": "Defeat 1 Cute Brog (south coast of Anti-Air Battery 1, night).",
+          "rewards": "500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q22-monster-quest-1-part-3",
@@ -6849,7 +6953,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "North Military District, night",
+          "objective": "Defeat 3 Colony Krabbles (Cliff Lake, east shore, night).",
+          "rewards": "1200G",
+          "detailed": true
         },
         {
           "id": "wq-46-q23-material-quest-2",
@@ -6861,7 +6970,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "NE of Ether Light, night",
+          "objective": "Collect 1 Small Scale (Colony Piranhax, pool below Outlook Park).",
+          "rewards": "800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q24-material-quest-1",
@@ -6873,7 +6987,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "Weapon Development Lab, daytime",
+          "objective": "Collect 2 Small Shells (Beach Krabbles, Anti-Air Battery 1 south shore).",
+          "rewards": "500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q25-collection-quest-2",
@@ -6885,7 +7004,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "Gem Man's Stall — north under the building, up the west stairs, night",
+          "objective": "Collect 1 Plate Snow (Colony 9).",
+          "rewards": "300G",
+          "detailed": true
         },
         {
           "id": "wq-46-q26-search-quest-1",
@@ -6897,7 +7021,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "Central Plaza, by a lamppost, night",
+          "objective": "Find the Wedding Ring (behind Dunban's House).",
+          "rewards": "1200G, 50 EXP",
+          "detailed": true
         },
         {
           "id": "wq-46-q27-search-quest-4",
@@ -6909,7 +7038,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "Tranquil Square HtH street, tree alcove, night",
+          "objective": "Find the Spanner (Gem Man's Stall — north overpass, west balcony, up the stairs, alcove to the south).",
+          "rewards": "1500G, 50 EXP",
+          "detailed": true
         },
         {
           "id": "wq-46-q28-search-quest-3",
@@ -6921,7 +7055,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "South of the Gem Man's Stall, daytime (seated at a table)",
+          "objective": "Find the Key (Tranquil Square HtH street — fenced property opposite Dionysus, around the back).",
+          "rewards": "1000G, 50 EXP",
+          "detailed": true
         },
         {
           "id": "wq-46-q29-search-quest-2",
@@ -6933,7 +7072,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "Wreckage of the mobile artillery, north Residential District, daytime",
+          "objective": "Find the Blue Glass Bead (Tranquil Square SW — use the barrels to jump the fence behind the house).",
+          "rewards": "1200G, 50 EXP",
+          "detailed": true
         },
         {
           "id": "wq-46-q30-challenge-4",
@@ -6945,7 +7089,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Colony 9 Resident",
+          "location": "Balcony north of the Gem Man's Stall, daytime",
+          "objective": "Defeat Wallslide Gwynry.",
+          "rewards": "2200G",
+          "detailed": true
         },
         {
           "id": "wq-46-q31-collection-quest-1",
@@ -6957,7 +7106,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Escape Pod Bay (east)",
+          "objective": "Collect 2 Kneecap Rocks (Tephra Cave).",
+          "rewards": "1000G",
+          "detailed": true
         },
         {
           "id": "wq-46-q32-collection-quest-2",
@@ -6969,7 +7123,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Escape Pod Bay (east)",
+          "objective": "Collect 2 Bright Figs (Tephra Cave).",
+          "rewards": "1500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q33-material-quest-1",
@@ -6981,7 +7140,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Escape Pod Bay (east)",
+          "objective": "Collect 3 Broken Pincers (Desert Krabble, west shore of Spring of Grief).",
+          "rewards": "1200G",
+          "detailed": true
         },
         {
           "id": "wq-46-q34-material-quest-2",
@@ -6993,7 +7157,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Escape Pod Bay (east)",
+          "objective": "Collect 1 lot of Brog Smelling Salts (Noble Brog, east shore of Spring of Grief).",
+          "rewards": "1500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q35-missing-in-action",
@@ -7005,7 +7174,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Warehouse 2, at the control panels atop the ramp",
+          "objective": "Speak with the soldier at the Cylinder Hangar.",
+          "rewards": "800G, 50 EXP, Leather Top, Leather Bottom",
+          "detailed": true
         },
         {
           "id": "wq-46-q36-the-lost-pendant",
@@ -7017,7 +7191,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Cylinder Hangar",
+          "objective": "Find the Pendant in Tephra Cave (Vilia Lake, NW), then report at the Cylinder Hangar.",
+          "rewards": "950G, 100 EXP, Quark Gear",
+          "strategy": "Prerequisite: Missing In Action completed.",
+          "detailed": true
         },
         {
           "id": "wq-46-q37-arachno-silk-fundraising",
@@ -7029,7 +7209,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Warehouse 2",
+          "objective": "Collect 3 Arachno Silk (rare drop, Worker Arachno — cave south of Spring of Grief).",
+          "rewards": "500G, 100 EXP, Ranger Gloves",
+          "detailed": true
         },
         {
           "id": "wq-46-q38-a-thank-you",
@@ -7041,7 +7226,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Warehouse 2",
+          "objective": "Locate the hidden object (from the Leg Pass head west, on the lower ledge).",
+          "rewards": "1500G, 100 EXP, Topple Resist II",
+          "detailed": true
         },
         {
           "id": "wq-46-q39-clearing-obstructions",
@@ -7053,7 +7243,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Defense Force Soldier",
+          "location": "Escape Pod Bay (east)",
+          "objective": "Defeat 2 Devoted Arachno, 4 Resolute Arachno, 3 Zealous Arachno (cave south of Spring of Grief).",
+          "rewards": "2500G, 200 EXP, Bleed Defense III",
+          "detailed": true
         },
         {
           "id": "wq-46-q40-biscuits-for-a-grandson",
@@ -7065,7 +7260,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Marcia",
+          "location": "NW of Ether Light, active 11:00–02:00",
+          "objective": "Deliver biscuits to Jiroque (HtH street, night, park on the left), then report to Marcia (daytime).",
+          "rewards": "800G, 30 EXP, Swimming Sandals",
+          "strategy": "Affinity: registers Marcia & Jiroque; yellow link 'close'.",
+          "detailed": true
         },
         {
           "id": "wq-46-q41-the-key-to-a-long-life",
@@ -7077,7 +7278,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Dionysus",
+          "location": "Tranquil Square bench (HtH road), 10:00–02:00",
+          "objective": "Collect 2 lots of Medicinal Brog Oil (Cute Brogs, Anti-Air Battery 1, night), then report.",
+          "rewards": "600G, 50 EXP, Light Shoes",
+          "detailed": true
         },
         {
           "id": "wq-46-q42-lonely-niranira",
@@ -7089,7 +7295,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Niranira",
+          "location": "Top of the stairs by the Tranquil Square HtH, daytime",
+          "objective": "Give Niranira's letter to Lukas (nearby), then report back.",
+          "rewards": "100G, 50 EXP, Block Guarder",
+          "strategy": "Affinity: yellow link 'Kind Friend' (Lukas/Niranira).",
+          "detailed": true
         },
         {
           "id": "wq-46-q43-the-broken-watch",
@@ -7101,7 +7313,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Desirée",
+          "location": "Balcony behind the Gem Man's Stall (NE stairs), night",
+          "objective": "Inspect the watch at the Wep. Dev. Lab, collect 3 Blue Chains, repair it, return it to Desirée.",
+          "rewards": "750G, 80 EXP, Muscle Up II",
+          "strategy": "Prerequisite: Shulk must be party leader.",
+          "detailed": true
         },
         {
           "id": "wq-46-q44-education-minded-suzana",
@@ -7113,7 +7331,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Suzana",
+          "location": "SW of Tranquil Square, daytime",
+          "objective": "Collect 2 lots of Black Nectar (Tephra Cave; easier to trade from Kenny Rohan), then report.",
+          "rewards": "500G, 50 EXP, Light Cap",
+          "strategy": "Prereq: speak to her son Moritz first. Trading with Kenny may unlock trial 'Friend Number Ten'.",
+          "detailed": true
         },
         {
           "id": "wq-46-q45-a-young-captains-request",
@@ -7125,7 +7349,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Emmy Leater",
+          "location": "North Military District, daytime",
+          "objective": "Find Miller in the Commercial District, then report back.",
+          "rewards": "600G, 70 EXP, Dyed Top/Bottoms/Mules",
+          "detailed": true
         },
         {
           "id": "wq-46-q46-flattened-flowers",
@@ -7137,7 +7366,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Françoise",
+          "location": "NW of Tranquil Square, in her flower garden, daytime",
+          "objective": "Collect 5 Dawn Hydrangeas (Colony 9), then report.",
+          "rewards": "750G, 100 EXP, Soil Gauntlets",
+          "detailed": true
         },
         {
           "id": "wq-46-q47-pride-and-courage",
@@ -7149,7 +7383,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Lukas",
+          "location": "East Tranquil Square",
+          "objective": "Rescue Niranira (at Hazzai Cape), then report to Lukas / Moritz / Lukas.",
+          "rewards": "800G, 100 EXP, Attack Plus II",
+          "detailed": true
         },
         {
           "id": "wq-46-q48-a-curry-conundrum",
@@ -7161,7 +7400,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Giorgio",
+          "location": "Ether Light restaurant, daytime",
+          "objective": "Collect 5 Dance Apples (Colony 9), then report.",
+          "rewards": "1200G, 60 EXP, Caravan Gauntlets",
+          "detailed": true
         },
         {
           "id": "wq-46-q49-roccos-heartful-request",
@@ -7173,7 +7417,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Rocco",
+          "location": "In front of the Gem Man's Stall, daytime",
+          "objective": "Find someone to repair the pendant (Dean, alley south of the Wep. Dev. Lab — Shulk must be in the lead), then report.",
+          "rewards": "350G, 100 EXP, Tinted Glasses, Pretty Bangle",
+          "strategy": "Prereq: Sonia registered. IMPORTANT — before finishing, speak with Erik (midnight, leaving the Wep. Dev. Lab) to lock the Erik/Dean 'both scientists' link (trial 'constellation'); it's missable if you complete the sequel first.",
+          "detailed": true
         },
         {
           "id": "wq-46-q50-deans-shady-request",
@@ -7185,7 +7435,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Dean",
+          "location": "Alley south of the Weapon Development Lab, daytime",
+          "objective": "Speak with Sonia → collect 2 Shin Geckos (Tephra Cave; or trade Meifimeifi), then report.",
+          "rewards": "1500G, 200 EXP, Lock-On Resist II",
+          "strategy": "Prereq: Liliana registered. Shin Geckos are rare — patience or high Colony 9 affinity for the trade. (Trial: the strongest tie.)",
+          "detailed": true
         },
         {
           "id": "wq-46-q51-education-crazy-suzanna",
@@ -7197,7 +7453,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Suzanna",
+          "location": "Tranquil Square",
+          "objective": "Collect 2 Heavy Bunniv Iron (Iron Bunniv, south of Mag Mell Ruins, up the ramp), then report.",
+          "rewards": "1500G, 300 EXP, Ranger Cap",
+          "detailed": true
         },
         {
           "id": "wq-46-q52a-romantic-notions-of-a-girl",
@@ -7209,7 +7470,13 @@
           "mutexWith": "Romantic Notions Of A Boy",
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Monica",
+          "location": "Alley north of the Wep. Dev. Lab, 20:00",
+          "objective": "Collect a Tephra Drop (Spring of Grief, night), then report to Monica.",
+          "rewards": "1200G, 300 EXP, Soil Gear",
+          "strategy": "Prereq: Erik registered.",
+          "detailed": true
         },
         {
           "id": "wq-46-q52b-romantic-notions-of-a-boy",
@@ -7221,7 +7488,13 @@
           "mutexWith": "Romantic Notions Of A Girl",
           "story": false,
           "note": "Guide pick: Andreas (better affinity).",
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Andreas",
+          "location": "North/NE of Monica's spot, 22:00",
+          "objective": "Collect a Tephra Drop (Spring of Grief, night), then report to Andreas.",
+          "rewards": "1200G, 300 EXP, Soil Boots",
+          "mutexWhy": "Guide picks ANDREAS. Whoever you choose gets a blue link with Monica, so it comes down to how the rejected suitor reacts: Andreas refuses rejection (red link) while Erik accepts it (orange) — so choosing Andreas leaves the stronger affinity chart. (First mutex; trial 'shaping history'.)",
+          "detailed": true
         },
         {
           "id": "wq-46-q53-an-impoverished-critic",
@@ -7233,7 +7506,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Leopold",
+          "location": "Center of Ether Light, night",
+          "objective": "Meet King Squeeze (behind the Gem Man's Stall, night) — triggers a vision and Q54.",
+          "rewards": "—",
+          "strategy": "Prereq: Sylvaine registered. (Trial: Colony 9 Celeb.)",
+          "detailed": true
         },
         {
           "id": "wq-46-q54a-financial-planning-leopold-route",
@@ -7245,7 +7524,12 @@
           "mutexWith": "Financial Planning (Sylvaine route)",
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "King Squeeze",
+          "location": "Colony 9",
+          "objective": "Speak with Sylvaine, collect the Top-Secret Orders (Anti-Air Battery 3 ramp), show King Squeeze.",
+          "rewards": "2500G, 500 EXP, Quark Boots",
+          "detailed": true
         },
         {
           "id": "wq-46-q54b-financial-planning-sylvaine-route",
@@ -7257,7 +7541,13 @@
           "mutexWith": "Financial Planning (Leopold route)",
           "story": false,
           "note": "Guide pick: Sylvaine.",
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "King Squeeze",
+          "location": "Colony 9",
+          "objective": "Speak with Leopold, collect 5 Caterpile Poison (Eater/Cute Caterpile, Caterpile Nest, Tephra Cave).",
+          "rewards": "2500G, 500 EXP, Ranger Shoes",
+          "mutexWhy": "Guide leans SYLVAINE (investigate route) but calls it a genuine personal choice — it's only +1 stronger. The real question is ethics vs. romance: taking matters into his own hands (Leopold/frame route) damages Leopold's reputation and his relationship with Sylvaine.",
+          "detailed": true
         },
         {
           "id": "wq-46-q55-overworked-and-underpaid",
@@ -7269,7 +7559,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Giorgio",
+          "location": "Colony 9",
+          "objective": "Two routes: (Giorgio) collect 3 Fresh Armu Milk; or speak to Paola → collect 3 Insanity Mint (Tephra Cave) → report Paola → tell Giorgio.",
+          "rewards": "3000G, 300 EXP, HP Up II or Ether Defense Up II",
+          "strategy": "Paola's route is better for the affinity chart.",
+          "detailed": true
         },
         {
           "id": "wq-46-q56a-pestering-paola",
@@ -7281,7 +7577,12 @@
           "mutexWith": "Out-Of-Luck Giorgio",
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Giorgio",
+          "location": "Colony 9",
+          "objective": "Speak with Paola → defeat Fiendish Bunnit (Cliff Lake, NE) → report Paola, then Giorgio.",
+          "rewards": "4500G, 550 EXP, Quark Leggings",
+          "detailed": true
         },
         {
           "id": "wq-46-q56b-out-of-luck-giorgio",
@@ -7293,7 +7594,13 @@
           "mutexWith": "Pestering Paola",
           "story": false,
           "note": "Guide pick: Paola route.",
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Giorgio",
+          "location": "Colony 9",
+          "objective": "Collect 5 lots of Piranhax Roe (Leg Piranhax) + 3 Juicy Broccoli (Bionis' Leg).",
+          "rewards": "5500G, 250 EXP, Quark Gauntlets",
+          "mutexWhy": "Guide picks PAOLA — speak with her during 'Overworked and Underpaid' to unlock 'Out-Of-Luck Giorgio', which gives a stronger father/daughter link than the alternative 'Pestering Paola'.",
+          "detailed": true
         },
         {
           "id": "wq-46-q57-the-plan-preparation",
@@ -7305,7 +7612,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Sesame",
+          "location": "East of the Gem Man's stall, behind the boxes, night",
+          "objective": "Collect 2 Croaking Brog Bags (Singing Brogs) → deliver to Betty for the Sealed Package → Sesame.",
+          "rewards": "1000G, 150 EXP, Critical Up II",
+          "detailed": true
         },
         {
           "id": "wq-46-q58-the-plan-the-night-before",
@@ -7317,7 +7629,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Sesame",
+          "location": "Colony 9 (night)",
+          "objective": "Collect 2 Iron Krabble Shells (Colony Krabble, Cliff Lake shore, night) → deliver to Kenny Rohan for the Fragile Package → Sesame.",
+          "rewards": "1500G, 200 EXP, Strength Up III",
+          "strategy": "Prereq: The Plan: Preparation completed.",
+          "detailed": true
         },
         {
           "id": "wq-46-q59-the-plan-execution",
@@ -7329,7 +7647,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Sesame",
+          "location": "Colony 9",
+          "objective": "Defeat Dark Murakmor → report, check the lamp post by the Main Entrance → report (triggers a cutscene).",
+          "rewards": "5000G, 1200 EXP, Attack Stability II",
+          "strategy": "Prereq: all earlier 'The Plan' quests.",
+          "detailed": true
         },
         {
           "id": "wq-46-q60-monster-quest-1-part-1",
@@ -7341,7 +7665,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Homs Traveller",
+          "location": "East of the Raginar Canyon Path",
+          "objective": "Defeat 2 Leg Ardun (Gaur Plain).",
+          "rewards": "1500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q61-monster-quest-1-part-2",
@@ -7353,7 +7682,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Homs Traveller",
+          "location": "East of the Raginar Canyon Path",
+          "objective": "Defeat 3 Maker Bunnits (Gaur Plain, north).",
+          "rewards": "1200G",
+          "detailed": true
         },
         {
           "id": "wq-46-q62-monster-quest-1-part-3",
@@ -7365,7 +7699,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Homs Traveller",
+          "location": "East of the Raginar Canyon Path",
+          "objective": "Defeat 5 Field Ponios (Gaur Plain, day).",
+          "rewards": "2500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q63-monster-quest-1-part-4",
@@ -7377,7 +7716,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Homs Traveller",
+          "location": "East of the Raginar Canyon Path",
+          "objective": "Defeat 3 Leg Volff (Gaur Plain, night).",
+          "rewards": "1800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q64-search-quest-1",
@@ -7389,7 +7733,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "Up the hill west of the lake, Refugee Camp, day",
+          "objective": "Find the Bird Necklace (out the north of camp, east, via Kisk Cave to the plateau beyond).",
+          "rewards": "2500G, 200 EXP",
+          "detailed": true
         },
         {
           "id": "wq-46-q65-search-quest-2",
@@ -7401,7 +7750,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "East shore of the Refugee Camp lake, night",
+          "objective": "Collect the Torn Paper (Gaur Plain southern peninsula — high-level area, use stealth).",
+          "rewards": "2000G, 200 EXP",
+          "detailed": true
         },
         {
           "id": "wq-46-q66-collection-quest-1",
@@ -7413,7 +7767,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "Inside the Refugee Camp cave (south of the HtH), night",
+          "objective": "Collect 2 Clear Almonds (Tephra Cave).",
+          "rewards": "1000G",
+          "detailed": true
         },
         {
           "id": "wq-46-q67-collection-quest-2",
@@ -7425,7 +7784,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "Refugee Camp, east shore of the lake, day",
+          "objective": "Collect 3 Moth Crawlers (Bionis' Leg).",
+          "rewards": "1500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q68-challenge-1-part-2",
@@ -7437,7 +7801,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "On the trail into the Refugee Camp",
+          "objective": "Defeat Violent Andante.",
+          "rewards": "3800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q69-challenge-2-part-2",
@@ -7449,7 +7818,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "North of the lake at the Refugee Camp, day",
+          "objective": "Defeat Vagrant Alfead (Tirkin Headquarters — NW of Kamos Guidepost, in the cavern).",
+          "rewards": "4800G",
+          "detailed": true
         },
         {
           "id": "wq-46-q70-monster-quest-2",
@@ -7461,7 +7835,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "Refugee Camp, east of the lake by the cliffs, day",
+          "objective": "Defeat 2 Basin Antols (forested area leading into the camp).",
+          "rewards": "2000G",
+          "detailed": true
         },
         {
           "id": "wq-46-q71-monster-quest-3-part-1",
@@ -7473,7 +7852,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "West side of the Refugee Camp lake",
+          "objective": "Defeat 5 Mechon M64 (Maguel Road — no rush, you pass there later).",
+          "rewards": "2500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q72-monster-quest-3-part-2",
@@ -7485,7 +7869,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "West side of the Refugee Camp lake",
+          "objective": "Defeat 2 Brave Tirkins (Tirkin Headquarters).",
+          "rewards": "5000G",
+          "detailed": true
         },
         {
           "id": "wq-46-q73-material-quest-1",
@@ -7497,7 +7886,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "Refugee Camp",
+          "objective": "Collect 2 Brog Leg Meat (Leg Brog) + 2 Fertile Flamii Egg (Oasis Flamii) — Raguel Lake central island, during a thunderstorm.",
+          "rewards": "1000G",
+          "detailed": true
         },
         {
           "id": "wq-46-q74-material-quest-2",
@@ -7509,7 +7903,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "Refugee Camp cavern (Gorman), night",
+          "objective": "Collect 2 Tirkin Crests (Javelin Tirkins, Tirkin HQ) + 2 Tirkin Tail Feathers (Archer Tirkins, south of Jacob's Rock).",
+          "rewards": "1500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q75-material-quest-3",
@@ -7521,7 +7920,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "Refugee Camp",
+          "objective": "Collect 1 Bunnit Sapling (Slugger Bunnit, north of Jacob's Rock Rest Area).",
+          "rewards": "1200G",
+          "detailed": true
         },
         {
           "id": "wq-46-q76-material-quest-4",
@@ -7533,7 +7937,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "Refugee Camp (Gorman), night",
+          "objective": "Collect 3 Vang Third Molars (Gust Vangs, Kisk Cave).",
+          "rewards": "1200G",
+          "detailed": true
         },
         {
           "id": "wq-46-q77-thieving-monsters",
@@ -7545,7 +7954,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Gorman",
+          "location": "Refugee Camp cave interior, night",
+          "objective": "Retrieve the stolen Clothes (Tirkin Headquarters) and return them to Gorman.",
+          "rewards": "950G, 300 EXP, Grand Armour, Grand Leggings",
+          "strategy": "⏱ TIMED — locks at Colony 6 reconstruction (§4.11). Registers Gorman.",
+          "detailed": true
         },
         {
           "id": "wq-46-q78-emergency-treatment",
@@ -7557,7 +7972,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Olga",
+          "location": "Refugee Camp cave, daytime",
+          "objective": "Collect 5 lots of Glowing Wisp fluid (wisps at night, east of Jacob's Rock through the Gaur Plains — not raining).",
+          "rewards": "750G, 300 EXP, Quark Gear",
+          "strategy": "⏱ TIMED. Prereq: Gorman registered. Yellow link 'customer' (Gorman/Olga).",
+          "detailed": true
         },
         {
           "id": "wq-46-q79-a-thoughtful-idea",
@@ -7569,7 +7990,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Matryona",
+          "location": "Refugee Camp cavern, daytime",
+          "objective": "Speak with Ewan → collect 3 Ponio Neck Meat (Field Ponios, east Gaur Plains, day) → Ewan → Matryona.",
+          "rewards": "1200G, 280 EXP, Quark Armour",
+          "strategy": "⏱ TIMED. Orange link 'bad feeling' (Ewan/Matryona).",
+          "detailed": true
         },
         {
           "id": "wq-46-q80-a-dash-of-colour",
@@ -7581,7 +8008,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Ewan",
+          "location": "Refugee Camp cave interior, daytime",
+          "objective": "Collect 4 Sour Gooseberries (Bionis' Leg) → Ewan → deliver items to Matryona → Ewan.",
+          "rewards": "750G, 200 EXP, Lime Bangle",
+          "strategy": "⏱ TIMED. Prereq: A Thoughtful Idea. Link improves to yellow 'interested'.",
+          "detailed": true
         },
         {
           "id": "wq-46-q81-being-a-good-grandfather",
@@ -7593,7 +8026,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Satata",
+          "location": "Refugee Camp, south shore of the lake, daytime",
+          "objective": "Collect 3 Sticky Web fibers (Leg Arachno, Kisk Cave) → Satata → Kokori → Satata.",
+          "rewards": "1000G, 220 EXP, Initial Tension III",
+          "strategy": "⏱ TIMED. Prereq: Nikita registered. Blue link 'close family' (Satata/Kokori).",
+          "detailed": true
         },
         {
           "id": "wq-46-q82-earnests-fibs",
@@ -7605,7 +8044,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Earnest",
+          "location": "Shore of the lake outside the Refugee Camp",
+          "objective": "Examine the ether mine at Kisk Cave, then report to Earnest.",
+          "rewards": "750G, 300 EXP, Lime Bangle",
+          "detailed": true
         },
         {
           "id": "wq-46-q83-save-the-girl",
@@ -7617,7 +8061,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Surprise Quest",
+          "location": "Gaur Plains, waterfall SE of Jacob's Rock Rest Area",
+          "objective": "Defeat 4 Ferocious Volff near the waterfall, then report to the girl.",
+          "rewards": "1200G, 300 EXP, Diver Top, Diver Bottoms",
+          "strategy": "⏱ TIMED.",
+          "detailed": true
         },
         {
           "id": "wq-46-q84-challenge-1-part-1",
@@ -7629,7 +8079,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "Refugee Camp, trail into camp",
+          "objective": "Defeat White Eduardo.",
+          "rewards": "5500G",
+          "detailed": true
         },
         {
           "id": "wq-46-q85-the-greedy-monster",
@@ -7641,7 +8096,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Satata",
+          "location": "South shore of the lake outside the Refugee Camp",
+          "objective": "Defeat the Abnormal Brog (Raguel Lake central island), then report to Satata.",
+          "rewards": "1100G, 400 EXP, Sleep Resist II",
+          "strategy": "⏱ TIMED. Prereq: Being a Good Grandfather.",
+          "detailed": true
         },
         {
           "id": "wq-46-q86-earnests-mischief",
@@ -7653,7 +8114,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Earnest",
+          "location": "Bionis' Leg",
+          "objective": "Examine the ether deposit at Tranquil Grotto, then report to Earnest.",
+          "rewards": "—",
+          "strategy": "Prereq: Earnest's Fibs.",
+          "detailed": true
         },
         {
           "id": "wq-46-q87a-imaginations-tempered",
@@ -7665,7 +8132,13 @@
           "mutexWith": "Spirits Raised",
           "story": false,
           "note": "Guide pick: Imaginations Tempered (get the Lake Drop).",
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Matryona",
+          "location": "Refugee Camp cave interior, daytime",
+          "objective": "Collect 1 Lake Drop (Raguel Lake, east shore north of Tranquil Grotto) → Matryona → give the picture book to Pama.",
+          "rewards": "1500G, 250 EXP, Damage Heal II",
+          "strategy": "⏱ TIMED. Prereq: A Dash of Colour + A Thoughtful Idea.",
+          "detailed": true
         },
         {
           "id": "wq-46-q87b-spirits-raised",
@@ -7677,7 +8150,13 @@
           "mutexWith": "Imaginations Tempered",
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Arda",
+          "location": "Refugee Camp cave interior (rear), daytime",
+          "objective": "Collect a Medicinal Herb (from Raguel Bridge: North, SE down the slope under a tree) → Arda.",
+          "rewards": "800G, 400 EXP, Arts Heal II",
+          "mutexWhy": "Guide picks IMAGINATIONS TEMPERED (get the Lake Drop). It gives a clearly better affinity chart; Ewan & Matryona reach green either way, but this route is cleaner. Spirits Raised's only edge is slightly earlier Colony 6 area affinity — negligible since you'll max every area's affinity anyway. ⏱ Both are TIMED.",
+          "detailed": true
         }
       ],
       "ums": [
@@ -7688,7 +8167,10 @@
           "area": "Colony 9",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "From the Main Entrance go west, then north to the beach; swerve NE — the larger caterpile is your target.",
+          "strategy": "Easy — just lay into him with arts. (First UM kill: trial Hunter-in-Training, plus likely your first gold chest.)",
+          "detailed": true
         },
         {
           "id": "wum-46-um2",
@@ -7697,7 +8179,10 @@
           "area": "Colony 9",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "From the Main Entrance up Tephra Hill — behind the boulder on the second knoll.",
+          "strategy": "Not difficult — open with Back Slash (he's not looking), then finish with arts.",
+          "detailed": true
         },
         {
           "id": "wum-46-um3",
@@ -7706,7 +8191,11 @@
           "area": "Colony 9",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Lake below Outlook Park (jump the cliff west of the landmark).",
+          "condition": "Night only",
+          "strategy": "Lots of allies — focus him with party commands.",
+          "detailed": true
         },
         {
           "id": "wum-46-um4",
@@ -7715,7 +8204,10 @@
           "area": "Colony 9",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Cliff Lake (the 'f' on the map) — from the colony waters go NW.",
+          "strategy": "Break (Shulk) + topple (Reyn), Sharla heals; clear allies one by one.",
+          "detailed": true
         },
         {
           "id": "wum-46-um5",
@@ -7724,7 +8216,11 @@
           "area": "Colony 9",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "East shore of Cliff Lake.",
+          "condition": "Day only",
+          "strategy": "Easy — plow with arts; Reyn topples if it gets chaotic.",
+          "detailed": true
         },
         {
           "id": "wum-46-um6",
@@ -7733,7 +8229,11 @@
           "area": "Colony 9",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Anti-Air Battery 1, far shore (quick-travel Tephra Cave Entrance, jump in, swim SE).",
+          "condition": "Dawn only (~05:00)",
+          "strategy": "Focus on toppling him; clear the Flamii first.",
+          "detailed": true
         },
         {
           "id": "wum-46-um7",
@@ -7742,7 +8242,10 @@
           "area": "Tephra Cave",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Tephra Cave — east of the Rear Entrance in Warehouse 2 (at 'Bay' on the map).",
+          "strategy": "Keep him toppled: break (Shulk) → topple (Reyn) → Sharla heals. Build gauge via criticals / Shulk's positional bonuses.",
+          "detailed": true
         },
         {
           "id": "wum-46-um8",
@@ -7751,7 +8254,10 @@
           "area": "Tephra Cave",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Tephra Cave — Caterpile Nest.",
+          "strategy": "Easy. Poison-resist armour optional (Sharla covers it). Clear the caterpiles around him first. (Record: Walking Insecticide.)",
+          "detailed": true
         },
         {
           "id": "wum-46-um9",
@@ -7760,7 +8266,11 @@
           "area": "Colony 9",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Anti-Air Battery 3 summit (from Tranquil Square go NE, jump the fence, swim west, climb the battery).",
+          "condition": "Night only",
+          "strategy": "Immune to break — just plow through. (Trial: Pro Hunter.)",
+          "detailed": true
         },
         {
           "id": "wum-46-um10",
@@ -7769,7 +8279,10 @@
           "area": "Bionis' Leg",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "SE of Kamos Guidepost.",
+          "strategy": "Nothing new — standard break/topple.",
+          "detailed": true
         },
         {
           "id": "wum-46-um11",
@@ -7778,7 +8291,10 @@
           "area": "Bionis' Leg",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Tirkin Headquarters (atop the hill).",
+          "strategy": "Standard — just don't get surprised.",
+          "detailed": true
         },
         {
           "id": "wum-46-um12",
@@ -7787,7 +8303,11 @@
           "area": "Bionis' Leg",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Raguel Lake, central island.",
+          "condition": "Thunderstorms only",
+          "strategy": "—",
+          "detailed": true
         },
         {
           "id": "wum-46-um13",
@@ -7796,7 +8316,11 @@
           "area": "Bionis' Leg",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "NE of 'plain' on the lower map (Gaur Plains).",
+          "condition": "Rain or thunderstorm",
+          "strategy": "Clear the volff allies first; not a hard fight.",
+          "detailed": true
         },
         {
           "id": "wum-46-um14",
@@ -7805,7 +8329,10 @@
           "area": "Bionis' Leg",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "North of the Jacob's Rock Rest Area.",
+          "strategy": "—",
+          "detailed": true
         }
       ],
       "hths": [
@@ -7817,7 +8344,10 @@
           "affinity": "Green",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Tephra Cave Entrance",
+          "gainChoices": "When we had that big fight? // Of course.",
+          "detailed": true
         },
         {
           "id": "whth-46-hth3",
@@ -7827,12 +8357,66 @@
           "affinity": "Green",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Interior of the Refugee Camp cave",
+          "gainChoices": "You, by a whisker. // You have dignified qualities.",
+          "detailed": true
         }
       ],
       "colony6": [],
       "notes": [
         "Refugee Camp ⏱ TIMED quests in this section lock once Colony 6 reconstruction begins (§4.11)."
+      ],
+      "landmarks": [
+        "Tranquil Square",
+        "Anti-Air Battery 3",
+        "Hazzai Cape",
+        "Agora Shore",
+        "Anti-Air Battery 2",
+        "Cliff Lake",
+        "Volff Lair",
+        "Viliera Hill",
+        "Sky Stage",
+        "Daksha Shrine",
+        "Observation Platform",
+        "Raguel Lake",
+        "Tranquil Grotto",
+        "Raguel Bridge: South",
+        "Raguel Bridge: North",
+        "Windy Cave",
+        "Crevasse Waterfall",
+        "Kisk Cave"
+      ],
+      "locations": [
+        "Agora Shore",
+        "Anti-Air Battery 2",
+        "Anti-Air Battery 3",
+        "Hazzai Cape",
+        "Cliff Lake"
+      ],
+      "records": [
+        "Equivalent Exchange — first successful trade with an NPC",
+        "Lazybones — skip-travel 50 times",
+        "Breaking The Ice — party banter on registering a quest for the first time",
+        "Idle Chit-Chat — party banter on registering quests 50 times",
+        "Ear To The Ground — spoken to people 100 times",
+        "Unlucky Sixes — deal exactly 666 damage in one hit",
+        "Lucky Sevens — deal exactly 777 damage in one hit",
+        "Rear Admiral — perform a back attack 50 times",
+        "It Hasn't Lost Its Lustre — open 10 gold chests",
+        "Hoarding Treasure — open 50 silver chests",
+        "Airing Grievances — defeat 30 flying monsters",
+        "Raring To Go — get your first rare ether crystal",
+        "Simply Smashing! — smash 100 vision tags",
+        "Killer Combo — deal 3,000 damage with a chain attack",
+        "Ground To A Pulp — defeat 250 ground-type monsters",
+        "Unshakeable Trust — raise two party members to blue affinity",
+        "Colony 9 Celebrity — reach 3-star affinity with Colony 9"
+      ],
+      "notaBene": [
+        "Around this section you'll likely pick up: Second Wind (10 revivals), Art School (level an art to Lv. 2) and Ninja Skillz (one-shot an enemy with Back Slash).",
+        "Item Vision: on collecting an early Bionis' Leg collectable (e.g. Moth Crawler / Sour Gooseberry) a gray vision flags that you'll need several of that item — they're then marked in your inventory until you hit the count.",
+        "Arts palette fills up around Lv. 16 (Reyn learns a 9th art) — you can only equip 8, so swap via the Arts submenu."
       ],
       "arc": "arc1"
     },

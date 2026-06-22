@@ -280,6 +280,24 @@
     if (item.confidence === "verify") out.push(el("span", { class: "badge verify", title: "Double-check in-game" }, ["⚠ Verify"]));
     return out;
   }
+  function itemDetails(item) {
+    const rows = [
+      ["Area", item.area], ["Giver", item.giver], ["Location", item.location],
+      ["Condition", item.condition], ["Affinity", item.affinity], ["Objective", item.objective],
+      ["Gain choices", item.gainChoices], ["Rewards", item.rewards], ["Strategy", item.strategy],
+      ["Why this pick", item.mutexWhy]
+    ].filter(([, v]) => v);
+    const hasRich = item.giver || item.location || item.objective || item.rewards || item.strategy ||
+      item.condition || item.gainChoices || item.mutexWhy || item.affinity;
+    if (!hasRich) return null;
+    return el("details", { class: "qdetails" }, [
+      el("summary", null, ["details"]),
+      el("div", { class: "qfields" }, rows.map(([k, v]) =>
+        el("div", { class: "qf" + (k === "Why this pick" ? " why" : "") }, [
+          el("span", { class: "qf-k", text: k }), el("span", { class: "qf-v", text: v })
+        ])))
+    ]);
+  }
   function walkRow(item, kind) {
     const checked = Store.isChecked(item.id);
     return el("label", { class: "item" + (checked ? " done" : ""), id: "item-" + item.id }, [
@@ -287,8 +305,18 @@
       el("span", { class: "item-body" }, [
         el("span", { class: "item-label" }, [item.code ? el("span", { class: "qcode", text: item.code + " " }) : null, document.createTextNode(item.label)]),
         el("span", { class: "item-badges" }, walkBadges(item, kind)),
-        item.note ? el("span", { class: "item-note", text: item.note }) : null
+        item.note ? el("span", { class: "item-note", text: item.note }) : null,
+        itemDetails(item)
       ])
+    ]);
+  }
+  // reference panel (display-only): landmarks/locations (quoted), records, nota bene, affinity steps
+  function refList(label, arr, opts) {
+    opts = opts || {};
+    if (!arr || !arr.length) return null;
+    return el("div", { class: "ref-block" + (opts.cls ? " " + opts.cls : "") }, [
+      el("div", { class: "ref-head", text: label + " (" + arr.length + ")" }),
+      el("ul", { class: "ref-listw" }, arr.map((x) => el("li", { text: opts.quote ? "“" + x + "”" : x })))
     ]);
   }
   function walkBlock(label, list, kind) {
@@ -329,6 +357,14 @@
       walkBlock("Colony 6 Development", s.colony6, "c6")
     ]);
     if (!body.querySelector(".cat-block")) body.appendChild(el("div", { class: "muted empty", text: "(Story/exploration section — nothing to check off here, or filtered out.)" }));
+    // reference panels from the guide (display-only)
+    [
+      refList("📍 Landmarks discovered here", s.landmarks, { quote: true }),
+      refList("📍 Locations discovered here", s.locations, { quote: true }),
+      refList("💞 Improve area affinity — steps", s.affinitySteps),
+      refList("🏅 Records to unlock", s.records),
+      refList("📝 Nota Bene", s.notaBene, { cls: "nb" })
+    ].forEach((p) => p && body.appendChild(p));
     return el("section", { class: "area-card" }, [
       el("div", { class: "area-head" }, [
         el("h3", { text: s.title }),
