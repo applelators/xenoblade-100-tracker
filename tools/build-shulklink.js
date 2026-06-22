@@ -839,7 +839,7 @@ try { DETAILS = require("./shulklink-details.js"); } catch (e) { console.warn("(
 let enriched = 0;
 sections.forEach((s) => {
   const sd = DETAILS.sections[s.id];
-  if (sd) ["landmarks", "locations", "affinitySteps", "records", "notaBene"].forEach((k) => { if (sd[k]) s[k] = sd[k]; });
+  if (sd) ["guide", "landmarks", "locations", "affinitySteps", "records", "notaBene"].forEach((k) => { if (sd[k]) s[k] = sd[k]; });
   [...s.quests, ...s.ums, ...s.hths].forEach((it) => {
     const d = DETAILS.items[s.id + ":" + it.code];
     if (d) { Object.assign(it, d); it.detailed = true; enriched++; }

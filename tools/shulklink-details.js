@@ -15,6 +15,12 @@ module.exports = {
   sections: {
     "4.2": {},
     "4.6": {
+      guide: [
+        "No story to advance here — this is the big side-quest sweep across Colony 9, Tephra Cave, and the Bionis' Leg / Refugee Camp.",
+        "Suggested order: clear Colony 9's daytime quests, then its night quests, then the Tephra Cave batch, then head to the Bionis' Leg and work the Refugee Camp quests.",
+        "Use the Quests column — each item's details give the giver, exact location, objective and reward; unique-monster spots and the 'which to pick' notes for mutually-exclusive quests are in their own details.",
+        "⏱ The Refugee Camp timed quests can be left for now, but they ALL lock when you start Colony 6 reconstruction (§4.11) — don't trigger that until they're done."
+      ],
       landmarks: ["Tranquil Square", "Anti-Air Battery 3", "Hazzai Cape", "Agora Shore", "Anti-Air Battery 2",
         "Cliff Lake", "Volff Lair", "Viliera Hill", "Sky Stage", "Daksha Shrine", "Observation Platform",
         "Raguel Lake", "Tranquil Grotto", "Raguel Bridge: South", "Raguel Bridge: North", "Windy Cave",
@@ -46,6 +52,13 @@ module.exports = {
       ]
     },
     "4.7": {
+      guide: [
+        "More cleanup plus a region boss. First, mop up the remaining Tephra Cave unique monsters.",
+        "Head up the Leg: from Raguel Bridge: North go northeast to Maguel Road, then north to the story flag. You'll fight the area's boss here (Mechon M71, Lv. 18) before finishing the errata because it blocks access — beating it locks nothing.",
+        "A short second fight follows (Mysterious Face, Lv. 25) — just survive; Sharla keeps the party up.",
+        "Afterward, finish the upper-Leg map (Traveller's Rest, Spiral Valley, Bask Cave Passage, Kasharpa Falls, Zax Guidepost, Believer's Paradise) and clear the remaining quests and the long affinity-link list.",
+        "When everything's done, quick-travel to the Bask Cave Passage and head southeast to the next region, Colony 6."
+      ],
       landmarks: ["Spiral Valley", "Bask Cave Passage", "Zax Guidepost", "Believer's Paradise"],
       locations: ["Traveller's Rest", "Kasharpa Falls"],
       records: [
@@ -104,26 +117,58 @@ module.exports = {
       ]
     },
     "4.1": {
+      guide: [
+        "It's a guided tutorial battle you can't lose — just learn the basics: target with L/R, fire Arts with A, and against Mechon use Monado Enchant (then Buster on the boss).",
+        "Play through to the title screen; the prologue ends there."
+      ],
       notaBene: ["Pure tutorial — you can't lose. Use Monado Enchant on the Mechon and finish the boss (Mechon M82) with Buster around 50% HP."]
     },
     "4.2": {
+      guide: [
+        "You take control as Shulk at the Mechon Wreckage Site. Win the tutorial fight, grab the chest, then head south down the road and follow it east into Colony 9.",
+        "Take the grand tour for free landmark EXP: Main Entrance → Ether Light → Gem Man's Stall → Central Plaza → Fortress Entrance, then into the Military District and west to the Weapon Dev. Lab.",
+        "Follow the story prompt 'Delivering Food' (Q1): bring the lunch to Shulk at Outlook Park, and watch the 'Sunrise in the Park' heart-to-heart there.",
+        "Return to the Weapon Dev. Lab to trigger the next beat, then take the errand toward Tephra Cave: quick-travel to the Main Entrance and climb the south trail up Tephra Hill to the Tephra Cave Entrance.",
+        "Hold off on side quests for now — the guide flags a story event ahead you don't want to be mid-quest for."
+      ],
       landmarks: ["Mechon Wreckage Site", "Main Entrance", "Ether Light", "Gem Man's Stall", "Central Plaza", "Fortress Entrance", "Outlook Park", "Tephra Cave Entrance"],
       locations: ["Commercial District", "Military District", "Weapon Dev. Lab", "Dunban's House", "Tephra Hill"],
       records: ["First Steps — your first trial (Mechon Wreckage Site)", "Back-Stabber — first Back Slash from behind", "Let's Fight — first burst affinity challenge", "Turn It Up! — a party member reaches high tension"],
       notaBene: ["Fiora is only playable until the upcoming cutscene.", "Hold off on quests for now — story events are coming that make it awkward."]
     },
     "4.3": {
+      guide: [
+        "Enter Tephra Cave. Follow the path west; at the fork go north past the Caterpile Nest (steer clear of the unique monster in the middle) and continue to the Mag Mell Ruins.",
+        "Enter the ruins for a cutscene and the skip-travel tutorial. Recommended detour: skip-travel back to Colony 9 to claim the Gem Man's free gems and buy/equip gear (don't sell Reyn's Scrap Driver).",
+        "From the ruins, climb the ramp, head east through the door, then north through the cavern (follow the U-turn) to the Rear Entrance, which sends you back toward Colony 9.",
+        "Outside you'll unlock the Cylinder Hangar — head to the story flag to continue."
+      ],
       landmarks: ["Tephra Path", "Mag Mell Ruins", "Rear Entrance", "Cylinder Hangar"],
       locations: ["Caterpile Nest", "Warehouse 2"],
       records: ["A Corner Of The World — trial (Mag Mell Ruins)", "Skip It — first skip-travel", "That Hits The Slot — set up your party's gear"],
       notaBene: ["Visit the Gem Man for a Strength Up II + HP Up II gem.", "Do NOT sell Reyn's Scrap Driver — it can't be replaced.", "Just run from the unique monster in the hallway past Mag Mell Ruins for now."]
     },
     "4.4": {
+      guide: [
+        "After the hangar scene you're thrown into a forced fight, then the colony falls into chaos and quick-travel is disabled. Drop into the water below (you're safe), swim east to shore (Anti-Air Battery 1), and climb up to re-enter through the Main Entrance.",
+        "Make for the Weapon Dev. Lab: east to the Central Plaza, then north across the bridge into the Military District. With the lab blocked, the plan routes you to the Residential District.",
+        "Fight through the forced Mechon battles (use Monado Enchant once Shulk holds the Monado), heading southeast and across the bridge to the Residential District.",
+        "Boss — Metal Face (Lv. 10): survive Stage 1, then in Stage 2 topple-lock him with a chain attack (Enchant first → Stream Edge → Wild Down → Steel Strike) and burn ~25% of his HP with red Arts or Buster."
+      ],
       locations: ["Anti-Air Battery 1", "Residential District"],
       records: ["Making Waves — land in the water", "Critical Thinking — score a critical hit", "Come On, Cheer Up! — revive after the leader is incapacitated", "Go Team! — your first chain attack"],
       notaBene: ["First real boss: Metal Face (Lv. 10). Stage 2 needs topple-locking via a chain attack (Enchant first): Stream Edge → Wild Down → Steel Strike, then ~25% HP in red arts / Buster."]
     },
     "4.5": {
+      guide: [
+        "Set out from Colony 9 (try a gem craft at the Gem Man for a record). Quick-travel to the Mag Mell Ruins, up the ramp, east through the door, then south past the Escape Pod Bay into the Tephra Cavern.",
+        "Farm the ice-like ether deposit for your first crystals, grab the Spring of Grief landmark, then follow the path south through the spider caves (a forced arachno fight happens along the way).",
+        "Continue west then south, climb the vines, cross Vilia Lake, and climb up to the Arachno Queen's Nest.",
+        "Boss — Arachno Queen (Lv. 12): focus her with Arts and party commands, and use Shield when a vision warns of her talent art. Take the Queen's Gut Fluid afterward.",
+        "Use the Gut Fluid on the sticky web, head to the overlook, then northeast to Kneecap Hill → east to Leg Pass → east into the Bionis' Leg.",
+        "On the Leg: from Raginar Canyon Path go southeast onto Gaur Plain, reach the abandoned buggy (forced fight), then meet Juju and follow his directions — east to the tall post, then south to the Refugee Camp.",
+        "At camp, speak with Sharla in the cave and agree to listen. You now have a full party — head north to the marker to restore quick-travel, then move into the §4.6 errata."
+      ],
       landmarks: ["Spring Of Grief", "Vilia Lake", "Leg Pass", "Raginar Canyon Path", "Refugee Camp", "Kamos Guidepost"],
       locations: ["Tephra Cavern", "Arachno Queen's Nest", "Kneecap Hill", "Gaur Plain", "Rho Oasis"],
       records: ["Titan's Gift — farm your first ether crystals", "Learning The Craft — first gem craft", "Blossoming Friendship — reach green party affinity", "Bug Off — defeat 30 insects"],

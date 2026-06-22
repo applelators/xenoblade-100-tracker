@@ -425,6 +425,10 @@
       body.classList.remove("wcols");
       body.appendChild(el("div", { class: "muted empty", text: "(Story/exploration section — nothing to check off here, or filtered out.)" }));
     }
+    const route = (s.guide && s.guide.length) ? el("div", { class: "route" }, [
+      el("div", { class: "route-head", text: "🧭 Route — what to do" }),
+      el("ol", { class: "route-list" }, s.guide.map((step) => el("li", { text: step })))
+    ]) : null;
     return el("section", { class: "area-card" }, [
       el("div", { class: "area-head" }, [
         el("h3", { text: s.title }),
@@ -433,6 +437,7 @@
       ]),
       ...banners,
       ...((s.notes || []).map((n) => el("div", { class: "muted section-note", text: n }))),
+      route,
       body
     ]);
   }
