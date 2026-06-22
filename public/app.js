@@ -88,7 +88,7 @@
     // flat list of walkthrough items (quests/ums/hths/colony6) for progress counting
     WALK_ITEMS = [];
     (DATA.walkthrough || []).forEach((s) => {
-      ["quests", "ums", "hths", "colony6"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
+      ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
     });
   }
 
@@ -354,15 +354,15 @@
       walkBlock("Quests", s.quests, "q"),
       walkBlock("Unique Monsters", s.ums, "um"),
       walkBlock("Heart-to-Hearts", s.hths, "hth"),
-      walkBlock("Colony 6 Development", s.colony6, "c6")
+      walkBlock("Colony 6 Development", s.colony6, "c6"),
+      walkBlock("📍 Landmarks (discover here)", s.landmarks, "lm"),
+      walkBlock("📍 Locations (discover here)", s.locations, "loc"),
+      walkBlock("🏅 Records to unlock", s.records, "rec")
     ]);
     if (!body.querySelector(".cat-block")) body.appendChild(el("div", { class: "muted empty", text: "(Story/exploration section — nothing to check off here, or filtered out.)" }));
-    // reference panels from the guide (display-only)
+    // affinity-chart steps + Nota Bene stay display-only
     [
-      refList("📍 Landmarks discovered here", s.landmarks, { quote: true }),
-      refList("📍 Locations discovered here", s.locations, { quote: true }),
       refList("💞 Improve area affinity — steps", s.affinitySteps),
-      refList("🏅 Records to unlock", s.records),
       refList("📝 Nota Bene", s.notaBene, { cls: "nb" })
     ].forEach((p) => p && body.appendChild(p));
     return el("section", { class: "area-card" }, [

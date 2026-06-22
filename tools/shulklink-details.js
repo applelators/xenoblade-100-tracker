@@ -44,6 +44,64 @@ module.exports = {
         "Item Vision: on collecting an early Bionis' Leg collectable (e.g. Moth Crawler / Sour Gooseberry) a gray vision flags that you'll need several of that item — they're then marked in your inventory until you hit the count.",
         "Arts palette fills up around Lv. 16 (Reyn learns a 9th art) — you can only equip 8, so swap via the Arts submenu."
       ]
+    },
+    "4.7": {
+      landmarks: ["Spiral Valley", "Bask Cave Passage", "Zax Guidepost", "Believer's Paradise"],
+      locations: ["Traveller's Rest", "Kasharpa Falls"],
+      records: [
+        "Explorer — discover the Observation Platform",
+        "A generous friend — complete A Young Captain's Rise",
+        "Fifty Fine Friends — register your 50th NPC (speak with Jan)",
+        "Spider's Web — speak with Zukazu"
+      ],
+      affinitySteps: [
+        "Speak with Dionysus at 12:00 → yellow 'tea friends' (Dionysus/Marcia).",
+        "Speak with Marcia at 12:00 → yellow 'interest' (Marcia/Liliana).",
+        "Speak with Jolele (Tranquil Square HtH street, right side, night) at 22:00 → blue 'fine grandson' (Jolele/Niranira); registers Jolele.",
+        "Speak with Jolele again at 00:00 → green 'grandson's pal' (Jolele/Lukas).",
+        "Speak with Betty → green 'big fan' (Betty/Kenny Rohan).",
+        "Register Narine by trading (SW of Tranquil Square, day) — don't take her quest yet.",
+        "Military District entrance, night — speak with Arnault, answer 'You should ask her yourself' → orange 'together/apart' (Arnault/Françoise).",
+        "Speak with Leopold → link with Arnault depends on your Financial Planning route (yellow 'fan' for the frame route / blue 'extreme fan' for the investigate route).",
+        "Register Cheryl by trading (Gem Man's Stall NE balcony, overlooking Central Plaza).",
+        "Speak with Minnie (sentry at the kids' bridge, 03:00) → orange 'idler/achiever' (Minnie/Monica); registers Minnie.",
+        "Speak with Jan (SE wall of the Military District, day) → yellow 'late bloomer?' (Jan/Minnie); registers Jan (trial: Fifty Fine Friends).",
+        "Speak with Gorman → yellow 'divorced' (Gorman/Arda).",
+        "Speak with Anna at 15:00 → yellow 'mother's friend' (Olga/Anna).",
+        "Speak with Olga → yellow 'understanding' (Olga/Ewan).",
+        "Speak with Nikita at 11:00 → green 'fine engineer' (Nikita/Satata).",
+        "Speak with Zukazu (SW Tranquil Square, night, by a tree) → orange 'hostility' (Zukazu/Marcia); registers Zukazu (trial: Spider's Web).",
+        "Register the remaining Colony 9 military: Kantz (north Military District, day), Oleksiy (Gem Man's Stall, night, NE under the building), Meifimeifi (center Military District, night), Nic (enclosed garrison north of Meifimeifi, night) — registering Nic unlocks the trial 'The Brave Protectors'.",
+        "Register Perrine (Weapon Dev Lab entrance, sunset).",
+        "Speak with Shura (Ether Light, night) → green 'good boss' (Shura/Erik).",
+        "Register Peppino (HtH street, night, tree hangout ~4 buildings down).",
+        "Register Rosemary (east of the Gem Man's Stall, night) and Werner (Mechon Wreckage Site)."
+      ],
+      notaBene: [
+        "You fight this region's two bosses (Mechon M71, then Mysterious Face on Maguel Road) BEFORE finishing the errata — the boss blocks access to a lot of it, and his defeat doesn't lock anything."
+      ]
+    },
+    "4.8": {
+      landmarks: ["Watchpoint Junction", "Supply Road", "Drainage Outlet"],
+      locations: ["Splintered Path"]
+    },
+    "4.9": {
+      landmarks: ["Drainage Tunnel", "Drainage Control Room", "Mining Base", "Central Pit: Entrance", "Personnel Lift 2", "Regulation Piston", "Personnel Lift 3", "Freight Elevator", "Glowmoss Lake"],
+      locations: ["Test Pit 1", "Test Pit 2", "Test Pit 3", "Test Pit 4", "Storage Depot", "Central Terminal", "Observation Point", "Central Pit: Level 1", "Central Pit: Level 2", "Central Pit: Level 3", "Central Pit: Base Level"],
+      records: [
+        "Fire It Up — (Dark Kisling fight at the fire ether deposits)",
+        "Unbreakable Bond",
+        "Chain Gang / Off The Chain — get an extra chain link (vs Xord)",
+        "Seasoned Traveller — discover the Freight Elevator (completes the Ether Mine map)"
+      ]
+    },
+    "4.10": {
+      landmarks: ["Kelsher Wetlands", "Nopon Merchant Camp", "Crown Tree", "Silent Obelisk", "Glowing Obelisk", "Sororal Statues", "Shining Pond", "Statue Summit"],
+      locations: ["Lacus Swamp", "Zaldandia Falls", "Poison Swamp", "Barren Moor", "Dark Swamp", "Igna Territory", "Exile Fortress", "Nopon Refuge", "Oath Sanctuary", "Place of Judgement", "Mauk Floodgate", "Soter Ruins", "Basin Cave", "Altar of Fate"],
+      notaBene: [
+        "Otharon, Juju and Dickson leave the party at the Sororal Statues — that's when Colony 6 reconstruction opens for business.",
+        "Easy 'Cosmic Killer Combo' record here via a lucky multi-link chain attack."
+      ]
     }
   },
 
@@ -162,6 +220,67 @@ module.exports = {
     "4.6:Q87a": { giver: "Matryona", location: "Refugee Camp cave interior, daytime", objective: "Collect 1 Lake Drop (Raguel Lake, east shore north of Tranquil Grotto) → Matryona → give the picture book to Pama.", rewards: "1500G, 250 EXP, Damage Heal II", strategy: "⏱ TIMED. Prereq: A Dash of Colour + A Thoughtful Idea." },
     "4.6:Q87b": { giver: "Arda", location: "Refugee Camp cave interior (rear), daytime", objective: "Collect a Medicinal Herb (from Raguel Bridge: North, SE down the slope under a tree) → Arda.", rewards: "800G, 400 EXP, Arts Heal II",
       mutexWhy: "Guide picks IMAGINATIONS TEMPERED (get the Lake Drop). It gives a clearly better affinity chart; Ewan & Matryona reach green either way, but this route is cleaner. Spirits Raised's only edge is slightly earlier Colony 6 area affinity — negligible since you'll max every area's affinity anyway. ⏱ Both are TIMED." },
-    "4.6:HTH3": { location: "Interior of the Refugee Camp cave", gainChoices: "You, by a whisker. // You have dignified qualities." }
+    "4.6:HTH3": { location: "Interior of the Refugee Camp cave", gainChoices: "You, by a whisker. // You have dignified qualities." },
+
+    // ---- 4.7: Upper Bionis' Leg & Early Loose Ends ----
+    "4.7:UM15": { location: "Tephra Cave — SE of the Mag Mell Ruins, in a small enclave.", strategy: "Easy — a single Back Slash can take him out." },
+    "4.7:UM16": { location: "Tephra Cave — Spring of Grief.", condition: "Night only" },
+    "4.7:UM17": { location: "Tephra Cave — Vilia Lake." },
+    "4.7:Q88": { giver: RF, location: "North of the lake at the Refugee Camp, day", objective: "Defeat Trainer Harmeleon (north of Spiral Valley).", rewards: "4200G" },
+    "4.7:UM18": { location: "Bionis' Leg — north of Spiral Valley.", strategy: "Plow with arts; watch the two Berserk Ardun escorting him." },
+    "4.7:Q89": { giver: "Earnest", location: "Bionis' Leg", objective: "Place flowers on the grave (NE of Spiral Valley, across the river) and defeat Arrogant Tirkin, then report.", rewards: "1200G, 750 EXP, Grand Boots", strategy: "Prereq: Earnest's Mischief. Speak to Ewan afterward → green 'relief'." },
+    "4.7:Q90": { giver: "Gerugu", location: "Traveller's Rest", objective: "Locate Gerugu (from Raguel Bridge: South go NW past the wind ether mine, on the ledge below), then report.", rewards: "750G, 300 EXP, Point Rifle" },
+    "4.7:Q91": { giver: "Batubatu", location: "Traveller's Rest", objective: "Find a Tokilos' Egg (east of Zax Guidepost — stealth) and a Pandora Mushroom (Windy Cave below Spiral Valley — sound-stealth).", rewards: "1000G, 450 EXP, Spike II" },
+    "4.7:Q92": { giver: "Gerugu", location: "Traveller's Rest", objective: "Locate Batubatu (land bridge to Believer's Paradise) → collect an Ether Rose (Believer's Paradise) → Batubatu.", rewards: "1200G, 750 EXP, Electric Plus III, Grand Gear", strategy: "Affinity → green 'valuable friend' (their best)." },
+    "4.7:UM19": { location: "Bionis' Leg — from Bask Cave Passage, the island connected by a ramp; the wisp by Kasharpa Falls (NE) is the target.", condition: "Clear weather, night only", strategy: "Target it so it flies to the cliff by the passage, run up the ramp, and use Lure to engage." },
+    "4.7:Q93": { location: "Colony 9 — HtH street, alley on the right then west to Jackson", objective: "Find Jackson a mentor (Kenny Rohan or Giorgio) → Vilia Lake, defeat 5 Tephra Lizards → report.", rewards: "2200G, 450 EXP, Ether Up III", strategy: "Prereq: Dorothy registered (Main Entrance)." },
+    "4.7:Q94a": { giver: "Jackson", location: "Colony 9", objective: "Defeat Dim Wisp (Kneecap Hill, night), then report.", rewards: "3800G, 650 EXP, Ether Up II" },
+    "4.7:Q94b": { giver: "Jackson", location: "Colony 9", objective: "Collect 5 Raw Piranhax Meat (Colony Piranhax, pool under Outlook Park).", rewards: "3800G, 650 EXP, Pile Driver",
+      mutexWhy: "Guide picks JACKSON THE POET (choose Kenny Rohan as mentor): Jackson's link with his teacher is stronger (blue vs green) and Kenny Rohan's link with Giorgio is better (green vs yellow); Dorothy's link is unaffected." },
+    "4.7:Q95": { giver: "Kenny Rohan", location: "Colony 9", objective: "Gather info on the mysterious light — speak Suzanna, Françoise, Dionysus → Kenny.", rewards: "2200G, 700 EXP, Auto-Attack Stealth II" },
+    "4.7:Q96": { giver: "Kenny Rohan", location: "Colony 9", objective: "Mend the ether lamp, OR throw it away.", rewards: "3400G, 950 EXP, Iron Armor",
+      mutexWhy: "Guide picks THROW IT AWAY (use the guardrail south of Central Plaza) — it's done here and now; mending requires farming and a later region for a negligible reward difference." },
+    "4.7:Q97": { giver: "Emmy Leater", location: "Colony 9 (Military District entrance, day)", objective: "Defeat 5 Wind Vangs (Spring of Grief), then report.", rewards: "1100G, 180 EXP, Ether Defense Up III", strategy: "Prereq: Raoul registered." },
+    "4.7:Q98": { giver: "Emmy Leater", location: "Colony 9", objective: "Defeat Lurker Krabble (Vilia Lake) or Lurker Brog (Spring of Grief), then report.", rewards: "1800G, 250 EXP, Flame Gear", strategy: "Either target is fine — same reward & affinity. (Trial: generous friend.)" },
+
+    // ---- 4.8: Colony 6 first visit ----
+    "4.8:Q99": { giver: "Daza", location: "Watchpoint Junction", objective: "Find the Nopon Coin (down the elevator to Splintered Path; at the second fork go SE then south), then report.", rewards: "850G, 320 EXP, Break II", strategy: "Registers Daza." },
+    "4.8:Q100": { giver: "Daza", location: "Watchpoint Junction", objective: "Defeat 4 Yellow Antols (Splintered Path), 6 Soft Hoxes (Watchpoint Junction), 3 Water Upa (rainstorm at the Drainage Outlet).", rewards: "900G, 400 EXP, Pelt Top, Pelt Bottoms" },
+    "4.8:UM20": { location: "NE of the Drainage Outlet.", condition: "Rain or thunderstorm only" },
+    "4.8:Q101": { giver: "Daza", location: "Watchpoint Junction", objective: "Deliver Daza's letter to Gerugu → take Gerugu's response back to Daza.", rewards: "1000G, 500 EXP, Slow III, Top Secret Data", strategy: "Affinity → green 'companions' (Gerugu/Daza)." },
+
+    // ---- 4.9: Ether Mine ----
+    "4.9:UM21": { location: "Glowmoss Lake.", strategy: "Mostly ether attacks — keep him toppled (he's susceptible to break)." },
+    "4.9:UM22": { location: "Stairs near Test Pit 4." },
+    "4.9:UM23": { location: "Fire Ether Deposits near Test Pit 4.", strategy: "Likely unlocks the records Fire It Up and Unbreakable Bond." },
+    "4.9:HTH4": { location: "Bionis' Leg (needs blue Shulk/Sharla affinity and Juju seen to safety)", gainChoices: "I wish I had it. // You can save someone's life!" },
+
+    // ---- 4.10: Satorl Marsh ----
+    "4.10:Q101b": { giver: "Cheryl", location: "Balcony north of the Gem Man's Stall, Colony 9, day", objective: "Collect 3 uniform pieces — Tatty Armor (Spring of Grief, Tephra Cave), Twisted Gun (north of the Observation Platform, Bionis' Leg), Nicked Knife (by the Shining Pond, Satorl Marsh) — then report.", rewards: "4500G, 1500 EXP, Bomber Lancer", strategy: "After completion, speak Marcia (blue 'friends always'), Cheryl (green 'old friends'), Jan (green 'old suitor')." },
+    "4.10:Q102": { giver: "Nopon Merchant", location: "Nopon Merchant Camp", objective: "Defeat 2 Detox Brogs (Crown Tree).", rewards: "5800G" },
+    "4.10:Q103": { giver: "Nopon Merchant", location: "Nopon Merchant Camp", objective: "Defeat 3 Coppice Quadwings (Lacus Swamp, day).", rewards: "5200G" },
+    "4.10:Q104": { giver: "Nopon Merchant", location: "Nopon Merchant Camp", objective: "Defeat 2 Mist Rhouguls (Barren Moor, day).", rewards: "6800G" },
+    "4.10:Q105": { giver: "Nopon Merchant", location: "Nopon Merchant Camp", objective: "Defeat 1 Officer Volff (NW of Barren Moor, day).", rewards: "6500G" },
+    "4.10:Q106": { giver: "Bokoko", location: "Nopon Merchant Camp", objective: "Find and save Kacha (Exile Fortress interior).", rewards: "3500G, 410 EXP, Jungle Cap/Gloves/Shoes", strategy: "Green link 'like family' (Kacha/Bokoko)." },
+    "4.10:UM25": { location: "Zaldandia Falls.", condition: "Day + clear weather only" },
+    "4.10:UM26": { location: "Plateau above Poison Swamp.", strategy: "Has Igna allies — clear them one by one first; he's far easier alone." },
+    "4.10:UM27": { location: "Plateau SE of the Silent Obelisk." },
+    "4.10:Q107": { giver: "Zazadan", location: "Nopon Refuge", objective: "Collect 5 Lemon Stones + 2 Twin Flamii Eggs (Lacus Swamp).", rewards: "2400G, 400 EXP, Mist Gel/Cream/Sandals", strategy: "Registers Zazadan." },
+    "4.10:Q108": { giver: "Zazadan", location: "Nopon Refuge", objective: "Defeat 8 Ogre Bunnia (Glowing Obelisk).", rewards: "3200G, 680 EXP, Swep Gear, Agility Up II" },
+    "4.10:Q109": { giver: "Zazadan", location: "Nopon Refuge", objective: "Defeat Sunlight Sachik.", rewards: "4500G, 850 EXP, Swep Gauntlets, HP II" },
+    "4.10:UM29": { location: "Silent Obelisk.", condition: "Day + clear weather only", strategy: "Immune to break (no topple) — reserve the party gauge for revives. Level Shield to 2 to block his talent art; Shulk leads, Sharla heals." },
+    "4.10:Q110": { giver: "Zazadan", location: "Nopon Refuge", objective: "Collect a Nopon Potion (cavern south of the Nopon Merchant Camp).", rewards: "5100G, 1000 EXP, Swep Boots, Ether Up II" },
+    "4.10:Q111": { giver: "Zazadan", location: "Nopon Refuge", objective: "Investigate the Shining Pond (dip the Red Pollen Orb to get Highmore Caviar).", rewards: "5800G, 1500 EXP, Pioneer" },
+    "4.10:Q112": { giver: "Zazadan", location: "Nopon Refuge", objective: "Deliver the Highmore Caviar to Dedeba (he's in Frontier Village — reachable at §4.14).", rewards: "7800G, 2500 EXP, Panther Bottoms" },
+    "4.10:Q113": { giver: "Bokoko", location: "Nopon Merchant Camp", objective: "Collect 4 Feather Leaves, 3 Wool Rocks, 3 Fancy Volff Hides, 4 Glowing Upa Seeds.", rewards: "10500G, 1000 EXP, Iron Armour, Nopon Boots" },
+    "4.10:Q114": { giver: "Kacha", location: "Nopon Merchant Camp", objective: "Defeat 5 Deluded Igna, dig up the Giant's Key, then use the Wall of Sin → Exile Fortress roof altar → report.", rewards: "5900G, 2200 EXP, Recovery Up IV" },
+    "4.10:Q115": { giver: "Kacha", location: "Nopon Merchant Camp", objective: "Collect the Giant's Mirror (Daksha Shrine) → offer it at the Exile Fortress roof altar → run → report.", rewards: "9100G, 3100 EXP, Double Attack IV, Daring Of The Giants" },
+    "4.10:HTH7": { location: "Mining Base (Ether Mine)", gainChoices: "It's a beautiful watch. // I can fix it!" },
+    "4.10:HTH8": { location: "Zaldandia Waterfall", condition: "Night only", gainChoices: "Really? Interesting. // Will it ever run out?" },
+    "4.10:Q116": { location: "Sororal Statues", objective: "Prepare for the ceremony (collect the Offerings), then use the Adulthood Emblem → defeat the Lv. 28 Satorl Guardian.", strategy: "Story quest." },
+    "4.10:Q117": { location: "Sororal Statues", objective: "Collect the Radiant Offerings — White (Basin Cave), Rainbow (Altar of Fate), Dull (Dark Swamp island), Blue (SW Igna Territory).", strategy: "Story quest." },
+    "4.10:UM30": { location: "Altar of Fate base, SE." },
+    "4.10:UM31": { location: "SW Igna Territory.", strategy: "Guards the Blue Radiant for the ceremony." },
+    "4.10:UM32": { location: "Daksha Shrine (Bionis' Leg)." }
   }
 };

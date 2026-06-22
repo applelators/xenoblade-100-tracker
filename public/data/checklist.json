@@ -1,7 +1,7 @@
 {
   "meta": {
     "game": "Xenoblade Chronicles: Definitive Edition",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "scope": "Full 100%: missable spine + full Collectopaedia + all landmarks/locations + Future Connected. Non-missable bulk data tagged confidence high (Game8-sourced); double-check completeness against the in-game map %.",
     "spoilerPolicy": "Cutoffs anchored to region locks + approximate chapter numbers. No boss/cutscene/plot names. Trust the in-game stopwatch (timer) icon over any guide.",
     "links": {
@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -6509,6 +6509,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -6550,6 +6553,9 @@
       ],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -6564,6 +6570,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -6578,6 +6587,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -6592,6 +6604,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -8368,50 +8383,250 @@
         "Refugee Camp ⏱ TIMED quests in this section lock once Colony 6 reconstruction begins (§4.11)."
       ],
       "landmarks": [
-        "Tranquil Square",
-        "Anti-Air Battery 3",
-        "Hazzai Cape",
-        "Agora Shore",
-        "Anti-Air Battery 2",
-        "Cliff Lake",
-        "Volff Lair",
-        "Viliera Hill",
-        "Sky Stage",
-        "Daksha Shrine",
-        "Observation Platform",
-        "Raguel Lake",
-        "Tranquil Grotto",
-        "Raguel Bridge: South",
-        "Raguel Bridge: North",
-        "Windy Cave",
-        "Crevasse Waterfall",
-        "Kisk Cave"
+        {
+          "id": "wlm-4.6-0",
+          "label": "“Tranquil Square”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-1",
+          "label": "“Anti-Air Battery 3”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-2",
+          "label": "“Hazzai Cape”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-3",
+          "label": "“Agora Shore”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-4",
+          "label": "“Anti-Air Battery 2”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-5",
+          "label": "“Cliff Lake”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-6",
+          "label": "“Volff Lair”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-7",
+          "label": "“Viliera Hill”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-8",
+          "label": "“Sky Stage”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-9",
+          "label": "“Daksha Shrine”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-10",
+          "label": "“Observation Platform”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-11",
+          "label": "“Raguel Lake”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-12",
+          "label": "“Tranquil Grotto”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-13",
+          "label": "“Raguel Bridge: South”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-14",
+          "label": "“Raguel Bridge: North”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-15",
+          "label": "“Windy Cave”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-16",
+          "label": "“Crevasse Waterfall”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-17",
+          "label": "“Kisk Cave”",
+          "missable": false,
+          "confidence": "high"
+        }
       ],
       "locations": [
-        "Agora Shore",
-        "Anti-Air Battery 2",
-        "Anti-Air Battery 3",
-        "Hazzai Cape",
-        "Cliff Lake"
+        {
+          "id": "wloc-4.6-0",
+          "label": "“Agora Shore”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-1",
+          "label": "“Anti-Air Battery 2”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-2",
+          "label": "“Anti-Air Battery 3”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-3",
+          "label": "“Hazzai Cape”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-4",
+          "label": "“Cliff Lake”",
+          "missable": false,
+          "confidence": "high"
+        }
       ],
       "records": [
-        "Equivalent Exchange — first successful trade with an NPC",
-        "Lazybones — skip-travel 50 times",
-        "Breaking The Ice — party banter on registering a quest for the first time",
-        "Idle Chit-Chat — party banter on registering quests 50 times",
-        "Ear To The Ground — spoken to people 100 times",
-        "Unlucky Sixes — deal exactly 666 damage in one hit",
-        "Lucky Sevens — deal exactly 777 damage in one hit",
-        "Rear Admiral — perform a back attack 50 times",
-        "It Hasn't Lost Its Lustre — open 10 gold chests",
-        "Hoarding Treasure — open 50 silver chests",
-        "Airing Grievances — defeat 30 flying monsters",
-        "Raring To Go — get your first rare ether crystal",
-        "Simply Smashing! — smash 100 vision tags",
-        "Killer Combo — deal 3,000 damage with a chain attack",
-        "Ground To A Pulp — defeat 250 ground-type monsters",
-        "Unshakeable Trust — raise two party members to blue affinity",
-        "Colony 9 Celebrity — reach 3-star affinity with Colony 9"
+        {
+          "id": "wrec-4.6-0",
+          "label": "Equivalent Exchange — first successful trade with an NPC",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-1",
+          "label": "Lazybones — skip-travel 50 times",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-2",
+          "label": "Breaking The Ice — party banter on registering a quest for the first time",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-3",
+          "label": "Idle Chit-Chat — party banter on registering quests 50 times",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-4",
+          "label": "Ear To The Ground — spoken to people 100 times",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-5",
+          "label": "Unlucky Sixes — deal exactly 666 damage in one hit",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-6",
+          "label": "Lucky Sevens — deal exactly 777 damage in one hit",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-7",
+          "label": "Rear Admiral — perform a back attack 50 times",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-8",
+          "label": "It Hasn't Lost Its Lustre — open 10 gold chests",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-9",
+          "label": "Hoarding Treasure — open 50 silver chests",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-10",
+          "label": "Airing Grievances — defeat 30 flying monsters",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-11",
+          "label": "Raring To Go — get your first rare ether crystal",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-12",
+          "label": "Simply Smashing! — smash 100 vision tags",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-13",
+          "label": "Killer Combo — deal 3,000 damage with a chain attack",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-14",
+          "label": "Ground To A Pulp — defeat 250 ground-type monsters",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-15",
+          "label": "Unshakeable Trust — raise two party members to blue affinity",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.6-16",
+          "label": "Colony 9 Celebrity — reach 3-star affinity with Colony 9",
+          "missable": false,
+          "confidence": "high"
+        }
       ],
       "notaBene": [
         "Around this section you'll likely pick up: Second Wind (10 revivals), Art School (level an art to Lv. 2) and Ninja Skillz (one-shot an enemy with Back Slash).",
@@ -8438,7 +8653,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Refugee",
+          "location": "North of the lake at the Refugee Camp, day",
+          "objective": "Defeat Trainer Harmeleon (north of Spiral Valley).",
+          "rewards": "4200G",
+          "detailed": true
         },
         {
           "id": "wq-47-q89-earnests-solitude",
@@ -8450,7 +8670,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Earnest",
+          "location": "Bionis' Leg",
+          "objective": "Place flowers on the grave (NE of Spiral Valley, across the river) and defeat Arrogant Tirkin, then report.",
+          "rewards": "1200G, 750 EXP, Grand Boots",
+          "strategy": "Prereq: Earnest's Mischief. Speak to Ewan afterward → green 'relief'.",
+          "detailed": true
         },
         {
           "id": "wq-47-q90-the-lost-nopon",
@@ -8462,7 +8688,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Gerugu",
+          "location": "Traveller's Rest",
+          "objective": "Locate Gerugu (from Raguel Bridge: South go NW past the wind ether mine, on the ledge below), then report.",
+          "rewards": "750G, 300 EXP, Point Rifle",
+          "detailed": true
         },
         {
           "id": "wq-47-q91-with-much-gratitude",
@@ -8474,7 +8705,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Batubatu",
+          "location": "Traveller's Rest",
+          "objective": "Find a Tokilos' Egg (east of Zax Guidepost — stealth) and a Pandora Mushroom (Windy Cave below Spiral Valley — sound-stealth).",
+          "rewards": "1000G, 450 EXP, Spike II",
+          "detailed": true
         },
         {
           "id": "wq-47-q92-with-even-more-gratitude",
@@ -8486,7 +8722,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Gerugu",
+          "location": "Traveller's Rest",
+          "objective": "Locate Batubatu (land bridge to Believer's Paradise) → collect an Ether Rose (Believer's Paradise) → Batubatu.",
+          "rewards": "1200G, 750 EXP, Electric Plus III, Grand Gear",
+          "strategy": "Affinity → green 'valuable friend' (their best).",
+          "detailed": true
         },
         {
           "id": "wq-47-q93-jacksons-awakening",
@@ -8498,7 +8740,12 @@
           "mutexWith": null,
           "story": false,
           "note": "Guide pick: Kenny Rohan (poet).",
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Colony 9 — HtH street, alley on the right then west to Jackson",
+          "objective": "Find Jackson a mentor (Kenny Rohan or Giorgio) → Vilia Lake, defeat 5 Tephra Lizards → report.",
+          "rewards": "2200G, 450 EXP, Ether Up III",
+          "strategy": "Prereq: Dorothy registered (Main Entrance).",
+          "detailed": true
         },
         {
           "id": "wq-47-q94a-jackson-the-poet",
@@ -8510,7 +8757,12 @@
           "mutexWith": "Jackson The Cook",
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Jackson",
+          "location": "Colony 9",
+          "objective": "Defeat Dim Wisp (Kneecap Hill, night), then report.",
+          "rewards": "3800G, 650 EXP, Ether Up II",
+          "detailed": true
         },
         {
           "id": "wq-47-q94b-jackson-the-cook",
@@ -8522,7 +8774,13 @@
           "mutexWith": "Jackson The Poet",
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Jackson",
+          "location": "Colony 9",
+          "objective": "Collect 5 Raw Piranhax Meat (Colony Piranhax, pool under Outlook Park).",
+          "rewards": "3800G, 650 EXP, Pile Driver",
+          "mutexWhy": "Guide picks JACKSON THE POET (choose Kenny Rohan as mentor): Jackson's link with his teacher is stronger (blue vs green) and Kenny Rohan's link with Giorgio is better (green vs yellow); Dorothy's link is unaffected.",
+          "detailed": true
         },
         {
           "id": "wq-47-q95-a-mysterious-light",
@@ -8534,7 +8792,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Kenny Rohan",
+          "location": "Colony 9",
+          "objective": "Gather info on the mysterious light — speak Suzanna, Françoise, Dionysus → Kenny.",
+          "rewards": "2200G, 700 EXP, Auto-Attack Stealth II",
+          "detailed": true
         },
         {
           "id": "wq-47-q96-out-like-a-light",
@@ -8546,7 +8809,13 @@
           "mutexWith": null,
           "story": false,
           "note": "Guide pick: throw the lamp away (faster).",
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Kenny Rohan",
+          "location": "Colony 9",
+          "objective": "Mend the ether lamp, OR throw it away.",
+          "rewards": "3400G, 950 EXP, Iron Armor",
+          "mutexWhy": "Guide picks THROW IT AWAY (use the guardrail south of Central Plaza) — it's done here and now; mending requires farming and a later region for a negligible reward difference.",
+          "detailed": true
         },
         {
           "id": "wq-47-q97-a-young-captains-suffering",
@@ -8558,7 +8827,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Emmy Leater",
+          "location": "Colony 9 (Military District entrance, day)",
+          "objective": "Defeat 5 Wind Vangs (Spring of Grief), then report.",
+          "rewards": "1100G, 180 EXP, Ether Defense Up III",
+          "strategy": "Prereq: Raoul registered.",
+          "detailed": true
         },
         {
           "id": "wq-47-q98-a-young-captains-rise",
@@ -8570,7 +8845,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Emmy Leater",
+          "location": "Colony 9",
+          "objective": "Defeat Lurker Krabble (Vilia Lake) or Lurker Brog (Spring of Grief), then report.",
+          "rewards": "1800G, 250 EXP, Flame Gear",
+          "strategy": "Either target is fine — same reward & affinity. (Trial: generous friend.)",
+          "detailed": true
         }
       ],
       "ums": [
@@ -8581,7 +8862,10 @@
           "area": "Tephra Cave",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Tephra Cave — SE of the Mag Mell Ruins, in a small enclave.",
+          "strategy": "Easy — a single Back Slash can take him out.",
+          "detailed": true
         },
         {
           "id": "wum-47-um16",
@@ -8590,7 +8874,10 @@
           "area": "Tephra Cave",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Tephra Cave — Spring of Grief.",
+          "condition": "Night only",
+          "detailed": true
         },
         {
           "id": "wum-47-um17",
@@ -8599,7 +8886,9 @@
           "area": "Tephra Cave",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Tephra Cave — Vilia Lake.",
+          "detailed": true
         },
         {
           "id": "wum-47-um18",
@@ -8608,7 +8897,10 @@
           "area": "Bionis' Leg",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Bionis' Leg — north of Spiral Valley.",
+          "strategy": "Plow with arts; watch the two Berserk Ardun escorting him.",
+          "detailed": true
         },
         {
           "id": "wum-47-um19",
@@ -8617,13 +8909,109 @@
           "area": "Bionis' Leg",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Bionis' Leg — from Bask Cave Passage, the island connected by a ramp; the wisp by Kasharpa Falls (NE) is the target.",
+          "condition": "Clear weather, night only",
+          "strategy": "Target it so it flies to the cliff by the passage, run up the ramp, and use Lure to engage.",
+          "detailed": true
         }
       ],
       "hths": [],
       "colony6": [],
       "notes": [
         "Refugee Camp ⏱ TIMED quests still lock at Colony 6 reconstruction (§4.11)."
+      ],
+      "landmarks": [
+        {
+          "id": "wlm-4.7-0",
+          "label": "“Spiral Valley”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.7-1",
+          "label": "“Bask Cave Passage”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.7-2",
+          "label": "“Zax Guidepost”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.7-3",
+          "label": "“Believer's Paradise”",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "locations": [
+        {
+          "id": "wloc-4.7-0",
+          "label": "“Traveller's Rest”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.7-1",
+          "label": "“Kasharpa Falls”",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "affinitySteps": [
+        "Speak with Dionysus at 12:00 → yellow 'tea friends' (Dionysus/Marcia).",
+        "Speak with Marcia at 12:00 → yellow 'interest' (Marcia/Liliana).",
+        "Speak with Jolele (Tranquil Square HtH street, right side, night) at 22:00 → blue 'fine grandson' (Jolele/Niranira); registers Jolele.",
+        "Speak with Jolele again at 00:00 → green 'grandson's pal' (Jolele/Lukas).",
+        "Speak with Betty → green 'big fan' (Betty/Kenny Rohan).",
+        "Register Narine by trading (SW of Tranquil Square, day) — don't take her quest yet.",
+        "Military District entrance, night — speak with Arnault, answer 'You should ask her yourself' → orange 'together/apart' (Arnault/Françoise).",
+        "Speak with Leopold → link with Arnault depends on your Financial Planning route (yellow 'fan' for the frame route / blue 'extreme fan' for the investigate route).",
+        "Register Cheryl by trading (Gem Man's Stall NE balcony, overlooking Central Plaza).",
+        "Speak with Minnie (sentry at the kids' bridge, 03:00) → orange 'idler/achiever' (Minnie/Monica); registers Minnie.",
+        "Speak with Jan (SE wall of the Military District, day) → yellow 'late bloomer?' (Jan/Minnie); registers Jan (trial: Fifty Fine Friends).",
+        "Speak with Gorman → yellow 'divorced' (Gorman/Arda).",
+        "Speak with Anna at 15:00 → yellow 'mother's friend' (Olga/Anna).",
+        "Speak with Olga → yellow 'understanding' (Olga/Ewan).",
+        "Speak with Nikita at 11:00 → green 'fine engineer' (Nikita/Satata).",
+        "Speak with Zukazu (SW Tranquil Square, night, by a tree) → orange 'hostility' (Zukazu/Marcia); registers Zukazu (trial: Spider's Web).",
+        "Register the remaining Colony 9 military: Kantz (north Military District, day), Oleksiy (Gem Man's Stall, night, NE under the building), Meifimeifi (center Military District, night), Nic (enclosed garrison north of Meifimeifi, night) — registering Nic unlocks the trial 'The Brave Protectors'.",
+        "Register Perrine (Weapon Dev Lab entrance, sunset).",
+        "Speak with Shura (Ether Light, night) → green 'good boss' (Shura/Erik).",
+        "Register Peppino (HtH street, night, tree hangout ~4 buildings down).",
+        "Register Rosemary (east of the Gem Man's Stall, night) and Werner (Mechon Wreckage Site)."
+      ],
+      "records": [
+        {
+          "id": "wrec-4.7-0",
+          "label": "Explorer — discover the Observation Platform",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-1",
+          "label": "A generous friend — complete A Young Captain's Rise",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-2",
+          "label": "Fifty Fine Friends — register your 50th NPC (speak with Jan)",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-3",
+          "label": "Spider's Web — speak with Zukazu",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "notaBene": [
+        "You fight this region's two bosses (Mechon M71, then Mysterious Face on Maguel Road) BEFORE finishing the errata — the boss blocks access to a lot of it, and his defeat doesn't lock anything."
       ],
       "arc": "arc1"
     },
@@ -8645,7 +9033,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Daza",
+          "location": "Watchpoint Junction",
+          "objective": "Find the Nopon Coin (down the elevator to Splintered Path; at the second fork go SE then south), then report.",
+          "rewards": "850G, 320 EXP, Break II",
+          "strategy": "Registers Daza.",
+          "detailed": true
         },
         {
           "id": "wq-48-q100-safety-first",
@@ -8657,7 +9051,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Daza",
+          "location": "Watchpoint Junction",
+          "objective": "Defeat 4 Yellow Antols (Splintered Path), 6 Soft Hoxes (Watchpoint Junction), 3 Water Upa (rainstorm at the Drainage Outlet).",
+          "rewards": "900G, 400 EXP, Pelt Top, Pelt Bottoms",
+          "detailed": true
         },
         {
           "id": "wq-48-q101-secret-mission",
@@ -8669,7 +9068,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Daza",
+          "location": "Watchpoint Junction",
+          "objective": "Deliver Daza's letter to Gerugu → take Gerugu's response back to Daza.",
+          "rewards": "1000G, 500 EXP, Slow III, Top Secret Data",
+          "strategy": "Affinity → green 'companions' (Gerugu/Daza).",
+          "detailed": true
         }
       ],
       "ums": [
@@ -8680,12 +9085,44 @@
           "area": "Colony 6",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "NE of the Drainage Outlet.",
+          "condition": "Rain or thunderstorm only",
+          "detailed": true
         }
       ],
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [
+        {
+          "id": "wlm-4.8-0",
+          "label": "“Watchpoint Junction”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.8-1",
+          "label": "“Supply Road”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.8-2",
+          "label": "“Drainage Outlet”",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "locations": [
+        {
+          "id": "wloc-4.8-0",
+          "label": "“Splintered Path”",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -8704,7 +9141,10 @@
           "area": "Ether Mine",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Glowmoss Lake.",
+          "strategy": "Mostly ether attacks — keep him toppled (he's susceptible to break).",
+          "detailed": true
         },
         {
           "id": "wum-49-um22",
@@ -8713,7 +9153,9 @@
           "area": "Ether Mine",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Stairs near Test Pit 4.",
+          "detailed": true
         },
         {
           "id": "wum-49-um23",
@@ -8722,7 +9164,10 @@
           "area": "Ether Mine",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Fire Ether Deposits near Test Pit 4.",
+          "strategy": "Likely unlocks the records Fire It Up and Unbreakable Bond.",
+          "detailed": true
         }
       ],
       "hths": [
@@ -8734,11 +9179,164 @@
           "affinity": "Green",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Bionis' Leg (needs blue Shulk/Sharla affinity and Juju seen to safety)",
+          "gainChoices": "I wish I had it. // You can save someone's life!",
+          "detailed": true
         }
       ],
       "colony6": [],
       "notes": [],
+      "landmarks": [
+        {
+          "id": "wlm-4.9-0",
+          "label": "“Drainage Tunnel”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-1",
+          "label": "“Drainage Control Room”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-2",
+          "label": "“Mining Base”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-3",
+          "label": "“Central Pit: Entrance”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-4",
+          "label": "“Personnel Lift 2”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-5",
+          "label": "“Regulation Piston”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-6",
+          "label": "“Personnel Lift 3”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-7",
+          "label": "“Freight Elevator”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-8",
+          "label": "“Glowmoss Lake”",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "locations": [
+        {
+          "id": "wloc-4.9-0",
+          "label": "“Test Pit 1”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-1",
+          "label": "“Test Pit 2”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-2",
+          "label": "“Test Pit 3”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-3",
+          "label": "“Test Pit 4”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-4",
+          "label": "“Storage Depot”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-5",
+          "label": "“Central Terminal”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-6",
+          "label": "“Observation Point”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-7",
+          "label": "“Central Pit: Level 1”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-8",
+          "label": "“Central Pit: Level 2”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-9",
+          "label": "“Central Pit: Level 3”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-10",
+          "label": "“Central Pit: Base Level”",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "records": [
+        {
+          "id": "wrec-4.9-0",
+          "label": "Fire It Up — (Dark Kisling fight at the fire ether deposits)",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.9-1",
+          "label": "Unbreakable Bond",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.9-2",
+          "label": "Chain Gang / Off The Chain — get an extra chain link (vs Xord)",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.9-3",
+          "label": "Seasoned Traveller — discover the Freight Elevator (completes the Ether Mine map)",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
       "arc": "arc1"
     },
     {
@@ -8759,7 +9357,13 @@
           "mutexWith": null,
           "story": false,
           "note": "Cheryl — collect 3 uniform pieces across regions.",
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Cheryl",
+          "location": "Balcony north of the Gem Man's Stall, Colony 9, day",
+          "objective": "Collect 3 uniform pieces — Tatty Armor (Spring of Grief, Tephra Cave), Twisted Gun (north of the Observation Platform, Bionis' Leg), Nicked Knife (by the Shining Pond, Satorl Marsh) — then report.",
+          "rewards": "4500G, 1500 EXP, Bomber Lancer",
+          "strategy": "After completion, speak Marcia (blue 'friends always'), Cheryl (green 'old friends'), Jan (green 'old suitor').",
+          "detailed": true
         },
         {
           "id": "wq-410-q102-monster-quest-1",
@@ -8771,7 +9375,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Nopon Merchant",
+          "location": "Nopon Merchant Camp",
+          "objective": "Defeat 2 Detox Brogs (Crown Tree).",
+          "rewards": "5800G",
+          "detailed": true
         },
         {
           "id": "wq-410-q103-monster-quest-2",
@@ -8783,7 +9392,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Nopon Merchant",
+          "location": "Nopon Merchant Camp",
+          "objective": "Defeat 3 Coppice Quadwings (Lacus Swamp, day).",
+          "rewards": "5200G",
+          "detailed": true
         },
         {
           "id": "wq-410-q104-monster-quest-3",
@@ -8795,7 +9409,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Nopon Merchant",
+          "location": "Nopon Merchant Camp",
+          "objective": "Defeat 2 Mist Rhouguls (Barren Moor, day).",
+          "rewards": "6800G",
+          "detailed": true
         },
         {
           "id": "wq-410-q105-monster-quest-4",
@@ -8807,7 +9426,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Nopon Merchant",
+          "location": "Nopon Merchant Camp",
+          "objective": "Defeat 1 Officer Volff (NW of Barren Moor, day).",
+          "rewards": "6500G",
+          "detailed": true
         },
         {
           "id": "wq-410-q106-kachas-kidnapping",
@@ -8819,7 +9443,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Bokoko",
+          "location": "Nopon Merchant Camp",
+          "objective": "Find and save Kacha (Exile Fortress interior).",
+          "rewards": "3500G, 410 EXP, Jungle Cap/Gloves/Shoes",
+          "strategy": "Green link 'like family' (Kacha/Bokoko).",
+          "detailed": true
         },
         {
           "id": "wq-410-q107-preventing-starvation",
@@ -8831,7 +9461,13 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Zazadan",
+          "location": "Nopon Refuge",
+          "objective": "Collect 5 Lemon Stones + 2 Twin Flamii Eggs (Lacus Swamp).",
+          "rewards": "2400G, 400 EXP, Mist Gel/Cream/Sandals",
+          "strategy": "Registers Zazadan.",
+          "detailed": true
         },
         {
           "id": "wq-410-q108-zazadan-in-danger",
@@ -8843,7 +9479,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Zazadan",
+          "location": "Nopon Refuge",
+          "objective": "Defeat 8 Ogre Bunnia (Glowing Obelisk).",
+          "rewards": "3200G, 680 EXP, Swep Gear, Agility Up II",
+          "detailed": true
         },
         {
           "id": "wq-410-q109-zazadan-still-in-danger",
@@ -8855,7 +9496,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Zazadan",
+          "location": "Nopon Refuge",
+          "objective": "Defeat Sunlight Sachik.",
+          "rewards": "4500G, 850 EXP, Swep Gauntlets, HP II",
+          "detailed": true
         },
         {
           "id": "wq-410-q110-its-all-in-the-mind",
@@ -8867,7 +9513,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Zazadan",
+          "location": "Nopon Refuge",
+          "objective": "Collect a Nopon Potion (cavern south of the Nopon Merchant Camp).",
+          "rewards": "5100G, 1000 EXP, Swep Boots, Ether Up II",
+          "detailed": true
         },
         {
           "id": "wq-410-q111-a-mysterious-delicacy",
@@ -8879,7 +9530,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Zazadan",
+          "location": "Nopon Refuge",
+          "objective": "Investigate the Shining Pond (dip the Red Pollen Orb to get Highmore Caviar).",
+          "rewards": "5800G, 1500 EXP, Pioneer",
+          "detailed": true
         },
         {
           "id": "wq-410-q112-a-gift",
@@ -8891,7 +9547,12 @@
           "mutexWith": null,
           "story": false,
           "note": "Deliver to Dedeba in Frontier Village later.",
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Zazadan",
+          "location": "Nopon Refuge",
+          "objective": "Deliver the Highmore Caviar to Dedeba (he's in Frontier Village — reachable at §4.14).",
+          "rewards": "7800G, 2500 EXP, Panther Bottoms",
+          "detailed": true
         },
         {
           "id": "wq-410-q113-making-camp",
@@ -8903,7 +9564,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Bokoko",
+          "location": "Nopon Merchant Camp",
+          "objective": "Collect 4 Feather Leaves, 3 Wool Rocks, 3 Fancy Volff Hides, 4 Glowing Upa Seeds.",
+          "rewards": "10500G, 1000 EXP, Iron Armour, Nopon Boots",
+          "detailed": true
         },
         {
           "id": "wq-410-q114-the-giants-key",
@@ -8915,7 +9581,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Kacha",
+          "location": "Nopon Merchant Camp",
+          "objective": "Defeat 5 Deluded Igna, dig up the Giant's Key, then use the Wall of Sin → Exile Fortress roof altar → report.",
+          "rewards": "5900G, 2200 EXP, Recovery Up IV",
+          "detailed": true
         },
         {
           "id": "wq-410-q115-the-giants-treasure",
@@ -8927,7 +9598,12 @@
           "mutexWith": null,
           "story": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "giver": "Kacha",
+          "location": "Nopon Merchant Camp",
+          "objective": "Collect the Giant's Mirror (Daksha Shrine) → offer it at the Exile Fortress roof altar → run → report.",
+          "rewards": "9100G, 3100 EXP, Double Attack IV, Daring Of The Giants",
+          "detailed": true
         },
         {
           "id": "wq-410-q116-the-ancient-ceremony",
@@ -8939,7 +9615,11 @@
           "mutexWith": null,
           "story": true,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Sororal Statues",
+          "objective": "Prepare for the ceremony (collect the Offerings), then use the Adulthood Emblem → defeat the Lv. 28 Satorl Guardian.",
+          "strategy": "Story quest.",
+          "detailed": true
         },
         {
           "id": "wq-410-q117-ancient-ceremony-offerings",
@@ -8951,7 +9631,11 @@
           "mutexWith": null,
           "story": true,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Sororal Statues",
+          "objective": "Collect the Radiant Offerings — White (Basin Cave), Rainbow (Altar of Fate), Dull (Dark Swamp island), Blue (SW Igna Territory).",
+          "strategy": "Story quest.",
+          "detailed": true
         }
       ],
       "ums": [
@@ -8962,7 +9646,10 @@
           "area": "Satorl Marsh",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Zaldandia Falls.",
+          "condition": "Day + clear weather only",
+          "detailed": true
         },
         {
           "id": "wum-410-um26",
@@ -8971,7 +9658,10 @@
           "area": "Satorl Marsh",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Plateau above Poison Swamp.",
+          "strategy": "Has Igna allies — clear them one by one first; he's far easier alone.",
+          "detailed": true
         },
         {
           "id": "wum-410-um27",
@@ -8980,7 +9670,9 @@
           "area": "Satorl Marsh",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Plateau SE of the Silent Obelisk.",
+          "detailed": true
         },
         {
           "id": "wum-410-um29",
@@ -8989,7 +9681,11 @@
           "area": "Satorl Marsh",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Silent Obelisk.",
+          "condition": "Day + clear weather only",
+          "strategy": "Immune to break (no topple) — reserve the party gauge for revives. Level Shield to 2 to block his talent art; Shulk leads, Sharla heals.",
+          "detailed": true
         },
         {
           "id": "wum-410-um30",
@@ -8998,7 +9694,9 @@
           "area": "Satorl Marsh",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Altar of Fate base, SE.",
+          "detailed": true
         },
         {
           "id": "wum-410-um31",
@@ -9007,7 +9705,10 @@
           "area": "Satorl Marsh",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "SW Igna Territory.",
+          "strategy": "Guards the Blue Radiant for the ceremony.",
+          "detailed": true
         },
         {
           "id": "wum-410-um32",
@@ -9016,7 +9717,9 @@
           "area": "Bionis' Leg",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Daksha Shrine (Bionis' Leg).",
+          "detailed": true
         }
       ],
       "hths": [
@@ -9028,7 +9731,10 @@
           "affinity": "Purple",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Mining Base (Ether Mine)",
+          "gainChoices": "It's a beautiful watch. // I can fix it!",
+          "detailed": true
         },
         {
           "id": "whth-410-hth8",
@@ -9038,11 +9744,156 @@
           "affinity": "Green",
           "missable": false,
           "note": null,
-          "confidence": "high"
+          "confidence": "high",
+          "location": "Zaldandia Waterfall",
+          "condition": "Night only",
+          "gainChoices": "Really? Interesting. // Will it ever run out?",
+          "detailed": true
         }
       ],
       "colony6": [],
       "notes": [],
+      "landmarks": [
+        {
+          "id": "wlm-4.10-0",
+          "label": "“Kelsher Wetlands”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.10-1",
+          "label": "“Nopon Merchant Camp”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.10-2",
+          "label": "“Crown Tree”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.10-3",
+          "label": "“Silent Obelisk”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.10-4",
+          "label": "“Glowing Obelisk”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.10-5",
+          "label": "“Sororal Statues”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.10-6",
+          "label": "“Shining Pond”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.10-7",
+          "label": "“Statue Summit”",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "locations": [
+        {
+          "id": "wloc-4.10-0",
+          "label": "“Lacus Swamp”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-1",
+          "label": "“Zaldandia Falls”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-2",
+          "label": "“Poison Swamp”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-3",
+          "label": "“Barren Moor”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-4",
+          "label": "“Dark Swamp”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-5",
+          "label": "“Igna Territory”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-6",
+          "label": "“Exile Fortress”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-7",
+          "label": "“Nopon Refuge”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-8",
+          "label": "“Oath Sanctuary”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-9",
+          "label": "“Place of Judgement”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-10",
+          "label": "“Mauk Floodgate”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-11",
+          "label": "“Soter Ruins”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-12",
+          "label": "“Basin Cave”",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.10-13",
+          "label": "“Altar of Fate”",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "notaBene": [
+        "Otharon, Juju and Dickson leave the party at the Sororal Statues — that's when Colony 6 reconstruction opens for business.",
+        "Easy 'Cosmic Killer Combo' record here via a lucky multi-link chain attack."
+      ],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -9257,6 +10108,9 @@
       "notes": [
         "⚠ POINT OF NO RETURN: completing 'To Colony 6!' / 'The Road Home' immigrates the Bionis' Leg residents and LOCKS every ⏱ Refugee Camp timed quest. Finish them first."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -9273,6 +10127,9 @@
       "notes": [
         "No collectables or monsters obtainable on this visit — straight run-through."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -9358,6 +10215,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -10154,6 +11014,9 @@
         }
       ],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -10189,6 +11052,9 @@
       ],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -10216,6 +11082,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -10240,6 +11109,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -10300,6 +11172,9 @@
       "notes": [
         "No collectables/unique monsters on this first visit."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -10351,6 +11226,9 @@
       "notes": [
         "⚠ Get Melia's Imperial Staff from Kallian at Ascension Hall (her best non-endgame weapon)."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -11205,6 +12083,9 @@
       "notes": [
         "⚠ Almost everything here is ⏱ TIMED — these quests are permanently FORFEIT at a later-game point of no return. Clear them all now."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -11434,6 +12315,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc1"
     },
     {
@@ -12112,6 +12996,9 @@
         }
       ],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -12242,6 +13129,9 @@
         "⚠ Everything here LOCKS after the Mechonis Field boss (§4.26). Also grab 3 Red Frontier for Colony 6.",
         "Mischievous Nabreus (UM74) is deliberately deferred to §4.25 when you're strong enough — but still before the lockout."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -12335,6 +13225,9 @@
       "notes": [
         "⚠ Locks with Sword Valley after the Mechonis Field boss. Grab 2 extra Art Core Coils for Colony 6."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -12780,6 +13673,9 @@
       ],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -13022,6 +13918,9 @@
         "⚠ The boss here is the PONR that permanently locks Sword Valley & Galahad Fortress.",
         "⚠ Mechonis Field itself locks after the Agniratha boss (§4.28). Grab extras: 3 Energy Aubergine, 2 Retro Diode, 2 Mossy Panel, 2 Azure Hollyhock for Colony 6."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -13217,6 +14116,9 @@
       "notes": [
         "⚠ Central Factory becomes permanent-lock after the Mechonis Core (last chance is the §4.30 approach). Grab 2 extra Black Styrene + 2 extra Angel Engine X for Colony 6."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -13512,6 +14414,9 @@
         "⚠ The boss here is the PONR that locks Mechonis Field AND Agniratha forever.",
         "⚠ DO NOT activate the four Pillar verification devices until everything is done. Grab 1 Fortune Feather, 2 Lewisia Silver, 3 Blue Light Amp for Colony 6."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -13659,6 +14564,9 @@
       "notes": [
         "⚠ Complete everything not requiring the Core. After §4.31: Central Factory permanent-locked, Prison Island temp, Alcamoth quick-travel off + full High Entia gone, Eryth/Alcamoth timed quests forfeit."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -13688,6 +14596,9 @@
       "notes": [
         "⚠ LAST chance for Central Factory. Quick-travel disabled throughout the approach."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -13717,6 +14628,9 @@
       "notes": [
         "⚠ MAJOR POINT OF NO RETURN — see the locks listed on this point of no return."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc2"
     },
     {
@@ -14158,6 +15072,9 @@
         }
       ],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc3"
     },
     {
@@ -14174,6 +15091,9 @@
       "notes": [
         "Opens a new Tephra Cave area; high-level — quests/UMs deferred to §4.36."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc3"
     },
     {
@@ -14261,6 +15181,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc3"
     },
     {
@@ -14364,6 +15287,9 @@
       "hths": [],
       "colony6": [],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc3"
     },
     {
@@ -14933,6 +15859,9 @@
         }
       ],
       "notes": [],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc3"
     },
     {
@@ -15114,6 +16043,9 @@
         "High Entia Doors (6): Valak Mountain (La Luz Church), Eryth Sea x2 (Hode Refuge / Kromar Coast), High Entia Tomb x2 (Ceremony Hall / Imperial Treasury), Satorl Marsh (Sororal Statues lift).",
         "Collectopaedia final trades: Minute Mantis (Sonia), Love Beetle (Lupa), Golden Cog (Oleksiy), Angel Engine Y (Rakzet), Thunder Compass (Jarak), Coin Of Fortune (Ma'crish), Love Source (Jer'ell — needs a Veritas Glyph from a superboss)."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc3"
     },
     {
@@ -15176,6 +16108,9 @@
       "notes": [
         "Optional. All fought at night. Lv. 100–120."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc3"
     },
     {
@@ -15604,6 +16539,9 @@
         "These depend on party affinity, so the guide lists them together. 41 conversations (HTH24–64).",
         "HTH35 'The Legend Of The Spider' — use the BAD choices once here to unlock the 'Heartbreaking' achievement."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc3"
     },
     {
@@ -15621,6 +16559,9 @@
         "⚠ FINAL POINT OF NO RETURN — the Memory Space transporter. Finish everything first.",
         "⚠ Keep Shulk's Miqol replica Monado equipped during the final boss (it cannot be re-made, even in NG+). The True Monado you earn also cannot be duplicated."
       ],
+      "landmarks": [],
+      "locations": [],
+      "records": [],
       "arc": "arc3"
     }
   ],
