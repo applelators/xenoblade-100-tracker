@@ -290,13 +290,11 @@
     const hasRich = item.giver || item.location || item.objective || item.rewards || item.strategy ||
       item.condition || item.gainChoices || item.mutexWhy || item.affinity;
     if (!hasRich) return null;
-    return el("details", { class: "qdetails" }, [
-      el("summary", null, ["details"]),
-      el("div", { class: "qfields" }, rows.map(([k, v]) =>
-        el("div", { class: "qf" + (k === "Why this pick" ? " why" : "") }, [
-          el("span", { class: "qf-k", text: k }), el("span", { class: "qf-v", text: v })
-        ])))
-    ]);
+    // always-visible detail grid (no disclosure); faded by CSS when the item is checked
+    return el("div", { class: "qfields" }, rows.map(([k, v]) =>
+      el("div", { class: "qf" + (k === "Why this pick" ? " why" : "") }, [
+        el("span", { class: "qf-k", text: k }), el("span", { class: "qf-v", text: v })
+      ])));
   }
   function walkRow(item, kind) {
     const checked = Store.isChecked(item.id);
@@ -350,21 +348,24 @@
         ? `⏱ Do before: ${locks.label}. ${locks.locks}`
         : `⏱ These are TIMED quests — finish them now. They become permanently unavailable at a later-game point of no return.`]));
     }
-    const body = el("div", { class: "area-body" }, [
-      walkBlock("Quests", s.quests, "q"),
-      walkBlock("Unique Monsters", s.ums, "um"),
-      walkBlock("Heart-to-Hearts", s.hths, "hth"),
-      walkBlock("Colony 6 Development", s.colony6, "c6"),
+    // 3-column layout: col1 = landmarks/locations/records/HtH/Colony6/affinity/Nota Bene,
+    // col2 = quests, col3 = unique monsters
+    const col1 = el("div", { class: "wcol" }, [
       walkBlock("📍 Landmarks (discover here)", s.landmarks, "lm"),
       walkBlock("📍 Locations (discover here)", s.locations, "loc"),
-      walkBlock("🏅 Records to unlock", s.records, "rec")
-    ]);
-    if (!body.querySelector(".cat-block")) body.appendChild(el("div", { class: "muted empty", text: "(Story/exploration section — nothing to check off here, or filtered out.)" }));
-    // affinity-chart steps + Nota Bene stay display-only
-    [
+      walkBlock("🏅 Records to unlock", s.records, "rec"),
+      walkBlock("Heart-to-Hearts", s.hths, "hth"),
+      walkBlock("Colony 6 Development", s.colony6, "c6"),
       refList("💞 Improve area affinity — steps", s.affinitySteps),
       refList("📝 Nota Bene", s.notaBene, { cls: "nb" })
-    ].forEach((p) => p && body.appendChild(p));
+    ]);
+    const col2 = el("div", { class: "wcol" }, [walkBlock("Quests", s.quests, "q")]);
+    const col3 = el("div", { class: "wcol" }, [walkBlock("Unique Monsters", s.ums, "um")]);
+    const body = el("div", { class: "area-body wcols" }, [col1, col2, col3]);
+    if (!body.querySelector(".cat-block") && !body.querySelector(".ref-block")) {
+      body.classList.remove("wcols");
+      body.appendChild(el("div", { class: "muted empty", text: "(Story/exploration section — nothing to check off here, or filtered out.)" }));
+    }
     return el("section", { class: "area-card" }, [
       el("div", { class: "area-head" }, [
         el("h3", { text: s.title }),
