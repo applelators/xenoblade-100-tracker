@@ -327,14 +327,16 @@
     ]);
   }
   function walkBlock(label, list, kind) {
-    const entries = (list || [])
-      .filter((it) => matchesSearch(it))
-      .filter((it) => !(Store.getPref("hideCompleted") && Store.isChecked(it.id)));
-    if (!entries.length) return null;
-    const done = entries.filter((it) => Store.isChecked(it.id)).length;
-    return el("div", { class: "cat-block" }, [
-      el("div", { class: "cat-head" }, [el("span", { text: label }), el("span", { class: "count", text: `${done}/${entries.length}` })]),
-      el("div", { class: "items" }, entries.map((it) => walkRow(it, kind)))
+    const all = (list || []).filter((it) => matchesSearch(it));
+    if (!all.length) return null;
+    const done = all.filter((it) => Store.isChecked(it.id)).length;
+    const allDone = done === all.length;
+    const visible = Store.getPref("hideCompleted") ? all.filter((it) => !Store.isChecked(it.id)) : all;
+    if (!visible.length) return null;
+    // a <details> that auto-collapses once every item in the block is checked
+    return el("details", { class: "cat-block" + (allDone ? " complete" : ""), ...(allDone ? {} : { open: "open" }) }, [
+      el("summary", { class: "cat-head" }, [el("span", { text: label }), el("span", { class: "count", text: `${done}/${all.length}` })]),
+      el("div", { class: "items" }, visible.map((it) => walkRow(it, kind)))
     ]);
   }
   // --- story-Part (arc) spoiler gating ---
