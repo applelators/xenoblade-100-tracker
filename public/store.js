@@ -44,19 +44,30 @@
   let reached = new Set(read(KEYS.reached, []));
   let prefs = Object.assign({}, DEFAULT_PREFS, read(KEYS.prefs, {}));
 
+  // cross-dataset check-state links: id -> [partner ids] (set by app at load).
+  // Checking an item also checks its matched twin in the other tab, and vice-versa.
+  let links = {};
+  const partnersOf = (id) => links[id] || [];
+
   const Store = {
+    // ---- cross-dataset links ----
+    setLinks(map) { links = map || {}; },
+
     // ---- checked items ----
-    isChecked: (id) => checked.has(id),
-    toggleChecked(id) {
-      if (checked.has(id)) checked.delete(id);
-      else checked.add(id);
-      write(KEYS.checked, [...checked]);
-      return checked.has(id);
+    isChecked(id) {
+      if (checked.has(id)) return true;
+      const ps = links[id];
+      if (ps) for (let i = 0; i < ps.length; i++) if (checked.has(ps[i])) return true;
+      return false;
     },
     setChecked(id, on) {
-      if (on) checked.add(id);
-      else checked.delete(id);
+      [id, ...partnersOf(id)].forEach((x) => { if (on) checked.add(x); else checked.delete(x); });
       write(KEYS.checked, [...checked]);
+    },
+    toggleChecked(id) {
+      const on = !this.isChecked(id);
+      this.setChecked(id, on);
+      return on;
     },
     checkedCount: () => checked.size,
 

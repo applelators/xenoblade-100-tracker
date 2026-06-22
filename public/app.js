@@ -90,6 +90,44 @@
     (DATA.walkthrough || []).forEach((s) => {
       ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records", "affinitySteps"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
     });
+
+    buildCheckLinks();
+  }
+
+  // Link check-state across the Walkthrough and Collectables datasets: when a
+  // landmark/location/unique-monster/quest in one matches one in the other (same
+  // normalized name, unambiguous 1:1), checking either checks both.
+  function buildCheckLinks() {
+    const norm = (s) => String(s || "").toLowerCase()
+      .replace(/[“”"'’]/g, "").replace(/\(lv\.?\s*\d+\)/g, "").replace(/lv\.?\s*\d+/g, "")
+      .replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+    const groups = {};
+    const add = (type, name, id, side) => {
+      const n = norm(name); if (!n) return;
+      const k = type + "|" + n;
+      (groups[k] = groups[k] || { w: [], c: [] })[side].push(id);
+    };
+    (DATA.walkthrough || []).forEach((s) => {
+      (s.landmarks || []).forEach((i) => add("place", i.label, i.id, "w"));
+      (s.locations || []).forEach((i) => add("place", i.label, i.id, "w"));
+      (s.ums || []).forEach((i) => add("monster", i.label, i.id, "w"));
+      (s.quests || []).forEach((i) => add("quest", i.label, i.id, "w"));
+    });
+    (DATA.areas || []).forEach((a) => {
+      const sec = a.sections || {};
+      (sec.landmarks || []).forEach((i) => add("place", i.label, i.id, "c"));
+      (sec.uniqueMonsters || []).forEach((i) => add("monster", i.label, i.id, "c"));
+      (sec.quests || []).forEach((i) => add("quest", i.label, i.id, "c"));
+    });
+    const links = {};
+    Object.values(groups).forEach((g) => {
+      if (g.w.length === 1 && g.c.length === 1) { // unambiguous 1:1 only
+        const a = g.w[0], b = g.c[0];
+        (links[a] = links[a] || []).push(b);
+        (links[b] = links[b] || []).push(a);
+      }
+    });
+    Store.setLinks(links);
   }
 
   function progress(predicate) {
