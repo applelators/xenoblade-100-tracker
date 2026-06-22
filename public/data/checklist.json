@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -6508,7 +6508,8 @@
       "ums": [],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.2",
@@ -6545,7 +6546,8 @@
         }
       ],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.3",
@@ -6558,7 +6560,8 @@
       "ums": [],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.4",
@@ -6571,7 +6574,8 @@
       "ums": [],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.5",
@@ -6584,7 +6588,8 @@
       "ums": [],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.6",
@@ -7828,7 +7833,8 @@
       "colony6": [],
       "notes": [
         "Refugee Camp ⏱ TIMED quests in this section lock once Colony 6 reconstruction begins (§4.11)."
-      ]
+      ],
+      "arc": "arc1"
     },
     {
       "id": "4.7",
@@ -8034,7 +8040,8 @@
       "colony6": [],
       "notes": [
         "Refugee Camp ⏱ TIMED quests still lock at Colony 6 reconstruction (§4.11)."
-      ]
+      ],
+      "arc": "arc1"
     },
     {
       "id": "4.8",
@@ -8094,7 +8101,8 @@
       ],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.9",
@@ -8146,7 +8154,8 @@
         }
       ],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.10",
@@ -8449,7 +8458,8 @@
         }
       ],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.11",
@@ -8468,7 +8478,7 @@
           "missable": true,
           "mutexWith": "The Road Home",
           "story": false,
-          "note": "Reconstruction trigger — do LAST. Mutually exclusive with 'The Road Home' (offered later at Fallen Arm).",
+          "note": "Reconstruction trigger — do this LAST (it locks the Refugee Camp ⏱ quests). An alternative version is offered much later; just complete THIS one now.",
           "confidence": "high"
         },
         {
@@ -8480,7 +8490,7 @@
           "missable": true,
           "mutexWith": "To Colony 6!",
           "story": false,
-          "note": "Alternative trigger (offered at Fallen Arm if you wait).",
+          "note": "Alternative reconstruction trigger offered much later — ignore it and do 'To Colony 6!' now.",
           "confidence": "high"
         },
         {
@@ -8662,7 +8672,8 @@
       ],
       "notes": [
         "⚠ POINT OF NO RETURN: completing 'To Colony 6!' / 'The Road Home' immigrates the Bionis' Leg residents and LOCKS every ⏱ Refugee Camp timed quest. Finish them first."
-      ]
+      ],
+      "arc": "arc1"
     },
     {
       "id": "4.12",
@@ -8677,7 +8688,8 @@
       "colony6": [],
       "notes": [
         "No collectables or monsters obtainable on this visit — straight run-through."
-      ]
+      ],
+      "arc": "arc1"
     },
     {
       "id": "4.13",
@@ -8761,7 +8773,8 @@
       ],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.14",
@@ -9556,7 +9569,8 @@
           "confidence": "high"
         }
       ],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.15",
@@ -9590,7 +9604,8 @@
         }
       ],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.16",
@@ -9616,7 +9631,8 @@
       "ums": [],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.17",
@@ -9639,7 +9655,8 @@
       ],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.18",
@@ -9698,7 +9715,8 @@
       "colony6": [],
       "notes": [
         "No collectables/unique monsters on this first visit."
-      ]
+      ],
+      "arc": "arc1"
     },
     {
       "id": "4.19",
@@ -9748,7 +9766,8 @@
       ],
       "notes": [
         "⚠ Get Melia's Imperial Staff from Kallian at Ascension Hall (her best non-endgame weapon)."
-      ]
+      ],
+      "arc": "arc1"
     },
     {
       "id": "4.20",
@@ -10600,8 +10619,9 @@
       ],
       "colony6": [],
       "notes": [
-        "⚠ Eryth Sea & Alcamoth TIMED quests here are FORFEIT after the Mechonis Core (§4.31). Clear them now."
-      ]
+        "⚠ Almost everything here is ⏱ TIMED — these quests are permanently FORFEIT at a later-game point of no return. Clear them all now."
+      ],
+      "arc": "arc1"
     },
     {
       "id": "4.21",
@@ -10829,7 +10849,8 @@
       ],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc1"
     },
     {
       "id": "4.22",
@@ -11506,7 +11527,8 @@
           "confidence": "high"
         }
       ],
-      "notes": []
+      "notes": [],
+      "arc": "arc2"
     },
     {
       "id": "4.23",
@@ -11635,7 +11657,8 @@
       "notes": [
         "⚠ Everything here LOCKS after the Mechonis Field boss (§4.26). Also grab 3 Red Frontier for Colony 6.",
         "Mischievous Nabreus (UM74) is deliberately deferred to §4.25 when you're strong enough — but still before the lockout."
-      ]
+      ],
+      "arc": "arc2"
     },
     {
       "id": "4.24",
@@ -11727,7 +11750,8 @@
       "colony6": [],
       "notes": [
         "⚠ Locks with Sword Valley after the Mechonis Field boss. Grab 2 extra Art Core Coils for Colony 6."
-      ]
+      ],
+      "arc": "arc2"
     },
     {
       "id": "4.25",
@@ -12171,7 +12195,8 @@
         }
       ],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc2"
     },
     {
       "id": "4.26",
@@ -12412,7 +12437,8 @@
       "notes": [
         "⚠ The boss here is the PONR that permanently locks Sword Valley & Galahad Fortress.",
         "⚠ Mechonis Field itself locks after the Agniratha boss (§4.28). Grab extras: 3 Energy Aubergine, 2 Retro Diode, 2 Mossy Panel, 2 Azure Hollyhock for Colony 6."
-      ]
+      ],
+      "arc": "arc2"
     },
     {
       "id": "4.27",
@@ -12606,7 +12632,8 @@
       "colony6": [],
       "notes": [
         "⚠ Central Factory becomes permanent-lock after the Mechonis Core (last chance is the §4.30 approach). Grab 2 extra Black Styrene + 2 extra Angel Engine X for Colony 6."
-      ]
+      ],
+      "arc": "arc2"
     },
     {
       "id": "4.28",
@@ -12900,7 +12927,8 @@
       "notes": [
         "⚠ The boss here is the PONR that locks Mechonis Field AND Agniratha forever.",
         "⚠ DO NOT activate the four Pillar verification devices until everything is done. Grab 1 Fortune Feather, 2 Lewisia Silver, 3 Blue Light Amp for Colony 6."
-      ]
+      ],
+      "arc": "arc2"
     },
     {
       "id": "4.29",
@@ -13046,7 +13074,8 @@
       ],
       "notes": [
         "⚠ Complete everything not requiring the Core. After §4.31: Central Factory permanent-locked, Prison Island temp, Alcamoth quick-travel off + full High Entia gone, Eryth/Alcamoth timed quests forfeit."
-      ]
+      ],
+      "arc": "arc2"
     },
     {
       "id": "4.30",
@@ -13074,7 +13103,8 @@
       "colony6": [],
       "notes": [
         "⚠ LAST chance for Central Factory. Quick-travel disabled throughout the approach."
-      ]
+      ],
+      "arc": "arc2"
     },
     {
       "id": "4.31",
@@ -13102,7 +13132,8 @@
       "colony6": [],
       "notes": [
         "⚠ MAJOR POINT OF NO RETURN — see the locks listed on this point of no return."
-      ]
+      ],
+      "arc": "arc2"
     },
     {
       "id": "4.32",
@@ -13542,7 +13573,8 @@
           "confidence": "high"
         }
       ],
-      "notes": []
+      "notes": [],
+      "arc": "arc3"
     },
     {
       "id": "4.33",
@@ -13557,7 +13589,8 @@
       "colony6": [],
       "notes": [
         "Opens a new Tephra Cave area; high-level — quests/UMs deferred to §4.36."
-      ]
+      ],
+      "arc": "arc3"
     },
     {
       "id": "4.34",
@@ -13643,7 +13676,8 @@
       ],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc3"
     },
     {
       "id": "4.35",
@@ -13745,7 +13779,8 @@
       ],
       "hths": [],
       "colony6": [],
-      "notes": []
+      "notes": [],
+      "arc": "arc3"
     },
     {
       "id": "4.36",
@@ -14313,7 +14348,8 @@
           "confidence": "high"
         }
       ],
-      "notes": []
+      "notes": [],
+      "arc": "arc3"
     },
     {
       "id": "4.37",
@@ -14493,7 +14529,8 @@
         "Finish the affinity chart, mop up unique monsters, open the 6 High Entia Doors, finish the Collectopaedia (trades).",
         "High Entia Doors (6): Valak Mountain (La Luz Church), Eryth Sea x2 (Hode Refuge / Kromar Coast), High Entia Tomb x2 (Ceremony Hall / Imperial Treasury), Satorl Marsh (Sororal Statues lift).",
         "Collectopaedia final trades: Minute Mantis (Sonia), Love Beetle (Lupa), Golden Cog (Oleksiy), Angel Engine Y (Rakzet), Thunder Compass (Jarak), Coin Of Fortune (Ma'crish), Love Source (Jer'ell — needs a Veritas Glyph from a superboss)."
-      ]
+      ],
+      "arc": "arc3"
     },
     {
       "id": "4.38",
@@ -14554,7 +14591,8 @@
       "colony6": [],
       "notes": [
         "Optional. All fought at night. Lv. 100–120."
-      ]
+      ],
+      "arc": "arc3"
     },
     {
       "id": "4.39",
@@ -14981,7 +15019,8 @@
       "notes": [
         "These depend on party affinity, so the guide lists them together. 41 conversations (HTH24–64).",
         "HTH35 'The Legend Of The Spider' — use the BAD choices once here to unlock the 'Heartbreaking' achievement."
-      ]
+      ],
+      "arc": "arc3"
     },
     {
       "id": "4.40",
@@ -14997,7 +15036,34 @@
       "notes": [
         "⚠ FINAL POINT OF NO RETURN — the Memory Space transporter. Finish everything first.",
         "⚠ Keep Shulk's Miqol replica Monado equipped during the final boss (it cannot be re-made, even in NG+). The True Monado you earn also cannot be duplicated."
-      ]
+      ],
+      "arc": "arc3"
+    }
+  ],
+  "arcs": [
+    {
+      "id": "arc1",
+      "part": 1,
+      "from": "4.1",
+      "to": "4.21",
+      "title": "Part 1 — Colony 9 → Valak Mountain",
+      "blurb": "The first ~third of the story: the opening through Prison Island (1st visit), reaching Valak Mountain."
+    },
+    {
+      "id": "arc2",
+      "part": 2,
+      "from": "4.22",
+      "to": "4.31",
+      "title": "Part 2",
+      "blurb": "The middle third — sealed to avoid spoilers. Reveal only when you're ready to continue past Valak Mountain."
+    },
+    {
+      "id": "arc3",
+      "part": 3,
+      "from": "4.32",
+      "to": "4.40",
+      "title": "Part 3",
+      "blurb": "The final third — sealed to avoid spoilers."
     }
   ]
 }

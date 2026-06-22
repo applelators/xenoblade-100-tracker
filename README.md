@@ -12,6 +12,11 @@ naming bosses, cutscenes, or plot beats.
     chronological sections **§4.1–§4.40**, each with its quests (⏱ timed + ⚄ mutually-exclusive +
     📖 story flags), unique monsters, heart-to-hearts, and Colony 6 development — in play order, with
     the **5 points of no return** called out as red banners exactly where they trigger.
+    - **Story Parts (spoiler wall):** the walkthrough is split into 3 sealed Parts. **Part 1
+      (§4.1–§4.21, Colony 9 → Valak Mountain)** is open by default; later Parts stay sealed behind a
+      warning until you choose to reveal them. Within a Part you can browse everything freely; nothing
+      past your current Part is shown, and timed-quest warnings whose lock is in a sealed Part are
+      auto-rewritten to be spoiler-safe.
   - **⏱ Missable** — the permanently-losable items grouped by cutoff (collectables/landmarks layer).
   - **Collectables** — full Collectopaedia + all landmarks, grouped by **area** card.
 

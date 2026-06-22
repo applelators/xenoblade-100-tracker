@@ -302,12 +302,26 @@
       el("div", { class: "items" }, entries.map((it) => walkRow(it, kind)))
     ]);
   }
+  // --- story-Part (arc) spoiler gating ---
+  function arcReached(id) { return Store.isReached(id); }
+  function ponrSectionArc(ponr) {
+    const code = (ponr && ponr.after || "").replace(/[^0-9.]/g, "");
+    const sec = (DATA.walkthrough || []).find((s) => s.id === code);
+    return sec ? sec.arc : null;
+  }
+  function ponrVisible(ponr) { const a = ponrSectionArc(ponr); return a ? arcReached(a) : true; }
+
   function sectionCard(s) {
     const ponrTrig = s.ponrTrigger ? (DATA.pointsOfNoReturn || []).find((p) => p.id === s.ponrTrigger) : null;
     const locks = s.locksAt ? (DATA.pointsOfNoReturn || []).find((p) => p.id === s.locksAt) : null;
     const banners = [];
     if (ponrTrig) banners.push(el("div", { class: "lock-banner danger" }, [`⚠ POINT OF NO RETURN here: ${ponrTrig.label} — ${ponrTrig.locks}`]));
-    if (locks && !ponrTrig) banners.push(el("div", { class: "lock-banner danger" }, [`⏱ Do before: ${locks.label}. ${locks.locks}`]));
+    if (locks && !ponrTrig) {
+      // if the lock's trigger is in a not-yet-revealed Part, keep the warning spoiler-safe
+      banners.push(el("div", { class: "lock-banner danger" }, [ponrVisible(locks)
+        ? `⏱ Do before: ${locks.label}. ${locks.locks}`
+        : `⏱ These are TIMED quests — finish them now. They become permanently unavailable at a later-game point of no return.`]));
+    }
     const body = el("div", { class: "area-body" }, [
       walkBlock("Quests", s.quests, "q"),
       walkBlock("Unique Monsters", s.ums, "um"),
@@ -329,16 +343,32 @@
   function walkView() {
     const wrap = el("div", { class: "view" });
     const secs = DATA.walkthrough || [];
-    const visible = secs.filter((s) => !Store.getPref("hideFutureAreas") || Store.isReached(s.id));
-    visible.forEach((s) => wrap.appendChild(sectionCard(s)));
-    if (Store.getPref("hideFutureAreas")) {
-      const next = secs.find((s) => !Store.isReached(s.id));
-      if (next) wrap.appendChild(el("div", { class: "reveal-row" }, [
-        el("button", { class: "btn reveal", onclick: () => { Store.markReached(next.id); render(); } }, ["Reveal next section ▸"]),
-        el("span", { class: "muted", text: "Reveal sections as you reach them in ShulkLink's order — keeps later story beats hidden." })
+    const arcs = DATA.arcs || [];
+    const reached = arcs.filter((a) => arcReached(a.id));
+    const cur = reached[reached.length - 1] || arcs[0];
+
+    // current-Part header + spoiler-wall status
+    wrap.appendChild(el("div", { class: "arc-banner" }, [
+      el("div", { class: "arc-title", text: "📖 " + (cur ? cur.title : "Walkthrough") }),
+      cur && cur.blurb ? el("div", { class: "muted", text: cur.blurb }) : null,
+      el("div", { class: "muted small", text: "🔒 Spoiler wall is ON — nothing past this Part is shown. Browse this Part freely." })
+    ]));
+
+    secs.filter((s) => arcReached(s.arc)).forEach((s) => wrap.appendChild(sectionCard(s)));
+
+    // sealed wall for the next Part
+    const nextArc = arcs.find((a) => !arcReached(a.id));
+    if (nextArc) {
+      wrap.appendChild(el("div", { class: "arc-wall" }, [
+        el("div", { class: "arc-wall-title", text: "🚧 " + nextArc.title + " — sealed" }),
+        el("div", { class: "muted", text: nextArc.blurb }),
+        el("div", { class: "muted small", text: "Revealing this shows quests, regions and story events from later in the game." }),
+        el("button", {
+          class: "btn reveal",
+          onclick: () => { if (confirm("Reveal " + nextArc.title + "?\n\nThis permanently shows content and SPOILERS from later in the game.")) { Store.markReached(nextArc.id); render(); } }
+        }, ["Reveal " + nextArc.title + " ▸"])
       ]));
     }
-    if (!visible.length) wrap.appendChild(el("div", { class: "muted empty", text: "Hit “Reveal next section” to begin at §4.1." }));
     return wrap;
   }
 
@@ -514,9 +544,9 @@
     .then((data) => {
       DATA = data;
       buildIndex();
-      // auto-reveal the first area + first walkthrough section so the app isn't empty on first run
+      // auto-reveal the first area + Part 1 so the app isn't empty on first run
       if (DATA.areas && DATA.areas.length && !Store.isReached(DATA.areas[0].id)) Store.markReached(DATA.areas[0].id);
-      if (DATA.walkthrough && DATA.walkthrough.length && !Store.isReached(DATA.walkthrough[0].id)) Store.markReached(DATA.walkthrough[0].id);
+      if (DATA.arcs && DATA.arcs.length && !Store.isReached(DATA.arcs[0].id)) Store.markReached(DATA.arcs[0].id);
       render();
     })
     .catch((err) => {

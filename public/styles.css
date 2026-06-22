@@ -113,6 +113,12 @@ a { color: var(--accent); }
 .flash { animation: flash 1.6s ease; }
 @keyframes flash { 0%, 100% { background: transparent; } 25% { background: #3a2f55; } }
 
+.arc-banner { background: linear-gradient(180deg, #12281d, #0e1c16); border: 1px solid #2c5b3f; border-radius: var(--radius); padding: 12px 14px; margin: 12px 0; }
+.arc-title { font-weight: 800; font-size: 16px; color: var(--accent2); }
+.arc-wall { margin: 16px 0; padding: 18px; border: 2px dashed #7d3535; border-radius: var(--radius); background: repeating-linear-gradient(45deg, #1a1212, #1a1212 12px, #1f1515 12px, #1f1515 24px); text-align: center; }
+.arc-wall-title { font-weight: 800; color: #ffb4b4; font-size: 16px; margin-bottom: 4px; }
+.arc-wall .btn { margin-top: 12px; }
+
 details.completion { margin-top: 8px; border-top: 1px dashed var(--line); padding-top: 6px; }
 details.completion > summary { cursor: pointer; color: var(--accent2); font-size: 13px; font-weight: 600; padding: 4px 0; list-style: none; }
 details.completion > summary::-webkit-details-marker { display: none; }

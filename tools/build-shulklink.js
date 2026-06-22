@@ -244,8 +244,8 @@ um(S, "UM32", "Clifftop Bayern", 32, { a: "Bionis' Leg" });
 // 4.11 ----------------------------------------------------------------
 S = sec("4.11", "Opening Colony 6", "Colony 6", { ponrTrigger: "ponr-colony6",
   notes: ["⚠ POINT OF NO RETURN: completing 'To Colony 6!' / 'The Road Home' immigrates the Bionis' Leg residents and LOCKS every ⏱ Refugee Camp timed quest. Finish them first."] });
-q(S, "Q118a", "To Colony 6!", { a: "Colony 6", x: "The Road Home", note: "Reconstruction trigger — do LAST. Mutually exclusive with 'The Road Home' (offered later at Fallen Arm)." });
-q(S, "Q118b", "The Road Home", { a: "Colony 6", x: "To Colony 6!", note: "Alternative trigger (offered at Fallen Arm if you wait)." });
+q(S, "Q118a", "To Colony 6!", { a: "Colony 6", x: "The Road Home", note: "Reconstruction trigger — do this LAST (it locks the Refugee Camp ⏱ quests). An alternative version is offered much later; just complete THIS one now." });
+q(S, "Q118b", "The Road Home", { a: "Colony 6", x: "To Colony 6!", note: "Alternative reconstruction trigger offered much later — ignore it and do 'To Colony 6!' now." });
 q(S, "Q119", "The Old Soldier's Test", { a: "Colony 9", miss: true, note: "⚠ Only if you tell Dionysus 'he's too old for the girl.' Guide warns: for PERFECT affinity, SKIP this and answer 'love keeps the old ticker going' instead." });
 q(S, "Q120", "A Selfish Girl's Mistake", { a: "Colony 6" });
 q(S, "Q121", "Satata's Younger Brother", { a: "Colony 6" });
@@ -368,7 +368,7 @@ c6(S, "Colony 6 — Commerce Lv. 3", "Shiny Kromar Hide x3, Slick Kromar Stone x
 c6(S, "Colony 6 — Special Lv. 2", "Dust Element x2, Sea Berry x3");
 // 4.20 ----------------------------------------------------------------
 S = sec("4.20", "Alcamoth & Eryth Sea Errata", "Alcamoth / Eryth Sea", { locksAt: "ponr-mechonis-core",
-  notes: ["⚠ Eryth Sea & Alcamoth TIMED quests here are FORFEIT after the Mechonis Core (§4.31). Clear them now."] });
+  notes: ["⚠ Almost everything here is ⏱ TIMED — these quests are permanently FORFEIT at a later-game point of no return. Clear them all now."] });
 q(S, "Q191a", "Monster Quest 1 (Eryth Sea)", { a: "Eryth Sea", t: true });
 q(S, "Q192", "Monster Quest 2 (Eryth Sea)", { a: "Eryth Sea", t: true });
 q(S, "Q193", "Challenge (Eryth Sea)", { a: "Eryth Sea", t: true });
@@ -832,6 +832,23 @@ S.notes.push("HTH35 'The Legend Of The Spider' — use the BAD choices once here
 // 4.40 ----------------------------------------------------------------
 S = sec("4.40", "The Endgame: Memory Space", "Prison Island / Memory Space", { ponrTrigger: "ponr-memory-space",
   notes: ["⚠ FINAL POINT OF NO RETURN — the Memory Space transporter. Finish everything first.", "⚠ Keep Shulk's Miqol replica Monado equipped during the final boss (it cannot be re-made, even in NG+). The True Monado you earn also cannot be duplicated."] });
+
+// ---- story Parts (spoiler gates) -------------------------------------------
+// Sections are pushed in chronological order, so we gate by their index range.
+const ARCS = [
+  { id: "arc1", part: 1, from: "4.1", to: "4.21",
+    title: "Part 1 — Colony 9 → Valak Mountain",
+    blurb: "The first ~third of the story: the opening through Prison Island (1st visit), reaching Valak Mountain." },
+  { id: "arc2", part: 2, from: "4.22", to: "4.31",
+    title: "Part 2", blurb: "The middle third — sealed to avoid spoilers. Reveal only when you're ready to continue past Valak Mountain." },
+  { id: "arc3", part: 3, from: "4.32", to: "4.40",
+    title: "Part 3", blurb: "The final third — sealed to avoid spoilers." }
+];
+const idxOf = (code) => sections.findIndex((s) => s.id === code);
+ARCS.forEach((a) => { a._from = idxOf(a.from); a._to = idxOf(a.to); });
+sections.forEach((s, i) => { s.arc = (ARCS.find((a) => i >= a._from && i <= a._to) || ARCS[ARCS.length - 1]).id; });
+ARCS.forEach((a) => { delete a._from; delete a._to; });
+data.arcs = ARCS;
 
 // ---- attach + write ---------------------------------------------------------
 data.pointsOfNoReturn = PONR;
