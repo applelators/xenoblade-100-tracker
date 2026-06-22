@@ -90,6 +90,7 @@
     WALK_ITEMS = [];
     (DATA.walkthrough || []).forEach((s) => {
       ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records", "affinitySteps"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
+      (s.guide || []).forEach((g) => { WALK_ITEMS.push(g); (g.notes || []).forEach((n) => WALK_ITEMS.push(n)); });
     });
 
     buildCheckLinks();
@@ -353,6 +354,38 @@
       ]);
     }));
   }
+  // parse {{spoiler}} markup into text nodes + click-to-reveal spans
+  function parseSpoilers(text) {
+    const out = [];
+    const re = /\{\{(.+?)\}\}/g;
+    let last = 0, m;
+    while ((m = re.exec(text))) {
+      if (m.index > last) out.push(document.createTextNode(text.slice(last, m.index)));
+      out.push(el("span", { class: "spoiler", title: "Spoiler — click to reveal" }, [m[1]]));
+      last = m.index + m[0].length;
+    }
+    if (last < text.length) out.push(document.createTextNode(text.slice(last)));
+    return out;
+  }
+  // a checkable route step (numbered) with optional checkable Nota-Bene sub-bullets
+  function routeStep(g) {
+    const checked = Store.isChecked(g.id);
+    const stepRow = el("label", { class: "rstep" + (checked ? " done" : "") }, [
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (e) => { Store.setChecked(g.id, e.target.checked); render(); } }),
+      el("span", { class: "rstep-text" }, parseSpoilers(g.step))
+    ]);
+    const kids = [stepRow];
+    if (g.notes && g.notes.length) {
+      kids.push(el("ul", { class: "rnotes" }, g.notes.map((n) => {
+        const nc = Store.isChecked(n.id);
+        return el("li", null, [el("label", { class: "rnote" + (nc ? " done" : "") }, [
+          el("input", { type: "checkbox", ...(nc ? { checked: "checked" } : {}), onchange: (e) => { Store.setChecked(n.id, e.target.checked); render(); } }),
+          el("span", { class: "rnote-text" }, [document.createTextNode("📝 "), ...parseSpoilers(n.text)])
+        ])]);
+      })));
+    }
+    return el("li", null, kids);
+  }
   function walkRow(item, kind) {
     const checked = Store.isChecked(item.id);
     return el("label", { class: "item" + (checked ? " done" : ""), id: "item-" + item.id }, [
@@ -416,7 +449,8 @@
       walkBlock("Heart-to-Hearts", s.hths, "hth"),
       walkBlock("Colony 6 Development", s.colony6, "c6"),
       walkBlock("💞 Improve area affinity — steps", s.affinitySteps, "aff"),
-      refList("📝 Nota Bene", s.notaBene, { cls: "nb" })
+      // Nota Bene moves under route steps when a route exists; otherwise show the panel
+      (s.guide && s.guide.length) ? null : refList("📝 Nota Bene", s.notaBene, { cls: "nb" })
     ]);
     const col2 = el("div", { class: "wcol" }, [walkBlock("Quests", s.quests, "q")]);
     const col3 = el("div", { class: "wcol" }, [walkBlock("Unique Monsters", s.ums, "um")]);
@@ -427,7 +461,7 @@
     }
     const route = (s.guide && s.guide.length) ? el("div", { class: "route" }, [
       el("div", { class: "route-head", text: "🧭 Route — what to do" }),
-      el("ol", { class: "route-list" }, s.guide.map((step) => el("li", { text: step })))
+      el("ol", { class: "route-list" }, s.guide.map(routeStep))
     ]) : null;
     return el("section", { class: "area-card" }, [
       el("div", { class: "area-head" }, [
@@ -590,6 +624,15 @@
   function doReset() {
     if (confirm("Reset ALL progress (checks + revealed areas)? Export first if you want a backup.")) { Store.resetAll(); render(); }
   }
+
+  // ---------- spoiler reveal (event delegation; don't toggle the step checkbox) ----------
+  document.addEventListener("click", (e) => {
+    const sp = e.target.closest(".spoiler");
+    if (!sp) return;
+    e.preventDefault();
+    e.stopPropagation();
+    sp.classList.toggle("revealed");
+  }, true);
 
   // ---------- mutex highlight (event delegation) ----------
   document.addEventListener("click", (e) => {

@@ -849,6 +849,12 @@ sections.forEach((s) => {
   s.locations = (s.locations || []).map((x, i) => ({ id: `wloc-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
   s.records = (s.records || []).map((x, i) => ({ id: `wrec-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
   s.affinitySteps = (s.affinitySteps || []).map((x, i) => ({ id: `waff-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
+  // route steps + their Nota-Bene sub-notes are checkable (ids by index)
+  s.guide = (s.guide || []).map((g, i) => ({
+    id: `wgs-${s.id}-${i}`,
+    step: g.step,
+    notes: (g.notes || []).map((n, j) => ({ id: `wgn-${s.id}-${i}-${j}`, text: n }))
+  }));
 });
 
 // ---- story Parts (spoiler gates) -------------------------------------------

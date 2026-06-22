@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -6510,8 +6510,21 @@
       "colony6": [],
       "notes": [],
       "guide": [
-        "It's a guided tutorial battle you can't lose — just learn the basics: target with L/R, fire Arts with A, and against Mechon use Monado Enchant (then Buster on the boss).",
-        "Play through to the title screen; the prologue ends there."
+        {
+          "id": "wgs-4.1-0",
+          "step": "It's a guided tutorial battle you can't lose — just learn the basics: target with L/R, fire Arts with A, and against Mechon use Monado Enchant (then Buster on the boss).",
+          "notes": [
+            {
+              "id": "wgn-4.1-0-0",
+              "text": "Finish the boss ({{Mechon M82}}) with Buster around 50% HP — pure tutorial, you can't lose."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.1-1",
+          "step": "Play through to the title screen; the prologue ends there.",
+          "notes": []
+        }
       ],
       "notaBene": [
         "Pure tutorial — you can't lose. Use Monado Enchant on the Mechon and finish the boss (Mechon M82) with Buster around 50% HP."
@@ -6566,11 +6579,36 @@
       "colony6": [],
       "notes": [],
       "guide": [
-        "You take control as Shulk at the Mechon Wreckage Site. Win the tutorial fight, grab the chest, then head south down the road and follow it east into Colony 9.",
-        "Take the grand tour for free landmark EXP: Main Entrance → Ether Light → Gem Man's Stall → Central Plaza → Fortress Entrance, then into the Military District and west to the Weapon Dev. Lab.",
-        "Follow the story prompt 'Delivering Food' (Q1): bring the lunch to Shulk at Outlook Park, and watch the 'Sunrise in the Park' heart-to-heart there.",
-        "Return to the Weapon Dev. Lab to trigger the next beat, then take the errand toward Tephra Cave: quick-travel to the Main Entrance and climb the south trail up Tephra Hill to the Tephra Cave Entrance.",
-        "Hold off on side quests for now — the guide flags a story event ahead you don't want to be mid-quest for."
+        {
+          "id": "wgs-4.2-0",
+          "step": "You take control as Shulk at the Mechon Wreckage Site. Win the tutorial fight, grab the chest, then head south down the road and follow it east into Colony 9.",
+          "notes": [
+            {
+              "id": "wgn-4.2-0-0",
+              "text": "Fiora is only playable until an upcoming cutscene — make the most of her now."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.2-1",
+          "step": "Take the grand tour for free landmark EXP: Main Entrance → Ether Light → Gem Man's Stall → Central Plaza → Fortress Entrance, then into the Military District and west to the Weapon Dev. Lab.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.2-2",
+          "step": "Follow the story prompt 'Delivering Food' (Q1): bring the lunch to Shulk at Outlook Park, and watch the 'Sunrise in the Park' heart-to-heart there.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.2-3",
+          "step": "Return to the Weapon Dev. Lab to trigger the next beat, then take the errand toward Tephra Cave: quick-travel to the Main Entrance and climb the south trail up Tephra Hill to the Tephra Cave Entrance.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.2-4",
+          "step": "Hold off on side quests for now — the guide flags a story event ahead you don't want to be mid-quest for.",
+          "notes": []
+        }
       ],
       "landmarks": [
         {
@@ -6700,10 +6738,40 @@
       "colony6": [],
       "notes": [],
       "guide": [
-        "Enter Tephra Cave. Follow the path west; at the fork go north past the Caterpile Nest (steer clear of the unique monster in the middle) and continue to the Mag Mell Ruins.",
-        "Enter the ruins for a cutscene and the skip-travel tutorial. Recommended detour: skip-travel back to Colony 9 to claim the Gem Man's free gems and buy/equip gear (don't sell Reyn's Scrap Driver).",
-        "From the ruins, climb the ramp, head east through the door, then north through the cavern (follow the U-turn) to the Rear Entrance, which sends you back toward Colony 9.",
-        "Outside you'll unlock the Cylinder Hangar — head to the story flag to continue."
+        {
+          "id": "wgs-4.3-0",
+          "step": "Enter Tephra Cave. Follow the path west; at the fork go north past the Caterpile Nest (steer clear of the unique monster in the middle) and continue to the Mag Mell Ruins.",
+          "notes": [
+            {
+              "id": "wgn-4.3-0-0",
+              "text": "Just run from the unique monster in the hallway past Mag Mell Ruins for now."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.3-1",
+          "step": "Enter the ruins for a cutscene and the skip-travel tutorial. Recommended detour: skip-travel back to Colony 9 to claim the Gem Man's free gems and buy/equip gear.",
+          "notes": [
+            {
+              "id": "wgn-4.3-1-0",
+              "text": "Visit the Gem Man for a free Strength Up II + HP Up II gem."
+            },
+            {
+              "id": "wgn-4.3-1-1",
+              "text": "Do NOT sell Reyn's Scrap Driver — it can't be replaced."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.3-2",
+          "step": "From the ruins, climb the ramp, head east through the door, then north through the cavern (follow the U-turn) to the Rear Entrance, which sends you back toward Colony 9.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.3-3",
+          "step": "Outside you'll unlock the Cylinder Hangar — head to the story flag to continue.",
+          "notes": []
+        }
       ],
       "landmarks": [
         {
@@ -6786,10 +6854,31 @@
       "colony6": [],
       "notes": [],
       "guide": [
-        "After the hangar scene you're thrown into a forced fight, then the colony falls into chaos and quick-travel is disabled. Drop into the water below (you're safe), swim east to shore (Anti-Air Battery 1), and climb up to re-enter through the Main Entrance.",
-        "Make for the Weapon Dev. Lab: east to the Central Plaza, then north across the bridge into the Military District. With the lab blocked, the plan routes you to the Residential District.",
-        "Fight through the forced Mechon battles (use Monado Enchant once Shulk holds the Monado), heading southeast and across the bridge to the Residential District.",
-        "Boss — Metal Face (Lv. 10): survive Stage 1, then in Stage 2 topple-lock him with a chain attack (Enchant first → Stream Edge → Wild Down → Steel Strike) and burn ~25% of his HP with red Arts or Buster."
+        {
+          "id": "wgs-4.4-0",
+          "step": "After the hangar scene you're thrown into a forced fight, then the colony falls into chaos and quick-travel is disabled. Drop into the water below (you're safe), swim east to shore (Anti-Air Battery 1), and climb up to re-enter through the Main Entrance.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.4-1",
+          "step": "Make for the Weapon Dev. Lab: east to the Central Plaza, then north across the bridge into the Military District. With the lab blocked, the plan routes you to the Residential District.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.4-2",
+          "step": "Fight through the forced Mechon battles (use Monado Enchant once Shulk holds the Monado), heading southeast and across the bridge to the Residential District.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.4-3",
+          "step": "Boss — {{Metal Face (Lv. 10)}}: survive Stage 1, then in Stage 2 topple-lock him with a chain attack (Enchant first → Stream Edge → Wild Down → Steel Strike) and burn ~25% of his HP with red Arts or Buster.",
+          "notes": [
+            {
+              "id": "wgn-4.4-3-0",
+              "text": "Your first real boss — topple-locking via a chain attack is the key skill to learn here."
+            }
+          ]
+        }
       ],
       "locations": [
         {
@@ -6851,13 +6940,46 @@
       "colony6": [],
       "notes": [],
       "guide": [
-        "Set out from Colony 9 (try a gem craft at the Gem Man for a record). Quick-travel to the Mag Mell Ruins, up the ramp, east through the door, then south past the Escape Pod Bay into the Tephra Cavern.",
-        "Farm the ice-like ether deposit for your first crystals, grab the Spring of Grief landmark, then follow the path south through the spider caves (a forced arachno fight happens along the way).",
-        "Continue west then south, climb the vines, cross Vilia Lake, and climb up to the Arachno Queen's Nest.",
-        "Boss — Arachno Queen (Lv. 12): focus her with Arts and party commands, and use Shield when a vision warns of her talent art. Take the Queen's Gut Fluid afterward.",
-        "Use the Gut Fluid on the sticky web, head to the overlook, then northeast to Kneecap Hill → east to Leg Pass → east into the Bionis' Leg.",
-        "On the Leg: from Raginar Canyon Path go southeast onto Gaur Plain, reach the abandoned buggy (forced fight), then meet Juju and follow his directions — east to the tall post, then south to the Refugee Camp.",
-        "At camp, speak with Sharla in the cave and agree to listen. You now have a full party — head north to the marker to restore quick-travel, then move into the §4.6 errata."
+        {
+          "id": "wgs-4.5-0",
+          "step": "Set out from Colony 9 (try a gem craft at the Gem Man for a record). Quick-travel to the Mag Mell Ruins, up the ramp, east through the door, then south past the Escape Pod Bay into the Tephra Cavern.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.5-1",
+          "step": "Farm the ice-like ether deposit for your first crystals, grab the Spring of Grief landmark, then follow the path south through the spider caves (a forced arachno fight happens along the way).",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.5-2",
+          "step": "Continue west then south, climb the vines, cross Vilia Lake, and climb up to the Arachno Queen's Nest.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.5-3",
+          "step": "Boss — {{Arachno Queen (Lv. 12)}}: focus her with Arts and party commands, and use Shield when a vision warns of her talent art. Take the Queen's Gut Fluid afterward.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.5-4",
+          "step": "Use the Gut Fluid on the sticky web, head to the overlook, then northeast to Kneecap Hill → east to Leg Pass → east into the Bionis' Leg.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.5-5",
+          "step": "On the Leg: from Raginar Canyon Path go southeast onto Gaur Plain, reach the abandoned buggy (forced fight), then meet Juju and follow his directions — east to the tall post, then south to the Refugee Camp.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.5-6",
+          "step": "At camp, speak with Sharla in the cave and agree to listen. You now have a full party — head north to the marker to restore quick-travel, then move into the §4.6 errata.",
+          "notes": [
+            {
+              "id": "wgn-4.5-6-0",
+              "text": "Sharla joins as your first healer."
+            }
+          ]
+        }
       ],
       "landmarks": [
         {
@@ -8736,10 +8858,39 @@
         "Refugee Camp ⏱ TIMED quests in this section lock once Colony 6 reconstruction begins (§4.11)."
       ],
       "guide": [
-        "No story to advance here — this is the big side-quest sweep across Colony 9, Tephra Cave, and the Bionis' Leg / Refugee Camp.",
-        "Suggested order: clear Colony 9's daytime quests, then its night quests, then the Tephra Cave batch, then head to the Bionis' Leg and work the Refugee Camp quests.",
-        "Use the Quests column — each item's details give the giver, exact location, objective and reward; unique-monster spots and the 'which to pick' notes for mutually-exclusive quests are in their own details.",
-        "⏱ The Refugee Camp timed quests can be left for now, but they ALL lock when you start Colony 6 reconstruction (§4.11) — don't trigger that until they're done."
+        {
+          "id": "wgs-4.6-0",
+          "step": "No story to advance here — this is the big side-quest sweep across Colony 9, Tephra Cave, and the Bionis' Leg / Refugee Camp.",
+          "notes": [
+            {
+              "id": "wgn-4.6-0-0",
+              "text": "Around here you'll pick up records like Second Wind (10 revivals), Art School (an art to Lv. 2) and Ninja Skillz (one-shot with Back Slash)."
+            },
+            {
+              "id": "wgn-4.6-0-1",
+              "text": "Item Vision: a gray vision flags how many of a newly-found collectable you'll need; it's tracked in your inventory."
+            },
+            {
+              "id": "wgn-4.6-0-2",
+              "text": "Your Arts palette fills up around Lv. 16 — you can only equip 8, so swap via the Arts submenu."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.6-1",
+          "step": "Suggested order: clear Colony 9's daytime quests, then its night quests, then the Tephra Cave batch, then head to the Bionis' Leg and work the Refugee Camp quests.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.6-2",
+          "step": "Use the Quests column — each item's details give the giver, exact location, objective and reward; unique-monster spots and the 'which to pick' notes for mutually-exclusive quests are in their own details.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.6-3",
+          "step": "⏱ The Refugee Camp timed quests can be left for now, but they ALL lock when you start Colony 6 reconstruction (§4.11) — don't trigger that until they're done.",
+          "notes": []
+        }
       ],
       "landmarks": [
         {
@@ -9282,11 +9433,36 @@
         "Refugee Camp ⏱ TIMED quests still lock at Colony 6 reconstruction (§4.11)."
       ],
       "guide": [
-        "More cleanup plus a region boss. First, mop up the remaining Tephra Cave unique monsters.",
-        "Head up the Leg: from Raguel Bridge: North go northeast to Maguel Road, then north to the story flag. You'll fight the area's boss here (Mechon M71, Lv. 18) before finishing the errata because it blocks access — beating it locks nothing.",
-        "A short second fight follows (Mysterious Face, Lv. 25) — just survive; Sharla keeps the party up.",
-        "Afterward, finish the upper-Leg map (Traveller's Rest, Spiral Valley, Bask Cave Passage, Kasharpa Falls, Zax Guidepost, Believer's Paradise) and clear the remaining quests and the long affinity-link list.",
-        "When everything's done, quick-travel to the Bask Cave Passage and head southeast to the next region, Colony 6."
+        {
+          "id": "wgs-4.7-0",
+          "step": "More cleanup plus a region boss. First, mop up the remaining Tephra Cave unique monsters.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.7-1",
+          "step": "Head up the Leg: from Raguel Bridge: North go northeast to Maguel Road, then north to the story flag. You'll fight the area's boss here ({{Mechon M71 (Lv. 18)}}) before finishing the errata because it blocks access.",
+          "notes": [
+            {
+              "id": "wgn-4.7-1-0",
+              "text": "You fight this region's bosses before clearing the errata — the boss blocks access, and beating it locks nothing."
+            }
+          ]
+        },
+        {
+          "id": "wgs-4.7-2",
+          "step": "A short second fight follows ({{Mysterious Face (Lv. 25)}}) — just survive; Sharla keeps the party up.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.7-3",
+          "step": "Afterward, finish the upper-Leg map (Traveller's Rest, Spiral Valley, Bask Cave Passage, Kasharpa Falls, Zax Guidepost, Believer's Paradise) and clear the remaining quests and the long affinity-link list.",
+          "notes": []
+        },
+        {
+          "id": "wgs-4.7-4",
+          "step": "When everything's done, quick-travel to the Bask Cave Passage and head southeast to the next region, Colony 6.",
+          "notes": []
+        }
       ],
       "landmarks": [
         {
@@ -9596,6 +9772,7 @@
       ],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -9811,6 +9988,7 @@
         }
       ],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -10369,6 +10547,7 @@
       ],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -10684,6 +10863,7 @@
       ],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -10721,6 +10901,7 @@
       ],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -10957,6 +11138,7 @@
         "Melia joins after the telethia fight — start her party affinity (pair with Sharla for an upcoming quest)."
       ],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12267,6 +12449,7 @@
         "Frontier Village has the most errata in the game — huge for character growth.",
         "Boss: Leonne Telethia (Lv. 36) at the Decayed Forest — suggested party Melia / Sharla / Riki."
       ],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12361,6 +12544,7 @@
       ],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12453,6 +12637,7 @@
         }
       ],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12546,6 +12731,7 @@
         }
       ],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12773,6 +12959,7 @@
         "After Zanza's release: Monado arts level up to X, and faced Mechon can now be damaged like normal Mechon (topple or Enchant)."
       ],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -12862,6 +13049,7 @@
       ],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -14071,6 +14259,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -14548,6 +14737,7 @@
       ],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc1"
     },
     {
@@ -15230,6 +15420,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -15364,6 +15555,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -15461,6 +15653,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -15910,6 +16103,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -16156,6 +16350,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -16355,6 +16550,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -16654,6 +16850,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -16805,6 +17002,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -16838,6 +17036,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -16871,6 +17070,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc2"
     },
     {
@@ -17316,6 +17516,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc3"
     },
     {
@@ -17336,6 +17537,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc3"
     },
     {
@@ -17427,6 +17629,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc3"
     },
     {
@@ -17534,6 +17737,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc3"
     },
     {
@@ -18107,6 +18311,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc3"
     },
     {
@@ -18292,6 +18497,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc3"
     },
     {
@@ -18358,6 +18564,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc3"
     },
     {
@@ -18790,6 +18997,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc3"
     },
     {
@@ -18811,6 +19019,7 @@
       "locations": [],
       "records": [],
       "affinitySteps": [],
+      "guide": [],
       "arc": "arc3"
     }
   ],
