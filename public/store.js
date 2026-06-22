@@ -16,9 +16,9 @@
   };
 
   const DEFAULT_PREFS = {
-    view: "missable",            // "missable" | "full"
+    view: "walk",                // "walk" | "missable" | "full"
     hideCompleted: false,
-    hideFutureAreas: true,       // spoiler guard: hide not-yet-reached areas
+    hideFutureAreas: true,       // spoiler guard: hide not-yet-reached areas/sections
     category: "all",             // category filter for full view
     search: ""
   };

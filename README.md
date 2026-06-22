@@ -7,11 +7,16 @@ naming bosses, cutscenes, or plot beats.
 
 ## What it does
 
-- **Two views**
-  - **⏱ Missable priority** (default while playing) — only the permanently-losable items, grouped by
-    cutoff in the order you'll hit them. Your "don't screw up 100%" list.
-  - **Full 100%** — everything, grouped by **area** card (mirrors how you explore / how the
-    ShulkLink guide is ordered).
+- **Three views**
+  - **📖 Walkthrough** (default) — follows **ShulkLink0624's GameFAQs guide** structure: the 40
+    chronological sections **§4.1–§4.40**, each with its quests (⏱ timed + ⚄ mutually-exclusive +
+    📖 story flags), unique monsters, heart-to-hearts, and Colony 6 development — in play order, with
+    the **5 points of no return** called out as red banners exactly where they trigger.
+  - **⏱ Missable** — the permanently-losable items grouped by cutoff (collectables/landmarks layer).
+  - **Collectables** — full Collectopaedia + all landmarks, grouped by **area** card.
+
+Source of truth: ShulkLink's guide (faqs/76615) — **structure + factual data only, no prose copied**
+(quest/UM/HTH numbering, points of no return, timed + mutually-exclusive quests, Colony 6 development).
 - **"Expires next" panel** — the next cutoff with unchecked missables under it, pinned at the top.
 - **Spoiler guard** — cutoffs are anchored to **chapter ranges + region locks**, never plot events.
   **Future areas are hidden by default** ("Hide future areas") and revealed one at a time with

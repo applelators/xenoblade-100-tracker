@@ -38,6 +38,7 @@
   let CUTOFF_BY_ID = {};
   let CUTOFF_ORDER = {};      // id -> order index
   let ALL_ENTRIES = [];       // { item, area, category }
+  let WALK_ITEMS = [];        // flat walkthrough items (for progress)
 
   // ---------- helpers ----------
   function $(sel, root) { return (root || document).querySelector(sel); }
@@ -83,15 +84,19 @@
     });
     (DATA.achievements || []).forEach((item) => ALL_ENTRIES.push({ item, area: null, category: "achievements" }));
     (DATA.futureConnected || []).forEach((item) => ALL_ENTRIES.push({ item, area: null, category: "futureConnected" }));
+
+    // flat list of walkthrough items (quests/ums/hths/colony6) for progress counting
+    WALK_ITEMS = [];
+    (DATA.walkthrough || []).forEach((s) => {
+      ["quests", "ums", "hths", "colony6"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
+    });
   }
 
   function progress(predicate) {
     let total = 0, done = 0;
-    ALL_ENTRIES.forEach(({ item }) => {
-      if (!predicate(item)) return;
-      total++;
-      if (Store.isChecked(item.id)) done++;
-    });
+    const count = (item) => { if (!predicate(item)) return; total++; if (Store.isChecked(item.id)) done++; };
+    ALL_ENTRIES.forEach(({ item }) => count(item));
+    WALK_ITEMS.forEach(count);
     return { total, done, pct: total ? Math.round((done / total) * 100) : 0 };
   }
 
@@ -265,6 +270,78 @@
     ]);
   }
 
+  // ---------- WALKTHROUGH VIEW (ShulkLink §4.1–4.40) ----------
+  function walkBadges(item, kind) {
+    const out = [];
+    if (item.timed) out.push(el("span", { class: "badge timed", title: "Timed quest — has the in-game ⏱ stopwatch icon and expires at a point of no return" }, ["⏱ Timed"]));
+    if (item.mutexWith) out.push(el("span", { class: "badge mutex", title: "Mutually exclusive — completing this forfeits: " + item.mutexWith }, ["⚄ Either/or"]));
+    if (item.story) out.push(el("span", { class: "badge story", title: "Story quest — required to progress" }, ["📖 Story"]));
+    if (kind === "um" && item.missable) out.push(el("span", { class: "badge ach", title: "Missable / no-respawn unique monster" }, ["★ Missable"]));
+    if (item.confidence === "verify") out.push(el("span", { class: "badge verify", title: "Double-check in-game" }, ["⚠ Verify"]));
+    return out;
+  }
+  function walkRow(item, kind) {
+    const checked = Store.isChecked(item.id);
+    return el("label", { class: "item" + (checked ? " done" : ""), id: "item-" + item.id }, [
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (e) => { Store.setChecked(item.id, e.target.checked); render(); } }),
+      el("span", { class: "item-body" }, [
+        el("span", { class: "item-label" }, [item.code ? el("span", { class: "qcode", text: item.code + " " }) : null, document.createTextNode(item.label)]),
+        el("span", { class: "item-badges" }, walkBadges(item, kind)),
+        item.note ? el("span", { class: "item-note", text: item.note }) : null
+      ])
+    ]);
+  }
+  function walkBlock(label, list, kind) {
+    const entries = (list || [])
+      .filter((it) => matchesSearch(it))
+      .filter((it) => !(Store.getPref("hideCompleted") && Store.isChecked(it.id)));
+    if (!entries.length) return null;
+    const done = entries.filter((it) => Store.isChecked(it.id)).length;
+    return el("div", { class: "cat-block" }, [
+      el("div", { class: "cat-head" }, [el("span", { text: label }), el("span", { class: "count", text: `${done}/${entries.length}` })]),
+      el("div", { class: "items" }, entries.map((it) => walkRow(it, kind)))
+    ]);
+  }
+  function sectionCard(s) {
+    const ponrTrig = s.ponrTrigger ? (DATA.pointsOfNoReturn || []).find((p) => p.id === s.ponrTrigger) : null;
+    const locks = s.locksAt ? (DATA.pointsOfNoReturn || []).find((p) => p.id === s.locksAt) : null;
+    const banners = [];
+    if (ponrTrig) banners.push(el("div", { class: "lock-banner danger" }, [`⚠ POINT OF NO RETURN here: ${ponrTrig.label} — ${ponrTrig.locks}`]));
+    if (locks && !ponrTrig) banners.push(el("div", { class: "lock-banner danger" }, [`⏱ Do before: ${locks.label}. ${locks.locks}`]));
+    const body = el("div", { class: "area-body" }, [
+      walkBlock("Quests", s.quests, "q"),
+      walkBlock("Unique Monsters", s.ums, "um"),
+      walkBlock("Heart-to-Hearts", s.hths, "hth"),
+      walkBlock("Colony 6 Development", s.colony6, "c6")
+    ]);
+    if (!body.querySelector(".cat-block")) body.appendChild(el("div", { class: "muted empty", text: "(Story/exploration section — nothing to check off here, or filtered out.)" }));
+    return el("section", { class: "area-card" }, [
+      el("div", { class: "area-head" }, [
+        el("h3", { text: s.title }),
+        el("span", { class: "chip soft", text: "§" + s.code }),
+        el("span", { class: "chip soft", text: s.region })
+      ]),
+      ...banners,
+      ...((s.notes || []).map((n) => el("div", { class: "muted section-note", text: n }))),
+      body
+    ]);
+  }
+  function walkView() {
+    const wrap = el("div", { class: "view" });
+    const secs = DATA.walkthrough || [];
+    const visible = secs.filter((s) => !Store.getPref("hideFutureAreas") || Store.isReached(s.id));
+    visible.forEach((s) => wrap.appendChild(sectionCard(s)));
+    if (Store.getPref("hideFutureAreas")) {
+      const next = secs.find((s) => !Store.isReached(s.id));
+      if (next) wrap.appendChild(el("div", { class: "reveal-row" }, [
+        el("button", { class: "btn reveal", onclick: () => { Store.markReached(next.id); render(); } }, ["Reveal next section ▸"]),
+        el("span", { class: "muted", text: "Reveal sections as you reach them in ShulkLink's order — keeps later story beats hidden." })
+      ]));
+    }
+    if (!visible.length) wrap.appendChild(el("div", { class: "muted empty", text: "Hit “Reveal next section” to begin at §4.1." }));
+    return wrap;
+  }
+
   function fullView() {
     const wrap = el("div", { class: "view" });
     const areas = DATA.areas || [];
@@ -310,8 +387,9 @@
     const bar = el("div", { class: "controls" });
 
     const tabs = el("div", { class: "tabs" }, [
-      el("button", { class: "tab" + (view === "missable" ? " active" : ""), onclick: () => { Store.setPref("view", "missable"); render(); } }, ["⏱ Missable priority"]),
-      el("button", { class: "tab" + (view === "full" ? " active" : ""), onclick: () => { Store.setPref("view", "full"); render(); } }, ["Full 100%"])
+      el("button", { class: "tab" + (view === "walk" ? " active" : ""), onclick: () => { Store.setPref("view", "walk"); render(); } }, ["📖 Walkthrough"]),
+      el("button", { class: "tab" + (view === "missable" ? " active" : ""), onclick: () => { Store.setPref("view", "missable"); render(); } }, ["⏱ Missable"]),
+      el("button", { class: "tab" + (view === "full" ? " active" : ""), onclick: () => { Store.setPref("view", "full"); render(); } }, ["Collectables"])
     ]);
 
     const search = el("input", {
@@ -415,8 +493,9 @@
     ]));
 
     root.appendChild(controls());
-    root.appendChild(expiresNextPanel());
-    root.appendChild(Store.getPref("view") === "missable" ? missableView() : fullView());
+    const view = Store.getPref("view");
+    if (view !== "walk") root.appendChild(expiresNextPanel());
+    root.appendChild(view === "walk" ? walkView() : view === "missable" ? missableView() : fullView());
 
     root.appendChild(el("footer", { class: "app-footer" }, [
       el("div", { class: "muted", text: "Trust the in-game ⏱ stopwatch icon over any guide. Cross-check quest completeness on Fandom; read the area walkthroughs on ShulkLink." }),
@@ -435,8 +514,9 @@
     .then((data) => {
       DATA = data;
       buildIndex();
-      // auto-reveal the first area so the app isn't empty on first run
-      if (Store.reachedCount() === 0 && DATA.areas && DATA.areas.length) Store.markReached(DATA.areas[0].id);
+      // auto-reveal the first area + first walkthrough section so the app isn't empty on first run
+      if (DATA.areas && DATA.areas.length && !Store.isReached(DATA.areas[0].id)) Store.markReached(DATA.areas[0].id);
+      if (DATA.walkthrough && DATA.walkthrough.length && !Store.isReached(DATA.walkthrough[0].id)) Store.markReached(DATA.walkthrough[0].id);
       render();
     })
     .catch((err) => {
