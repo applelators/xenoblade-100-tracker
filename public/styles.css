@@ -218,8 +218,8 @@ details.area-collapsible:not([open]) > summary.area-head { margin: 0; }
 
 /* ------------------------------------------------------------------ items */
 .items, .expires-list { display: flex; flex-direction: column; gap: 2px; }
-.item { display: flex; gap: 11px; align-items: flex-start; padding: 7px 9px; border-radius: var(--radius-sm); cursor: pointer; transition: background .15s, transform .15s; }
-.item:hover { background: var(--card2); transform: translateX(2px); }
+.item { display: flex; gap: 11px; align-items: flex-start; padding: 7px 9px; border-radius: var(--radius-sm); cursor: pointer; transition: background .1s; }
+.item:hover { background: var(--card2); }
 .item input { margin-top: 3px; width: 17px; height: 17px; accent-color: var(--accent2); flex: 0 0 auto; cursor: pointer; }
 .item-body { display: flex; flex-direction: column; gap: 3px; }
 .item-label { line-height: 1.4; }
@@ -513,7 +513,7 @@ details.completion[open] > summary::before { content: "▾ "; }
 /* after first load, re-renders (e.g. ticking a checkbox) must NOT replay the
    entrance fade — otherwise every card flashes dark and animates back in */
 body.no-anim .panel, body.no-anim .area-card, body.no-anim .cutoff-card,
-body.no-anim .arc-banner, body.no-anim .completed-area { animation: none; transition: none; }
+body.no-anim .arc-banner, body.no-anim .completed-area, body.no-anim .item { animation: none; transition: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; }
 }
