@@ -700,15 +700,20 @@
   let artsFloatEl = null, tocFloatEl = null, floatsBound = false;
   function sectionByCode(code) { return (DATA.walkthrough || []).find((s) => s.code === code); }
   function activeSectionCard() {
-    const cards = document.querySelectorAll("#app .area-card[data-code]");
-    let best = null, bestTop = -Infinity, firstBelow = null;
-    cards.forEach((c) => {
-      const r = c.getBoundingClientRect();
-      if (r.height <= 0) return;                 // skip collapsed (completed) sections
-      if (r.top <= 170 && r.top > bestTop) { bestTop = r.top; best = c; }
-      if (!firstBelow && r.bottom > 170) firstBelow = c;
-    });
-    return best || firstBelow || cards[0] || null;
+    const LINE = 160; // reference line, px from the top of the viewport
+    // only sections in the active flow — never the collapsed "Completed sections" pile
+    const cards = Array.prototype.slice
+      .call(document.querySelectorAll("#app .area-card[data-code]"))
+      .filter((c) => !c.closest(".completed-area"));
+    let firstBelow = null, lastAbove = null;
+    for (let i = 0; i < cards.length; i++) {
+      const r = cards[i].getBoundingClientRect();
+      if (r.height <= 0) continue;                       // skip anything not laid out
+      if (r.top <= LINE && r.bottom > LINE) return cards[i]; // the card crossing the line = active
+      if (r.bottom <= LINE) lastAbove = cards[i];        // fully scrolled past
+      else if (!firstBelow) firstBelow = cards[i];        // first one still below the line
+    }
+    return firstBelow || lastAbove || cards[0] || null;
   }
   function updateArtsFloat() {
     if (!artsFloatEl) return;
