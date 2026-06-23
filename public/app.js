@@ -1212,7 +1212,11 @@
       ])
     ));
   }
+  let bootedRender = false;
   function render() {
+    // entrance fade plays once on first load only — on re-renders (every checkbox
+    // toggle rebuilds the DOM) suppress it so cards don't flash dark + reanimate.
+    if (bootedRender) document.body.classList.add("no-anim");
     const root = $("#app");
     root.innerHTML = "";
     document.body.classList.toggle("view-walk", Store.getPref("view") === "walk");
@@ -1256,6 +1260,7 @@
     if (next) settleTimer = setTimeout(render, Math.max(250, next - Date.now() + 50));
 
     scheduleSyncPush(); // push local changes to the cloud (debounced) if sync is on
+    bootedRender = true;
   }
   let settleTimer = null;
 

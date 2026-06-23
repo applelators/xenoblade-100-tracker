@@ -510,6 +510,10 @@ details.completion[open] > summary::before { content: "▾ "; }
 /* entrance + reduced-motion ------------------------------------------------ */
 .panel, .area-card, .cutoff-card, .arc-banner, .completed-area { animation: fadeUp .45s cubic-bezier(.3,0,.2,1) both; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+/* after first load, re-renders (e.g. ticking a checkbox) must NOT replay the
+   entrance fade — otherwise every card flashes dark and animates back in */
+body.no-anim .panel, body.no-anim .area-card, body.no-anim .cutoff-card,
+body.no-anim .arc-banner, body.no-anim .completed-area { animation: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; }
 }
