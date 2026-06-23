@@ -383,7 +383,7 @@
     if (it.timed) badgeEls.push(el("span", { class: "badge timed", title: "Timed quest — shows the in-game ⏱ icon" }, ["⏱ Timed"]));
     if (locked) badgeEls.push(forfeitBadge(it.id));
     return el("label", { class: "item" + (checked ? " done" : "") + (locked ? " locked" : ""), id: "item-" + it.id }, [
-      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), ...(locked ? { disabled: "disabled" } : {}), onchange: (e) => { Store.setChecked(it.id, e.target.checked); render(); } }),
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), ...(locked ? { disabled: "disabled" } : {}), onchange: (e) => checkboxToggle(it.id, e) }),
       el("span", { class: "item-body" }, [
         el("span", { class: "item-label" }, [document.createTextNode(it.label), it.area ? el("span", { class: "item-sub", text: " · " + it.area }) : null]),
         badgeEls.length ? el("span", { class: "item-badges" }, badgeEls) : null,
@@ -442,7 +442,7 @@
     const item = entry.item;
     const checked = Store.isChecked(item.id);
     return el("label", { class: "item" + (checked ? " done" : ""), id: "item-" + item.id }, [
-      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (e) => { Store.setChecked(item.id, e.target.checked); render(); } }),
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (e) => checkboxToggle(item.id, e) }),
       el("span", { class: "item-body" }, [el("span", { class: "item-label", text: item.label })])
     ]);
   }
@@ -575,7 +575,7 @@
   function routeStep(g) {
     const checked = Store.isChecked(g.id);
     const stepRow = el("label", { class: "rstep" }, [
-      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (e) => { Store.setChecked(g.id, e.target.checked); render(); } }),
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (e) => checkboxToggle(g.id, e) }),
       el("span", { class: "rstep-text" }, parseSpoilers(g.step))
     ]);
     const kids = [stepRow];
@@ -592,7 +592,7 @@
     const badgeEls = walkBadges(item, kind);
     if (locked) badgeEls.push(forfeitBadge(item.id));
     return el("label", { class: "item" + (checked ? " done" : "") + (locked ? " locked" : ""), id: "item-" + item.id }, [
-      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), ...(locked ? { disabled: "disabled" } : {}), onchange: (e) => { Store.setChecked(item.id, e.target.checked); render(); } }),
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), ...(locked ? { disabled: "disabled" } : {}), onchange: (e) => checkboxToggle(item.id, e) }),
       el("span", { class: "item-body" }, [
         el("span", { class: "item-label" }, [item.code ? el("span", { class: "qcode", text: item.code + " " }) : null, document.createTextNode(item.label)]),
         el("span", { class: "item-badges" }, badgeEls),
@@ -1000,7 +1000,7 @@
   function achRow(e) {
     const checked = Store.isChecked(e.id);
     return el("label", { class: "item" + (checked ? " done" : ""), id: "item-" + e.id }, [
-      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (ev) => { Store.setChecked(e.id, ev.target.checked); render(); } }),
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (ev) => checkboxToggle(e.id, ev) }),
       el("span", { class: "item-body" }, [
         el("span", { class: "item-label" }, [e.n < 9999 ? el("span", { class: "ach-num", text: "#" + e.n + " " }) : null, document.createTextNode(e.name)]),
         e.cond ? el("span", { class: "item-note", text: e.cond }) : null
@@ -1218,6 +1218,21 @@
       ])
     ));
   }
+  // Checkbox clicks: apply state + instant visual feedback on the clicked row,
+  // then defer the (heavy) full re-render so the checkmark/strikethrough paint
+  // immediately instead of blocking on a whole-DOM rebuild.
+  let renderTimer = null;
+  function scheduleRender() {
+    if (renderTimer) return;
+    renderTimer = setTimeout(() => { renderTimer = null; render(); }, 0);
+  }
+  function checkboxToggle(id, e) {
+    Store.setChecked(id, e.target.checked);
+    const row = e.target.closest(".item, .rli");
+    if (row) row.classList.toggle("done", Store.isChecked(id)); // optimistic, instant
+    scheduleRender();
+  }
+
   let bootedRender = false;
   function render() {
     // entrance fade plays once on first load only — on re-renders (every checkbox
