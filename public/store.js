@@ -13,6 +13,7 @@
     checked: "xbc100:checked",   // array of item ids
     checkedAt: "xbc100:checkedAt", // id -> epoch ms when checked (for delayed collapse)
     reached: "xbc100:reached",   // array of area ids the player has reached
+    playtime: "xbc100:playtime", // section code -> in-game hours logged on arrival
     prefs: "xbc100:prefs"        // ui preferences object
   };
 
@@ -47,6 +48,7 @@
   // In-memory mirrors (Sets for fast membership tests).
   let checked = new Set(read(KEYS.checked, []));
   let checkedAt = read(KEYS.checkedAt, {}) || {};
+  let playtime = read(KEYS.playtime, {}) || {};
   let reached = new Set(read(KEYS.reached, []));
   let prefs = Object.assign({}, DEFAULT_PREFS, read(KEYS.prefs, {}));
 
@@ -138,6 +140,15 @@
     },
     checkedCount: () => checked.size,
 
+    // ---- in-game playtime logged per section (for "hours left" estimate) ----
+    getPlaytime: (code) => playtime[code],
+    setPlaytime(code, hours) {
+      if (hours == null || hours === "" || isNaN(hours)) delete playtime[code];
+      else playtime[code] = Number(hours);
+      write(KEYS.playtime, playtime);
+    },
+    allPlaytime: () => Object.assign({}, playtime),
+
     // ---- reached areas (progressive reveal) ----
     isReached: (areaId) => reached.has(areaId),
     markReached(areaId) {
@@ -158,6 +169,7 @@
       return {
         checked: [...checked],
         checkedAt,
+        playtime,
         reached: [...reached],
         prefs,
         exportedAt: new Date().toISOString()
@@ -167,10 +179,12 @@
       if (!obj || typeof obj !== "object") return false;
       checked = new Set(Array.isArray(obj.checked) ? obj.checked : []);
       checkedAt = (obj.checkedAt && typeof obj.checkedAt === "object") ? obj.checkedAt : {};
+      playtime = (obj.playtime && typeof obj.playtime === "object") ? obj.playtime : {};
       reached = new Set(Array.isArray(obj.reached) ? obj.reached : []);
       prefs = Object.assign({}, DEFAULT_PREFS, obj.prefs || {});
       write(KEYS.checked, [...checked]);
       write(KEYS.checkedAt, checkedAt);
+      write(KEYS.playtime, playtime);
       write(KEYS.reached, [...reached]);
       write(KEYS.prefs, prefs);
       return true;
@@ -178,10 +192,12 @@
     resetAll() {
       checked = new Set();
       checkedAt = {};
+      playtime = {};
       reached = new Set();
       prefs = Object.assign({}, DEFAULT_PREFS);
       write(KEYS.checked, []);
       write(KEYS.checkedAt, {});
+      write(KEYS.playtime, {});
       write(KEYS.reached, []);
       write(KEYS.prefs, prefs);
     }

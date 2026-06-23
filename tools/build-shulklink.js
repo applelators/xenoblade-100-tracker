@@ -898,12 +898,14 @@ sections.forEach((s) => {
 // Sections are pushed in chronological order, so we gate by their index range.
 const ARCS = [
   { id: "arc1", part: 1, from: "4.1", to: "4.21",
-    title: "Part 1 — Colony 9 → Valak Mountain",
-    blurb: "The first ~third of the story: the opening through Prison Island (1st visit), reaching Valak Mountain." },
+    title: "Part 1 — Prologue to Chapter 10",
+    blurb: "The opening stretch of the story: the Prologue through the end of Chapter 10 (roughly the first third)." },
   { id: "arc2", part: 2, from: "4.22", to: "4.31",
-    title: "Part 2", blurb: "The middle third — sealed to avoid spoilers. Reveal only when you're ready to continue past Valak Mountain." },
+    title: "Part 2 — Chapters 11 to 15",
+    blurb: "The middle stretch (Chapters 11–15) — sealed to avoid spoilers. Reveal only when you're ready to continue." },
   { id: "arc3", part: 3, from: "4.32", to: "4.40",
-    title: "Part 3", blurb: "The final third — sealed to avoid spoilers." }
+    title: "Part 3 — Chapters 16 to 17",
+    blurb: "The final stretch (Chapters 16–17) plus the Future Connected epilogue — sealed to avoid spoilers." }
 ];
 const idxOf = (code) => sections.findIndex((s) => s.id === code);
 ARCS.forEach((a) => { a._from = idxOf(a.from); a._to = idxOf(a.to); });

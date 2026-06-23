@@ -55,6 +55,19 @@
   };
   // display order of the aside
   const PARTY_ORDER = ["Shulk", "Reyn", "Sharla", "Dunban", "Melia", "Riki", "Seven"];
+  // a small icon per art, by its role (⚔️ attack · 🗡️ positional · 💚 heal ·
+  // 🛡️ buff/guard · 🌀 aura · 🔮 summon · 🔥/❄️/⚡ elemental · 💢 debuff)
+  const ART_ICON = {
+    "Battle Soul": "⚔️", "Shadow Eye": "🌀", "Air Slash": "⚔️", "Back Slash": "🗡️", "Slit Edge": "⚔️", "Stream Edge": "⚔️", "Light Heal": "💚", "Armor": "🛡️", "Shield": "🛡️", "Buster": "⚔️",
+    "Lariat": "⚔️", "Berserker": "🌀", "Sword Drive": "⚔️", "Wild Down": "⚔️", "Dive Sobat": "⚔️", "Magnum Charge": "🌀", "Shield Bash": "🛡️", "War Swing": "⚔️",
+    "Cure Round": "💚", "Head Shot": "⚔️", "Heal Round": "💚", "Heal Bullet": "💚", "Covert Stance": "🌀", "Heal Blast": "💚",
+    "Soaring Tempest": "⚔️", "Heat Haze": "🌀", "Serene Heart": "🌀", "Steel Strike": "⚔️", "Worldly Slash": "⚔️", "Peerless": "🌀", "Gale Slash": "⚔️", "Spirit Breath": "🌀", "Electric Gutbuster": "⚔️",
+    "Summon Earth": "🔮", "Summon Copy": "🔮", "Summon Flare": "🔥", "Summon Bolt": "⚡", "Mind Blast": "💢", "Summon Wind": "🔮", "Reflection": "🛡️", "Summon Ice": "❄️",
+    "Freezinate": "❄️", "Burninate": "🔥", "You Can Do It": "💚", "Hero Time": "🌀", "Lurgy": "💢", "Sneaky": "🌀", "Bitey Bitey": "⚔️", "Tantrum": "🌀", "Happy Happy": "🛡️",
+    "Final Cross": "⚔️", "Air Fang": "⚔️", "Lock-On": "🌀", "Zero Gravity": "⚔️", "Spear Blade": "⚔️", "Double Blade": "⚔️", "Power Drain": "💚", "Double Wind": "⚔️", "Ether Drain": "🔮", "Cross Impact": "⚔️"
+  };
+  const artIcon = (n) => ART_ICON[n] || "⚔️";
+  const artsList = (arr) => el("span", { class: "arts-list" }, arr.map((n) => el("span", { class: "art" }, [el("span", { class: "art-ic", text: artIcon(n) }), document.createTextNode(" " + n)])));
   let SECTION_RANK = {};      // section code -> chronological index (for party-by-section)
   // who is in the party at a given section (spoiler-gated by arc reveal anyway)
   function partyFor(code) {
@@ -77,8 +90,8 @@
       const a = PARTY_ARTS[c];
       return el("div", { class: "arts-char" }, [
         el("div", { class: "arts-name", text: c }),
-        a.S && a.S.length ? el("div", { class: "arts-tier" }, [el("span", { class: "tl s", text: "S" }), el("span", { class: "arts-list", text: a.S.join(", ") })]) : null,
-        a.A && a.A.length ? el("div", { class: "arts-tier" }, [el("span", { class: "tl a", text: "A" }), el("span", { class: "arts-list", text: a.A.join(", ") })]) : null
+        a.S && a.S.length ? el("div", { class: "arts-tier" }, [el("span", { class: "tl s", text: "S" }), artsList(a.S)]) : null,
+        a.A && a.A.length ? el("div", { class: "arts-tier" }, [el("span", { class: "tl a", text: "A" }), artsList(a.A)]) : null
       ]);
     });
     return el("aside", { class: "arts-aside" }, [
@@ -703,12 +716,21 @@
     }
     // best-arts panel is NOT inlined per section — a single floating card (managed
     // by updateArtsFloat) follows the scroll and shows only the active section.
+    const playtimeRow = el("div", { class: "playtime-row" }, [
+      el("span", { class: "playtime-label", text: "⏱ In-game hours when you reached here:" }),
+      el("input", {
+        class: "playtime-input", type: "number", min: "0", step: "0.1", placeholder: "e.g. 12.5",
+        ...(Store.getPlaytime(s.code) != null ? { value: Store.getPlaytime(s.code) } : {}),
+        onchange: (e) => { Store.setPlaytime(s.code, e.target.value); render(); }
+      })
+    ]);
     return el("section", { class: "area-card", "data-code": s.code }, [
       el("div", { class: "area-head" }, [
         el("h3", { text: s.title }),
         el("span", { class: "chip soft", text: "§" + s.code }),
         el("span", { class: "chip soft", text: s.region })
       ]),
+      playtimeRow,
       ...banners,
       ...((s.notes || []).map((n) => el("div", { class: "muted section-note", text: n }))),
       route,
@@ -750,16 +772,33 @@
   function updateTocFloat() {
     if (!tocFloatEl) return;
     const active = Store.getPref("view") === "walk" ? activeSectionCard() : null;
-    const groups = active ? active.querySelectorAll(".area-group[data-region]") : [];
-    if (!active || groups.length < 2) { tocFloatEl.style.display = "none"; return; }
-    const card = el("div", { class: "toc-card" }, [el("div", { class: "toc-head", text: "🧭 Jump to area" })]);
-    groups.forEach((g) => {
-      const region = g.getAttribute("data-region");
-      card.appendChild(el("button", {
-        class: "toc-link" + (g.classList.contains("complete") ? " done" : ""),
-        onclick: () => { g.open = true; g.scrollIntoView({ behavior: "smooth", block: "start" }); }
-      }, [region]));
-    });
+    if (!active) { tocFloatEl.style.display = "none"; return; }
+    // prev/next among the ACTIVE (incomplete) section cards — completed ones are
+    // tucked in the "Completed sections" pile, so prev is always an unfinished one.
+    const flow = Array.prototype.slice.call(document.querySelectorAll("#app .area-card[data-code]")).filter((c) => !c.closest(".completed-area"));
+    const idx = flow.indexOf(active);
+    const prev = idx > 0 ? flow[idx - 1] : null;
+    const next = (idx >= 0 && idx < flow.length - 1) ? flow[idx + 1] : null;
+    const groups = active.querySelectorAll(".area-group[data-region]");
+    if (!prev && !next && groups.length < 2) { tocFloatEl.style.display = "none"; return; }
+    const jump = (c) => c.scrollIntoView({ behavior: "smooth", block: "start" });
+    const card = el("div", { class: "toc-card" });
+    if (prev || next) {
+      const nav = el("div", { class: "sec-nav" }, [
+        prev ? el("button", { class: "sec-nav-btn", title: "Jump to the previous (unfinished) section", onclick: () => jump(prev) }, ["▲ Prev section"]) : null,
+        next ? el("button", { class: "sec-nav-btn", title: "Jump to the next section", onclick: () => jump(next) }, ["▼ Next section"]) : null
+      ].filter(Boolean));
+      card.appendChild(nav);
+    }
+    if (groups.length >= 2) {
+      card.appendChild(el("div", { class: "toc-head", text: "🧭 Jump to area" }));
+      groups.forEach((g) => {
+        card.appendChild(el("button", {
+          class: "toc-link" + (g.classList.contains("complete") ? " done" : ""),
+          onclick: () => { g.open = true; g.scrollIntoView({ behavior: "smooth", block: "start" }); }
+        }, [g.getAttribute("data-region")]));
+      });
+    }
     tocFloatEl.innerHTML = "";
     tocFloatEl.appendChild(card);
     tocFloatEl.style.display = "";
@@ -787,6 +826,28 @@
     (s.guide || []).forEach((g) => ids.push(g.id));
     return ids.length > 0 && ids.every((id) => Store.isChecked(id));
   }
+  // estimate of in-game hours left in the current Part, from logged section times
+  function playtimeEstimate(cur) {
+    if (!cur) return null;
+    const arcSecs = (DATA.walkthrough || []).filter((s) => s.arc === cur.id);
+    const N = arcSecs.length;
+    const partName = (cur.title || "this Part").split("—")[0].trim();
+    const pts = arcSecs.map((s, i) => ({ i, code: s.code, h: Store.getPlaytime(s.code) })).filter((p) => p.h != null && !isNaN(p.h));
+    if (!pts.length) {
+      return el("div", { class: "muted small pt-est" }, ["⏱ Tip: enter your in-game hours when you reach a section (in its card) and I'll estimate the time left in " + partName + "."]);
+    }
+    const last = pts[pts.length - 1];
+    if (pts.length < 2) {
+      return el("div", { class: "muted small pt-est" }, ["⏱ Logged " + last.h + " h at §" + last.code + ". Log your hours at one more section to estimate the time left in " + partName + "."]);
+    }
+    const first = pts[0];
+    const pace = (last.h - first.h) / (last.i - first.i);
+    const estLeft = Math.max(0, pace * ((N - 1) - last.i));
+    return el("div", { class: "pt-est" }, [
+      el("strong", { text: "⏱ ~" + estLeft.toFixed(1) + " h left in " + partName }),
+      el("span", { class: "muted small", text: " — at your pace (~" + pace.toFixed(1) + " h/section; " + last.h + " h logged at §" + last.code + "). Projected " + partName + " total ≈ " + (last.h + estLeft).toFixed(0) + " h." })
+    ]);
+  }
   function walkView() {
     const wrap = el("div", { class: "view" });
     const secs = DATA.walkthrough || [];
@@ -794,11 +855,12 @@
     const reached = arcs.filter((a) => arcReached(a.id));
     const cur = reached[reached.length - 1] || arcs[0];
 
-    // current-Part header + spoiler-wall status
+    // current-Part header + spoiler-wall status + playtime estimate
     wrap.appendChild(el("div", { class: "arc-banner" }, [
       el("div", { class: "arc-title", text: "📖 " + (cur ? cur.title : "Walkthrough") }),
       cur && cur.blurb ? el("div", { class: "muted", text: cur.blurb }) : null,
-      el("div", { class: "muted small", text: "🔒 Spoiler wall is ON — nothing past this Part is shown. Browse this Part freely." })
+      el("div", { class: "muted small", text: "🔒 Spoiler wall is ON — nothing past this Part is shown. Browse this Part freely." }),
+      playtimeEstimate(cur)
     ]));
 
     const visible = secs.filter((s) => arcReached(s.arc));
