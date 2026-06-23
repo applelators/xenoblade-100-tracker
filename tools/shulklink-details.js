@@ -22,11 +22,10 @@ module.exports = {
         { step: "Use the Quests column — each item's details give the giver, exact location, objective and reward; unique-monster spots and the 'which to pick' notes for mutually-exclusive quests are in their own details." },
         { step: "⏱ The Refugee Camp timed quests can be left for now, but they ALL lock when you start Colony 6 reconstruction (§4.11) — don't trigger that until they're done." }
       ],
-      landmarks: ["Tranquil Square", "Anti-Air Battery 3", "Hazzai Cape", "Agora Shore", "Anti-Air Battery 2",
-        "Cliff Lake", "Volff Lair", "Viliera Hill", "Sky Stage", "Daksha Shrine", "Observation Platform",
-        "Raguel Lake", "Tranquil Grotto", "Raguel Bridge: South", "Raguel Bridge: North", "Windy Cave",
-        "Crevasse Waterfall", "Kisk Cave"],
-      locations: ["Agora Shore", "Anti-Air Battery 2", "Anti-Air Battery 3", "Hazzai Cape", "Cliff Lake"],
+      landmarks: ["Tranquil Square", "Observation Platform", "Raguel Bridge: South", "Raguel Bridge: North"],
+      locations: ["Agora Shore", "Anti-Air Battery 2", "Anti-Air Battery 3", "Hazzai Cape", "Cliff Lake",
+        "Volff Lair", "Viliera Hill", "Sky Stage", "Daksha Shrine", "Raguel Lake", "Tranquil Grotto",
+        "Windy Cave", "Crevasse Waterfall", "Kisk Cave"],
       records: [
         "Equivalent Exchange — first successful trade with an NPC",
         "Lazybones — skip-travel 50 times",
@@ -112,8 +111,8 @@ module.exports = {
         { step: "Climb back up and hit the Freight Elevator's start button for a rematch with a weaker {{Xord}}." },
         { step: "After escaping the mine you're thrown into a forced fight; reinforcements arrive to help. Then grab the Pod Depot and Misty Path, and head south to the next region, Satorl Marsh." }
       ],
-      landmarks: ["Drainage Tunnel", "Drainage Control Room", "Mining Base", "Central Pit: Entrance", "Personnel Lift 2", "Regulation Piston", "Personnel Lift 3", "Freight Elevator", "Glowmoss Lake"],
-      locations: ["Test Pit 1", "Test Pit 2", "Test Pit 3", "Test Pit 4", "Storage Depot", "Central Terminal", "Observation Point", "Central Pit: Level 1", "Central Pit: Level 2", "Central Pit: Level 3", "Central Pit: Base Level"],
+      landmarks: ["Drainage Tunnel", "Drainage Control Room", "Mining Base", "Central Pit: Entrance", "Personnel Lift 2", "Regulation Piston", "Personnel Lift 3", "Freight Elevator", "Glowmoss Lake", "Central Pit: Base Level"],
+      locations: ["Test Pit 1", "Test Pit 2", "Test Pit 3", "Test Pit 4", "Storage Depot", "Central Terminal", "Observation Point", "Central Pit: Level 1", "Central Pit: Level 2", "Central Pit: Level 3"],
       records: [
         "Fire It Up — (Dark Kisling fight at the fire ether deposits)",
         "Unbreakable Bond",
@@ -263,8 +262,8 @@ module.exports = {
         { step: "A short region. From Latael Shore, hop the transporters across the Hovering Reefs (1 → 2 → 3 → 4) and grab the Syrath Lighthouse." },
         { step: "Return to Hovering Reef 2 and take the transporter to the Centre Gate, then continue into Alcamoth, the High Entia capital." }
       ],
-      landmarks: ["Latael Shore", "Hovering Reef 1", "Showdown Cliff", "Syrath Lighthouse", "Centre Gate"],
-      locations: ["Hovering Reef 2", "Hovering Reef 3", "Hovering Reef 4"]
+      landmarks: ["Latael Shore", "Syrath Lighthouse", "Centre Gate"],
+      locations: ["Hovering Reef 1", "Showdown Cliff", "Hovering Reef 2", "Hovering Reef 3", "Hovering Reef 4"]
     },
     "4.16": {
       guide: [
@@ -272,8 +271,8 @@ module.exports = {
         { step: "You'll be asked to rescue a worker on Eryth Sea (Q187): quick-travel to Syrath Lighthouse, take the transporters to the Ether Crystal Deposit, and defeat the Defensive Kromar." },
         { step: "Return and rest at Whitewing Palace to advance the story into the High Entia Tomb." }
       ],
-      landmarks: ["Main Entrance", "Imperial Palace", "Great Hall", "Ascension Hall", "Audience Chamber", "Whitewing Palace"],
-      locations: ["Melifica Road", "Sky Terrace"],
+      landmarks: ["Main Entrance", "Imperial Palace", "Ascension Hall", "Whitewing Palace"],
+      locations: ["Melifica Road", "Sky Terrace", "Great Hall", "Audience Chamber"],
       records: ["Globetrotter — discover Ascension Hall"]
     },
     "4.17": {
@@ -306,8 +305,8 @@ module.exports = {
           notes: ["Don't skip the Imperial Staff — it's a big upgrade for Melia."] },
         { step: "Do 'Bridge Repair' (Q190) in Makna to finish that region's map, push Colony 6 development to Lv. 3, and recruit a few new residents (Perrine, etc.)." }
       ],
-      landmarks: ["Fountain of Eternity", "Fountain of Hope", "Revelation Hall"],
-      locations: ["Repaired Bridge Four"],
+      landmarks: ["Fountain of Eternity", "Fountain of Hope"],
+      locations: ["Repaired Bridge Four", "Revelation Hall"],
       notaBene: ["⚠ Get Melia's Imperial Staff from Kallian at Ascension Hall — her best non-endgame weapon."]
     },
     "4.20": {
@@ -327,8 +326,8 @@ module.exports = {
         { step: "At Nofol Tower, boss: {{Mumkhar (Lv. 48)}} — topple or daze him repeatedly. Then head west to the Bionis' Wrist to finish the region's map." },
         { step: "⚠ That completes Part 1. The next region begins the second third of the story — reveal Part 2 only when you're ready for later-game spoilers." }
       ],
-      landmarks: ["Zokhed Pass", "Befalgar Pedestal", "Hallow Bone", "Nopon Camp", "Antol Den", "Sealed Tower", "Harict Chapel", "Lava Cave", "La Luz Church", "Three Sage Summit", "Nofol Tower", "Bionis' Wrist"],
-      locations: ["Kana Peak", "Bagnar Snowfield", "Apis Lair", "Valak Peak", "Bionis' Right Elbow", "Url Crevasse", "Chilkin Lair", "Mechonis Wound", "Nagul Waterfall", "Jakt Geyser", "Great Glacier", "Ignia Hill", "Serik Waterfall", "Agul Mountain Range"],
+      landmarks: ["Zokhed Pass", "Mechonis Wound", "Befalgar Pedestal", "Hallow Bone", "Nopon Camp", "Harict Chapel", "Lava Cave", "La Luz Church", "Three Sage Summit", "Nofol Tower", "Bionis' Wrist"],
+      locations: ["Kana Peak", "Bagnar Snowfield", "Apis Lair", "Valak Peak", "Bionis' Right Elbow", "Url Crevasse", "Chilkin Lair", "Antol Den", "Sealed Tower", "Nagul Waterfall", "Jakt Geyser", "Great Glacier", "Ignia Hill", "Serik Waterfall", "Agul Mountain Range"],
       notaBene: ["Boss: Mumkhar (Lv. 48) at Nofol Tower — topple/daze repeatedly.", "Equip Quick Step gems before the ice chutes/slides."]
     }
   },

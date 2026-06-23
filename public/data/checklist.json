@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -8901,103 +8901,19 @@
         },
         {
           "id": "wlm-4.6-1",
-          "label": "Anti-Air Battery 3",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-2",
-          "label": "Hazzai Cape",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-3",
-          "label": "Agora Shore",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-4",
-          "label": "Anti-Air Battery 2",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-5",
-          "label": "Cliff Lake",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-6",
-          "label": "Volff Lair",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-7",
-          "label": "Viliera Hill",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-8",
-          "label": "Sky Stage",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-9",
-          "label": "Daksha Shrine",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-10",
           "label": "Observation Platform",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wlm-4.6-11",
-          "label": "Raguel Lake",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-12",
-          "label": "Tranquil Grotto",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-13",
+          "id": "wlm-4.6-2",
           "label": "Raguel Bridge: South",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wlm-4.6-14",
+          "id": "wlm-4.6-3",
           "label": "Raguel Bridge: North",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-15",
-          "label": "Windy Cave",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-16",
-          "label": "Crevasse Waterfall",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.6-17",
-          "label": "Kisk Cave",
           "missable": false,
           "confidence": "high"
         }
@@ -9030,6 +8946,60 @@
         {
           "id": "wloc-4.6-4",
           "label": "Cliff Lake",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-5",
+          "label": "Volff Lair",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-6",
+          "label": "Viliera Hill",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-7",
+          "label": "Sky Stage",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-8",
+          "label": "Daksha Shrine",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-9",
+          "label": "Raguel Lake",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-10",
+          "label": "Tranquil Grotto",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-11",
+          "label": "Windy Cave",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-12",
+          "label": "Crevasse Waterfall",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-13",
+          "label": "Kisk Cave",
           "missable": false,
           "confidence": "high"
         }
@@ -9929,6 +9899,12 @@
           "label": "Glowmoss Lake",
           "missable": false,
           "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-9",
+          "label": "Central Pit: Base Level",
+          "missable": false,
+          "confidence": "high"
         }
       ],
       "locations": [
@@ -9989,12 +9965,6 @@
         {
           "id": "wloc-4.9-9",
           "label": "Central Pit: Level 3",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wloc-4.9-10",
-          "label": "Central Pit: Base Level",
           "missable": false,
           "confidence": "high"
         }
@@ -12682,24 +12652,12 @@
         },
         {
           "id": "wlm-4.15-1",
-          "label": "Hovering Reef 1",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.15-2",
-          "label": "Showdown Cliff",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.15-3",
           "label": "Syrath Lighthouse",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wlm-4.15-4",
+          "id": "wlm-4.15-2",
           "label": "Centre Gate",
           "missable": false,
           "confidence": "high"
@@ -12708,18 +12666,30 @@
       "locations": [
         {
           "id": "wloc-4.15-0",
-          "label": "Hovering Reef 2",
+          "label": "Hovering Reef 1",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.15-1",
-          "label": "Hovering Reef 3",
+          "label": "Showdown Cliff",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.15-2",
+          "label": "Hovering Reef 2",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.15-3",
+          "label": "Hovering Reef 3",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.15-4",
           "label": "Hovering Reef 4",
           "missable": false,
           "confidence": "high"
@@ -12790,24 +12760,12 @@
         },
         {
           "id": "wlm-4.16-2",
-          "label": "Great Hall",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.16-3",
           "label": "Ascension Hall",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wlm-4.16-4",
-          "label": "Audience Chamber",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.16-5",
+          "id": "wlm-4.16-3",
           "label": "Whitewing Palace",
           "missable": false,
           "confidence": "high"
@@ -12823,6 +12781,18 @@
         {
           "id": "wloc-4.16-1",
           "label": "Sky Terrace",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.16-2",
+          "label": "Great Hall",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.16-3",
+          "label": "Audience Chamber",
           "missable": false,
           "confidence": "high"
         }
@@ -13290,18 +13260,18 @@
           "label": "Fountain of Hope",
           "missable": false,
           "confidence": "high"
-        },
-        {
-          "id": "wlm-4.19-2",
-          "label": "Revelation Hall",
-          "missable": false,
-          "confidence": "high"
         }
       ],
       "locations": [
         {
           "id": "wloc-4.19-0",
           "label": "Repaired Bridge Four",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.19-1",
+          "label": "Revelation Hall",
           "missable": false,
           "confidence": "high"
         }
@@ -14889,66 +14859,60 @@
         },
         {
           "id": "wlm-4.21-1",
-          "label": "Befalgar Pedestal",
+          "label": "Mechonis Wound",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-2",
-          "label": "Hallow Bone",
+          "label": "Befalgar Pedestal",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-3",
-          "label": "Nopon Camp",
+          "label": "Hallow Bone",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-4",
-          "label": "Antol Den",
+          "label": "Nopon Camp",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-5",
-          "label": "Sealed Tower",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wlm-4.21-6",
           "label": "Harict Chapel",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wlm-4.21-7",
+          "id": "wlm-4.21-6",
           "label": "Lava Cave",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wlm-4.21-8",
+          "id": "wlm-4.21-7",
           "label": "La Luz Church",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wlm-4.21-9",
+          "id": "wlm-4.21-8",
           "label": "Three Sage Summit",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wlm-4.21-10",
+          "id": "wlm-4.21-9",
           "label": "Nofol Tower",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wlm-4.21-11",
+          "id": "wlm-4.21-10",
           "label": "Bionis' Wrist",
           "missable": false,
           "confidence": "high"
@@ -14999,42 +14963,48 @@
         },
         {
           "id": "wloc-4.21-7",
-          "label": "Mechonis Wound",
+          "label": "Antol Den",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-8",
-          "label": "Nagul Waterfall",
+          "label": "Sealed Tower",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-9",
-          "label": "Jakt Geyser",
+          "label": "Nagul Waterfall",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-10",
-          "label": "Great Glacier",
+          "label": "Jakt Geyser",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-11",
-          "label": "Ignia Hill",
+          "label": "Great Glacier",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-12",
-          "label": "Serik Waterfall",
+          "label": "Ignia Hill",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-13",
+          "label": "Serik Waterfall",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.21-14",
           "label": "Agul Mountain Range",
           "missable": false,
           "confidence": "high"
