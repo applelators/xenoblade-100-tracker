@@ -719,5 +719,65 @@ module.exports = {
     "4.21:UM60": { location: "Valak Mountain — Ignia Hill, NE corner.", condition: "Night only", strategy: "Area spike — spike-defense gems / Purge / topple-lock (clear allies first)." },
     "4.21:UM61": { location: "Valak Mountain — land bridge south of Ignia Hill.", condition: "Night only" },
     "4.21:UM62": { location: "Valak Mountain — Lava Cave, NW lava lake (west side of the room).", strategy: "Ether-based party is most effective." }
+  },
+
+  // quest -> the unique monster(s) it defeats (by UM canonical name).
+  // Completing the quest auto-checks the monster.
+  defeats: {
+    "4.6:Q6": "Verdant Bluchal", "4.6:Q18": "Evil Rhangarot", "4.6:Q19": "Lake Magdalena",
+    "4.6:Q30": "Wallslide Gwynry", "4.6:Q59": "Dark Murakmor", "4.6:Q68": "Violent Andante",
+    "4.6:Q69": "Vagrant Alfead", "4.6:Q84": "White Eduardo",
+    "4.7:Q88": "Trainer Harmeleon",
+    "4.10:Q109": "Sunlight Schvaik",
+    "4.11:Q119": "Elder Gragus",
+    "4.13:Q137": "Shimmering Forte",
+    "4.14:Q144": "Agile Albarto", "4.14:Q145": "Lazy Bluco", "4.14:Q158b": "Obsessive Galgaron", "4.14:Q179": "Breezy Zolos",
+    "4.20:Q193": "Flabbergasted Gerome", "4.20:Q197": "Funeral Gorza", "4.20:Q214": "Proper Bandaz",
+    "4.20:Q215": "Tempestuous Edegia", "4.20:Q216": "Peeling Kircheis", "4.20:Q217": "Lightspeed Sonid",
+    "4.20:Q241": "Lakebed Orthlus",
+    "4.21:Q257": "Conflagrant Roxael", "4.21:Q261": ["Barbaric Sitiri", "Banquet Vassago"]
+  },
+
+  // quest -> ShulkLink "Affinity Chart Changes" (paraphrased; § references kept).
+  affinity: {
+    // ---- 4.6 ----
+    "4.6:Q40": "Marcia & Jiroque register; yellow link “close” (Marcia/Jiroque).",
+    "4.6:Q41": "Dionysus registers.",
+    "4.6:Q42": "Niranira & Lukas register; yellow “Kind Friend” (Lukas/Niranira).",
+    "4.6:Q43": "Desirée registers.",
+    "4.6:Q44": "Suzanna & Moritz register (Kenny Rohan too if you trade with him); orange “irritation” (Suzanna/Moritz).",
+    "4.6:Q45": "Emmy Leater & Miller register; red “dissatisfaction” (Miller/Emmy Leater).",
+    "4.6:Q46": "Françoise registers.",
+    "4.6:Q47": "Green “best friends” (Moritz/Niranira) and (Moritz/Lukas); Lukas/Niranira improve to green “best friends”.",
+    "4.6:Q48": "Giorgio registers.",
+    "4.6:Q49": "Registers Sonia, Rocco, Dean, Erik. Yellow “respect” (Dean/Rocco); yellow “old friends” (Sonia/Dean); Sonia/Rocco red “warring family” → green “happy family”; yellow “both scientists” (Erik/Dean) — speak Erik BEFORE finishing.",
+    "4.6:Q50": "Rocco/Lilliana green “close siblings”; Sonia/Dean improve to blue “mutual respect”.",
+    "4.6:Q51": "Suzanna/Moritz improve to yellow “normal”.",
+    "4.6:Q52a": "(Girl) Erik/Monica blue “mutual love?”, Monica/Andreas red “parted ways”.",
+    "4.6:Q52b": "(Boy — guide pick) Andreas/Monica blue “passionate”, Monica/Erik orange “parted ways” — their best.",
+    "4.6:Q54a": "(Leopold/frame route) King Squeeze/Leopold orange “complicated”; Sylvaine/King Squeeze green “dastardly duo”; Leopold/Sylvaine orange “awkward”.",
+    "4.6:Q54b": "(Sylvaine/investigate route — guide pick) King Squeeze/Leopold red “got revenge”; Leopold/Sylvaine blue “endless love”; Sylvaine/King Squeeze yellow “accomplices”.",
+    "4.6:Q56a": "Paola registers; yellow “wants to play” (Giorgio/Paola).",
+    "4.6:Q56b": "Giorgio/Paola improve to blue “trusting family” (guide-pick route).",
+    "4.6:Q57": "Sesame & Betty register; orange “skepticism” (Betty/Sesame).",
+    "4.6:Q58": "Orange “indifferent” (Kenny Rohan/Sesame).",
+    "4.6:Q59": "Sesame/Kenny Rohan and Sesame/Betty improve to green (“Big Success”, “Wonderful”).",
+    "4.6:Q77": "Gorman registers.",
+    "4.6:Q78": "Yellow “customer” (Gorman/Olga); Olga registers.",
+    "4.6:Q79": "Matryona & Ewan register; orange “bad feeling” (Ewan/Matryona).",
+    "4.6:Q80": "Ewan/Matryona improve to yellow “interested”.",
+    "4.6:Q81": "Satata, Kokori & Nikita register; blue “close family” (Satata/Kokori); green “friends again” (Kokori/Nikita).",
+    "4.6:Q82": "Earnest registers.",
+    "4.6:Q87a": "Pama & Arda register; green “really great person” (Pama/Matryona and Pama/Ewan); Matryona/Ewan improve to green “likes”; speak Arda after → yellow “concern” (Arda/Pama).",
+    "4.6:Q87b": "Pama & Arda register; yellow “kind person” links (Pama/Matryona, Arda/Ewan).",
+    // ---- 4.7 ----
+    "4.7:Q89": "Speak Ewan afterwards → green “relief” (their best).",
+    "4.7:Q90": "Gerugu & Batubatu register; yellow “prickly pal” (Gerugu/Batubatu).",
+    "4.7:Q92": "Gerugu/Batubatu improve to green “valuable friend” (their best).",
+    "4.7:Q93": "Jackson & Dorothy register; yellow “eager siblings” (Dorothy/Jackson); yellow link Jackson/chosen mentor.",
+    "4.7:Q94a": "Jackson/Kenny Rohan improve to blue “talent in bloom”; Jackson/Dorothy green “rival siblings”; Giorgio/Sesame green “amazing”; Giorgio/Kenny Rohan green “VIP regular”.",
+    "4.7:Q94b": "Jackson/Dorothy green “rival siblings”; Jackson/Giorgio green “shows promise”; Giorgio/Sesame green “amazing”; Giorgio/Kenny Rohan yellow “a regular”.",
+    "4.7:Q97": "Orange “mistrust” (Emmy Leater/Raoul); Miller/Emmy Leater improve to orange “patience”.",
+    "4.7:Q98": "Emmy Leater/Miller improve to yellow “higher opinion”; Emmy Leater/Raoul improve to green “impressed”."
   }
 };

@@ -53,10 +53,16 @@
   let mutex = {};
   const mutexOf = (id) => mutex[id] || [];
 
+  // one-way implications: id -> [ids]. Checking the source also checks these
+  // (e.g. a quest that defeats a unique monster checks that monster).
+  let implies = {};
+  const impliesOf = (id) => implies[id] || [];
+
   const Store = {
-    // ---- cross-dataset links / mutex ----
+    // ---- cross-dataset links / mutex / implies ----
     setLinks(map) { links = map || {}; },
     setMutex(map) { mutex = map || {}; },
+    setImplies(map) { implies = map || {}; },
 
     // ---- checked items ----
     isChecked(id) {
@@ -86,6 +92,11 @@
         group.forEach((x) => mutexOf(x).forEach((p) => {
           checked.delete(p);
           (links[p] || []).forEach((pt) => checked.delete(pt));
+        }));
+        // ...and auto-checks anything it implies (e.g. its unique monster) + their twins
+        group.forEach((x) => impliesOf(x).forEach((p) => {
+          checked.add(p);
+          (links[p] || []).forEach((pt) => checked.add(pt));
         }));
       }
       write(KEYS.checked, [...checked]);

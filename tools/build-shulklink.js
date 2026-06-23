@@ -871,6 +871,9 @@ sections.forEach((s) => {
   [...s.quests, ...s.ums, ...s.hths].forEach((it) => {
     const d = DETAILS.items[s.id + ":" + it.code];
     if (d) { Object.assign(it, d); it.detailed = true; enriched++; }
+    const key = s.id + ":" + it.code;
+    if (DETAILS.defeats && DETAILS.defeats[key]) it.defeatsUM = DETAILS.defeats[key];
+    if (DETAILS.affinity && DETAILS.affinity[key]) it.affinityChanges = DETAILS.affinity[key];
   });
   // make landmarks / locations / records / affinity steps checkable items (stable ids by index)
   // section context = the section's stated region(s) + the regions of its quests/UMs/HtH

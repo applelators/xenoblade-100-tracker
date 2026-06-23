@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -7215,7 +7215,8 @@
           "location": "North of Ether Light, daytime",
           "objective": "Defeat Verdant Bluchal near Anti-Air Battery 1.",
           "rewards": "1800G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Verdant Bluchal"
         },
         {
           "id": "wq-46-q7-collection-quest-4",
@@ -7419,7 +7420,8 @@
           "location": "Center of the east wall, Military District, daytime",
           "objective": "Defeat Evil Rhanagrot.",
           "rewards": "1800G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Evil Rhangarot"
         },
         {
           "id": "wq-46-q19-challenge-3",
@@ -7436,7 +7438,8 @@
           "location": "Entrance of Military District, night",
           "objective": "Defeat Lake Magdalena.",
           "rewards": "3000G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Lake Magdalena"
         },
         {
           "id": "wq-46-q20-monster-quest-1-part-1",
@@ -7623,7 +7626,8 @@
           "location": "Balcony north of the Gem Man's Stall, daytime",
           "objective": "Defeat Wallslide Gwynry.",
           "rewards": "2200G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Wallslide Gwynry"
         },
         {
           "id": "wq-46-q31-collection-quest-1",
@@ -7795,7 +7799,8 @@
           "objective": "Deliver biscuits to Jiroque (HtH street, night, park on the left), then report to Marcia (daytime).",
           "rewards": "800G, 30 EXP, Swimming Sandals",
           "strategy": "Affinity: registers Marcia & Jiroque; yellow link 'close'.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Marcia & Jiroque register; yellow link “close” (Marcia/Jiroque)."
         },
         {
           "id": "wq-46-q41-the-key-to-a-long-life",
@@ -7812,7 +7817,8 @@
           "location": "Tranquil Square bench (HtH road), 10:00–02:00",
           "objective": "Collect 2 lots of Medicinal Brog Oil (Cute Brogs, Anti-Air Battery 1, night), then report.",
           "rewards": "600G, 50 EXP, Light Shoes",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Dionysus registers."
         },
         {
           "id": "wq-46-q42-lonely-niranira",
@@ -7830,7 +7836,8 @@
           "objective": "Give Niranira's letter to Lukas (nearby), then report back.",
           "rewards": "100G, 50 EXP, Block Guarder",
           "strategy": "Affinity: yellow link 'Kind Friend' (Lukas/Niranira).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Niranira & Lukas register; yellow “Kind Friend” (Lukas/Niranira)."
         },
         {
           "id": "wq-46-q43-the-broken-watch",
@@ -7848,7 +7855,8 @@
           "objective": "Inspect the watch at the Wep. Dev. Lab, collect 3 Blue Chains, repair it, return it to Desirée.",
           "rewards": "750G, 80 EXP, Muscle Up II",
           "strategy": "Prerequisite: Shulk must be party leader.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Desirée registers."
         },
         {
           "id": "wq-46-q44-education-minded-suzana",
@@ -7866,7 +7874,8 @@
           "objective": "Collect 2 lots of Black Nectar (Tephra Cave; easier to trade from Kenny Rohan), then report.",
           "rewards": "500G, 50 EXP, Light Cap",
           "strategy": "Prereq: speak to her son Moritz first. Trading with Kenny may unlock trial 'Friend Number Ten'.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Suzanna & Moritz register (Kenny Rohan too if you trade with him); orange “irritation” (Suzanna/Moritz)."
         },
         {
           "id": "wq-46-q45-a-young-captains-request",
@@ -7883,7 +7892,8 @@
           "location": "North Military District, daytime",
           "objective": "Find Miller in the Commercial District, then report back.",
           "rewards": "600G, 70 EXP, Dyed Top/Bottoms/Mules",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Emmy Leater & Miller register; red “dissatisfaction” (Miller/Emmy Leater)."
         },
         {
           "id": "wq-46-q46-flattened-flowers",
@@ -7900,7 +7910,8 @@
           "location": "NW of Tranquil Square, in her flower garden, daytime",
           "objective": "Collect 5 Dawn Hydrangeas (Colony 9), then report.",
           "rewards": "750G, 100 EXP, Soil Gauntlets",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Françoise registers."
         },
         {
           "id": "wq-46-q47-pride-and-courage",
@@ -7917,7 +7928,8 @@
           "location": "East Tranquil Square",
           "objective": "Rescue Niranira (at Hazzai Cape), then report to Lukas / Moritz / Lukas.",
           "rewards": "800G, 100 EXP, Attack Plus II",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Green “best friends” (Moritz/Niranira) and (Moritz/Lukas); Lukas/Niranira improve to green “best friends”."
         },
         {
           "id": "wq-46-q48-a-curry-conundrum",
@@ -7934,7 +7946,8 @@
           "location": "Ether Light restaurant, daytime",
           "objective": "Collect 5 Dance Apples (Colony 9), then report.",
           "rewards": "1200G, 60 EXP, Caravan Gauntlets",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Giorgio registers."
         },
         {
           "id": "wq-46-q49-roccos-heartful-request",
@@ -7952,7 +7965,8 @@
           "objective": "Find someone to repair the pendant (Dean, alley south of the Wep. Dev. Lab — Shulk must be in the lead), then report.",
           "rewards": "350G, 100 EXP, Tinted Glasses, Pretty Bangle",
           "strategy": "Prereq: Sonia registered. IMPORTANT — before finishing, speak with Erik (midnight, leaving the Wep. Dev. Lab) to lock the Erik/Dean 'both scientists' link (trial 'constellation'); it's missable if you complete the sequel first.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Registers Sonia, Rocco, Dean, Erik. Yellow “respect” (Dean/Rocco); yellow “old friends” (Sonia/Dean); Sonia/Rocco red “warring family” → green “happy family”; yellow “both scientists” (Erik/Dean) — speak Erik BEFORE finishing."
         },
         {
           "id": "wq-46-q50-deans-shady-request",
@@ -7970,7 +7984,8 @@
           "objective": "Speak with Sonia → collect 2 Shin Geckos (Tephra Cave; or trade Meifimeifi), then report.",
           "rewards": "1500G, 200 EXP, Lock-On Resist II",
           "strategy": "Prereq: Liliana registered. Shin Geckos are rare — patience or high Colony 9 affinity for the trade. (Trial: the strongest tie.)",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Rocco/Lilliana green “close siblings”; Sonia/Dean improve to blue “mutual respect”."
         },
         {
           "id": "wq-46-q51-education-crazy-suzanna",
@@ -7987,7 +8002,8 @@
           "location": "Tranquil Square",
           "objective": "Collect 2 Heavy Bunniv Iron (Iron Bunniv, south of Mag Mell Ruins, up the ramp), then report.",
           "rewards": "1500G, 300 EXP, Ranger Cap",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Suzanna/Moritz improve to yellow “normal”."
         },
         {
           "id": "wq-46-q52a-romantic-notions-of-a-girl",
@@ -8005,7 +8021,8 @@
           "objective": "Collect a Tephra Drop (Spring of Grief, night), then report to Monica.",
           "rewards": "1200G, 300 EXP, Soil Gear",
           "strategy": "Prereq: Erik registered.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "(Girl) Erik/Monica blue “mutual love?”, Monica/Andreas red “parted ways”."
         },
         {
           "id": "wq-46-q52b-romantic-notions-of-a-boy",
@@ -8023,7 +8040,8 @@
           "objective": "Collect a Tephra Drop (Spring of Grief, night), then report to Andreas.",
           "rewards": "1200G, 300 EXP, Soil Boots",
           "mutexWhy": "Guide picks ANDREAS. Whoever you choose gets a blue link with Monica, so it comes down to how the rejected suitor reacts: Andreas refuses rejection (red link) while Erik accepts it (orange) — so choosing Andreas leaves the stronger affinity chart. (First mutex; trial 'shaping history'.)",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "(Boy — guide pick) Andreas/Monica blue “passionate”, Monica/Erik orange “parted ways” — their best."
         },
         {
           "id": "wq-46-q53-an-impoverished-critic",
@@ -8058,7 +8076,8 @@
           "location": "Colony 9",
           "objective": "Speak with Sylvaine, collect the Top-Secret Orders (Anti-Air Battery 3 ramp), show King Squeeze.",
           "rewards": "2500G, 500 EXP, Quark Boots",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "(Leopold/frame route) King Squeeze/Leopold orange “complicated”; Sylvaine/King Squeeze green “dastardly duo”; Leopold/Sylvaine orange “awkward”."
         },
         {
           "id": "wq-46-q54b-financial-planning-sylvaine-route",
@@ -8076,7 +8095,8 @@
           "objective": "Speak with Leopold, collect 5 Caterpile Poison (Eater/Cute Caterpile, Caterpile Nest, Tephra Cave).",
           "rewards": "2500G, 500 EXP, Ranger Shoes",
           "mutexWhy": "Guide leans SYLVAINE (investigate route) but calls it a genuine personal choice — it's only +1 stronger. The real question is ethics vs. romance: taking matters into his own hands (Leopold/frame route) damages Leopold's reputation and his relationship with Sylvaine.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "(Sylvaine/investigate route — guide pick) King Squeeze/Leopold red “got revenge”; Leopold/Sylvaine blue “endless love”; Sylvaine/King Squeeze yellow “accomplices”."
         },
         {
           "id": "wq-46-q55-overworked-and-underpaid",
@@ -8111,7 +8131,8 @@
           "location": "Colony 9",
           "objective": "Speak with Paola → defeat Fiendish Bunnit (Cliff Lake, NE) → report Paola, then Giorgio.",
           "rewards": "4500G, 550 EXP, Quark Leggings",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Paola registers; yellow “wants to play” (Giorgio/Paola)."
         },
         {
           "id": "wq-46-q56b-out-of-luck-giorgio",
@@ -8129,7 +8150,8 @@
           "objective": "Collect 5 lots of Piranhax Roe (Leg Piranhax) + 3 Juicy Broccoli (Bionis' Leg).",
           "rewards": "5500G, 250 EXP, Quark Gauntlets",
           "mutexWhy": "Guide picks PAOLA — speak with her during 'Overworked and Underpaid' to unlock 'Out-Of-Luck Giorgio', which gives a stronger father/daughter link than the alternative 'Pestering Paola'.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Giorgio/Paola improve to blue “trusting family” (guide-pick route)."
         },
         {
           "id": "wq-46-q57-the-plan-preparation",
@@ -8146,7 +8168,8 @@
           "location": "East of the Gem Man's stall, behind the boxes, night",
           "objective": "Collect 2 Croaking Brog Bags (Singing Brogs) → deliver to Betty for the Sealed Package → Sesame.",
           "rewards": "1000G, 150 EXP, Critical Up II",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Sesame & Betty register; orange “skepticism” (Betty/Sesame)."
         },
         {
           "id": "wq-46-q58-the-plan-the-night-before",
@@ -8164,7 +8187,8 @@
           "objective": "Collect 2 Iron Krabble Shells (Colony Krabble, Cliff Lake shore, night) → deliver to Kenny Rohan for the Fragile Package → Sesame.",
           "rewards": "1500G, 200 EXP, Strength Up III",
           "strategy": "Prereq: The Plan: Preparation completed.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Orange “indifferent” (Kenny Rohan/Sesame)."
         },
         {
           "id": "wq-46-q59-the-plan-execution",
@@ -8182,7 +8206,9 @@
           "objective": "Defeat Dark Murakmor → report, check the lamp post by the Main Entrance → report (triggers a cutscene).",
           "rewards": "5000G, 1200 EXP, Attack Stability II",
           "strategy": "Prereq: all earlier 'The Plan' quests.",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Dark Murakmor",
+          "affinityChanges": "Sesame/Kenny Rohan and Sesame/Betty improve to green (“Big Success”, “Wonderful”)."
         },
         {
           "id": "wq-46-q60-monster-quest-1-part-1",
@@ -8335,7 +8361,8 @@
           "location": "On the trail into the Refugee Camp",
           "objective": "Defeat Violent Andante.",
           "rewards": "3800G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Violent Andante"
         },
         {
           "id": "wq-46-q69-challenge-2-part-2",
@@ -8352,7 +8379,8 @@
           "location": "North of the lake at the Refugee Camp, day",
           "objective": "Defeat Vagrant Alfead (Tirkin Headquarters — NW of Kamos Guidepost, in the cavern).",
           "rewards": "4800G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Vagrant Alfead"
         },
         {
           "id": "wq-46-q70-monster-quest-2",
@@ -8489,7 +8517,8 @@
           "objective": "Retrieve the stolen Clothes (Tirkin Headquarters) and return them to Gorman.",
           "rewards": "950G, 300 EXP, Grand Armour, Grand Leggings",
           "strategy": "⏱ TIMED — locks at Colony 6 reconstruction (§4.11). Registers Gorman.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Gorman registers."
         },
         {
           "id": "wq-46-q78-emergency-treatment",
@@ -8507,7 +8536,8 @@
           "objective": "Collect 5 lots of Glowing Wisp fluid (wisps at night, east of Jacob's Rock through the Gaur Plains — not raining).",
           "rewards": "750G, 300 EXP, Quark Gear",
           "strategy": "⏱ TIMED. Prereq: Gorman registered. Yellow link 'customer' (Gorman/Olga).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Yellow “customer” (Gorman/Olga); Olga registers."
         },
         {
           "id": "wq-46-q79-a-thoughtful-idea",
@@ -8525,7 +8555,8 @@
           "objective": "Speak with Ewan → collect 3 Ponio Neck Meat (Field Ponios, east Gaur Plains, day) → Ewan → Matryona.",
           "rewards": "1200G, 280 EXP, Quark Armour",
           "strategy": "⏱ TIMED. Orange link 'bad feeling' (Ewan/Matryona).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Matryona & Ewan register; orange “bad feeling” (Ewan/Matryona)."
         },
         {
           "id": "wq-46-q80-a-dash-of-colour",
@@ -8543,7 +8574,8 @@
           "objective": "Collect 4 Sour Gooseberries (Bionis' Leg) → Ewan → deliver items to Matryona → Ewan.",
           "rewards": "750G, 200 EXP, Lime Bangle",
           "strategy": "⏱ TIMED. Prereq: A Thoughtful Idea. Link improves to yellow 'interested'.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Ewan/Matryona improve to yellow “interested”."
         },
         {
           "id": "wq-46-q81-being-a-good-grandfather",
@@ -8561,7 +8593,8 @@
           "objective": "Collect 3 Sticky Web fibers (Leg Arachno, Kisk Cave) → Satata → Kokori → Satata.",
           "rewards": "1000G, 220 EXP, Initial Tension III",
           "strategy": "⏱ TIMED. Prereq: Nikita registered. Blue link 'close family' (Satata/Kokori).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Satata, Kokori & Nikita register; blue “close family” (Satata/Kokori); green “friends again” (Kokori/Nikita)."
         },
         {
           "id": "wq-46-q82-earnests-fibs",
@@ -8578,7 +8611,8 @@
           "location": "Shore of the lake outside the Refugee Camp",
           "objective": "Examine the ether mine at Kisk Cave, then report to Earnest.",
           "rewards": "750G, 300 EXP, Lime Bangle",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Earnest registers."
         },
         {
           "id": "wq-46-q83-save-the-girl",
@@ -8613,7 +8647,8 @@
           "location": "Refugee Camp, trail into camp",
           "objective": "Defeat White Eduardo.",
           "rewards": "5500G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "White Eduardo"
         },
         {
           "id": "wq-46-q85-the-greedy-monster",
@@ -8667,7 +8702,8 @@
           "objective": "Collect 1 Lake Drop (Raguel Lake, east shore north of Tranquil Grotto) → Matryona → give the picture book to Pama.",
           "rewards": "1500G, 250 EXP, Damage Heal II",
           "strategy": "⏱ TIMED. Prereq: A Dash of Colour + A Thoughtful Idea.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Pama & Arda register; green “really great person” (Pama/Matryona and Pama/Ewan); Matryona/Ewan improve to green “likes”; speak Arda after → yellow “concern” (Arda/Pama)."
         },
         {
           "id": "wq-46-q87b-spirits-raised",
@@ -8685,7 +8721,8 @@
           "objective": "Collect a Medicinal Herb (from Raguel Bridge: North, SE down the slope under a tree) → Arda.",
           "rewards": "800G, 400 EXP, Arts Heal II",
           "mutexWhy": "Guide picks IMAGINATIONS TEMPERED (get the Lake Drop). It gives a clearly better affinity chart; Ewan & Matryona reach green either way, but this route is cleaner. Spirits Raised's only edge is slightly earlier Colony 6 area affinity — negligible since you'll max every area's affinity anyway. ⏱ Both are TIMED.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Pama & Arda register; yellow “kind person” links (Pama/Matryona, Arda/Ewan)."
         }
       ],
       "ums": [
@@ -9210,7 +9247,8 @@
           "location": "North of the lake at the Refugee Camp, day",
           "objective": "Defeat Trainer Harmeleon (north of Spiral Valley).",
           "rewards": "4200G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Trainer Harmeleon"
         },
         {
           "id": "wq-47-q89-earnests-solitude",
@@ -9228,7 +9266,8 @@
           "objective": "Place flowers on the grave (NE of Spiral Valley, across the river) and defeat Arrogant Tirkin, then report.",
           "rewards": "1200G, 750 EXP, Grand Boots",
           "strategy": "Prereq: Earnest's Mischief. Speak to Ewan afterward → green 'relief'.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Speak Ewan afterwards → green “relief” (their best)."
         },
         {
           "id": "wq-47-q90-the-lost-nopon",
@@ -9245,7 +9284,8 @@
           "location": "Traveller's Rest",
           "objective": "Locate Gerugu (from Raguel Bridge: South go NW past the wind ether mine, on the ledge below), then report.",
           "rewards": "750G, 300 EXP, Point Rifle",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Gerugu & Batubatu register; yellow “prickly pal” (Gerugu/Batubatu)."
         },
         {
           "id": "wq-47-q91-with-much-gratitude",
@@ -9280,7 +9320,8 @@
           "objective": "Locate Batubatu (land bridge to Believer's Paradise) → collect an Ether Rose (Believer's Paradise) → Batubatu.",
           "rewards": "1200G, 750 EXP, Electric Plus III, Grand Gear",
           "strategy": "Affinity → green 'valuable friend' (their best).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Gerugu/Batubatu improve to green “valuable friend” (their best)."
         },
         {
           "id": "wq-47-q93-jacksons-awakening",
@@ -9297,7 +9338,8 @@
           "objective": "Find Jackson a mentor (Kenny Rohan or Giorgio) → Vilia Lake, defeat 5 Tephra Lizards → report.",
           "rewards": "2200G, 450 EXP, Ether Up III",
           "strategy": "Prereq: Dorothy registered (Main Entrance).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Jackson & Dorothy register; yellow “eager siblings” (Dorothy/Jackson); yellow link Jackson/chosen mentor."
         },
         {
           "id": "wq-47-q94a-jackson-the-poet",
@@ -9314,7 +9356,8 @@
           "location": "Colony 9",
           "objective": "Defeat Dim Wisp (Kneecap Hill, night), then report.",
           "rewards": "3800G, 650 EXP, Ether Up II",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Jackson/Kenny Rohan improve to blue “talent in bloom”; Jackson/Dorothy green “rival siblings”; Giorgio/Sesame green “amazing”; Giorgio/Kenny Rohan green “VIP regular”."
         },
         {
           "id": "wq-47-q94b-jackson-the-cook",
@@ -9332,7 +9375,8 @@
           "objective": "Collect 5 Raw Piranhax Meat (Colony Piranhax, pool under Outlook Park).",
           "rewards": "3800G, 650 EXP, Pile Driver",
           "mutexWhy": "Guide picks JACKSON THE POET (choose Kenny Rohan as mentor): Jackson's link with his teacher is stronger (blue vs green) and Kenny Rohan's link with Giorgio is better (green vs yellow); Dorothy's link is unaffected.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Jackson/Dorothy green “rival siblings”; Jackson/Giorgio green “shows promise”; Giorgio/Sesame green “amazing”; Giorgio/Kenny Rohan yellow “a regular”."
         },
         {
           "id": "wq-47-q95-a-mysterious-light",
@@ -9385,7 +9429,8 @@
           "objective": "Defeat 5 Wind Vangs (Spring of Grief), then report.",
           "rewards": "1100G, 180 EXP, Ether Defense Up III",
           "strategy": "Prereq: Raoul registered.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Orange “mistrust” (Emmy Leater/Raoul); Miller/Emmy Leater improve to orange “patience”."
         },
         {
           "id": "wq-47-q98-a-young-captains-rise",
@@ -9403,7 +9448,8 @@
           "objective": "Defeat Lurker Krabble (Vilia Lake) or Lurker Brog (Spring of Grief), then report.",
           "rewards": "1800G, 250 EXP, Flame Gear",
           "strategy": "Either target is fine — same reward & affinity. (Trial: generous friend.)",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Emmy Leater/Miller improve to yellow “higher opinion”; Emmy Leater/Raoul improve to green “impressed”."
         }
       ],
       "ums": [
@@ -10289,7 +10335,8 @@
           "location": "Nopon Refuge",
           "objective": "Defeat Sunlight Sachik.",
           "rewards": "4500G, 850 EXP, Swep Gauntlets, HP II",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Sunlight Schvaik"
         },
         {
           "id": "wq-410-q110-its-all-in-the-mind",
@@ -10795,7 +10842,8 @@
           "objective": "Defeat Elder Gragus in Makna Forest (by the Nopon Arch), then report to Jan.",
           "rewards": "5800G, 5000 EXP, Dawn Staff",
           "strategy": "Prereq: Jan/Minnie link + tell Dionysus 'he's too old for the girl'.",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Elder Gragus"
         },
         {
           "id": "wq-411-q120-a-selfish-girls-mistake",
@@ -11649,7 +11697,8 @@
           "location": "North of the Reservoir stairs, bottom floor, day",
           "objective": "Defeat Agile Albarto.",
           "rewards": "23000G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Agile Albarto"
         },
         {
           "id": "wq-414-q145-challenge-3",
@@ -11666,7 +11715,8 @@
           "location": "Archaeology Center, night",
           "objective": "Defeat Lazy Bluco (Yellow Flower Grove).",
           "rewards": "29000G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Lazy Bluco"
         },
         {
           "id": "wq-414-q146-collection-quest-1",
@@ -11905,7 +11955,8 @@
           "location": "Frontier Village",
           "objective": "Defeat Obsessive Galgaron, then report to Leku.",
           "rewards": "5500G, 1500 EXP, Panther Gloves",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Obsessive Galgaron"
         },
         {
           "id": "wq-414-q159-popularity-premonition",
@@ -12265,7 +12316,8 @@
           "location": "Kyn Shopping Street, day",
           "objective": "Defeat Breezy Zolos.",
           "rewards": "26000G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Breezy Zolos"
         },
         {
           "id": "wq-414-q180-defend-colony-6-mechon",
@@ -13684,7 +13736,8 @@
           "location": "Interior of Syrath Lighthouse",
           "objective": "Defeat Flabbergasted Gerome.",
           "rewards": "32000G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Flabbergasted Gerome"
         },
         {
           "id": "wq-420-q194-collect-quest-1-eryth-sea",
@@ -13752,7 +13805,8 @@
           "location": "Ether Plant",
           "objective": "Defeat Funeral Gorza.",
           "strategy": "Sub-mission of Trouble At The Plant.",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Funeral Gorza"
         },
         {
           "id": "wq-420-q198-mend-the-plant",
@@ -14040,7 +14094,8 @@
           "location": "SE of the Fountain of Hope, night",
           "objective": "Defeat Proper Bandaz.",
           "rewards": "45000G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Proper Bandaz"
         },
         {
           "id": "wq-420-q215-challenge-2",
@@ -14057,7 +14112,8 @@
           "location": "NE of the Fountain of Eternity, night (by a lake)",
           "objective": "Defeat Tempestuous Edegia.",
           "rewards": "38000G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Tempestuous Edegia"
         },
         {
           "id": "wq-420-q216-challenge-3",
@@ -14074,7 +14130,8 @@
           "location": "Great Hall, NE hallway, day",
           "objective": "Defeat Peeling Kircheis.",
           "rewards": "35000G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Peeling Kircheis"
         },
         {
           "id": "wq-420-q217-challenge-4",
@@ -14091,7 +14148,8 @@
           "location": "NE of the Fountain of Eternity, day",
           "objective": "Defeat Lightspeed Sonid.",
           "rewards": "50000G",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Lightspeed Sonid"
         },
         {
           "id": "wq-420-q218-search-quest-3",
@@ -14525,7 +14583,8 @@
           "location": "Alcamoth",
           "objective": "Collect Orthlus' Liver (Lakebed Orthlus, Agora Shore), then report.",
           "rewards": "6600G, 2500 EXP, Mithril Gear/Gauntlets/Boots",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Lakebed Orthlus"
         },
         {
           "id": "wq-420-q242-losing-the-taste-for-alcohol",
@@ -14982,7 +15041,8 @@
           "giver": "Story",
           "location": "Harict Chapel",
           "objective": "Obtain the Magma Rock (defeat Conflagrant Roxael in the Lava Cave).",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": "Conflagrant Roxael"
         },
         {
           "id": "wq-421-q258-bad-timing",
@@ -15050,7 +15110,11 @@
           "location": "Nopon Camp (Dunban in the lead)",
           "objective": "Defeat Barbaric Sitiri and Banquet Vassago (both in the Antol Den), then report.",
           "rewards": "21000G, 8500 EXP, Snaer Striker, Stellar Gear/Gauntlets, unlocks Dunban's Obstinance skill tree",
-          "detailed": true
+          "detailed": true,
+          "defeatsUM": [
+            "Barbaric Sitiri",
+            "Banquet Vassago"
+          ]
         }
       ],
       "ums": [

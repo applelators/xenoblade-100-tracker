@@ -41,6 +41,7 @@
   let WALK_ITEMS = [];        // flat walkthrough items (for progress)
   let CHECK_LINKS = {};       // id -> [partner ids] across datasets (for dedup)
   let ITEM_LABEL = {};        // id -> label (for mutex "forfeited" messaging)
+  let IMPLIED_BY = {};        // unique-monster id -> [quest labels that auto-check it]
 
   // ---------- helpers ----------
   function $(sel, root) { return (root || document).querySelector(sel); }
@@ -96,6 +97,26 @@
 
     buildCheckLinks();
     buildMutex();
+    buildImplies();
+  }
+
+  // quest -> unique-monster auto-check links (quest.defeatsUM, matched by UM name)
+  function buildImplies() {
+    const norm = (s) => String(s || "").toLowerCase().replace(/[“”"'’]/g, "").replace(/\(lv\.?\s*\d+\)/g, "").replace(/lv\.?\s*\d+/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+    const umByName = {};
+    const idxUM = (u) => { (umByName[norm(u.label)] = umByName[norm(u.label)] || []).push(u.id); };
+    (DATA.walkthrough || []).forEach((s) => (s.ums || []).forEach(idxUM));
+    (DATA.areas || []).forEach((a) => (a.sections.uniqueMonsters || []).forEach(idxUM));
+    const implies = {}; IMPLIED_BY = {};
+    (DATA.walkthrough || []).forEach((s) => (s.quests || []).forEach((q) => {
+      if (!q.defeatsUM) return;
+      const names = Array.isArray(q.defeatsUM) ? q.defeatsUM : [q.defeatsUM];
+      names.forEach((nm) => (umByName[norm(nm)] || []).forEach((uid) => {
+        (implies[q.id] = implies[q.id] || []); if (implies[q.id].indexOf(uid) < 0) implies[q.id].push(uid);
+        (IMPLIED_BY[uid] = IMPLIED_BY[uid] || []); if (IMPLIED_BY[uid].indexOf(q.label) < 0) IMPLIED_BY[uid].push(q.label);
+      }));
+    }));
+    Store.setImplies(implies);
   }
 
   // mutually-exclusive quest pairs → Store. Walkthrough quests reference the
@@ -366,10 +387,10 @@
       ["Area", item.area], ["Giver", item.giver], ["Location", item.location],
       ["Condition", item.condition], ["Affinity", item.affinity], ["Objective", item.objective],
       ["Gain choices", item.gainChoices], ["Rewards", item.rewards], ["Strategy", item.strategy],
-      ["Why this pick", item.mutexWhy]
+      ["Affinity changes", item.affinityChanges], ["Why this pick", item.mutexWhy]
     ].filter(([, v]) => v);
     const hasRich = item.giver || item.location || item.objective || item.rewards || item.strategy ||
-      item.condition || item.gainChoices || item.mutexWhy || item.affinity;
+      item.condition || item.gainChoices || item.mutexWhy || item.affinity || item.affinityChanges;
     if (!hasRich) return null;
     // always-visible detail grid (no disclosure); faded by CSS when the item is checked
     return el("div", { class: "qfields" }, rows.map(([k, v]) => {
@@ -381,7 +402,7 @@
       } else {
         vcell = el("span", { class: "qf-v", text: v });
       }
-      return el("div", { class: "qf" + (k === "Why this pick" ? " why" : "") }, [
+      return el("div", { class: "qf" + (k === "Why this pick" ? " why" : k === "Affinity changes" ? " aff" : "") }, [
         el("span", { class: "qf-k", text: k }), vcell
       ]);
     }));
@@ -426,6 +447,7 @@
         el("span", { class: "item-label" }, [item.code ? el("span", { class: "qcode", text: item.code + " " }) : null, document.createTextNode(item.label)]),
         el("span", { class: "item-badges" }, badgeEls),
         item.note ? el("span", { class: "item-note", text: item.note }) : null,
+        (kind === "um" && IMPLIED_BY[item.id]) ? el("span", { class: "item-note implied", text: "↩ Auto-checks when you complete: " + IMPLIED_BY[item.id].join(", ") }) : null,
         itemDetails(item)
       ])
     ]);
