@@ -128,6 +128,8 @@
   let ALL_ENTRIES = [];       // { item, area, category }
   let WALK_ITEMS = [];        // flat walkthrough items (for progress)
   let CHECK_LINKS = {};       // id -> [partner ids] across datasets (for dedup)
+  let MUTEX_MAP = {};         // id -> [mutually-exclusive partner ids]
+  let IMPLIES_MAP = {};       // id -> [ids it auto-checks] (quest -> its unique monster)
   let ITEM_LABEL = {};        // id -> label (for mutex "forfeited" messaging)
   let IMPLIED_BY = {};        // unique-monster id -> [quest labels that auto-check it]
 
@@ -208,6 +210,7 @@
       }));
     }));
     Store.setImplies(implies);
+    IMPLIES_MAP = implies;
   }
 
   // mutually-exclusive quest pairs → Store. Walkthrough quests reference the
@@ -234,6 +237,7 @@
       if (q.mutexWith) add(q.id, q.mutexWith);
     }));
     Store.setMutex(mutex);
+    MUTEX_MAP = mutex;
   }
 
   // Link check-state across the Walkthrough and Collectables datasets: when a
@@ -1218,19 +1222,85 @@
       ])
     ));
   }
-  // Checkbox clicks: apply state + instant visual feedback on the clicked row,
-  // then defer the (heavy) full re-render so the checkmark/strikethrough paint
-  // immediately instead of blocking on a whole-DOM rebuild.
-  let renderTimer = null;
-  function scheduleRender() {
-    if (renderTimer) return;
-    renderTimer = setTimeout(() => { renderTimer = null; render(); }, 0);
+  // Checkbox clicks update the DOM IN PLACE (no full rebuild) so they feel instant
+  // and never flash/blink: the clicked row + any rows it ripples to (cross-tab
+  // links, mutex forfeits, auto-checked monsters), the affected count badges +
+  // completion-collapse, and the two progress meters. A full render is only used
+  // for navigation / settle (60s) — never for a plain check.
+  function rippleIds(id) {
+    const out = new Set([id]);
+    const add = (x) => { if (x && !out.has(x)) out.add(x); };
+    [...(CHECK_LINKS[id] || []), ...(MUTEX_MAP[id] || []), ...(IMPLIES_MAP[id] || [])].forEach((p) => {
+      add(p); (CHECK_LINKS[p] || []).forEach(add);
+    });
+    return [...out];
+  }
+  // sync one item row (#item-<id>) to current Store state, without recreating it
+  function syncRow(rid) {
+    const row = document.getElementById("item-" + rid);
+    if (!row) return null;
+    const on = Store.isChecked(rid), locked = !on && Store.isMutexLocked(rid);
+    const box = row.querySelector("input[type=checkbox]");
+    if (box) { box.checked = on; box.disabled = locked; }
+    row.classList.toggle("done", on);
+    row.classList.toggle("locked", locked);
+    const badges = row.querySelector(".item-badges");
+    if (badges) {
+      const has = badges.querySelector(".badge.forfeit");
+      if (locked && !has) badges.appendChild(forfeitBadge(rid));
+      else if (!locked && has) has.remove();
+    }
+    return row;
+  }
+  // recount + collapse the count-bearing blocks above a checkbox (and toggle the
+  // "complete" state / open-ness in place, matching what a full render would do)
+  function refreshCountsUpward(node) {
+    while (node && node.id !== "app" && node !== document.body) {
+      let countEl = null, scope = node;
+      if (node.matches && (node.matches("details.cat-block") || node.matches("details.area-group") || node.matches("details.route"))) countEl = node.querySelector(":scope > summary > .count");
+      else if (node.matches && node.matches(".collect-col")) countEl = node.querySelector(":scope > .collect-cat > .count");
+      else if (node.matches && node.matches(".rt-col")) countEl = node.querySelector(":scope > .rt-col-head > .count");
+      else if (node.matches && node.matches(".cutoff-card")) countEl = node.querySelector(":scope > .cutoff-head > .count");
+      if (countEl) {
+        const boxes = scope.querySelectorAll("input[type=checkbox]");
+        let done = 0; boxes.forEach((b) => { if (b.checked) done++; });
+        const total = boxes.length;
+        countEl.textContent = `${done}/${total}`;
+        if (node.tagName === "DETAILS") {
+          const complete = total > 0 && done === total;
+          if (complete !== node.classList.contains("complete")) {
+            node.classList.toggle("complete", complete);
+            node.open = !complete; // auto-collapse when complete, expand when not
+          }
+        }
+      }
+      node = node.parentElement;
+    }
+  }
+  function setMeter(block, p) {
+    if (!block) return;
+    const num = block.querySelector(".progress-num"); if (num) num.textContent = `${p.done} / ${p.total} (${p.pct}%)`;
+    const bar = block.querySelector(".progress .bar"); if (bar) bar.style.width = p.pct + "%";
+  }
+  function refreshMeters() {
+    const blocks = document.querySelectorAll(".meters .progress-block");
+    setMeter(blocks[0], progress((i) => i.missable));
+    setMeter(blocks[1], progress(() => true));
   }
   function checkboxToggle(id, e) {
     Store.setChecked(id, e.target.checked);
-    const row = e.target.closest(".item, .rli");
-    if (row) row.classList.toggle("done", Store.isChecked(id)); // optimistic, instant
-    scheduleRender();
+    // "Hide completed" mode needs the row to actually appear/disappear → full render
+    if (Store.getPref("hideCompleted")) { render(); return; }
+    // route steps have no id-addressable row — handle the clicked one directly
+    const rli = e.target.closest(".rli");
+    if (rli) { rli.classList.toggle("done", Store.isChecked(id)); refreshCountsUpward(e.target); }
+    else {
+      // sync the clicked row + everything it rippled to, and recount each block
+      rippleIds(id).forEach((rid) => { const row = syncRow(rid); if (row) refreshCountsUpward(row); });
+    }
+    refreshMeters();
+    scheduleSettle(); // re-arm the 60s "settle into Completed" timer
+    if (Store.syncEnabled()) scheduleSyncPush();
   }
 
   let bootedRender = false;
@@ -1274,16 +1344,17 @@
 
     updateFloats(); // refresh the floating best-arts + table-of-contents cards
 
-    // schedule a re-render when the next freshly-checked quest "settles" (so it
-    // tucks into Completed automatically ~60s after you check it)
-    if (settleTimer) { clearTimeout(settleTimer); settleTimer = null; }
-    const next = Store.soonestSettle();
-    if (next) settleTimer = setTimeout(render, Math.max(250, next - Date.now() + 50));
+    scheduleSettle(); // re-render ~60s after a check so settled quests tuck into Completed
 
     scheduleSyncPush(); // push local changes to the cloud (debounced) if sync is on
     bootedRender = true;
   }
   let settleTimer = null;
+  function scheduleSettle() {
+    if (settleTimer) { clearTimeout(settleTimer); settleTimer = null; }
+    const next = Store.soonestSettle();
+    if (next) settleTimer = setTimeout(render, Math.max(250, next - Date.now() + 50));
+  }
 
   // ---------- boot ----------
   fetch("data/checklist.json")
