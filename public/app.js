@@ -335,46 +335,57 @@
   }
 
   // ---------- MISSABLE VIEW ----------
+  // a checkable missables row. Item ids match the Walkthrough dataset, so checks
+  // are shared; `mg-*` extras are RPG-Site-only items with their own ids.
+  function missRow(it) {
+    const checked = Store.isChecked(it.id);
+    const locked = !checked && Store.isMutexLocked(it.id);
+    const badgeEls = [];
+    if (it.timed) badgeEls.push(el("span", { class: "badge timed", title: "Timed quest — shows the in-game ⏱ icon" }, ["⏱ Timed"]));
+    if (locked) badgeEls.push(forfeitBadge(it.id));
+    return el("label", { class: "item" + (checked ? " done" : "") + (locked ? " locked" : ""), id: "item-" + it.id }, [
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), ...(locked ? { disabled: "disabled" } : {}), onchange: (e) => { Store.setChecked(it.id, e.target.checked); render(); } }),
+      el("span", { class: "item-body" }, [
+        el("span", { class: "item-label" }, [document.createTextNode(it.label), it.area ? el("span", { class: "item-sub", text: " · " + it.area }) : null]),
+        badgeEls.length ? el("span", { class: "item-badges" }, badgeEls) : null,
+        it.note ? el("span", { class: "item-note", text: it.note }) : null
+      ])
+    ]);
+  }
+
+  // Missables tab — RPG Site checklist (data.missables), spoiler-gated by arc.
   function missableView() {
     const wrap = el("div", { class: "view" });
+    wrap.appendChild(el("div", { class: "arc-banner" }, [
+      el("div", { class: "arc-title", text: "⏱ Missables — RPG Site checklist" }),
+      el("div", { class: "muted", text: "Grouped by point of no return (source: RPG Site's missables list). Later cutoffs stay sealed / genericised until you reveal that Part in the Walkthrough tab. Checks here are shared with the Walkthrough tab. Always trust the in-game ⏱ icon." })
+    ]));
 
-    // group visible, missable items by cutoff order; plus a no-deadline bucket
-    const groups = {}; // cutoffId or "_none" -> entries
-    ALL_ENTRIES.forEach((e) => {
-      const { item, area } = e;
-      if (!item.missable) return;
-      if (area && !isAreaVisible(area)) return;
-      if (!matchesSearch(item)) return;
-      if (Store.getPref("hideCompleted") && Store.isChecked(item.id)) return;
-      const cid = effectiveCutoff(item, area) || "_none";
-      (groups[cid] = groups[cid] || []).push(e);
-    });
-
-    const orderedCutoffIds = (DATA.cutoffs || []).slice().sort((a, b) => a.order - b.order).map((c) => c.id);
-    orderedCutoffIds.push("_none");
-
-    let rendered = 0;
-    orderedCutoffIds.forEach((cid) => {
-      const entries = groups[cid];
-      if (!entries || !entries.length) return;
-      rendered++;
-      const cutoff = CUTOFF_BY_ID[cid];
-      const done = entries.filter((e) => Store.isChecked(e.item.id)).length;
-      const { crit, comp } = splitCritical(entries);
-      const head = el("div", { class: "cutoff-card" }, [
+    let shown = 0;
+    (DATA.missables || []).forEach((m) => {
+      const triggerRevealed = arcReached(m.triggerArc);
+      const allVisible = m.items.filter((it) => arcReached(it.arc)).concat(m.extras.filter((e) => arcReached(e.arc)));
+      if (!allVisible.length) return;
+      const done = allVisible.filter((x) => Store.isChecked(x.id)).length;
+      if (Store.getPref("hideCompleted") && done === allVisible.length) return;
+      shown++;
+      const items = m.items.filter((it) => arcReached(it.arc)).filter(matchesSearch).filter((it) => !(Store.getPref("hideCompleted") && Store.isChecked(it.id)));
+      const extras = m.extras.filter((e) => arcReached(e.arc)).filter(matchesSearch).filter((e) => !(Store.getPref("hideCompleted") && Store.isChecked(e.id)));
+      wrap.appendChild(el("section", { class: "cutoff-card" + (done === allVisible.length ? " complete" : "") }, [
         el("div", { class: "cutoff-head" }, [
-          el("strong", { text: cutoff ? cutoff.label : "Choice / one-time missables (no region deadline)" }),
-          cutoff ? el("span", { class: "chip", text: cutoff.chapterAnchor }) : el("span", { class: "chip", text: "anytime, but easy to miss" }),
-          el("span", { class: "count", text: `${done}/${entries.length}` })
+          el("strong", { text: triggerRevealed ? m.label : m.generic }),
+          el("span", { class: "count", text: `${done}/${allVisible.length}` })
         ]),
-        cutoff && cutoff.note ? el("div", { class: "muted", text: cutoff.note }) : null,
-        crit.length ? el("div", { class: "items" }, crit.map(itemRow)) : null,
-        completionDetails(comp)
-      ]);
-      wrap.appendChild(head);
+        el("div", { class: "muted cutoff-trigger", text: triggerRevealed ? m.trigger : "⏱ These are TIMED — finish them before a later-game point of no return." }),
+        items.length ? el("div", { class: "items" }, items.map(missRow)) : null,
+        extras.length ? el("div", { class: "miss-extras" }, [
+          el("div", { class: "miss-extras-head", text: "Also flagged by RPG Site" }),
+          el("div", { class: "items" }, extras.map(missRow))
+        ]) : null
+      ]));
     });
 
-    if (!rendered) wrap.appendChild(el("div", { class: "empty muted", text: "Nothing to show — reveal areas as you reach them (Full 100% tab), or clear filters." }));
+    if (!shown) wrap.appendChild(el("div", { class: "empty muted", text: "No missables in revealed Parts yet — they appear as you reveal Parts in the Walkthrough tab." }));
     return wrap;
   }
 
@@ -500,6 +511,7 @@
         el("span", { class: "item-badges" }, badgeEls),
         item.note ? el("span", { class: "item-note", text: item.note }) : null,
         (kind === "um" && IMPLIED_BY[item.id]) ? el("span", { class: "item-note implied", text: "↩ Auto-checks when you complete: " + IMPLIED_BY[item.id].join(", ") }) : null,
+        item.rpgsite ? el("span", { class: "item-note rpg" + (item.rpgConflict ? " conflict" : ""), text: (item.rpgConflict ? "⚠ Guides disagree — " : "ℹ Second opinion — ") + item.rpgsite }) : null,
         itemDetails(item)
       ])
     ]);
@@ -700,10 +712,42 @@
         el("div", { class: "area-body" }, [el("div", { class: "items" }, entries.map(itemRow))])
       ]));
     });
-    if (Store.getPref("category") === "all") wrap.appendChild(tail);
+    if (Store.getPref("category") === "all") {
+      const rt = recordsTrialsCard();
+      if (rt) wrap.appendChild(rt);
+      wrap.appendChild(tail);
+    }
 
     if (!visible.length) wrap.insertBefore(el("div", { class: "muted empty", text: "No areas revealed yet — hit “Reveal next area” when you start playing." }), wrap.firstChild);
     return wrap;
+  }
+
+  // Records & Trials, aggregated from REVEALED walkthrough sections only (spoiler
+  // gate — later-Part record/trial names can be spoilers). Checks share with the
+  // Walkthrough tab via the same wrec-/wtrial- ids.
+  function recordsTrialsCard() {
+    const secs = (DATA.walkthrough || []).filter((s) => arcReached(s.arc));
+    const collect = (key) => { const out = []; secs.forEach((s) => (s[key] || []).forEach((it) => out.push(it))); return out; };
+    const block = (label, arr) => {
+      if (!arr.length) return null;
+      const visible = arr.filter(matchesSearch).filter((it) => !(Store.getPref("hideCompleted") && Store.isChecked(it.id)));
+      if (!visible.length) return null;
+      const done = arr.filter((it) => Store.isChecked(it.id)).length;
+      return el("details", { class: "cat-block", open: "open" }, [
+        el("summary", { class: "cat-head" }, [el("span", { text: label }), el("span", { class: "count", text: `${done}/${arr.length}` })]),
+        el("div", { class: "items" }, visible.map(missRow))
+      ]);
+    };
+    const blocks = [block("🏅 Records", collect("records")), block("🎯 Trials", collect("trials"))].filter(Boolean);
+    if (!blocks.length) return null;
+    const sealed = (DATA.arcs || []).some((a) => !arcReached(a.id));
+    return el("section", { class: "area-card" }, [
+      el("div", { class: "area-head" }, [el("h3", { text: "Records & Trials" })]),
+      el("div", { class: "muted", text: sealed
+        ? "🔒 From the Parts you've revealed only — more records & trials (some with spoiler-y names) appear as you reveal later Parts in the Walkthrough tab."
+        : "All Parts revealed." }),
+      el("div", { class: "area-body" }, blocks)
+    ]);
   }
 
   // ---------- controls ----------
@@ -828,7 +872,7 @@
 
     root.appendChild(controls());
     const view = Store.getPref("view");
-    if (view !== "walk") root.appendChild(expiresNextPanel());
+    if (view === "full") root.appendChild(expiresNextPanel());
     root.appendChild(view === "walk" ? walkView() : view === "missable" ? missableView() : fullView());
 
     root.appendChild(el("footer", { class: "app-footer" }, [

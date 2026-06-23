@@ -876,5 +876,25 @@ module.exports = {
     "4.20:Q250": "Yellow “kind person” (Kaleka/Elior) — their best.",
     // ---- 4.21 ----
     "4.21:Q260": "Dakuku registers."
+  },
+
+  // RPG Site quest-choice guide (rpgsite.net/feature/9776) cross-reference.
+  // Surfaced as a "second opinion" on choice/mutex quests; `conflict:true` means
+  // RPG Site recommends a DIFFERENT route than ShulkLink (a real disagreement).
+  rpgsite: {
+    // --- hard conflicts (ShulkLink pick ≠ RPG Site pick) ---
+    "4.6:Q56a": { conflict: true, text: "RPG Site picks the OTHER route — Out-Of-Luck Giorgio (better affinity). ShulkLink picks Pestering Paola. The guides disagree." },
+    "4.6:Q56b": { conflict: true, text: "RPG Site picks THIS route — Out-Of-Luck Giorgio (better affinity). ShulkLink instead picks Pestering Paola." },
+    "4.6:Q87a": { conflict: true, text: "RPG Site picks the OTHER route — Spirits Raised (higher affinity + unlocks more quests later). ShulkLink picks Imaginations Tempered (for the Lake Drop)." },
+    "4.6:Q87b": { conflict: true, text: "RPG Site picks THIS route — Spirits Raised (higher affinity + more later quests). ShulkLink instead picks Imaginations Tempered." },
+    "4.7:Q96": { conflict: true, text: "RPG Site says REPAIR the lamp (better reward). ShulkLink throws it away (faster). The guides disagree." },
+    "4.14:Q184a": { conflict: true, text: "RPG Site picks the OTHER route — A Little Brother's Fight (give the pollen to Jiroque; slightly better affinity). ShulkLink picks this one (Zukazu, the big brother)." },
+    "4.14:Q184b": { conflict: true, text: "RPG Site picks THIS route — A Little Brother's Fight (give the pollen to Jiroque; slightly better affinity). ShulkLink instead picks A Big Brother's Fight (Zukazu)." },
+    "4.22:Q280a": { conflict: true, text: "RPG Site picks THIS route — Medical Advancements (more EXP/money). ShulkLink instead picks Let's Make Fillings (Yusa, better drop rates). Affinity is identical either way." },
+    "4.22:Q280b": { conflict: true, text: "RPG Site picks the OTHER route — Medical Advancements (more EXP/money). ShulkLink picks this one (Yusa, better drop rates). Affinity is identical either way." },
+    // --- soft differences (ShulkLink leans one way; RPG Site says either is fine) ---
+    "4.6:Q52b": { conflict: false, text: "RPG Site: neither Romantic Notions route is clearly better. ShulkLink leans Andreas (the Boy route)." },
+    "4.14:Q159": { conflict: false, text: "RPG Site: neither Popularity Premonition choice is clearly better. ShulkLink leans Pepa." },
+    "4.14:Q186": { conflict: false, text: "RPG Site: neither A Young Captain's Challenge route is better (different follow-ups, near-identical rewards). ShulkLink leans the Nopon Claymore." }
   }
 };

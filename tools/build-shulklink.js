@@ -874,6 +874,7 @@ sections.forEach((s) => {
     const key = s.id + ":" + it.code;
     if (DETAILS.defeats && DETAILS.defeats[key]) it.defeatsUM = DETAILS.defeats[key];
     if (DETAILS.affinity && DETAILS.affinity[key]) it.affinityChanges = DETAILS.affinity[key];
+    if (DETAILS.rpgsite && DETAILS.rpgsite[key]) { it.rpgsite = DETAILS.rpgsite[key].text; it.rpgConflict = !!DETAILS.rpgsite[key].conflict; }
   });
   // make landmarks / locations / records / affinity steps checkable items (stable ids by index)
   // section context = the section's stated region(s) + the regions of its quests/UMs/HtH
@@ -909,6 +910,79 @@ ARCS.forEach((a) => { a._from = idxOf(a.from); a._to = idxOf(a.to); });
 sections.forEach((s, i) => { s.arc = (ARCS.find((a) => i >= a._from && i <= a._to) || ARCS[ARCS.length - 1]).id; });
 ARCS.forEach((a) => { delete a._from; delete a._to; });
 data.arcs = ARCS;
+
+// ---- RPG Site missables checklist (rpgsite.net/feature/9775) -----------------
+// Source of truth for the Missables tab. Each cutoff is spoiler-gated by
+// triggerArc (the Part where the point-of-no-return fires); individual items are
+// gated by their own section's arc, so Part-1-doable items (e.g. the timed
+// Alcamoth quests) still surface in Part 1 under a genericised label.
+const SEC_BY_ID = {}; sections.forEach((s) => { SEC_BY_ID[s.id] = s; });
+const ITEM_BY_KEY = {};
+sections.forEach((s) => [...s.quests, ...s.ums].forEach((it) => { ITEM_BY_KEY[s.id + ":" + it.code] = { it, s }; }));
+
+const MISS_DEF = [
+  {
+    id: "miss-colony6", triggerArc: "arc1",
+    label: "Cutoff 1 — Moving the refugees to Colony 6",
+    generic: "Cutoff 1 — Refugee Camp timed quests",
+    trigger: "Fires when YOU choose to complete 'To Colony 6!' / 'The Road Home' (after Satorl Marsh). Locks every ⏱ Refugee Camp / Bionis' Leg timed quest — do them all first.",
+    keys: ["4.6:Q87a", "4.6:Q87b", "4.6:Q77", "4.6:Q78", "4.6:Q79", "4.6:Q80", "4.6:Q81", "4.6:Q83", "4.6:Q85", "4.6:Q70", "4.6:Q71", "4.6:Q72", "4.7:Q88", "4.6:Q69", "4.6:Q73", "4.6:Q74", "4.6:Q75", "4.6:Q76", "4.6:Q66", "4.6:Q67", "4.6:Q64", "4.6:Q65"],
+    extras: [
+      { arc: "arc1", label: "Melia's Imperial Staff (weapon skin)", note: "Grab it from Kallian in Alcamoth (Ascension/Audience Hall) once you reach Alcamoth — RPG Site flags it as easy to miss; it locks at the later Alcamoth cutoff." }
+    ]
+  },
+  {
+    id: "miss-mechonis-field", triggerArc: "arc2",
+    label: "Cutoff 2 — Mechonis Field boss",
+    generic: "A later cutoff — Sword Valley & Galahad Fortress",
+    trigger: "Fires at the boss at the end of Mechonis Field. Permanently locks Sword Valley and Galahad Fortress (all quests, unique monsters, collectables, maps).",
+    sections: ["4.23", "4.24"],
+    extras: [
+      { arc: "arc2", label: "2× Red Frontier (Colony 6 reconstruction)", note: "Sword Valley collectable — grab 2 before the area locks." },
+      { arc: "arc2", label: "2× Art Core Coil (Colony 6 reconstruction)", note: "Galahad Fortress collectable — grab 2 before the area locks." },
+      { arc: "arc2", label: "Sword Valley weapon/armour skins (Anti-Mechon Driver, etc.)", note: "Buy one of each from the Sword Valley supply shop for fashion appearances — gone when the area locks." }
+    ]
+  },
+  {
+    id: "miss-agniratha", triggerArc: "arc2",
+    label: "Cutoff 3 — Agniratha boss",
+    generic: "A later cutoff — Mechonis Field & Agniratha",
+    trigger: "Fires at the boss in Agniratha. Permanently locks Mechonis Field, the Machina Refuge, Agniratha, and the Hidden Machina Village timed quests.",
+    sections: ["4.26", "4.28"],
+    extras: [
+      { arc: "arc2", label: "Hidden Machina Village timed quests", note: "RPG Site: The History of Mechonis, A Weapon Just For Me, For My Loved One…, To My Loved One…, The History of the Capital — finish before the Agniratha boss." },
+      { arc: "arc2", label: "Agniratha terminal quests (14) → Cloister Key", note: "Complete all 14 optional Agniratha quests, then use the last Central Tower terminal for the Cloister Key." },
+      { arc: "arc2", label: "Colony 6 collectables (Mechonis Field / Agniratha)", note: "RPG Site: 2× Retro Diode, 2× Mossy Panel, 2× Azure Hollyhock, 2× Energy Aubergine, 1× Fortune Feather, 2× Lewisia Silver, 3× Blue Light Amp." },
+      { arc: "arc2", label: "Machina weapon skins (Hidden Village & Agniratha shops)", note: "RPG Site: Sparrow Blades, Murder Knives, Machina Cannon, Machina Biter II + drop-only skins (Machina Rod/Nibbler/Sniper, Palva/Grizzly Drones)." }
+    ]
+  },
+  {
+    id: "miss-mechonis-core", triggerArc: "arc2",
+    label: "Cutoff 4 — Mechonis Core boss",
+    generic: "A later cutoff — timed Alcamoth & Eryth Sea quests",
+    trigger: "Fires at the Mechonis Core boss (Central Factory revisit). Permanently locks Central Factory and ALL Alcamoth / Eryth Sea content. Most §4.20 quests are ⏱ TIMED for this — clear them now.",
+    sections: ["4.20", "4.27", "4.30"],
+    keys: ["4.22:Q299", "4.22:Q300", "4.22:Q301", "4.22:Q302", "4.22:Q303", "4.22:Q304", "4.22:Q305"],
+    extras: [
+      { arc: "arc1", label: "Mumkhar's Razor (missable easter egg)", note: "Trade with Kurralth WHILE he's on Valak Mountain (Part 1) — RPG Site notes it's otherwise lost." },
+      { arc: "arc2", label: "Colony 6 collectables (Central Factory)", note: "RPG Site: 2× Black Styrene, 2× Angel Engine X (obtainable elsewhere too)." },
+      { arc: "arc2", label: "Talia's Research OR Investigating Satorl (mutually exclusive)", note: "RPG Site: pick Talia's Research — only it benefits the affinity chart." }
+    ]
+  }
+];
+
+const missables = MISS_DEF.map((def) => {
+  const seen = new Set(), items = [];
+  const pushItem = (it, s) => {
+    if (seen.has(it.id)) return; seen.add(it.id);
+    items.push({ id: it.id, label: (it.code ? it.code + " " : "") + it.label, area: it.area || s.region, arc: s.arc || "arc1", timed: !!it.timed, mutexWith: it.mutexWith || null });
+  };
+  (def.keys || []).forEach((k) => { const e = ITEM_BY_KEY[k]; if (e) pushItem(e.it, e.s); else console.warn("(missables) unresolved key:", k); });
+  (def.sections || []).forEach((sid) => { const s = SEC_BY_ID[sid]; if (!s) return console.warn("(missables) unknown section:", sid); [...s.quests, ...s.ums].forEach((it) => pushItem(it, s)); });
+  const extras = (def.extras || []).map((e, i) => ({ id: `mg-${def.id}-${i}`, label: e.label, note: e.note || null, arc: e.arc || "arc1" }));
+  return { id: def.id, triggerArc: def.triggerArc, label: def.label, generic: def.generic, trigger: def.trigger, items, extras };
+});
+data.missables = missables;
 
 // ---- attach + write ---------------------------------------------------------
 data.pointsOfNoReturn = PONR;
