@@ -158,6 +158,11 @@ a { color: var(--accent); }
 .area-group-body { padding: 4px 14px 12px; }
 .area-group-body > .cat-block { margin: 8px 0 12px; }
 
+/* quests + unique monsters side-by-side on wide screens */
+.qum-row { display: grid; grid-template-columns: 1fr; gap: 0 18px; }
+.qum-row > .cat-block { margin: 8px 0 12px; min-width: 0; }
+@media (min-width: 900px) { .qum-row { grid-template-columns: 1fr 1fr; align-items: start; } }
+
 /* collapsible category blocks (auto-collapse when fully checked) */
 details.cat-block > summary.cat-head { cursor: pointer; list-style: none; }
 details.cat-block > summary.cat-head::-webkit-details-marker { display: none; }
@@ -203,6 +208,27 @@ details.completion[open] > summary::before { content: "▾ "; }
 
 .reveal-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 14px 0; padding: 12px; background: var(--bg2); border: 1px dashed var(--line); border-radius: var(--radius); }
 .empty { padding: 16px; text-align: center; }
+
+/* area card with a sticky best-arts side panel (wide screens) */
+.area-card.has-aside { display: block; }
+.area-card.has-aside .area-main { min-width: 0; }
+@media (min-width: 1180px) {
+  .area-card.has-aside { display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 20px; align-items: start; }
+}
+.arts-aside { background: linear-gradient(180deg, #1a1320, #14101c); border: 1px solid #4a2f5a; border-left: 3px solid #b06fd6; border-radius: var(--radius); padding: 11px 13px; margin-top: 10px; }
+@media (min-width: 1180px) { .arts-aside { position: sticky; top: 12px; margin-top: 0; } }
+.arts-head { display: flex; flex-direction: column; gap: 1px; margin-bottom: 9px; padding-bottom: 7px; border-bottom: 1px solid #4a2f5a; }
+.arts-title { font-weight: 800; font-size: 13.5px; color: #e0b6f5; }
+.arts-sub { font-size: 11px; color: var(--muted); }
+.arts-body { display: flex; flex-direction: column; gap: 9px; }
+.arts-char { font-size: 12.5px; }
+.arts-name { font-weight: 700; color: var(--accent2); margin-bottom: 2px; }
+.arts-tier { display: flex; gap: 6px; align-items: baseline; line-height: 1.4; margin: 1px 0; }
+.arts-list { color: var(--text); }
+.tl { font-weight: 800; font-size: 10.5px; padding: 0 5px; border-radius: 4px; flex: 0 0 auto; line-height: 1.5; }
+.tl.s { background: #5a1f2f; color: #ffd1dc; border: 1px solid #9d3550; }
+.tl.a { background: #2f3f1f; color: #d8f0b0; border: 1px solid #5a7d35; }
+.arts-src { display: inline-block; margin-top: 9px; font-size: 11px; color: var(--muted); }
 
 /* footer */
 .app-footer { margin: 26px 0 10px; padding-top: 14px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }

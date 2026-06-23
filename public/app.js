@@ -34,6 +34,55 @@
     ]);
   }
 
+  // ---- best-arts reference (Game8 tier list #289556) — S & A tier per character ----
+  const ARTS_TIER_URL = "https://game8.co/games/Xenoblade-Chronicles-Definitive-Edition/archives/289556";
+  const PARTY_ARTS = {
+    Shulk:  { S: ["Battle Soul", "Shadow Eye", "Air Slash", "Back Slash", "Slit Edge"], A: ["Stream Edge", "Light Heal", "Armor", "Shield", "Buster"] },
+    Reyn:   { S: ["Lariat", "Berserker", "Sword Drive", "Wild Down"], A: ["Dive Sobat", "Magnum Charge", "Shield Bash", "War Swing"] },
+    Sharla: { S: ["Cure Round", "Head Shot", "Heal Round", "Heal Bullet"], A: ["Covert Stance", "Heal Blast"] },
+    Dunban: { S: ["Soaring Tempest", "Heat Haze", "Serene Heart", "Steel Strike", "Worldly Slash", "Peerless", "Gale Slash"], A: ["Spirit Breath", "Electric Gutbuster"] },
+    Melia:  { S: ["Summon Earth", "Summon Copy", "Summon Flare", "Summon Bolt"], A: ["Mind Blast", "Summon Wind", "Reflection", "Summon Ice"] },
+    Riki:   { S: ["Freezinate", "Burninate", "You Can Do It", "Hero Time", "Lurgy", "Sneaky", "Bitey Bitey"], A: ["Tantrum", "Happy Happy"] },
+    Seven:  { S: ["Final Cross", "Air Fang", "Lock-On", "Zero Gravity", "Spear Blade", "Double Blade"], A: ["Power Drain", "Double Wind", "Ether Drain", "Cross Impact"] }
+  };
+  // display order of the aside
+  const PARTY_ORDER = ["Shulk", "Reyn", "Sharla", "Dunban", "Melia", "Riki", "Seven"];
+  let SECTION_RANK = {};      // section code -> chronological index (for party-by-section)
+  // who is in the party at a given section (spoiler-gated by arc reveal anyway)
+  function partyFor(code) {
+    const r = SECTION_RANK[code];
+    if (r == null) return [];
+    const at = (c) => SECTION_RANK[c];
+    const mem = new Set();
+    if (r >= at("4.2")) { mem.add("Shulk"); mem.add("Reyn"); }
+    if (r === at("4.4") || r >= at("4.9")) mem.add("Dunban");   // raid cameo, then permanent
+    if (r >= at("4.5")) mem.add("Sharla");
+    if (r >= at("4.13")) mem.add("Melia");
+    if (r >= at("4.14")) mem.add("Riki");
+    if (r >= at("4.25")) mem.add("Seven");                       // Fiora returns (new art set)
+    return PARTY_ORDER.filter((c) => mem.has(c));
+  }
+  function artsAside(s) {
+    const party = partyFor(s.code).filter((c) => PARTY_ARTS[c]);
+    if (!party.length) return null;
+    const chars = party.map((c) => {
+      const a = PARTY_ARTS[c];
+      return el("div", { class: "arts-char" }, [
+        el("div", { class: "arts-name", text: c }),
+        a.S && a.S.length ? el("div", { class: "arts-tier" }, [el("span", { class: "tl s", text: "S" }), el("span", { class: "arts-list", text: a.S.join(", ") })]) : null,
+        a.A && a.A.length ? el("div", { class: "arts-tier" }, [el("span", { class: "tl a", text: "A" }), el("span", { class: "arts-list", text: a.A.join(", ") })]) : null
+      ]);
+    });
+    return el("aside", { class: "arts-aside" }, [
+      el("div", { class: "arts-head" }, [
+        el("span", { class: "arts-title", text: "⚔️ Best Arts to Level" }),
+        el("span", { class: "arts-sub", text: "Current party · Game8 S/A tier" })
+      ]),
+      el("div", { class: "arts-body" }, chars),
+      el("a", { class: "arts-src", href: ARTS_TIER_URL, target: "_blank", rel: "noopener" }, ["Source: Game8 best-arts tier list ↗"])
+    ]);
+  }
+
   let DATA = null;
   let CUTOFF_BY_ID = {};
   let CUTOFF_ORDER = {};      // id -> order index
@@ -91,9 +140,12 @@
     // flat list of walkthrough items (quests/ums/hths/colony6) for progress counting
     WALK_ITEMS = [];
     (DATA.walkthrough || []).forEach((s) => {
-      ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records", "affinitySteps"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
+      ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records", "trials", "affinitySteps"].forEach((k) => (s[k] || []).forEach((item) => WALK_ITEMS.push(item)));
       (s.guide || []).forEach((g) => WALK_ITEMS.push(g)); // steps count; Nota Bene sub-notes don't
     });
+
+    SECTION_RANK = {};
+    (DATA.walkthrough || []).forEach((s, i) => { SECTION_RANK[s.code] = i; });
 
     buildCheckLinks();
     buildMutex();
@@ -510,12 +562,13 @@
     const regions = Object.keys(groups).sort((a, b) => regionIndex(a) - regionIndex(b));
     const areaGroups = regions.map((r) => {
       const g = groups[r];
-      const blocks = [
-        walkBlock("📍 Landmarks (discover here)", g.landmarks, "lm"),
-        walkBlock("📍 Locations (discover here)", g.locations, "loc"),
-        walkBlock("Quests", g.quests, "q"),
-        walkBlock("Unique Monsters", g.ums, "um")
-      ].filter(Boolean);
+      const lmBlock = walkBlock("📍 Landmarks (discover here)", g.landmarks, "lm");
+      const locBlock = walkBlock("📍 Locations (discover here)", g.locations, "loc");
+      const qBlock = walkBlock("Quests", g.quests, "q");
+      const umBlock = walkBlock("Unique Monsters", g.ums, "um");
+      // quests + unique monsters sit side-by-side on wide screens
+      const qumRow = (qBlock || umBlock) ? el("div", { class: "qum-row" }, [qBlock, umBlock].filter(Boolean)) : null;
+      const blocks = [lmBlock, locBlock, qumRow].filter(Boolean);
       if (!blocks.length) return null;
       const all = [...g.landmarks, ...g.locations, ...g.quests, ...g.ums];
       const done = all.filter((i) => Store.isChecked(i.id)).length;
@@ -530,6 +583,7 @@
       walkBlock("Heart-to-Hearts", s.hths, "hth"),
       walkBlock("Colony 6 Development", s.colony6, "c6"),
       walkBlock("🏅 Records to unlock", s.records, "rec"),
+      walkBlock("🎯 Trials to unlock", s.trials, "trial"),
       walkBlock("💞 Improve area affinity — steps", s.affinitySteps, "aff"),
       // Nota Bene lives under route steps when a route exists; otherwise show the panel
       (s.guide && s.guide.length) ? null : refList("📝 Nota Bene", s.notaBene, { cls: "nb" })
@@ -543,7 +597,8 @@
       el("div", { class: "route-head", text: "🧭 Route — what to do" }),
       el("ol", { class: "route-list" }, s.guide.map(routeStep))
     ]) : null;
-    return el("section", { class: "area-card" }, [
+    const aside = artsAside(s);
+    const main = el("div", { class: "area-main" }, [
       el("div", { class: "area-head" }, [
         el("h3", { text: s.title }),
         el("span", { class: "chip soft", text: "§" + s.code }),
@@ -554,6 +609,7 @@
       route,
       body
     ]);
+    return el("section", { class: "area-card" + (aside ? " has-aside" : "") }, aside ? [main, aside] : [main]);
   }
   const REGION_ORDER = ["Colony 9", "Tephra Cave", "Bionis' Leg", "Colony 6", "Ether Mine", "Satorl Marsh",
     "Bionis' Interior", "Makna Forest", "Frontier Village", "Eryth Sea", "Alcamoth", "High Entia Tomb",
@@ -564,7 +620,7 @@
   // a section is "complete" when it has checkable items and they're all checked
   function sectionComplete(s) {
     const ids = [];
-    ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records", "affinitySteps"].forEach((k) => (s[k] || []).forEach((i) => ids.push(i.id)));
+    ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records", "trials", "affinitySteps"].forEach((k) => (s[k] || []).forEach((i) => ids.push(i.id)));
     (s.guide || []).forEach((g) => ids.push(g.id));
     return ids.length > 0 && ids.every((id) => Store.isChecked(id));
   }

@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -6532,6 +6532,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -6705,28 +6706,16 @@
           "confidence": "high"
         }
       ],
-      "records": [
+      "trials": [
         {
-          "id": "wrec-4.2-0",
+          "id": "wtrial-4.2-0",
           "label": "First Steps — your first trial (Mechon Wreckage Site)",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.2-1",
-          "label": "Back-Stabber — first Back Slash from behind",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wrec-4.2-2",
-          "label": "Let's Fight — first burst affinity challenge",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wrec-4.2-3",
-          "label": "Turn It Up! — a party member reaches high tension",
+          "id": "wtrial-4.2-1",
+          "label": "Heartwarming — view the Sunrise in the Park heart-to-heart (Q1)",
           "missable": false,
           "confidence": "high"
         }
@@ -6735,6 +6724,7 @@
         "Fiora is only playable until the upcoming cutscene.",
         "Hold off on quests for now — story events are coming that make it awkward."
       ],
+      "records": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -6835,19 +6825,21 @@
       "records": [
         {
           "id": "wrec-4.3-0",
-          "label": "A Corner Of The World — trial (Mag Mell Ruins)",
+          "label": "Skip It — your first skip-travel",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.3-1",
-          "label": "Skip It — first skip-travel",
+          "label": "That Hits The Slot — set up your party's gear",
           "missable": false,
           "confidence": "high"
-        },
+        }
+      ],
+      "trials": [
         {
-          "id": "wrec-4.3-2",
-          "label": "That Hits The Slot — set up your party's gear",
+          "id": "wtrial-4.3-0",
+          "label": "A Corner Of The World — enter the Mag Mell Ruins",
           "missable": false,
           "confidence": "high"
         }
@@ -6945,6 +6937,7 @@
         "First real boss: Metal Face (Lv. 10). Stage 2 needs topple-locking via a chain attack (Enchant first): Stream Edge → Wild Down → Steel Strike, then ~25% HP in red arts / Buster."
       ],
       "landmarks": [],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -7093,25 +7086,67 @@
       "records": [
         {
           "id": "wrec-4.5-0",
-          "label": "Titan's Gift — farm your first ether crystals",
+          "label": "Learning The Craft — your first gem craft",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.5-1",
-          "label": "Learning The Craft — first gem craft",
+          "label": "Second Wind — 10 revivals",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.5-2",
-          "label": "Blossoming Friendship — reach green party affinity",
+          "label": "Art School — level an art to Lv. 2",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.5-3",
+          "label": "Ninja Skillz — one-shot an enemy with Back Slash",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.5-4",
+          "label": "Titan's Gift — farm your first ether crystals",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.5-5",
+          "label": "Beginner's Luck — spider-cave battle luck",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.5-6",
+          "label": "Ground Down — spider-cave battles",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.5-7",
+          "label": "Hunting For Treasure — open enough silver chests",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.5-8",
           "label": "Bug Off — defeat 30 insects",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.5-9",
+          "label": "Not Gonna Happen! — survive a near-wipe",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.5-10",
+          "label": "Simply Smashing! — smash your first vision tag",
           "missable": false,
           "confidence": "high"
         }
@@ -7120,6 +7155,7 @@
         "Boss: Arachno Queen (Lv. 12) — focus her with arts; use Shield (leveled ≥ her talent art) when a vision warns of it.",
         "Sharla joins (your first healer). Quick-travel returns after you reach the camp's north marker."
       ],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -9115,109 +9151,86 @@
       "records": [
         {
           "id": "wrec-4.6-0",
-          "label": "Equivalent Exchange — first successful trade with an NPC",
+          "label": "Bone Breaker — break a monster (e.g. a Back Slash surprise on Mell Lizards)",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.6-1",
-          "label": "Lazybones — skip-travel 50 times",
+          "label": "Walking Insecticide — defeat an insect-type unique monster",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "trials": [
+        {
+          "id": "wtrial-4.6-0",
+          "label": "Problem Solved! — complete your first non-story quest",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-2",
-          "label": "Breaking The Ice — party banter on registering a quest for the first time",
+          "id": "wtrial-4.6-1",
+          "label": "Ground Up — defeat 2 Singing Brogs",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-3",
-          "label": "Idle Chit-Chat — party banter on registering quests 50 times",
+          "id": "wtrial-4.6-2",
+          "label": "Hunter-In-Training — defeat your first unique monster (Verdant Bluchal)",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-4",
-          "label": "Ear To The Ground — spoken to people 100 times",
+          "id": "wtrial-4.6-3",
+          "label": "Helpful Stranger — complete the Beach Krabbles quest",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-5",
-          "label": "Unlucky Sixes — deal exactly 666 damage in one hit",
+          "id": "wtrial-4.6-4",
+          "label": "The Strongest Tie — complete the Shin Geckos collection quest",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-6",
-          "label": "Lucky Sevens — deal exactly 777 damage in one hit",
+          "id": "wtrial-4.6-5",
+          "label": "Friend Number Ten — register your 10th NPC (trade with Kenny)",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-7",
-          "label": "Rear Admiral — perform a back attack 50 times",
+          "id": "wtrial-4.6-6",
+          "label": "Constellation — establish the Erik/Sonia affinity link",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-8",
-          "label": "It Hasn't Lost Its Lustre — open 10 gold chests",
+          "id": "wtrial-4.6-7",
+          "label": "Shaping History — complete your first mutually-exclusive quest",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-9",
-          "label": "Hoarding Treasure — open 50 silver chests",
+          "id": "wtrial-4.6-8",
+          "label": "Colony 9 Celeb — speak with King Squeeze",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-10",
-          "label": "Airing Grievances — defeat 30 flying monsters",
+          "id": "wtrial-4.6-9",
+          "label": "Pro Hunter — defeat the flagged unique monster",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.6-11",
-          "label": "Raring To Go — get your first rare ether crystal",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wrec-4.6-12",
-          "label": "Simply Smashing! — smash 100 vision tags",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wrec-4.6-13",
-          "label": "Killer Combo — deal 3,000 damage with a chain attack",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wrec-4.6-14",
-          "label": "Ground To A Pulp — defeat 250 ground-type monsters",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wrec-4.6-15",
-          "label": "Unshakeable Trust — raise two party members to blue affinity",
-          "missable": false,
-          "confidence": "high"
-        },
-        {
-          "id": "wrec-4.6-16",
-          "label": "Colony 9 Celebrity — reach 3-star affinity with Colony 9",
+          "id": "wtrial-4.6-10",
+          "label": "Explorer — discover the Observation Platform (jump into Raguel Lake)",
           "missable": false,
           "confidence": "high"
         }
       ],
       "notaBene": [
-        "Around this section you'll likely pick up: Second Wind (10 revivals), Art School (level an art to Lv. 2) and Ninja Skillz (one-shot an enemy with Back Slash).",
         "Item Vision: on collecting an early Bionis' Leg collectable (e.g. Moth Crawler / Sour Gooseberry) a gray vision flags that you'll need several of that item — they're then marked in your inventory until you hit the count.",
         "Arts palette fills up around Lv. 16 (Reyn learns a 9th art) — you can only equip 8, so swap via the Arts submenu."
       ],
@@ -9735,25 +9748,117 @@
       "records": [
         {
           "id": "wrec-4.7-0",
-          "label": "Explorer — discover the Observation Platform",
+          "label": "Equivalent Exchange — first successful trade with an NPC",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.7-1",
-          "label": "A generous friend — complete A Young Captain's Rise",
+          "label": "Lazybones — skip-travel 50 times",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.7-2",
-          "label": "Fifty Fine Friends — register your 50th NPC (speak with Jan)",
+          "label": "Breaking The Ice — party banter on registering a quest for the first time",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.7-3",
+          "label": "Idle Chit-Chat — party banter on registering quests 50 times",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-4",
+          "label": "Ear To The Ground — speak to people 100 times",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-5",
+          "label": "Unlucky Sixes — deal exactly 666 damage in one hit",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-6",
+          "label": "Lucky Sevens — deal exactly 777 damage in one hit",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-7",
+          "label": "Rear Admiral — perform a back attack 50 times",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-8",
+          "label": "It Hasn't Lost Its Lustre — open 10 gold chests",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-9",
+          "label": "Hoarding Treasure — open 50 silver chests",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-10",
+          "label": "Airing Grievances — defeat 30 flying monsters",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-11",
+          "label": "Raring To Go — get your first rare ether crystal",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-12",
+          "label": "Killer Combo — deal 3,000 damage with a chain attack",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-13",
+          "label": "Ground To A Pulp — defeat 250 ground-type monsters",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.7-14",
+          "label": "Unshakeable Trust — raise two party members to blue affinity",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "trials": [
+        {
+          "id": "wtrial-4.7-0",
+          "label": "A Generous Friend — complete A Young Captain's Rise",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wtrial-4.7-1",
+          "label": "Fifty Fine Friends — register your 50th NPC (speak with Jan)",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wtrial-4.7-2",
           "label": "Spider's Web — speak with Zukazu",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wtrial-4.7-3",
+          "label": "The Brave Protectors — speak with all of Colony 9's military personnel",
           "missable": false,
           "confidence": "high"
         }
@@ -9787,7 +9892,8 @@
           "objective": "Find the Nopon Coin (down the elevator to Splintered Path; at the second fork go SE then south), then report.",
           "rewards": "850G, 320 EXP, Break II",
           "strategy": "Registers Daza.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Daza registers."
         },
         {
           "id": "wq-48-q100-safety-first",
@@ -9822,7 +9928,8 @@
           "objective": "Deliver Daza's letter to Gerugu → take Gerugu's response back to Daza.",
           "rewards": "1000G, 500 EXP, Slow III, Top Secret Data",
           "strategy": "Affinity → green 'companions' (Gerugu/Daza).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Green “companions” (Gerugu/Daza) — their best."
         }
       ],
       "ums": [
@@ -9892,6 +9999,7 @@
         }
       ],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -10147,24 +10255,44 @@
       "records": [
         {
           "id": "wrec-4.9-0",
-          "label": "Fire It Up — (Dark Kisling fight at the fire ether deposits)",
+          "label": "Fire It Up — the Dark Kisling fight at the fire ether deposits",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.9-1",
-          "label": "Unbreakable Bond",
+          "label": "Unbreakable Bond — the Dark Kisling fight",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.9-2",
-          "label": "Chain Gang / Off The Chain — get an extra chain link (vs Xord)",
+          "label": "Chain Gang — land an extra chain link (vs Xord)",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.9-3",
+          "label": "Off The Chain — land an extra chain link (vs Xord)",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.9-4",
+          "label": "One Is Never Enough — collect a duplicate collectable",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.9-5",
+          "label": "Collector's Mentality — fill out collectables",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "trials": [
+        {
+          "id": "wtrial-4.9-0",
           "label": "Seasoned Traveller — discover the Freight Elevator (completes the Ether Mine map)",
           "missable": false,
           "confidence": "high"
@@ -10197,7 +10325,8 @@
           "objective": "Collect 3 uniform pieces — Tatty Armor (Spring of Grief, Tephra Cave), Twisted Gun (north of the Observation Platform, Bionis' Leg), Nicked Knife (by the Shining Pond, Satorl Marsh) — then report.",
           "rewards": "4500G, 1500 EXP, Bomber Lancer",
           "strategy": "After completion, speak Marcia (blue 'friends always'), Cheryl (green 'old friends'), Jan (green 'old suitor').",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "No direct changes — follow up with the indirect affinity steps afterward."
         },
         {
           "id": "wq-410-q102-monster-quest-1",
@@ -10283,7 +10412,8 @@
           "objective": "Find and save Kacha (Exile Fortress interior).",
           "rewards": "3500G, 410 EXP, Jungle Cap/Gloves/Shoes",
           "strategy": "Green link 'like family' (Kacha/Bokoko).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Bokoko & Kacha register; green “like family” (Kacha/Bokoko) — their best."
         },
         {
           "id": "wq-410-q107-preventing-starvation",
@@ -10301,7 +10431,8 @@
           "objective": "Collect 5 Lemon Stones + 2 Twin Flamii Eggs (Lacus Swamp).",
           "rewards": "2400G, 400 EXP, Mist Gel/Cream/Sandals",
           "strategy": "Registers Zazadan.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Zazadan registers."
         },
         {
           "id": "wq-410-q108-zazadan-in-danger",
@@ -10777,11 +10908,37 @@
           "confidence": "high"
         }
       ],
+      "records": [
+        {
+          "id": "wrec-4.10-0",
+          "label": "Cosmic Killer Combo — big damage from a single chain attack",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.10-1",
+          "label": "Critical Condition — a battle milestone",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.10-2",
+          "label": "Let's Go, Everyone! — a battle milestone",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.10-3",
+          "label": "Truly Outrageous — a battle milestone",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
       "notaBene": [
         "Otharon, Juju and Dickson leave the party at the Sororal Statues — that's when Colony 6 reconstruction opens for business.",
         "Easy 'Cosmic Killer Combo' record here via a lucky multi-link chain attack."
       ],
-      "records": [],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -10860,7 +11017,8 @@
           "location": "Reconstruction HQ, day",
           "objective": "Speak with Kikori (near Nikita, by the Drainage Control Room), then report to Anna.",
           "rewards": "4200G, 680 EXP, Pierce Resistance II",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Anna/Nikita/Kikori links all improve to blue “friends always” — their best."
         },
         {
           "id": "wq-411-q121-satatas-younger-brother",
@@ -10998,7 +11156,8 @@
           "objective": "Collect a Lake Drop (Raguel Lake) or Nasty Weed (Satorl) → Matryona → give painting to Ewan → Matryona.",
           "rewards": "4500G, 700 EXP",
           "strategy": "Guide: lake drop → green 'likes'.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Lake-drop pick → green “likes” (the couple, their best); nasty-weed → red “bad breakup”."
         },
         {
           "id": "wq-411-q129-the-gem-mans-invention",
@@ -11128,6 +11287,14 @@
           "confidence": "high"
         }
       ],
+      "trials": [
+        {
+          "id": "wtrial-4.11-0",
+          "label": "A Fixer-Upper — progress Colony 6 reconstruction",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
       "notaBene": [
         "Reconstruction begins here — finish ALL Refugee Camp ⏱ timed quests first.",
         "After Lv.1 development you get an Ultra Small Reactor (for the Gem Man's quest) and street lights."
@@ -11189,6 +11356,7 @@
         "Can't collect or fight anything on this visit — straight run-through to Makna Forest."
       ],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -11521,12 +11689,20 @@
         },
         {
           "id": "wrec-4.13-1",
-          "label": "Time For New Glasses — telethia fight",
+          "label": "Time For New Glasses — the telethia fight",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.13-2",
+          "label": "Who Dares Defy Me?! — the region boss",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "trials": [
+        {
+          "id": "wtrial-4.13-0",
           "label": "Trailblazer — discover Seahorse Islet",
           "missable": false,
           "confidence": "high"
@@ -11904,7 +12080,8 @@
           "objective": "Collect 10 Peachy Leg Joints (Deinos in Makna / trade Bana).",
           "rewards": "3200G, 800 EXP, Chill Defense IV",
           "strategy": "Prereq: Kilaki registered.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Kilaki & Leku register; yellow “at a loss” (Leku/Kilaki)."
         },
         {
           "id": "wq-414-q157-hunt-for-a-patron",
@@ -11921,7 +12098,8 @@
           "location": "Frontier Village",
           "objective": "Speak with Lupa, Modamo and Pepa, then report to Leku.",
           "rewards": "3800G, 950 EXP, Blaze Defense IV",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Yellow “support” links (Leku/Lupa, Leku/Modamo, Leku/Pepa)."
         },
         {
           "id": "wq-414-q158-heropons-spirit",
@@ -11938,7 +12116,8 @@
           "location": "Frontier Village",
           "objective": "Collect 2 Tasty Ansel Wings (Makna Ansel, Eks' Watering Hole / trade Bana).",
           "rewards": "4300G, 1100 EXP, Poison Defense IV, Kilaki's Note",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Kilaki/Leku improve to blue “close siblings” — their best."
         },
         {
           "id": "wq-414-q158b-beat-kilaki-to-it",
@@ -11974,7 +12153,8 @@
           "objective": "Speak with Pepa or Lupa (Leku's fiancée) → fetch their item → report.",
           "rewards": "11000G, 2800 EXP, Shell Boots",
           "mutexWhy": "Guide picks PEPA — it preserves the ability to build a green Pachipa/Pepa link, which Lupa forfeits.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Leku’s chosen fiancée → green “engaged” (their best); the rejected one stays yellow “support”."
         },
         {
           "id": "wq-414-q160-lousy-lizards",
@@ -11991,7 +12171,8 @@
           "location": "Frontier Village",
           "objective": "Defeat 5 Inferno Deinos + 5 Plasma Deinos (Twisted Tree Gate).",
           "rewards": "7500G, 2000 EXP, Jungle Top, Jungle Bottoms",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "After, speak Modamo at 22:00 (nearby balcony) → green “thick and thin” (Modamo/Leku); speak again → green “promising” (Modamo/Kilaki)."
         },
         {
           "id": "wq-414-q161-making-a-mixer",
@@ -12008,7 +12189,8 @@
           "location": "Pollen Works, night (Shulk in the lead)",
           "objective": "Get the mixer materials → Wep. Dev. Lab → deliver to Rono.",
           "rewards": "3800G, 1200 EXP, Good Footing IV",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Yellow “friends” (Rono/Pepa) — their best."
         },
         {
           "id": "wq-414-q162-materials-for-a-mixer",
@@ -12061,7 +12243,8 @@
           "objective": "Speak Abada → collect 3 Shield Bug (Makna / trade Miko) → Abada → Kokora.",
           "rewards": "3600G, 950 EXP, Sky Cap",
           "strategy": "Prereq: Deki registered.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Kokora, Deki & Abada register; green “grampypon” (Kokora/Deki); yellow “respect” (Kokora/Abada); yellow “insect fans” (Deki/Abada)."
         },
         {
           "id": "wq-414-q165-mushy-mushrooms",
@@ -12078,7 +12261,8 @@
           "location": "Armour Shop, night",
           "objective": "Collect 8 Kelp Mushrooms (Makna Forest).",
           "rewards": "1000G, 1150 EXP, Jungle Gloves, Bleed Attack II",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Kofuko registers."
         },
         {
           "id": "wq-414-q166-fixing-time-mushrooms",
@@ -12095,7 +12279,8 @@
           "location": "Sacred Altar, day",
           "objective": "Repair the time mushrooms (Kyn Shopping Street / upstairs from Pollen Works / up from the Chief's Residence) → Migaga.",
           "rewards": "4000G, 1150 EXP, Agility Down III",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Migaga registers."
         },
         {
           "id": "wq-414-q167-sweet-seduction",
@@ -12113,7 +12298,8 @@
           "objective": "Speak with Kofuko (triggers the brew quest).",
           "rewards": "3500G, 1000 EXP, Sky Gloves, Aerial Cloak II",
           "strategy": "⚠ SELL all your Walnut Grapes first (a glitch forces them if in stock).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Bitter Kiwi route → blue “happily married” (best); Walnut Grapes → red “rocky marriage”. Use the bitter kiwis."
         },
         {
           "id": "wq-414-q168-ingredients-for-a-brew",
@@ -12148,7 +12334,8 @@
           "location": "West of Sacred Altar, day",
           "objective": "Speak Tati (Nopon Kitchen, night) → collect 3 Hode Camouflage (Bois Hode, Precipice Bridge).",
           "rewards": "5800G, 2000 EXP, Panther Top",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Pipiki & Tati register; yellow “weird songs” (Pipiki/Tati) — their best."
         },
         {
           "id": "wq-414-q170-pollen-orb-ingredients",
@@ -12165,7 +12352,8 @@
           "location": "Pollen Orb Storehouse, day",
           "objective": "Collect 5 Yellow Pollen (Yellow Flower Grove).",
           "rewards": "5000G, 1500 EXP, Panther Bottoms, First Attack Plus III",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Dobadoba registers."
         },
         {
           "id": "wq-414-q171-a-worried-bug-lover",
@@ -12182,7 +12370,8 @@
           "location": "Frontier Village",
           "objective": "Collect 2 Green Eluca Juice (Makna Eluca, Yellow Flower Grove) → Abada → Deki.",
           "rewards": "4200G, 1000 EXP, Night Vision IV",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Abada/Deki link devolves to orange “outrage”."
         },
         {
           "id": "wq-414-q172-a-musical-genius",
@@ -12249,7 +12438,8 @@
           "objective": "Collect Filtered Water (Sparkling Pool, day) → Cherri → Rasha.",
           "rewards": "6000G, 2100 EXP, Buff Time Plus II",
           "strategy": "Prereq: Cherri registered.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Yellow “meddlesome” (Rasha/Cherri)."
         },
         {
           "id": "wq-414-q176-disinsectization",
@@ -12266,7 +12456,8 @@
           "location": "Frontier Village",
           "objective": "Defeat 5 Makna Eluca (Yellow Flower Grove) → Cherri → Rasha.",
           "rewards": "3200G, 900 EXP, Mist Gel/Cream/Sandals",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Rasha/Cherri degrades to orange “irritating”."
         },
         {
           "id": "wq-414-q177-kind-lupas-grampypon",
@@ -12283,7 +12474,8 @@
           "location": "Frontier Village",
           "objective": "Get the nopon-potion materials (Secret Elixir Ingredients) → Lupa → deliver the potion to Satata (Colony 6) → Lupa.",
           "rewards": "3300G, 1200 EXP, Panther Shoes",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Green “relieved” (Lupa/Satata)."
         },
         {
           "id": "wq-414-q178-secret-elixir-ingredients",
@@ -12369,7 +12561,8 @@
           "objective": "Raise Shulk/Reyn to blue → Narine; then purple → Paola; then raise two female members (Melia + Sharla) to purple.",
           "rewards": "200G, 20000 EXP, Daze Plus IV",
           "strategy": "Prereq: Paola registered.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Paola & Narine register orange “rivals”; on completion improves to blue “best friends” — their best."
         },
         {
           "id": "wq-414-q183-lilianas-sincere-request",
@@ -12386,7 +12579,8 @@
           "location": "Main Entrance, day (Colony 9)",
           "objective": "Collect the message in a bottle (Agora Shore, NW cave) → Sonia.",
           "rewards": "4000G, 500 EXP, Swimming Oil",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Liliana/Sonia → green “happy family”; speak Marcia after → green “fondness” (best); Sonia/Dean settle to green “good friends” (best)."
         },
         {
           "id": "wq-414-q184a-a-big-brothers-fight",
@@ -12403,7 +12597,8 @@
           "location": "SW Tranquil Square, night (Colony 9)",
           "objective": "Collect a Red Pollen Orb (Nopon Refuge) → Zukazu.",
           "rewards": "2500G, 3000 EXP, Jungle Top",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Green “close brothers” (Jiroque/Zukazu)."
         },
         {
           "id": "wq-414-q184b-a-little-brothers-fight",
@@ -12421,7 +12616,8 @@
           "objective": "Collect a Red Pollen Orb (Nopon Refuge) → Jiroque.",
           "rewards": "7500G, 1500 EXP, Jungle Bottoms",
           "mutexWhy": "Guide picks ZUKAZU (Q184a) — it enables an otherwise-impossible link and the brothers reach a blue link.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Yellow “brothers” (Jiroque/Zukazu)."
         },
         {
           "id": "wq-414-q185a-a-place-to-come-home-to",
@@ -12438,7 +12634,8 @@
           "location": "Colony 9",
           "objective": "Collect 3 Quality Antol Jaws (Cliff Lake), 4 Black Iris (Makna), 2 Forget-You-Not (Satorl / Colony 6 Lv.1 special).",
           "rewards": "(see guide)",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Jiroque/Zukazu improve to blue “perfect brother” (best); Marcia/Zukazu orange is their best on this route."
         },
         {
           "id": "wq-414-q185b-thawing-relations",
@@ -12454,7 +12651,8 @@
           "giver": "Zukazu",
           "location": "Colony 9",
           "objective": "Collect 3 Maternal Armu Milk (trade Zukazu) → Zukazu → return the Old Ring to Marcia → Zukazu.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Jiroque/Zukazu green “close brothers”; Zukazu/Marcia green “reconciled”; Jiroque/Marcia green “fine grandson”."
         },
         {
           "id": "wq-414-q186-a-young-captains-challenge",
@@ -12472,7 +12670,8 @@
           "objective": "Find a Nopon Claymore or a Carbo Shield.",
           "rewards": "3300G, 600 EXP",
           "strategy": "Guide leans Nopon Claymore (marginally better Colony 9 area affinity).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Any path: Miller/Emmy Leater → green “trust”; Emmy Leater/Kantz “hate”. Nopon Claymore → yellow “sympathy” (Raoul); Carbo Shield → orange “mistrust”."
         }
       ],
       "ums": [
@@ -12879,19 +13078,27 @@
       "records": [
         {
           "id": "wrec-4.14-0",
-          "label": "Know So Many Nopon! — register every nopon in Frontier Village",
+          "label": "Clearing The Air — the Popularity Premonition quest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wrec-4.14-1",
-          "label": "Honorary Nopon — 3-star affinity with the central Bionis",
+          "label": "Need More Treasure — a treasure milestone",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "trials": [
+        {
+          "id": "wtrial-4.14-0",
+          "label": "Know So Many Nopon! — register every nopon in Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
-          "id": "wrec-4.14-2",
-          "label": "Clearing The Air — (Popularity Premonition quest)",
+          "id": "wtrial-4.14-1",
+          "label": "Honorary Nopon — 3-star affinity with the central Bionis",
           "missable": false,
           "confidence": "high"
         }
@@ -13013,6 +13220,7 @@
         }
       ],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -13122,14 +13330,15 @@
           "confidence": "high"
         }
       ],
-      "records": [
+      "trials": [
         {
-          "id": "wrec-4.16-0",
+          "id": "wtrial-4.16-0",
           "label": "Globetrotter — discover Ascension Hall",
           "missable": false,
           "confidence": "high"
         }
       ],
+      "records": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -13256,6 +13465,7 @@
           "confidence": "high"
         }
       ],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -13557,7 +13767,7 @@
       "records": [
         {
           "id": "wrec-4.18-0",
-          "label": "Jaws Of Defeat — (Khatorl seal release)",
+          "label": "Jaws Of Defeat — the Khatorl seal release",
           "missable": false,
           "confidence": "high"
         }
@@ -13566,6 +13776,7 @@
         "No collectables or unique monsters on this first visit.",
         "After Zanza's release: Monado arts level up to X, and faced Mechon can now be damaged like normal Mechon (topple or Enchant)."
       ],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -13676,6 +13887,7 @@
         "⚠ Get Melia's Imperial Staff from Kallian at Ascension Hall — her best non-endgame weapon."
       ],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -13839,7 +14051,8 @@
           "location": "Ether Plant",
           "objective": "Defeat 2 Confusion Ekidno (Ether Plant), then find Jarack on the lower level.",
           "rewards": "5400G, 3000 EXP",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Jarack registers."
         },
         {
           "id": "wq-420-q200-trouble-at-the-lighthouse",
@@ -13856,7 +14069,8 @@
           "location": "Syrath Lighthouse, 2nd floor (Melia in the lead)",
           "objective": "Defeat 3 Decay Ekindo (night, 2nd floor).",
           "rewards": "5700G, 3800 EXP, Nightglow Staff, unlocks Melia's Reticence skill tree",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Shalen registers; blue “heart racing” (Shalen/Jarack) — their best."
         },
         {
           "id": "wq-420-q201-material-quest-4-alcamoth",
@@ -14353,7 +14567,8 @@
           "location": "East of the Fountain of Hope, day",
           "objective": "Find Atael (NE corner of the lower city), then report.",
           "rewards": "6750G, 2300 EXP, Tension Swing III",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Vol’aren & Altael register; green “dear family” (Vol’aren/Altael)."
         },
         {
           "id": "wq-420-q230-looking-for-a-lost-daughter",
@@ -14371,7 +14586,8 @@
           "objective": "Find Cian (NE of the Fountain of Hope, day), then report.",
           "rewards": "7200G, 2500 EXP, Strength Up IV",
           "strategy": "Completion → trial 'Neural Network'.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Cian registers."
         },
         {
           "id": "wq-420-q231-looking-for-gold-bugs",
@@ -14388,7 +14604,8 @@
           "location": "Melifica Road, day, next to the central escalator",
           "objective": "Collect 9 Gold Caterpillars (Tephra Cave; Caterpile Nest / Leg Pass).",
           "rewards": "8100G, 1950 EXP, Fall Defense II",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Teelan registers."
         },
         {
           "id": "wq-420-q232-back-pain",
@@ -14406,7 +14623,8 @@
           "objective": "Defeat 6 Archer Hodes (Showdown Cliff), then report.",
           "rewards": "5500G, 1800 EXP, Bind II",
           "strategy": "Prereq: Lar'shen registered.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Galdo & Lar’shen register."
         },
         {
           "id": "wq-420-q233-bring-back-my-son",
@@ -14424,7 +14642,8 @@
           "objective": "Find Mir'leiz (Hovering Reef 1), then report.",
           "rewards": "3500G, 1800 EXP, Weapon Power IV",
           "strategy": "Prereq: Mir'leiz registered.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Merisa & Mir’leiz register; yellow “worried” (Merisa/Mir’leiz)."
         },
         {
           "id": "wq-420-q234-the-deciphering-machine",
@@ -14441,7 +14660,8 @@
           "location": "South of the Imperial Palace, night",
           "objective": "Collect 6 Sturdy Armour (Flavel Andos, Hovering Reef 1; trade Jer'ell).",
           "rewards": "5500G, 1500 EXP, Slow Resist III",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Ruthan registers."
         },
         {
           "id": "wq-420-q235-how-do-they-feel",
@@ -14458,7 +14678,8 @@
           "location": "East of the Main Entrance, night",
           "objective": "Speak with Rozael and Ricoth (Fountain of Eternity, night), then report.",
           "rewards": "3800G, 1300 EXP, Spike Defense II",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Scarlen, Ricoth & Rozael register."
         },
         {
           "id": "wq-420-q236-how-do-i-feel",
@@ -14494,7 +14715,8 @@
           "objective": "Speak with Rozael, then report.",
           "rewards": "4800G, 2100 EXP, Physical Protect IV",
           "strategy": "Prereq: Rozael chosen in Q236.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Scarlen/Rozael improve to blue “the one” — their best."
         },
         {
           "id": "wq-420-q237b-i-love-you-no-matter-what",
@@ -14512,7 +14734,8 @@
           "objective": "Speak with Ricoth, then report.",
           "rewards": "4800G, 2100 EXP, Ether Protect IV",
           "mutexWhy": "Guide picks the Rozael line (Q236 → Q237a 'Together Forever') for the stronger affinity chart.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Scarlen/Rozael improve to green “very close”."
         },
         {
           "id": "wq-420-q238-a-friend-in-need",
@@ -14530,7 +14753,8 @@
           "objective": "Defeat 6 Eryth Hiln (Latael Shore), then report.",
           "rewards": "7500G, 2500 EXP, Arts Stealth III",
           "strategy": "Prereq: Galvin registered.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Lecrough registers; blue “closest friend” (Galvin/Lecrough) — their best."
         },
         {
           "id": "wq-420-q239-preparing-for-adventure",
@@ -14548,7 +14772,8 @@
           "objective": "Collect Kasharpa Water (Kasharpa Falls), Statue Water (NE of Sororal Statues), Makna Water (Great Makna Falls) → Zain.",
           "rewards": "4200G, 1600 EXP, Str/Ether/Agility Up III",
           "strategy": "Prereq: Kurralth registered (trial: Friend Of The World).",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Zain & Kurralth register."
         },
         {
           "id": "wq-420-q240-preparing-for-adventure-2",
@@ -14601,7 +14826,8 @@
           "location": "SE of the Fountain of Hope, night",
           "objective": "Collect 5 Pagul Hot Pot (Cruz Pagul, Latael Shore) + 2 Feris Blood (Waypoint Beacon; trade Gadada).",
           "rewards": "4750G, 1800 EXP, Confuse Resist III",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Nelo registers."
         },
         {
           "id": "wq-420-q243-going-out-to-play",
@@ -14618,7 +14844,8 @@
           "location": "NE of the Main Entrance, day",
           "objective": "Speak Baroba (Main Entrance) → 5 Ether Roses (Satorl) → Baroba → Popipo.",
           "rewards": "6400G, 1600 EXP, Paralysis Resist III",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Baroba & Popipo register."
         },
         {
           "id": "wq-420-q244-a-necessary-upgrade",
@@ -14635,7 +14862,8 @@
           "location": "North of the shop on Melifica Road, day",
           "objective": "Collect 5 Green Diode (High Entia Tomb, near the Tower of Trials Bridge) + 3 Astas Remote Units (Hover Astas, High Entia Tomb).",
           "rewards": "6500G, 1800 EXP, Shell Gauntlets",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Naroth registers."
         },
         {
           "id": "wq-420-q245-talias-research",
@@ -14653,7 +14881,8 @@
           "objective": "Defeat Dramatic Gogol (Place of Judgement), then report to Talia (temporarily at Satorl Marsh).",
           "rewards": "6800G, 2250 EXP, Ether Defense Up IV, Arts Seal Resist III",
           "mutexWhy": "Do TALIA'S RESEARCH now — its mutex twin 'Investigating Satorl' (post-core) gives NO affinity benefit, and these links can't be gained any other way.",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Talia registers."
         },
         {
           "id": "wq-420-q246-teaching-materials",
@@ -14670,7 +14899,8 @@
           "location": "Alcamoth",
           "objective": "Speak Caul (N of Imperial Palace, 18:00) → 3 Murky Eluca Water (Perna Eluca, Latael Shore; trade Jarack) → Caul → Mir'leiz.",
           "rewards": "4300G, 2000 EXP, Shell Boots",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Caul registers."
         },
         {
           "id": "wq-420-q247-brave-actions",
@@ -14687,7 +14917,8 @@
           "location": "Alcamoth",
           "objective": "Speak Lecrough, complete the conjunctive quest, defeat 2 Buono Nebulae (Latael Shore / Hovering Reef 5) → Lecrough → Mir'leiz.",
           "rewards": "5600G, 2400 EXP, Unbeatable III",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Lecrough registers."
         },
         {
           "id": "wq-420-q248-protect-the-capital",
@@ -14721,7 +14952,8 @@
           "location": "Alcamoth",
           "objective": "Speak Miriall → 2 Silver Eks Plate (Stella Eks, Hovering Reef 7) → Miriall → take Miriall's Telescope to Elior.",
           "rewards": "5600G, 2000 EXP, Daze Resist III",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Green “kind person” (Miriall/Elior) — their best."
         },
         {
           "id": "wq-420-q250-starlight-gazer",
@@ -14738,7 +14970,8 @@
           "location": "Alcamoth",
           "objective": "Speak Kaleka → get the Attachment Part (Second Treasury) → Kaleka → take the Stronger Telescope back to Elior.",
           "rewards": "6900G, 2700 EXP, Amethyst Leggings",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Yellow “kind person” (Kaleka/Elior) — their best."
         }
       ],
       "ums": [
@@ -14907,13 +15140,58 @@
           "notes": []
         }
       ],
+      "records": [
+        {
+          "id": "wrec-4.20-0",
+          "label": "Changing Course — a flagged monster fight",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wrec-4.20-1",
+          "label": "Burn It Up — complete a quest's objectives",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
+      "trials": [
+        {
+          "id": "wtrial-4.20-0",
+          "label": "Charitable Ally — complete the flagged quest",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wtrial-4.20-1",
+          "label": "Neural Network — complete the flagged quest",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wtrial-4.20-2",
+          "label": "Friend Of The World — register Kurralth",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wtrial-4.20-3",
+          "label": "Honorary High Entia — 3-star affinity with Alcamoth",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wtrial-4.20-4",
+          "label": "Wings Of Nobility — complete the flagged quest",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
       "notaBene": [
         "Roughly the halfway mark of the game.",
         "Almost everything here is ⏱ TIMED — clear it ALL now (it's forfeit at a later point of no return)."
       ],
       "landmarks": [],
       "locations": [],
-      "records": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -15093,7 +15371,8 @@
           "location": "Nopon Camp",
           "objective": "Investigate the Chilkin Lair, then report to Dakuku.",
           "rewards": "15000G, 3200 EXP, Blaze Defense V, Daze Resist II",
-          "detailed": true
+          "detailed": true,
+          "affinityChanges": "Dakuku registers."
         },
         {
           "id": "wq-421-q261-the-balance-of-power",
@@ -15444,11 +15723,19 @@
           "confidence": "high"
         }
       ],
+      "records": [
+        {
+          "id": "wrec-4.21-0",
+          "label": "No Stopping You — during a Valak Mountain quest",
+          "missable": false,
+          "confidence": "high"
+        }
+      ],
       "notaBene": [
         "Boss: Mumkhar (Lv. 48) at Nofol Tower — topple/daze repeatedly.",
         "Equip Quick Step gems before the ice chutes/slides."
       ],
-      "records": [],
+      "trials": [],
       "affinitySteps": [],
       "arc": "arc1"
     },
@@ -16131,6 +16418,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -16266,6 +16554,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -16364,6 +16653,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -16814,6 +17104,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -17061,6 +17352,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -17261,6 +17553,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -17561,6 +17854,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -17713,6 +18007,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -17747,6 +18042,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -17781,6 +18077,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc2"
@@ -18227,6 +18524,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc3"
@@ -18248,6 +18546,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc3"
@@ -18340,6 +18639,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc3"
@@ -18448,6 +18748,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc3"
@@ -19022,6 +19323,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc3"
@@ -19208,6 +19510,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc3"
@@ -19275,6 +19578,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc3"
@@ -19708,6 +20012,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc3"
@@ -19730,6 +20035,7 @@
       "landmarks": [],
       "locations": [],
       "records": [],
+      "trials": [],
       "affinitySteps": [],
       "guide": [],
       "arc": "arc3"

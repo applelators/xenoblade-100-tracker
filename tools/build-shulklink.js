@@ -867,7 +867,7 @@ function regionOf(name, ctx) {
 let enriched = 0;
 sections.forEach((s) => {
   const sd = DETAILS.sections[s.id];
-  if (sd) ["guide", "landmarks", "locations", "affinitySteps", "records", "notaBene"].forEach((k) => { if (sd[k]) s[k] = sd[k]; });
+  if (sd) ["guide", "landmarks", "locations", "affinitySteps", "records", "trials", "notaBene"].forEach((k) => { if (sd[k]) s[k] = sd[k]; });
   [...s.quests, ...s.ums, ...s.hths].forEach((it) => {
     const d = DETAILS.items[s.id + ":" + it.code];
     if (d) { Object.assign(it, d); it.detailed = true; enriched++; }
@@ -883,6 +883,7 @@ sections.forEach((s) => {
   s.landmarks = (s.landmarks || []).map((x, i) => ({ id: `wlm-${s.id}-${i}`, label: x, area: regionOf(x, ctx), missable: false, confidence: "high" }));
   s.locations = (s.locations || []).map((x, i) => ({ id: `wloc-${s.id}-${i}`, label: x, area: regionOf(x, ctx), missable: false, confidence: "high" }));
   s.records = (s.records || []).map((x, i) => ({ id: `wrec-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
+  s.trials = (s.trials || []).map((x, i) => ({ id: `wtrial-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
   s.affinitySteps = (s.affinitySteps || []).map((x, i) => ({ id: `waff-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
   // route steps + their Nota-Bene sub-notes are checkable (ids by index)
   s.guide = (s.guide || []).map((g, i) => ({

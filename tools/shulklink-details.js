@@ -27,26 +27,23 @@ module.exports = {
         "Volff Lair", "Viliera Hill", "Sky Stage", "Daksha Shrine", "Raguel Lake", "Tranquil Grotto",
         "Windy Cave", "Crevasse Waterfall", "Kisk Cave", "Tirkin Headquarters"],
       records: [
-        "Equivalent Exchange — first successful trade with an NPC",
-        "Lazybones — skip-travel 50 times",
-        "Breaking The Ice — party banter on registering a quest for the first time",
-        "Idle Chit-Chat — party banter on registering quests 50 times",
-        "Ear To The Ground — spoken to people 100 times",
-        "Unlucky Sixes — deal exactly 666 damage in one hit",
-        "Lucky Sevens — deal exactly 777 damage in one hit",
-        "Rear Admiral — perform a back attack 50 times",
-        "It Hasn't Lost Its Lustre — open 10 gold chests",
-        "Hoarding Treasure — open 50 silver chests",
-        "Airing Grievances — defeat 30 flying monsters",
-        "Raring To Go — get your first rare ether crystal",
-        "Simply Smashing! — smash 100 vision tags",
-        "Killer Combo — deal 3,000 damage with a chain attack",
-        "Ground To A Pulp — defeat 250 ground-type monsters",
-        "Unshakeable Trust — raise two party members to blue affinity",
-        "Colony 9 Celebrity — reach 3-star affinity with Colony 9"
+        "Bone Breaker — break a monster (e.g. a Back Slash surprise on Mell Lizards)",
+        "Walking Insecticide — defeat an insect-type unique monster"
+      ],
+      trials: [
+        "Problem Solved! — complete your first non-story quest",
+        "Ground Up — defeat 2 Singing Brogs",
+        "Hunter-In-Training — defeat your first unique monster (Verdant Bluchal)",
+        "Helpful Stranger — complete the Beach Krabbles quest",
+        "The Strongest Tie — complete the Shin Geckos collection quest",
+        "Friend Number Ten — register your 10th NPC (trade with Kenny)",
+        "Constellation — establish the Erik/Sonia affinity link",
+        "Shaping History — complete your first mutually-exclusive quest",
+        "Colony 9 Celeb — speak with King Squeeze",
+        "Pro Hunter — defeat the flagged unique monster",
+        "Explorer — discover the Observation Platform (jump into Raguel Lake)"
       ],
       notaBene: [
-        "Around this section you'll likely pick up: Second Wind (10 revivals), Art School (level an art to Lv. 2) and Ninja Skillz (one-shot an enemy with Back Slash).",
         "Item Vision: on collecting an early Bionis' Leg collectable (e.g. Moth Crawler / Sour Gooseberry) a gray vision flags that you'll need several of that item — they're then marked in your inventory until you hit the count.",
         "Arts palette fills up around Lv. 16 (Reyn learns a 9th art) — you can only equip 8, so swap via the Arts submenu."
       ]
@@ -63,10 +60,27 @@ module.exports = {
       landmarks: ["Spiral Valley", "Bask Cave Passage", "Zax Guidepost", "Believer's Paradise"],
       locations: ["Traveller's Rest", "Kasharpa Falls", "Maguel Road"],
       records: [
-        "Explorer — discover the Observation Platform",
-        "A generous friend — complete A Young Captain's Rise",
+        "Equivalent Exchange — first successful trade with an NPC",
+        "Lazybones — skip-travel 50 times",
+        "Breaking The Ice — party banter on registering a quest for the first time",
+        "Idle Chit-Chat — party banter on registering quests 50 times",
+        "Ear To The Ground — speak to people 100 times",
+        "Unlucky Sixes — deal exactly 666 damage in one hit",
+        "Lucky Sevens — deal exactly 777 damage in one hit",
+        "Rear Admiral — perform a back attack 50 times",
+        "It Hasn't Lost Its Lustre — open 10 gold chests",
+        "Hoarding Treasure — open 50 silver chests",
+        "Airing Grievances — defeat 30 flying monsters",
+        "Raring To Go — get your first rare ether crystal",
+        "Killer Combo — deal 3,000 damage with a chain attack",
+        "Ground To A Pulp — defeat 250 ground-type monsters",
+        "Unshakeable Trust — raise two party members to blue affinity"
+      ],
+      trials: [
+        "A Generous Friend — complete A Young Captain's Rise",
         "Fifty Fine Friends — register your 50th NPC (speak with Jan)",
-        "Spider's Web — speak with Zukazu"
+        "Spider's Web — speak with Zukazu",
+        "The Brave Protectors — speak with all of Colony 9's military personnel"
       ],
       affinitySteps: [
         "Speak with Dionysus at 12:00 → yellow 'tea friends' (Dionysus/Marcia).",
@@ -114,11 +128,14 @@ module.exports = {
       landmarks: ["Drainage Tunnel", "Drainage Control Room", "Mining Base", "Central Pit: Entrance", "Personnel Lift 2", "Regulation Piston", "Personnel Lift 3", "Freight Elevator", "Glowmoss Lake", "Central Pit: Base Level", "Freight Road", "Misty Path"],
       locations: ["Test Pit 1", "Test Pit 2", "Test Pit 3", "Test Pit 4", "Storage Depot", "Central Terminal", "Observation Point", "Central Pit: Level 1", "Central Pit: Level 2", "Central Pit: Level 3", "Pod Depot"],
       records: [
-        "Fire It Up — (Dark Kisling fight at the fire ether deposits)",
-        "Unbreakable Bond",
-        "Chain Gang / Off The Chain — get an extra chain link (vs Xord)",
-        "Seasoned Traveller — discover the Freight Elevator (completes the Ether Mine map)"
-      ]
+        "Fire It Up — the Dark Kisling fight at the fire ether deposits",
+        "Unbreakable Bond — the Dark Kisling fight",
+        "Chain Gang — land an extra chain link (vs Xord)",
+        "Off The Chain — land an extra chain link (vs Xord)",
+        "One Is Never Enough — collect a duplicate collectable",
+        "Collector's Mentality — fill out collectables"
+      ],
+      trials: ["Seasoned Traveller — discover the Freight Elevator (completes the Ether Mine map)"]
     },
     "4.10": {
       guide: [
@@ -130,6 +147,12 @@ module.exports = {
       ],
       landmarks: ["Kelsher Wetlands", "Nopon Merchant Camp", "Crown Tree", "Silent Obelisk", "Glowing Obelisk", "Sororal Statues", "Shining Pond", "Statue Summit"],
       locations: ["Lacus Swamp", "Zaldandia Falls", "Poison Swamp", "Barren Moor", "Dark Swamp", "Igna Territory", "Exile Fortress", "Nopon Refuge", "Oath Sanctuary", "Place of Judgement", "Mauk Floodgate", "Soter Ruins", "Basin Cave", "Altar of Fate"],
+      records: [
+        "Cosmic Killer Combo — big damage from a single chain attack",
+        "Critical Condition — a battle milestone",
+        "Let's Go, Everyone! — a battle milestone",
+        "Truly Outrageous — a battle milestone"
+      ],
       notaBene: [
         "Otharon, Juju and Dickson leave the party at the Sororal Statues — that's when Colony 6 reconstruction opens for business.",
         "Easy 'Cosmic Killer Combo' record here via a lucky multi-link chain attack."
@@ -154,7 +177,7 @@ module.exports = {
       ],
       landmarks: ["Mechon Wreckage Site", "Main Entrance", "Ether Light", "Gem Man's Stall", "Central Plaza", "Fortress Entrance", "Outlook Park", "Tephra Cave Entrance"],
       locations: ["Commercial District", "Military District", "Weapon Dev. Lab", "Dunban's House", "Tephra Hill"],
-      records: ["First Steps — your first trial (Mechon Wreckage Site)", "Back-Stabber — first Back Slash from behind", "Let's Fight — first burst affinity challenge", "Turn It Up! — a party member reaches high tension"],
+      trials: ["First Steps — your first trial (Mechon Wreckage Site)", "Heartwarming — view the Sunrise in the Park heart-to-heart (Q1)"],
       notaBene: ["Fiora is only playable until the upcoming cutscene.", "Hold off on quests for now — story events are coming that make it awkward."]
     },
     "4.3": {
@@ -168,7 +191,8 @@ module.exports = {
       ],
       landmarks: ["Tephra Path", "Mag Mell Ruins", "Rear Entrance", "Cylinder Hangar"],
       locations: ["Caterpile Nest", "Warehouse 2"],
-      records: ["A Corner Of The World — trial (Mag Mell Ruins)", "Skip It — first skip-travel", "That Hits The Slot — set up your party's gear"],
+      records: ["Skip It — your first skip-travel", "That Hits The Slot — set up your party's gear"],
+      trials: ["A Corner Of The World — enter the Mag Mell Ruins"],
       notaBene: ["Visit the Gem Man for a Strength Up II + HP Up II gem.", "Do NOT sell Reyn's Scrap Driver — it can't be replaced.", "Just run from the unique monster in the hallway past Mag Mell Ruins for now."]
     },
     "4.4": {
@@ -196,7 +220,7 @@ module.exports = {
       ],
       landmarks: ["Spring Of Grief", "Vilia Lake", "Leg Pass", "Raginar Canyon Path", "Refugee Camp", "Kamos Guidepost"],
       locations: ["Tephra Cavern", "Arachno Queen's Nest", "Kneecap Hill", "Gaur Plain", "Rho Oasis", "Escape Pod Bay"],
-      records: ["Titan's Gift — farm your first ether crystals", "Learning The Craft — first gem craft", "Blossoming Friendship — reach green party affinity", "Bug Off — defeat 30 insects"],
+      records: ["Learning The Craft — your first gem craft", "Second Wind — 10 revivals", "Art School — level an art to Lv. 2", "Ninja Skillz — one-shot an enemy with Back Slash", "Titan's Gift — farm your first ether crystals", "Beginner's Luck — spider-cave battle luck", "Ground Down — spider-cave battles", "Hunting For Treasure — open enough silver chests", "Bug Off — defeat 30 insects", "Not Gonna Happen! — survive a near-wipe", "Simply Smashing! — smash your first vision tag"],
       notaBene: ["Boss: Arachno Queen (Lv. 12) — focus her with arts; use Shield (leveled ≥ her talent art) when a vision warns of it.", "Sharla joins (your first healer). Quick-travel returns after you reach the camp's north marker."]
     },
     "4.11": {
@@ -210,6 +234,7 @@ module.exports = {
       ],
       landmarks: ["Main Entrance", "Reconstruction HQ"],
       locations: ["Hope Farm"],
+      trials: ["A Fixer-Upper — progress Colony 6 reconstruction"],
       notaBene: ["Reconstruction begins here — finish ALL Refugee Camp ⏱ timed quests first.", "After Lv.1 development you get an Ultra Small Reactor (for the Gem Man's quest) and street lights."]
     },
     "4.12": {
@@ -232,7 +257,8 @@ module.exports = {
       ],
       landmarks: ["Makna Path", "Agni Tablet", "Lakeside", "Divine Sanctuary", "Seahorse Islet", "Waypoint Beacon", "Nopon Arch", "Twisted Tree Gate", "Village Entrance", "Sparkling Pool", "Windmill Pavilion", "Glowmoss Trihenge"],
       locations: ["Bridge One", "Bridge Two", "Bridge Three", "Sap Cave", "Eks' Watering Hole", "Contaminated Area", "Great Makna Falls", "Clear Waterfall", "Yellow Flower Grove", "Decayed Forest", "Abyss Basin", "Precipice Bridge", "Hode Lair"],
-      records: ["One Step Further — learn an intermediate art from a manual", "Time For New Glasses — telethia fight", "Trailblazer — discover Seahorse Islet"],
+      records: ["One Step Further — learn an intermediate art from a manual", "Time For New Glasses — the telethia fight", "Who Dares Defy Me?! — the region boss"],
+      trials: ["Trailblazer — discover Seahorse Islet"],
       notaBene: ["Buy & learn ALL the art manuals from the Ether Light shop (Colony 9) for an edge.", "Melia joins after the telethia fight — start her party affinity (pair with Sharla for an upcoming quest)."]
     },
     "4.14": {
@@ -245,7 +271,8 @@ module.exports = {
       ],
       landmarks: ["Sacred Altar", "Nopon Tower", "Entry Bridge", "Pollen Works", "Riki's House", "Chief's Residence", "Prophecy Hut", "Contemplation Terrace"],
       locations: ["Central Plaza", "Kyn Shopping Street", "Orb Storage Level", "Pollen Orb Storehouse", "Middle Housing Level", "Pollen Works Level", "Archaeology Level", "Archaeology Center", "Top Housing Level", "Underground Store", "Nopon Kitchen", "Mysterious Sanctuary", "Apex Lake", "Reservoir"],
-      records: ["Know So Many Nopon! — register every nopon in Frontier Village", "Honorary Nopon — 3-star affinity with the central Bionis", "Clearing The Air — (Popularity Premonition quest)"],
+      records: ["Clearing The Air — the Popularity Premonition quest", "Need More Treasure — a treasure milestone"],
+      trials: ["Know So Many Nopon! — register every nopon in Frontier Village", "Honorary Nopon — 3-star affinity with the central Bionis"],
       affinitySteps: [
         "Register every nopon to unlock 'Know So Many Nopon!': Berryjammy (Contemplation Terrace, night), Pelupelu (downstairs from there, night), Kiriku (by the Sacred Altar, day), Yusa & Npa (Underground Store, day), Pachipa (Archaeology Center upper, 1200), Tuzu (Archaeology Center lower), Gadada (Pollen Works, day), Gowago (near Riki's House, night), Minana (Kyn Shopping Street, day), Norara (lower-level clearing, west), Hoko (platform SE of Chief's Residence, day), Pokapoka (east Sacred Plaza, night), Medi (Kyn Shopping Street, night), Puko (Kyn Shopping Street, sunny), Miko (Prophecy Hut, day), Lalapa (Chief's Residence, day), Dabidabi (balcony up from Chief's Residence, night), Adidi (Reservoir NE shore). Just trade with Bana (save his quest).",
         "Speak Deki at 12:00 → yellow 'old friend' (Deki/Migaga); Kokora at 15:00 → yellow 'grannypon' (Kokora/Migaga); Kofuko at 03:00 → yellow 'grampypon' (Kokora/Kofuko).",
@@ -273,7 +300,7 @@ module.exports = {
       ],
       landmarks: ["Main Entrance", "Imperial Palace", "Ascension Hall", "Whitewing Palace"],
       locations: ["Melifica Road", "Sky Terrace", "Great Hall", "Audience Chamber"],
-      records: ["Globetrotter — discover Ascension Hall"]
+      trials: ["Globetrotter — discover Ascension Hall"]
     },
     "4.17": {
       guide: [
@@ -296,7 +323,7 @@ module.exports = {
       ],
       landmarks: ["High Entia Transporter", "Prison Gate", "Prison Terrace", "Central Seal Island", "Khatorl Seal Island", "Soltnar Seal Island", "Ether Plant", "Faras Cave", "Imperial Villa", "Pod Landing Site", "Valak Pass", "King Agni's Tomb"],
       locations: ["Hovering Reef 5", "Hovering Reef 6", "Hovering Reef 7", "Hovering Reef 8", "Hovering Reef 9", "Hovering Reef 10", "Ether Crystal Deposit", "Hode Refuge", "Bionis' Occipital", "Sleeping Dragon Isle", "Anu Shore", "Secluded Island", "Kromar Coast", "Central Hall", "Great Canyon"],
-      records: ["Jaws Of Defeat — (Khatorl seal release)"],
+      records: ["Jaws Of Defeat — the Khatorl seal release"],
       notaBene: ["No collectables or unique monsters on this first visit.", "After Zanza's release: Monado arts level up to X, and faced Mechon can now be damaged like normal Mechon (topple or Enchant)."]
     },
     "4.19": {
@@ -316,6 +343,17 @@ module.exports = {
         { step: "Work the Eryth Sea quests first (the Syrath Lighthouse keeper, and Jarack at the Ether Plant), then the big Alcamoth quest list (Citizens and Imperial Guards), plus the heart-to-hearts." },
         { step: "There's no new region to push here — once the Quests column is clear, continue to Valak Mountain (§4.21) if you haven't already." }
       ],
+      records: [
+        "Changing Course — a flagged monster fight",
+        "Burn It Up — complete a quest's objectives"
+      ],
+      trials: [
+        "Charitable Ally — complete the flagged quest",
+        "Neural Network — complete the flagged quest",
+        "Friend Of The World — register Kurralth",
+        "Honorary High Entia — 3-star affinity with Alcamoth",
+        "Wings Of Nobility — complete the flagged quest"
+      ],
       notaBene: ["Roughly the halfway mark of the game.", "Almost everything here is ⏱ TIMED — clear it ALL now (it's forfeit at a later point of no return)."]
     },
     "4.21": {
@@ -328,6 +366,7 @@ module.exports = {
       ],
       landmarks: ["Zokhed Pass", "Mechonis Wound", "Befalgar Pedestal", "Hallow Bone", "Nopon Camp", "Harict Chapel", "Lava Cave", "La Luz Church", "Three Sage Summit", "Nofol Tower", "Bionis' Wrist"],
       locations: ["Kana Peak", "Bagnar Snowfield", "Apis Lair", "Valak Peak", "Bionis' Right Elbow", "Url Crevasse", "Chilkin Lair", "Antol Den", "Sealed Tower", "Nagul Waterfall", "Jakt Geyser", "Great Glacier", "Ignia Hill", "Serik Waterfall", "Agul Mountain Range"],
+      records: ["No Stopping You — during a Valak Mountain quest"],
       notaBene: ["Boss: Mumkhar (Lv. 48) at Nofol Tower — topple/daze repeatedly.", "Equip Quick Step gems before the ice chutes/slides."]
     }
   },
@@ -778,6 +817,64 @@ module.exports = {
     "4.7:Q94a": "Jackson/Kenny Rohan improve to blue “talent in bloom”; Jackson/Dorothy green “rival siblings”; Giorgio/Sesame green “amazing”; Giorgio/Kenny Rohan green “VIP regular”.",
     "4.7:Q94b": "Jackson/Dorothy green “rival siblings”; Jackson/Giorgio green “shows promise”; Giorgio/Sesame green “amazing”; Giorgio/Kenny Rohan yellow “a regular”.",
     "4.7:Q97": "Orange “mistrust” (Emmy Leater/Raoul); Miller/Emmy Leater improve to orange “patience”.",
-    "4.7:Q98": "Emmy Leater/Miller improve to yellow “higher opinion”; Emmy Leater/Raoul improve to green “impressed”."
+    "4.7:Q98": "Emmy Leater/Miller improve to yellow “higher opinion”; Emmy Leater/Raoul improve to green “impressed”.",
+    // ---- 4.8 ----
+    "4.8:Q99": "Daza registers.",
+    "4.8:Q101": "Green “companions” (Gerugu/Daza) — their best.",
+    // ---- 4.10 ----
+    "4.10:Q101b": "No direct changes — follow up with the indirect affinity steps afterward.",
+    "4.10:Q106": "Bokoko & Kacha register; green “like family” (Kacha/Bokoko) — their best.",
+    "4.10:Q107": "Zazadan registers.",
+    // ---- 4.11 ----
+    "4.11:Q120": "Anna/Nikita/Kikori links all improve to blue “friends always” — their best.",
+    "4.11:Q128": "Lake-drop pick → green “likes” (the couple, their best); nasty-weed → red “bad breakup”.",
+    // ---- 4.14 ----
+    "4.14:Q156": "Kilaki & Leku register; yellow “at a loss” (Leku/Kilaki).",
+    "4.14:Q157": "Yellow “support” links (Leku/Lupa, Leku/Modamo, Leku/Pepa).",
+    "4.14:Q158": "Kilaki/Leku improve to blue “close siblings” — their best.",
+    "4.14:Q159": "Leku’s chosen fiancée → green “engaged” (their best); the rejected one stays yellow “support”.",
+    "4.14:Q160": "After, speak Modamo at 22:00 (nearby balcony) → green “thick and thin” (Modamo/Leku); speak again → green “promising” (Modamo/Kilaki).",
+    "4.14:Q161": "Yellow “friends” (Rono/Pepa) — their best.",
+    "4.14:Q164": "Kokora, Deki & Abada register; green “grampypon” (Kokora/Deki); yellow “respect” (Kokora/Abada); yellow “insect fans” (Deki/Abada).",
+    "4.14:Q165": "Kofuko registers.",
+    "4.14:Q166": "Migaga registers.",
+    "4.14:Q167": "Bitter Kiwi route → blue “happily married” (best); Walnut Grapes → red “rocky marriage”. Use the bitter kiwis.",
+    "4.14:Q169": "Pipiki & Tati register; yellow “weird songs” (Pipiki/Tati) — their best.",
+    "4.14:Q170": "Dobadoba registers.",
+    "4.14:Q171": "Abada/Deki link devolves to orange “outrage”.",
+    "4.14:Q175": "Yellow “meddlesome” (Rasha/Cherri).",
+    "4.14:Q176": "Rasha/Cherri degrades to orange “irritating”.",
+    "4.14:Q177": "Green “relieved” (Lupa/Satata).",
+    "4.14:Q182": "Paola & Narine register orange “rivals”; on completion improves to blue “best friends” — their best.",
+    "4.14:Q183": "Liliana/Sonia → green “happy family”; speak Marcia after → green “fondness” (best); Sonia/Dean settle to green “good friends” (best).",
+    "4.14:Q184a": "Green “close brothers” (Jiroque/Zukazu).",
+    "4.14:Q184b": "Yellow “brothers” (Jiroque/Zukazu).",
+    "4.14:Q185a": "Jiroque/Zukazu improve to blue “perfect brother” (best); Marcia/Zukazu orange is their best on this route.",
+    "4.14:Q185b": "Jiroque/Zukazu green “close brothers”; Zukazu/Marcia green “reconciled”; Jiroque/Marcia green “fine grandson”.",
+    "4.14:Q186": "Any path: Miller/Emmy Leater → green “trust”; Emmy Leater/Kantz “hate”. Nopon Claymore → yellow “sympathy” (Raoul); Carbo Shield → orange “mistrust”.",
+    // ---- 4.20 ----
+    "4.20:Q199": "Jarack registers.",
+    "4.20:Q200": "Shalen registers; blue “heart racing” (Shalen/Jarack) — their best.",
+    "4.20:Q229": "Vol’aren & Altael register; green “dear family” (Vol’aren/Altael).",
+    "4.20:Q230": "Cian registers.",
+    "4.20:Q231": "Teelan registers.",
+    "4.20:Q232": "Galdo & Lar’shen register.",
+    "4.20:Q233": "Merisa & Mir’leiz register; yellow “worried” (Merisa/Mir’leiz).",
+    "4.20:Q234": "Ruthan registers.",
+    "4.20:Q235": "Scarlen, Ricoth & Rozael register.",
+    "4.20:Q237a": "Scarlen/Rozael improve to blue “the one” — their best.",
+    "4.20:Q237b": "Scarlen/Rozael improve to green “very close”.",
+    "4.20:Q238": "Lecrough registers; blue “closest friend” (Galvin/Lecrough) — their best.",
+    "4.20:Q239": "Zain & Kurralth register.",
+    "4.20:Q242": "Nelo registers.",
+    "4.20:Q243": "Baroba & Popipo register.",
+    "4.20:Q244": "Naroth registers.",
+    "4.20:Q245": "Talia registers.",
+    "4.20:Q246": "Caul registers.",
+    "4.20:Q247": "Lecrough registers.",
+    "4.20:Q249": "Green “kind person” (Miriall/Elior) — their best.",
+    "4.20:Q250": "Yellow “kind person” (Kaleka/Elior) — their best.",
+    // ---- 4.21 ----
+    "4.21:Q260": "Dakuku registers."
   }
 };
