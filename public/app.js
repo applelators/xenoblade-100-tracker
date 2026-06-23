@@ -780,10 +780,16 @@
     }
     return firstBelow || lastAbove || cards[0] || null;
   }
+  let artsFloatCode = null; // section currently shown in the arts float
   function updateArtsFloat() {
     if (!artsFloatEl) return;
     const active = Store.getPref("view") === "walk" ? activeSectionCard() : null;
-    const s = active && sectionByCode(active.getAttribute("data-code"));
+    const code = active ? active.getAttribute("data-code") : null;
+    // only rebuild when the active section changes — otherwise leave the existing
+    // DOM (and its <img> icons) untouched so they don't flash on scroll/re-render
+    if (code === artsFloatCode) return;
+    artsFloatCode = code;
+    const s = code && sectionByCode(code);
     const aside = s ? artsAside(s) : null;
     artsFloatEl.innerHTML = "";
     if (!aside) { artsFloatEl.style.display = "none"; return; }
