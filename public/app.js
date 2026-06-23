@@ -477,23 +477,44 @@
         ? `⏱ Do before: ${locks.label}. ${locks.locks}`
         : `⏱ These are TIMED quests — finish them now. They become permanently unavailable at a later-game point of no return.`]));
     }
-    // 3-column layout: col1 = landmarks/locations/records/HtH/Colony6/affinity/Nota Bene,
-    // col2 = quests, col3 = unique monsters
-    const col1 = el("div", { class: "wcol" }, [
-      walkBlock("📍 Landmarks (discover here)", s.landmarks, "lm"),
-      walkBlock("📍 Locations (discover here)", s.locations, "loc"),
-      walkBlock("🏅 Records to unlock", s.records, "rec"),
+    // Group landmarks / locations / quests / unique monsters by in-game area,
+    // each area a collapsible. Records / H2H / Colony 6 / affinity stay section-level.
+    const groups = {};
+    const push = (cat, list) => (list || []).forEach((i) => {
+      const r = i.area || "Other";
+      (groups[r] = groups[r] || { landmarks: [], locations: [], quests: [], ums: [] })[cat].push(i);
+    });
+    push("landmarks", s.landmarks); push("locations", s.locations); push("quests", s.quests); push("ums", s.ums);
+    const regions = Object.keys(groups).sort((a, b) => regionIndex(a) - regionIndex(b));
+    const areaGroups = regions.map((r) => {
+      const g = groups[r];
+      const blocks = [
+        walkBlock("📍 Landmarks (discover here)", g.landmarks, "lm"),
+        walkBlock("📍 Locations (discover here)", g.locations, "loc"),
+        walkBlock("Quests", g.quests, "q"),
+        walkBlock("Unique Monsters", g.ums, "um")
+      ].filter(Boolean);
+      if (!blocks.length) return null;
+      const all = [...g.landmarks, ...g.locations, ...g.quests, ...g.ums];
+      const done = all.filter((i) => Store.isChecked(i.id)).length;
+      const allDone = done === all.length;
+      return el("details", { class: "area-group" + (allDone ? " complete" : ""), ...(allDone ? {} : { open: "open" }) }, [
+        el("summary", { class: "area-group-head" }, [el("span", { text: "📂 " + r }), el("span", { class: "count", text: `${done}/${all.length}` })]),
+        el("div", { class: "area-group-body" }, blocks)
+      ]);
+    }).filter(Boolean);
+
+    const sectionBlocks = [
       walkBlock("Heart-to-Hearts", s.hths, "hth"),
       walkBlock("Colony 6 Development", s.colony6, "c6"),
+      walkBlock("🏅 Records to unlock", s.records, "rec"),
       walkBlock("💞 Improve area affinity — steps", s.affinitySteps, "aff"),
-      // Nota Bene moves under route steps when a route exists; otherwise show the panel
+      // Nota Bene lives under route steps when a route exists; otherwise show the panel
       (s.guide && s.guide.length) ? null : refList("📝 Nota Bene", s.notaBene, { cls: "nb" })
-    ]);
-    const col2 = el("div", { class: "wcol" }, [walkBlock("Quests", s.quests, "q")]);
-    const col3 = el("div", { class: "wcol" }, [walkBlock("Unique Monsters", s.ums, "um")]);
-    const body = el("div", { class: "area-body wcols" }, [col1, col2, col3]);
-    if (!body.querySelector(".cat-block") && !body.querySelector(".ref-block")) {
-      body.classList.remove("wcols");
+    ].filter(Boolean);
+
+    const body = el("div", { class: "area-body" }, [...areaGroups, ...sectionBlocks]);
+    if (!areaGroups.length && !sectionBlocks.length && !(s.guide && s.guide.length)) {
       body.appendChild(el("div", { class: "muted empty", text: "(Story/exploration section — nothing to check off here, or filtered out.)" }));
     }
     const route = (s.guide && s.guide.length) ? el("div", { class: "route" }, [
@@ -512,6 +533,12 @@
       body
     ]);
   }
+  const REGION_ORDER = ["Colony 9", "Tephra Cave", "Bionis' Leg", "Colony 6", "Ether Mine", "Satorl Marsh",
+    "Bionis' Interior", "Makna Forest", "Frontier Village", "Eryth Sea", "Alcamoth", "High Entia Tomb",
+    "Prison Island", "Valak Mountain", "Sword Valley", "Galahad Fortress", "Fallen Arm", "Mechonis Field",
+    "Central Factory", "Agniratha", "Mechonis Core", "Memory Space", "Other"];
+  function regionIndex(r) { const i = REGION_ORDER.indexOf(r); return i < 0 ? 998 : i; }
+
   // a section is "complete" when it has checkable items and they're all checked
   function sectionComplete(s) {
     const ids = [];

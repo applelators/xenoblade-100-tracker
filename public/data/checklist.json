@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -6614,48 +6614,56 @@
         {
           "id": "wlm-4.2-0",
           "label": "Mechon Wreckage Site",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.2-1",
           "label": "Main Entrance",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.2-2",
           "label": "Ether Light",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.2-3",
           "label": "Gem Man's Stall",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.2-4",
           "label": "Central Plaza",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.2-5",
           "label": "Fortress Entrance",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.2-6",
           "label": "Outlook Park",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.2-7",
           "label": "Tephra Cave Entrance",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         }
@@ -6664,30 +6672,35 @@
         {
           "id": "wloc-4.2-0",
           "label": "Commercial District",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.2-1",
           "label": "Military District",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.2-2",
           "label": "Weapon Dev. Lab",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.2-3",
           "label": "Dunban's House",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.2-4",
           "label": "Tephra Hill",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         }
@@ -6777,24 +6790,28 @@
         {
           "id": "wlm-4.3-0",
           "label": "Tephra Path",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.3-1",
           "label": "Mag Mell Ruins",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.3-2",
           "label": "Rear Entrance",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.3-3",
           "label": "Cylinder Hangar",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         }
@@ -6803,12 +6820,14 @@
         {
           "id": "wloc-4.3-0",
           "label": "Caterpile Nest",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.3-1",
           "label": "Warehouse 2",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         }
@@ -6884,12 +6903,14 @@
         {
           "id": "wloc-4.4-0",
           "label": "Anti-Air Battery 1",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.4-1",
           "label": "Residential District",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         }
@@ -6985,36 +7006,42 @@
         {
           "id": "wlm-4.5-0",
           "label": "Spring Of Grief",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.5-1",
           "label": "Vilia Lake",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.5-2",
           "label": "Leg Pass",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.5-3",
           "label": "Raginar Canyon Path",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.5-4",
           "label": "Refugee Camp",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.5-5",
           "label": "Kamos Guidepost",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         }
@@ -7023,36 +7050,42 @@
         {
           "id": "wloc-4.5-0",
           "label": "Tephra Cavern",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.5-1",
           "label": "Arachno Queen's Nest",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.5-2",
           "label": "Kneecap Hill",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.5-3",
           "label": "Gaur Plain",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.5-4",
           "label": "Rho Oasis",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.5-5",
           "label": "Escape Pod Bay",
+          "area": "Tephra Cave",
           "missable": false,
           "confidence": "high"
         }
@@ -8902,30 +8935,35 @@
         {
           "id": "wlm-4.6-0",
           "label": "Tranquil Square",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.6-1",
           "label": "Observation Platform",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.6-2",
           "label": "Raguel Bridge: South",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.6-3",
           "label": "Raguel Bridge: North",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.6-4",
           "label": "Jacob's Rock Rest Area",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         }
@@ -8934,90 +8972,105 @@
         {
           "id": "wloc-4.6-0",
           "label": "Agora Shore",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-1",
           "label": "Anti-Air Battery 2",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-2",
           "label": "Anti-Air Battery 3",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-3",
           "label": "Hazzai Cape",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-4",
           "label": "Cliff Lake",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-5",
           "label": "Volff Lair",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-6",
           "label": "Viliera Hill",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-7",
           "label": "Sky Stage",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-8",
           "label": "Daksha Shrine",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-9",
           "label": "Raguel Lake",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-10",
           "label": "Tranquil Grotto",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-11",
           "label": "Windy Cave",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-12",
           "label": "Crevasse Waterfall",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-13",
           "label": "Kisk Cave",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.6-14",
           "label": "Tirkin Headquarters",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         }
@@ -9456,24 +9509,28 @@
         {
           "id": "wlm-4.7-0",
           "label": "Spiral Valley",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.7-1",
           "label": "Bask Cave Passage",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.7-2",
           "label": "Zax Guidepost",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.7-3",
           "label": "Believer's Paradise",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         }
@@ -9482,18 +9539,21 @@
         {
           "id": "wloc-4.7-0",
           "label": "Traveller's Rest",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.7-1",
           "label": "Kasharpa Falls",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.7-2",
           "label": "Maguel Road",
+          "area": "Bionis' Leg",
           "missable": false,
           "confidence": "high"
         }
@@ -9757,18 +9817,21 @@
         {
           "id": "wlm-4.8-0",
           "label": "Watchpoint Junction",
+          "area": "Colony 6",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.8-1",
           "label": "Supply Road",
+          "area": "Colony 6",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.8-2",
           "label": "Drainage Outlet",
+          "area": "Colony 6",
           "missable": false,
           "confidence": "high"
         }
@@ -9777,6 +9840,7 @@
         {
           "id": "wloc-4.8-0",
           "label": "Splintered Path",
+          "area": "Colony 6",
           "missable": false,
           "confidence": "high"
         }
@@ -9873,72 +9937,84 @@
         {
           "id": "wlm-4.9-0",
           "label": "Drainage Tunnel",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-1",
           "label": "Drainage Control Room",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-2",
           "label": "Mining Base",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-3",
           "label": "Central Pit: Entrance",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-4",
           "label": "Personnel Lift 2",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-5",
           "label": "Regulation Piston",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-6",
           "label": "Personnel Lift 3",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-7",
           "label": "Freight Elevator",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-8",
           "label": "Glowmoss Lake",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-9",
           "label": "Central Pit: Base Level",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-10",
           "label": "Freight Road",
+          "area": "Colony 6",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.9-11",
           "label": "Misty Path",
+          "area": "Colony 6",
           "missable": false,
           "confidence": "high"
         }
@@ -9947,66 +10023,77 @@
         {
           "id": "wloc-4.9-0",
           "label": "Test Pit 1",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-1",
           "label": "Test Pit 2",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-2",
           "label": "Test Pit 3",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-3",
           "label": "Test Pit 4",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-4",
           "label": "Storage Depot",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-5",
           "label": "Central Terminal",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-6",
           "label": "Observation Point",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-7",
           "label": "Central Pit: Level 1",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-8",
           "label": "Central Pit: Level 2",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-9",
           "label": "Central Pit: Level 3",
+          "area": "Ether Mine",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.9-10",
           "label": "Pod Depot",
+          "area": "Colony 6",
           "missable": false,
           "confidence": "high"
         }
@@ -10489,48 +10576,56 @@
         {
           "id": "wlm-4.10-0",
           "label": "Kelsher Wetlands",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.10-1",
           "label": "Nopon Merchant Camp",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.10-2",
           "label": "Crown Tree",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.10-3",
           "label": "Silent Obelisk",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.10-4",
           "label": "Glowing Obelisk",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.10-5",
           "label": "Sororal Statues",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.10-6",
           "label": "Shining Pond",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.10-7",
           "label": "Statue Summit",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         }
@@ -10539,84 +10634,98 @@
         {
           "id": "wloc-4.10-0",
           "label": "Lacus Swamp",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-1",
           "label": "Zaldandia Falls",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-2",
           "label": "Poison Swamp",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-3",
           "label": "Barren Moor",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-4",
           "label": "Dark Swamp",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-5",
           "label": "Igna Territory",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-6",
           "label": "Exile Fortress",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-7",
           "label": "Nopon Refuge",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-8",
           "label": "Oath Sanctuary",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-9",
           "label": "Place of Judgement",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-10",
           "label": "Mauk Floodgate",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-11",
           "label": "Soter Ruins",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-12",
           "label": "Basin Cave",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.10-13",
           "label": "Altar of Fate",
+          "area": "Satorl Marsh",
           "missable": false,
           "confidence": "high"
         }
@@ -10950,12 +11059,14 @@
         {
           "id": "wlm-4.11-0",
           "label": "Main Entrance",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.11-1",
           "label": "Reconstruction HQ",
+          "area": "Colony 6",
           "missable": false,
           "confidence": "high"
         }
@@ -10964,6 +11075,7 @@
         {
           "id": "wloc-4.11-0",
           "label": "Hope Farm",
+          "area": "Colony 6",
           "missable": false,
           "confidence": "high"
         }
@@ -11011,6 +11123,7 @@
         {
           "id": "wlm-4.12-0",
           "label": "Upper Trachea",
+          "area": "Bionis' Interior",
           "missable": false,
           "confidence": "high"
         }
@@ -11019,6 +11132,7 @@
         {
           "id": "wloc-4.12-0",
           "label": "Third Lung",
+          "area": "Bionis' Interior",
           "missable": false,
           "confidence": "high"
         }
@@ -11175,72 +11289,84 @@
         {
           "id": "wlm-4.13-0",
           "label": "Makna Path",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-1",
           "label": "Agni Tablet",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-2",
           "label": "Lakeside",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-3",
           "label": "Divine Sanctuary",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-4",
           "label": "Seahorse Islet",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-5",
           "label": "Waypoint Beacon",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-6",
           "label": "Nopon Arch",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-7",
           "label": "Twisted Tree Gate",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-8",
           "label": "Village Entrance",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-9",
           "label": "Sparkling Pool",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-10",
           "label": "Windmill Pavilion",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.13-11",
           "label": "Glowmoss Trihenge",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         }
@@ -11249,78 +11375,91 @@
         {
           "id": "wloc-4.13-0",
           "label": "Bridge One",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-1",
           "label": "Bridge Two",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-2",
           "label": "Bridge Three",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-3",
           "label": "Sap Cave",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-4",
           "label": "Eks' Watering Hole",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-5",
           "label": "Contaminated Area",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-6",
           "label": "Great Makna Falls",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-7",
           "label": "Clear Waterfall",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-8",
           "label": "Yellow Flower Grove",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-9",
           "label": "Decayed Forest",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-10",
           "label": "Abyss Basin",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-11",
           "label": "Precipice Bridge",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.13-12",
           "label": "Hode Lair",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         }
@@ -12487,48 +12626,56 @@
         {
           "id": "wlm-4.14-0",
           "label": "Sacred Altar",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.14-1",
           "label": "Nopon Tower",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.14-2",
           "label": "Entry Bridge",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.14-3",
           "label": "Pollen Works",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.14-4",
           "label": "Riki's House",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.14-5",
           "label": "Chief's Residence",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.14-6",
           "label": "Prophecy Hut",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.14-7",
           "label": "Contemplation Terrace",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         }
@@ -12537,84 +12684,98 @@
         {
           "id": "wloc-4.14-0",
           "label": "Central Plaza",
+          "area": "Colony 9",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-1",
           "label": "Kyn Shopping Street",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-2",
           "label": "Orb Storage Level",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-3",
           "label": "Pollen Orb Storehouse",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-4",
           "label": "Middle Housing Level",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-5",
           "label": "Pollen Works Level",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-6",
           "label": "Archaeology Level",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-7",
           "label": "Archaeology Center",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-8",
           "label": "Top Housing Level",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-9",
           "label": "Underground Store",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-10",
           "label": "Nopon Kitchen",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-11",
           "label": "Mysterious Sanctuary",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-12",
           "label": "Apex Lake",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.14-13",
           "label": "Reservoir",
+          "area": "Frontier Village",
           "missable": false,
           "confidence": "high"
         }
@@ -12743,18 +12904,21 @@
         {
           "id": "wlm-4.15-0",
           "label": "Latael Shore",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.15-1",
           "label": "Syrath Lighthouse",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.15-2",
           "label": "Centre Gate",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         }
@@ -12763,30 +12927,35 @@
         {
           "id": "wloc-4.15-0",
           "label": "Hovering Reef 1",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.15-1",
           "label": "Showdown Cliff",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.15-2",
           "label": "Hovering Reef 2",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.15-3",
           "label": "Hovering Reef 3",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.15-4",
           "label": "Hovering Reef 4",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         }
@@ -12845,24 +13014,28 @@
         {
           "id": "wlm-4.16-0",
           "label": "Main Entrance",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.16-1",
           "label": "Imperial Palace",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.16-2",
           "label": "Ascension Hall",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.16-3",
           "label": "Whitewing Palace",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         }
@@ -12871,24 +13044,28 @@
         {
           "id": "wloc-4.16-0",
           "label": "Melifica Road",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.16-1",
           "label": "Sky Terrace",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.16-2",
           "label": "Great Hall",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.16-3",
           "label": "Audience Chamber",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         }
@@ -12949,42 +13126,49 @@
         {
           "id": "wlm-4.17-0",
           "label": "High Entia Tomb",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-1",
           "label": "Tomb Approach",
+          "area": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-2",
           "label": "Sealed Chamber",
+          "area": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-3",
           "label": "Ceremony Hall",
+          "area": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-4",
           "label": "Tomb Robber Pool",
+          "area": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-5",
           "label": "Valley Of Emperors",
+          "area": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-6",
           "label": "Tower of Trials: Bridge",
+          "area": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         }
@@ -12993,18 +13177,21 @@
         {
           "id": "wloc-4.17-0",
           "label": "Hall Of Spirits",
+          "area": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.17-1",
           "label": "Hall Of Trials",
+          "area": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.17-2",
           "label": "Second Treasury",
+          "area": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         }
@@ -13126,72 +13313,84 @@
         {
           "id": "wlm-4.18-0",
           "label": "High Entia Transporter",
+          "area": "Prison Island",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-1",
           "label": "Prison Gate",
+          "area": "Prison Island",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-2",
           "label": "Prison Terrace",
+          "area": "Prison Island",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-3",
           "label": "Central Seal Island",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-4",
           "label": "Khatorl Seal Island",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-5",
           "label": "Soltnar Seal Island",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-6",
           "label": "Ether Plant",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-7",
           "label": "Faras Cave",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-8",
           "label": "Imperial Villa",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-9",
           "label": "Pod Landing Site",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-10",
           "label": "Valak Pass",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.18-11",
           "label": "King Agni's Tomb",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         }
@@ -13200,90 +13399,105 @@
         {
           "id": "wloc-4.18-0",
           "label": "Hovering Reef 5",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-1",
           "label": "Hovering Reef 6",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-2",
           "label": "Hovering Reef 7",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-3",
           "label": "Hovering Reef 8",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-4",
           "label": "Hovering Reef 9",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-5",
           "label": "Hovering Reef 10",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-6",
           "label": "Ether Crystal Deposit",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-7",
           "label": "Hode Refuge",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-8",
           "label": "Bionis' Occipital",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-9",
           "label": "Sleeping Dragon Isle",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-10",
           "label": "Anu Shore",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-11",
           "label": "Secluded Island",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-12",
           "label": "Kromar Coast",
+          "area": "Eryth Sea",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-13",
           "label": "Central Hall",
+          "area": "Prison Island",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.18-14",
           "label": "Great Canyon",
+          "area": "Prison Island",
           "missable": false,
           "confidence": "high"
         }
@@ -13378,12 +13592,14 @@
         {
           "id": "wlm-4.19-0",
           "label": "Fountain of Eternity",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.19-1",
           "label": "Fountain of Hope",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         }
@@ -13392,12 +13608,14 @@
         {
           "id": "wloc-4.19-0",
           "label": "Repaired Bridge Four",
+          "area": "Makna Forest",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.19-1",
           "label": "Revelation Hall",
+          "area": "Alcamoth",
           "missable": false,
           "confidence": "high"
         }
@@ -14980,66 +15198,77 @@
         {
           "id": "wlm-4.21-0",
           "label": "Zokhed Pass",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-1",
           "label": "Mechonis Wound",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-2",
           "label": "Befalgar Pedestal",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-3",
           "label": "Hallow Bone",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-4",
           "label": "Nopon Camp",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-5",
           "label": "Harict Chapel",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-6",
           "label": "Lava Cave",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-7",
           "label": "La Luz Church",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-8",
           "label": "Three Sage Summit",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-9",
           "label": "Nofol Tower",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.21-10",
           "label": "Bionis' Wrist",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         }
@@ -15048,90 +15277,105 @@
         {
           "id": "wloc-4.21-0",
           "label": "Kana Peak",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-1",
           "label": "Bagnar Snowfield",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-2",
           "label": "Apis Lair",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-3",
           "label": "Valak Peak",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-4",
           "label": "Bionis' Right Elbow",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-5",
           "label": "Url Crevasse",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-6",
           "label": "Chilkin Lair",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-7",
           "label": "Antol Den",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-8",
           "label": "Sealed Tower",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-9",
           "label": "Nagul Waterfall",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-10",
           "label": "Jakt Geyser",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-11",
           "label": "Great Glacier",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-12",
           "label": "Ignia Hill",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-13",
           "label": "Serik Waterfall",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wloc-4.21-14",
           "label": "Agul Mountain Range",
+          "area": "Valak Mountain",
           "missable": false,
           "confidence": "high"
         }

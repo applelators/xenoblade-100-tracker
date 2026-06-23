@@ -836,6 +836,34 @@ S = sec("4.40", "The Endgame: Memory Space", "Prison Island / Memory Space", { p
 // ---- merge per-item + per-section detail fields ----------------------------
 let DETAILS = { items: {}, sections: {} };
 try { DETAILS = require("./shulklink-details.js"); } catch (e) { console.warn("(no shulklink-details.js — base data only)"); }
+
+// region reference for landmarks/locations (from the Game8-sourced areas dataset).
+// A place name can exist in multiple regions, so we keep all candidates and pick
+// section-aware (prefer the region(s) the current section is actually about).
+const rnorm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const REGION_OF = {};
+(data.areas || []).forEach((a) => (a.sections.landmarks || []).forEach((i) => {
+  if (!i.kind) return;
+  const k = rnorm(i.label.replace(/^Galahad:\s*/, ""));
+  (REGION_OF[k] = REGION_OF[k] || []); if (REGION_OF[k].indexOf(a.name) < 0) REGION_OF[k].push(a.name);
+}));
+const REGION_OVERRIDE = {
+  "kelsher wetlands": "Satorl Marsh", "zaldandia falls": "Satorl Marsh", "place of judgement": "Satorl Marsh",
+  "viliera hill": "Bionis' Leg", "sparkling pool": "Makna Forest", "hallow bone": "Valak Mountain",
+  "archaeology center": "Frontier Village", "melifica road": "Alcamoth", "jacob s rock rest area": "Bionis' Leg"
+};
+const REGION_ORDER = ["Colony 9", "Tephra Cave", "Bionis' Leg", "Colony 6", "Ether Mine", "Satorl Marsh",
+  "Bionis' Interior", "Makna Forest", "Frontier Village", "Eryth Sea", "Alcamoth", "High Entia Tomb",
+  "Prison Island", "Valak Mountain"];
+const regIdx = (r) => { const i = REGION_ORDER.indexOf(r); return i < 0 ? 998 : i; };
+function regionOf(name, ctx) {
+  const ov = REGION_OVERRIDE[rnorm(name)]; if (ov) return ov;
+  const cands = REGION_OF[rnorm(name)] || [];
+  if (cands.length <= 1) return cands[0] || null;
+  const inCtx = cands.filter((c) => ctx.has(c));
+  return (inCtx.length ? inCtx : cands).slice().sort((a, b) => regIdx(a) - regIdx(b))[0];
+}
+
 let enriched = 0;
 sections.forEach((s) => {
   const sd = DETAILS.sections[s.id];
@@ -845,8 +873,12 @@ sections.forEach((s) => {
     if (d) { Object.assign(it, d); it.detailed = true; enriched++; }
   });
   // make landmarks / locations / records / affinity steps checkable items (stable ids by index)
-  s.landmarks = (s.landmarks || []).map((x, i) => ({ id: `wlm-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
-  s.locations = (s.locations || []).map((x, i) => ({ id: `wloc-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
+  // section context = the section's stated region(s) + the regions of its quests/UMs/HtH
+  const ctx = new Set();
+  String(s.region || "").split("/").forEach((x) => { const t = x.trim(); if (t) ctx.add(t); });
+  [...s.quests, ...s.ums, ...s.hths].forEach((it) => { if (it.area) ctx.add(it.area); });
+  s.landmarks = (s.landmarks || []).map((x, i) => ({ id: `wlm-${s.id}-${i}`, label: x, area: regionOf(x, ctx), missable: false, confidence: "high" }));
+  s.locations = (s.locations || []).map((x, i) => ({ id: `wloc-${s.id}-${i}`, label: x, area: regionOf(x, ctx), missable: false, confidence: "high" }));
   s.records = (s.records || []).map((x, i) => ({ id: `wrec-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
   s.affinitySteps = (s.affinitySteps || []).map((x, i) => ({ id: `waff-${s.id}-${i}`, label: x, missable: false, confidence: "high" }));
   // route steps + their Nota-Bene sub-notes are checkable (ids by index)
