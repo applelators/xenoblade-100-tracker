@@ -444,19 +444,24 @@
 
     const body = el("div", { class: "area-body" });
     const catFilter = Store.getPref("category");
+    // a category block that auto-collapses once every item in it is checked
     const mkBlock = (cat) => {
       if (catFilter !== "all" && catFilter !== cat) return null;
-      const entries = listForCat(area, cat)
+      const allList = listForCat(area, cat);
+      if (!allList.length) return null;
+      const entries = allList
         .map((item) => ({ item, area, category: cat }))
         .filter((e) => matchesSearch(e.item))
         .filter((e) => !(Store.getPref("hideCompleted") && Store.isChecked(e.item.id)));
       if (!entries.length) return null;
-      const done = entries.filter((e) => Store.isChecked(e.item.id)).length;
+      const total = allList.length;
+      const done = allList.filter((i) => Store.isChecked(i.id)).length;
+      const allDone = done === total;
       const inner = (cat === "collectopaedia") ? collectGrouped(entries) : el("div", { class: "items" }, entries.map(itemRow));
-      return el("div", { class: "cat-block" + (cat === "collectopaedia" ? " collect-block" : "") }, [
-        el("div", { class: "cat-head" }, [
+      return el("details", { class: "cat-block" + (cat === "collectopaedia" ? " collect-block" : "") + (allDone ? " complete" : ""), ...(allDone ? {} : { open: "open" }) }, [
+        el("summary", { class: "cat-head" }, [
           el("span", { text: CATEGORY_LABELS[cat] || cat }),
-          el("span", { class: "count", text: `${done}/${entries.length}` })
+          el("span", { class: "count", text: `${done}/${total}` })
         ]),
         inner
       ]);
@@ -469,10 +474,16 @@
     [placesRow, collo, c6].filter(Boolean).forEach((b) => body.appendChild(b));
     if (!placesRow && !collo && !c6) body.appendChild(el("div", { class: "muted empty", text: "Nothing in this area for the current filters." }));
 
-    return el("section", { class: "area-card" }, [
-      el("div", { class: "area-head" }, [
+    // whole area auto-collapses once every collectable in it is checked off
+    const areaItems = [];
+    COLLECT_VIEW_CATS.forEach((cat) => listForCat(area, cat).forEach((i) => areaItems.push(i)));
+    const areaDone = areaItems.filter((i) => Store.isChecked(i.id)).length;
+    const areaComplete = areaItems.length > 0 && areaDone === areaItems.length;
+    return el("details", { class: "area-card area-collapsible" + (areaComplete ? " complete" : ""), ...(areaComplete ? {} : { open: "open" }) }, [
+      el("summary", { class: "area-head" }, [
         el("h3", { text: area.name }),
-        el("span", { class: "chip soft", text: area.reachableAnchor })
+        el("span", { class: "chip soft", text: area.reachableAnchor }),
+        areaItems.length ? el("span", { class: "count", text: `${areaDone}/${areaItems.length}` }) : null
       ]),
       lockBanner,
       links,
@@ -588,10 +599,10 @@
       el("div", { class: "items" }, visible.map((it) => walkRow(it, kind)))
     ]);
   }
-  // Quests block: settled-complete quests (checked > 60s ago) tuck into a collapsed
+  // A block where settled-complete items (checked > 60s ago) tuck into a collapsed
   // "Completed" sub-section at the top; freshly-checked ones stay visible so an
-  // accidental check can be undone within the grace period.
-  function questBlock(list) {
+  // accidental check can be undone within the grace period. Used for quests + UMs.
+  function settleBlock(label, list, kind) {
     const all = (list || []).filter((it) => matchesSearch(it));
     if (!all.length) return null;
     const done = all.filter((it) => Store.isChecked(it.id)).length;
@@ -604,12 +615,12 @@
     const completedSub = (!hideC && settled.length)
       ? el("details", { class: "completed-quests" }, [
           el("summary", { class: "completed-quests-head" }, ["✓ Completed — " + settled.length]),
-          el("div", { class: "items" }, settled.map((it) => walkRow(it, "q")))
+          el("div", { class: "items" }, settled.map((it) => walkRow(it, kind)))
         ])
       : null;
     return el("details", { class: "cat-block" + (allDone ? " complete" : ""), ...(allDone ? {} : { open: "open" }) }, [
-      el("summary", { class: "cat-head" }, [el("span", { text: "Quests" }), el("span", { class: "count", text: `${done}/${all.length}` })]),
-      el("div", { class: "items" }, [completedSub, ...activeVisible.map((it) => walkRow(it, "q"))].filter(Boolean))
+      el("summary", { class: "cat-head" }, [el("span", { text: label }), el("span", { class: "count", text: `${done}/${all.length}` })]),
+      el("div", { class: "items" }, [completedSub, ...activeVisible.map((it) => walkRow(it, kind))].filter(Boolean))
     ]);
   }
   // --- story-Part (arc) spoiler gating ---
@@ -645,8 +656,8 @@
       const g = groups[r];
       const lmBlock = walkBlock("📍 Landmarks (discover here)", g.landmarks, "lm");
       const locBlock = walkBlock("📍 Locations (discover here)", g.locations, "loc");
-      const qBlock = questBlock(g.quests);
-      const umBlock = walkBlock("Unique Monsters", g.ums, "um");
+      const qBlock = settleBlock("Quests", g.quests, "q");
+      const umBlock = settleBlock("Unique Monsters", g.ums, "um");
       // quests + unique monsters sit side-by-side on wide screens
       const qumRow = (qBlock || umBlock) ? el("div", { class: "qum-row" }, [qBlock, umBlock].filter(Boolean)) : null;
       const blocks = [lmBlock, locBlock, qumRow].filter(Boolean);
@@ -661,24 +672,35 @@
       ]);
     }).filter(Boolean);
 
+    // Heart-to-Hearts move directly under the route (rendered separately, below).
+    const hthBlock = walkBlock("Heart-to-Hearts", s.hths, "hth");
+    // Records + Trials side-by-side (records left, trials right).
+    const recBlock = walkBlock("🏅 Records to unlock", s.records, "rec");
+    const triBlock = walkBlock("🎯 Trials to unlock", s.trials, "trial");
+    const rtRow = (recBlock || triBlock) ? el("div", { class: "qum-row" }, [recBlock, triBlock].filter(Boolean)) : null;
     const sectionBlocks = [
-      walkBlock("Heart-to-Hearts", s.hths, "hth"),
       walkBlock("Colony 6 Development", s.colony6, "c6"),
-      walkBlock("🏅 Records to unlock", s.records, "rec"),
-      walkBlock("🎯 Trials to unlock", s.trials, "trial"),
+      rtRow,
       walkBlock("💞 Improve area affinity — steps", s.affinitySteps, "aff"),
       // Nota Bene lives under route steps when a route exists; otherwise show the panel
       (s.guide && s.guide.length) ? null : refList("📝 Nota Bene", s.notaBene, { cls: "nb" })
     ].filter(Boolean);
 
     const body = el("div", { class: "area-body" }, [...areaGroups, ...sectionBlocks]);
-    if (!areaGroups.length && !sectionBlocks.length && !(s.guide && s.guide.length)) {
+    if (!areaGroups.length && !sectionBlocks.length && !hthBlock && !(s.guide && s.guide.length)) {
       body.appendChild(el("div", { class: "muted empty", text: "(Story/exploration section — nothing to check off here, or filtered out.)" }));
     }
-    const route = (s.guide && s.guide.length) ? el("div", { class: "route" }, [
-      el("div", { class: "route-head", text: "🧭 Route — what to do" }),
-      el("ol", { class: "route-list" }, s.guide.map(routeStep))
-    ]) : null;
+    // Route — a collapsible that auto-collapses once every step is checked.
+    let route = null;
+    if (s.guide && s.guide.length) {
+      const rDone = s.guide.filter((g) => Store.isChecked(g.id)).length;
+      const rAll = s.guide.length;
+      const rComplete = rDone === rAll;
+      route = el("details", { class: "route" + (rComplete ? " complete" : ""), ...(rComplete ? {} : { open: "open" }) }, [
+        el("summary", { class: "route-head" }, [el("span", { text: "🧭 Route — what to do" }), el("span", { class: "count", text: `${rDone}/${rAll}` })]),
+        el("ol", { class: "route-list" }, s.guide.map(routeStep))
+      ]);
+    }
     // best-arts panel is NOT inlined per section — a single floating card (managed
     // by updateArtsFloat) follows the scroll and shows only the active section.
     return el("section", { class: "area-card", "data-code": s.code }, [
@@ -690,6 +712,7 @@
       ...banners,
       ...((s.notes || []).map((n) => el("div", { class: "muted section-note", text: n }))),
       route,
+      hthBlock,
       body
     ]);
   }

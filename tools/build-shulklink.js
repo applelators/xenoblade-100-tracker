@@ -520,7 +520,7 @@ q(S, "Q307", "Miss Sweetness Showdown!", { a: "Colony 6", x: "Miss Sweetness Sho
 q(S, "Q308", "The Most Transparent Thing", { a: "Colony 6" });
 q(S, "Q309", "Legend Of Mythical Empress", { a: "Bionis' Leg" });
 hth(S, "HTH13", "Geography Lesson", "Shulk/Dunban", { aff: "Purple", a: "Bionis' Leg" });
-hth(S, "HTH14", "Fallen Brethren", "Melia/Shulk", { aff: "Green", a: "Makna Forest" });
+hth(S, "HTH14", "Fallen Brethren", "Melia/Shulk", { aff: "Green", a: "Makna Forest", note: "💔 Popular pick for the Heartbreaking trial (#35 — have a Heart-to-Heart go as BADLY as possible). To grab it here, deliberately choose the WORST option at every prompt (e.g. 'What's wrong?' rather than 'They sound like great people'). This forfeits the affinity gain, so only do it if you want Heartbreaking from this one. You still need a separate H2H done perfectly for Heartwarming (#34)." });
 // 4.23 ----------------------------------------------------------------
 S = sec("4.23", "Sword Valley", "Sword Valley", { locksAt: "ponr-mechonis-field",
   notes: ["⚠ Everything here LOCKS after the Mechonis Field boss (§4.26). Also grab 3 Red Frontier for Colony 6.", "Mischievous Nabreus (UM74) is deliberately deferred to §4.25 when you're strong enough — but still before the lockout."] });

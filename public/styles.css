@@ -81,6 +81,15 @@ a { color: var(--accent); }
 /* area cards (full view) */
 .area-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; margin: 12px 0; }
 .area-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+/* collectables area cards collapse (auto) once everything in them is checked */
+details.area-collapsible > summary.area-head { cursor: pointer; list-style: none; }
+details.area-collapsible > summary.area-head::-webkit-details-marker { display: none; }
+details.area-collapsible > summary.area-head::before { content: "▾"; color: var(--muted); font-size: 12px; align-self: center; }
+details.area-collapsible:not([open]) > summary.area-head::before { content: "▸"; }
+details.area-collapsible.complete > summary.area-head h3 { color: var(--done); }
+details.area-collapsible.complete > summary.area-head::before { content: "✓"; color: var(--done); }
+details.area-collapsible > summary.area-head .count { margin-left: auto; font-weight: 600; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+details.area-collapsible:not([open]) > summary.area-head { margin: 0; }
 .area-head h3 { margin: 0; font-size: 17px; }
 .lock-banner { margin: 8px 0; padding: 7px 11px; border-radius: 8px; font-size: 13px; font-weight: 600; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .lock-banner.danger { background: #3a1a1a; border: 1px solid #7d3535; color: #ffb4b4; }
@@ -131,6 +140,16 @@ a { color: var(--accent); }
 /* route / "what to do" narrative panel */
 .route { background: linear-gradient(180deg, #161f33, #131a2b); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 10px 14px 10px 12px; margin: 10px 0 6px; }
 .route-head { font-weight: 700; font-size: 12.5px; color: var(--accent); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+/* route collapses (auto) once every step is checked */
+details.route > summary.route-head { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px; margin-bottom: 0; }
+details.route[open] > summary.route-head { margin-bottom: 6px; }
+details.route > summary.route-head::-webkit-details-marker { display: none; }
+details.route > summary.route-head::before { content: "▾"; color: var(--muted); font-size: 10px; }
+details.route:not([open]) > summary.route-head::before { content: "▸"; }
+details.route.complete { border-left-color: var(--done); }
+details.route.complete > summary.route-head { color: var(--done); }
+details.route.complete > summary.route-head::before { content: "✓"; color: var(--done); }
+details.route > summary .count { margin-left: auto; font-weight: 600; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .route-list { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; }
 .route-list li { font-size: 13.5px; line-height: 1.5; }
 .rstep { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
