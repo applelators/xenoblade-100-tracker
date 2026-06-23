@@ -49,9 +49,14 @@
   let links = {};
   const partnersOf = (id) => links[id] || [];
 
+  // mutually-exclusive quests: id -> [partner ids]. Checking one clears the other.
+  let mutex = {};
+  const mutexOf = (id) => mutex[id] || [];
+
   const Store = {
-    // ---- cross-dataset links ----
+    // ---- cross-dataset links / mutex ----
     setLinks(map) { links = map || {}; },
+    setMutex(map) { mutex = map || {}; },
 
     // ---- checked items ----
     isChecked(id) {
@@ -60,11 +65,33 @@
       if (ps) for (let i = 0; i < ps.length; i++) if (checked.has(ps[i])) return true;
       return false;
     },
+    // is this item blocked because a mutually-exclusive partner is already done?
+    isMutexLocked(id) {
+      if (this.isChecked(id)) return false;
+      const ps = mutex[id];
+      if (ps) for (let i = 0; i < ps.length; i++) if (this.isChecked(ps[i])) return true;
+      return false;
+    },
+    // the checked mutex partner blocking this id (or null)
+    mutexWinner(id) {
+      const ps = mutex[id] || [];
+      for (let i = 0; i < ps.length; i++) if (this.isChecked(ps[i])) return ps[i];
+      return null;
+    },
     setChecked(id, on) {
-      [id, ...partnersOf(id)].forEach((x) => { if (on) checked.add(x); else checked.delete(x); });
+      const group = new Set([id, ...partnersOf(id)]); // the item + its cross-tab twins
+      group.forEach((x) => { if (on) checked.add(x); else checked.delete(x); });
+      if (on) {
+        // completing this quest forfeits its mutually-exclusive partner(s) + their twins
+        group.forEach((x) => mutexOf(x).forEach((p) => {
+          checked.delete(p);
+          (links[p] || []).forEach((pt) => checked.delete(pt));
+        }));
+      }
       write(KEYS.checked, [...checked]);
     },
     toggleChecked(id) {
+      if (!this.isChecked(id) && this.isMutexLocked(id)) return this.isChecked(id); // can't pick a forfeited quest
       const on = !this.isChecked(id);
       this.setChecked(id, on);
       return on;

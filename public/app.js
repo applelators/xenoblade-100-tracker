@@ -40,6 +40,7 @@
   let ALL_ENTRIES = [];       // { item, area, category }
   let WALK_ITEMS = [];        // flat walkthrough items (for progress)
   let CHECK_LINKS = {};       // id -> [partner ids] across datasets (for dedup)
+  let ITEM_LABEL = {};        // id -> label (for mutex "forfeited" messaging)
 
   // ---------- helpers ----------
   function $(sel, root) { return (root || document).querySelector(sel); }
@@ -94,6 +95,33 @@
     });
 
     buildCheckLinks();
+    buildMutex();
+  }
+
+  // mutually-exclusive quest pairs → Store. Walkthrough quests reference the
+  // partner by name (label); area quests reference it by id.
+  function buildMutex() {
+    const norm = (s) => String(s || "").toLowerCase().replace(/[“”"'’]/g, "").replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+    const mutex = {};
+    ITEM_LABEL = {};
+    const add = (a, b) => {
+      if (!a || !b || a === b) return;
+      (mutex[a] = mutex[a] || []); if (mutex[a].indexOf(b) < 0) mutex[a].push(b);
+      (mutex[b] = mutex[b] || []); if (mutex[b].indexOf(a) < 0) mutex[b].push(a);
+    };
+    const byLabel = {}; // norm(label) -> [walkthrough quest ids]
+    (DATA.walkthrough || []).forEach((s) => (s.quests || []).forEach((q) => {
+      ITEM_LABEL[q.id] = q.label;
+      (byLabel[norm(q.label)] = byLabel[norm(q.label)] || []).push(q.id);
+    }));
+    (DATA.walkthrough || []).forEach((s) => (s.quests || []).forEach((q) => {
+      if (q.mutexWith) (byLabel[norm(q.mutexWith)] || []).forEach((pid) => add(q.id, pid));
+    }));
+    (DATA.areas || []).forEach((a) => (a.sections.quests || []).forEach((q) => {
+      ITEM_LABEL[q.id] = q.label;
+      if (q.mutexWith) add(q.id, q.mutexWith);
+    }));
+    Store.setMutex(mutex);
   }
 
   // Link check-state across the Walkthrough and Collectables datasets: when a
@@ -173,10 +201,14 @@
   function itemRow(entry) {
     const { item, category } = entry;
     const checked = Store.isChecked(item.id);
-    const row = el("label", { class: "item" + (checked ? " done" : ""), id: "item-" + item.id }, [
+    const locked = !checked && Store.isMutexLocked(item.id);
+    const badgeEls = badges(item, category);
+    if (locked) badgeEls.push(forfeitBadge(item.id));
+    const row = el("label", { class: "item" + (checked ? " done" : "") + (locked ? " locked" : ""), id: "item-" + item.id }, [
       el("input", {
         type: "checkbox",
         ...(checked ? { checked: "checked" } : {}),
+        ...(locked ? { disabled: "disabled" } : {}),
         onchange: (e) => {
           Store.setChecked(item.id, e.target.checked);
           render(); // re-render to update progress / expires-next / hide-completed
@@ -184,7 +216,7 @@
       }),
       el("span", { class: "item-body" }, [
         el("span", { class: "item-label", text: item.label }),
-        el("span", { class: "item-badges" }, badges(item, category)),
+        el("span", { class: "item-badges" }, badgeEls),
         item.note ? el("span", { class: "item-note", text: item.note }) : null
       ])
     ]);
@@ -385,15 +417,23 @@
   }
   function walkRow(item, kind) {
     const checked = Store.isChecked(item.id);
-    return el("label", { class: "item" + (checked ? " done" : ""), id: "item-" + item.id }, [
-      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (e) => { Store.setChecked(item.id, e.target.checked); render(); } }),
+    const locked = !checked && Store.isMutexLocked(item.id);
+    const badgeEls = walkBadges(item, kind);
+    if (locked) badgeEls.push(forfeitBadge(item.id));
+    return el("label", { class: "item" + (checked ? " done" : "") + (locked ? " locked" : ""), id: "item-" + item.id }, [
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), ...(locked ? { disabled: "disabled" } : {}), onchange: (e) => { Store.setChecked(item.id, e.target.checked); render(); } }),
       el("span", { class: "item-body" }, [
         el("span", { class: "item-label" }, [item.code ? el("span", { class: "qcode", text: item.code + " " }) : null, document.createTextNode(item.label)]),
-        el("span", { class: "item-badges" }, walkBadges(item, kind)),
+        el("span", { class: "item-badges" }, badgeEls),
         item.note ? el("span", { class: "item-note", text: item.note }) : null,
         itemDetails(item)
       ])
     ]);
+  }
+  function forfeitBadge(id) {
+    const w = Store.mutexWinner(id);
+    const wl = w && ITEM_LABEL[w] ? " — chose “" + ITEM_LABEL[w] + "”" : "";
+    return el("span", { class: "badge forfeit", title: "Mutually exclusive — its partner is already completed" }, ["⚄ Forfeited" + wl]);
   }
   // reference panel (display-only): landmarks/locations (quoted), records, nota bene, affinity steps
   function refList(label, arr, opts) {
