@@ -1146,6 +1146,17 @@
   });
 
   // ---------- render ----------
+  // mobile-only fixed bottom tab bar mirroring the top view tabs
+  function bottomNav() {
+    const view = Store.getPref("view");
+    const items = [["walk", "📖", "Guide"], ["missable", "⏱", "Missable"], ["full", "📦", "Collect"], ["records", "🏅", "Records"]];
+    return el("nav", { class: "bottom-nav" }, items.map(([v, ic, label]) =>
+      el("button", { class: "bnav-btn" + (view === v ? " active" : ""), "aria-label": label, onclick: () => { Store.setPref("view", v); window.scrollTo(0, 0); render(); } }, [
+        el("span", { class: "bnav-ic", text: ic }),
+        el("span", { class: "bnav-label", text: label })
+      ])
+    ));
+  }
   function render() {
     const root = $("#app");
     root.innerHTML = "";
@@ -1178,6 +1189,8 @@
       ]),
       el("div", { class: "muted small", text: `Data ${DATA.meta.version} · ⚠ Verify = double-check in-game. Collectopaedia/landmark bulk data is loaded progressively.` })
     ]));
+
+    root.appendChild(bottomNav()); // mobile-only fixed tab bar for the 4 views
 
     updateFloats(); // refresh the floating best-arts + table-of-contents cards
 

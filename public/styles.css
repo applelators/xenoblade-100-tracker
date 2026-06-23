@@ -298,8 +298,8 @@ details.route > summary .count { margin-left: auto; font-weight: 600; font-size:
 }
 .spoiler:hover { background: #3a4a72; }
 .spoiler.revealed { filter: none; background: rgba(76,201,255,.14); cursor: default; user-select: text; border-bottom-color: transparent; }
-/* small affordance shown alongside the blurred word */
-.spoiler:not(.revealed)::after { content: " 🔒"; font-size: .82em; filter: none; }
+/* literal "tap to reveal" affordance shown sharp alongside the blurred word */
+.spoiler:not(.revealed)::after { content: " 🔒 tap to reveal"; font-size: .72em; font-weight: 600; color: var(--accent); letter-spacing: .2px; white-space: nowrap; filter: none; }
 
 /* per-area collapsible groups within a section — INSET (level 2) */
 .area-group { border: 1px solid var(--line2); border-radius: var(--radius-sm); margin: 9px 0; background: #121a2b; }
@@ -479,6 +479,31 @@ details.completion[open] > summary::before { content: "▾ "; }
 /* footer */
 .app-footer { margin: 28px 0 10px; padding-top: 15px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
 .footer-links { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; }
+
+/* mobile bottom tab bar ----------------------------------------------------
+   The 4 views as a fixed bottom bar on phones; the top tabs hide there so they
+   don't duplicate. Degrades in (shows) on small screens, hidden on desktop.   */
+.bottom-nav { display: none; }
+.bnav-btn {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  background: none; border: 0; color: var(--muted); cursor: pointer;
+  padding: 7px 2px 5px; border-radius: var(--radius-sm);
+  font-family: var(--font-display); transition: color .15s;
+}
+.bnav-ic { font-size: 19px; line-height: 1; }
+.bnav-label { font-size: 10.5px; font-weight: 600; letter-spacing: .2px; }
+.bnav-btn.active { color: var(--accent); }
+.bnav-btn.active .bnav-ic { filter: drop-shadow(0 0 7px rgba(76,201,255,.55)); }
+@media (max-width: 620px) {
+  .bottom-nav {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    background: rgba(13,18,30,.93); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid var(--line); box-shadow: 0 -8px 24px rgba(0,0,0,.4);
+    padding: 4px 4px calc(4px + env(safe-area-inset-bottom, 0px));
+  }
+  .controls .tabs { display: none; }     /* replaced by the bottom bar on phones */
+  body { padding-bottom: 74px; }          /* clear the fixed bar */
+}
 
 /* entrance + reduced-motion ------------------------------------------------ */
 .panel, .area-card, .cutoff-card, .arc-banner, .completed-area { animation: fadeUp .45s cubic-bezier(.3,0,.2,1) both; }
