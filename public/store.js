@@ -14,7 +14,9 @@
     checkedAt: "xbc100:checkedAt", // id -> epoch ms when checked (for delayed collapse)
     reached: "xbc100:reached",   // array of area ids the player has reached
     playtime: "xbc100:playtime", // section code -> in-game hours logged on arrival
-    prefs: "xbc100:prefs"        // ui preferences object
+    prefs: "xbc100:prefs",       // ui preferences object
+    updatedAt: "xbc100:updatedAt", // epoch ms of the last data change (for sync conflict resolution)
+    synckey: "xbc100:synckey"    // sync passphrase — DEVICE-LOCAL, never part of synced state
   };
 
   // a checked quest only "settles" (collapses into the Completed area) after this
@@ -50,6 +52,10 @@
   let checkedAt = read(KEYS.checkedAt, {}) || {};
   let playtime = read(KEYS.playtime, {}) || {};
   let reached = new Set(read(KEYS.reached, []));
+  let updatedAt = read(KEYS.updatedAt, 0) || 0;
+  let syncKey = read(KEYS.synckey, "") || "";
+  // bump the change-clock whenever data the user owns changes (drives sync)
+  function touch() { updatedAt = Date.now(); write(KEYS.updatedAt, updatedAt); }
   let prefs = Object.assign({}, DEFAULT_PREFS, read(KEYS.prefs, {}));
 
   // cross-dataset check-state links: id -> [partner ids] (set by app at load).
@@ -112,6 +118,7 @@
       }
       write(KEYS.checked, [...checked]);
       write(KEYS.checkedAt, checkedAt);
+      touch();
     },
     // has this item been checked long enough to "settle" (tuck into Completed)?
     // unchecked = settled; legacy checks with no timestamp = settled (long ago).
@@ -146,6 +153,7 @@
       if (hours == null || hours === "" || isNaN(hours)) delete playtime[code];
       else playtime[code] = Number(hours);
       write(KEYS.playtime, playtime);
+      touch();
     },
     allPlaytime: () => Object.assign({}, playtime),
 
@@ -154,6 +162,7 @@
     markReached(areaId) {
       reached.add(areaId);
       write(KEYS.reached, [...reached]);
+      touch();
     },
     reachedCount: () => reached.size,
 
@@ -172,6 +181,7 @@
         playtime,
         reached: [...reached],
         prefs,
+        updatedAt,
         exportedAt: new Date().toISOString()
       };
     },
@@ -187,7 +197,60 @@
       write(KEYS.playtime, playtime);
       write(KEYS.reached, [...reached]);
       write(KEYS.prefs, prefs);
+      touch(); // a manual import is a fresh change → will push to sync if connected
       return true;
+    },
+
+    // ---- cross-device sync (KV via /api/state) -----------------------------
+    // Prefs (UI view/search/toggles) are intentionally NOT synced, so each device
+    // keeps its own view; only the data you enter (checks, playtimes, reached) syncs.
+    getUpdatedAt: () => updatedAt,
+    getSyncKey: () => syncKey,
+    setSyncKey(k) { syncKey = (k || "").trim(); write(KEYS.synckey, syncKey); },
+    syncEnabled: () => !!syncKey,
+    syncSnapshot() {
+      return { checked: [...checked], checkedAt, playtime, reached: [...reached], updatedAt };
+    },
+    syncApply(obj) {
+      if (!obj || typeof obj !== "object") return false;
+      checked = new Set(Array.isArray(obj.checked) ? obj.checked : []);
+      checkedAt = (obj.checkedAt && typeof obj.checkedAt === "object") ? obj.checkedAt : {};
+      playtime = (obj.playtime && typeof obj.playtime === "object") ? obj.playtime : {};
+      reached = new Set(Array.isArray(obj.reached) ? obj.reached : []);
+      updatedAt = Number(obj.updatedAt) || Date.now();
+      write(KEYS.checked, [...checked]);
+      write(KEYS.checkedAt, checkedAt);
+      write(KEYS.playtime, playtime);
+      write(KEYS.reached, [...reached]);
+      write(KEYS.updatedAt, updatedAt);
+      return true;
+    },
+    // pull remote; adopt it only if it's newer than local. returns a status object.
+    async syncPull() {
+      if (!syncKey) return { ok: false, reason: "nokey" };
+      let r;
+      try { r = await fetch("/api/state", { headers: { "x-sync-key": syncKey } }); }
+      catch (e) { return { ok: false, reason: "network" }; }
+      let j; try { j = await r.json(); } catch (e) { return { ok: false, reason: "badresp" }; }
+      if (!j.ok) return { ok: false, reason: j.error || ("http-" + r.status) };
+      if (!j.state) return { ok: true, changed: false, empty: true };
+      const remoteAt = Number(j.state.updatedAt) || 0;
+      if (remoteAt > updatedAt) { this.syncApply(j.state); return { ok: true, changed: true, remoteAt }; }
+      return { ok: true, changed: false, remoteAt };
+    },
+    // push local snapshot to remote. returns a status object.
+    async syncPush() {
+      if (!syncKey) return { ok: false, reason: "nokey" };
+      let r;
+      try {
+        r = await fetch("/api/state", {
+          method: "PUT",
+          headers: { "x-sync-key": syncKey, "content-type": "application/json" },
+          body: JSON.stringify(this.syncSnapshot())
+        });
+      } catch (e) { return { ok: false, reason: "network" }; }
+      let j; try { j = await r.json(); } catch (e) { return { ok: false, reason: "badresp" }; }
+      return j.ok ? { ok: true, updatedAt: j.updatedAt } : { ok: false, reason: j.error || ("http-" + r.status) };
     },
     resetAll() {
       checked = new Set();
@@ -200,6 +263,7 @@
       write(KEYS.playtime, {});
       write(KEYS.reached, []);
       write(KEYS.prefs, prefs);
+      touch(); // a reset is a change too (will propagate to sync if connected)
     }
   };
 

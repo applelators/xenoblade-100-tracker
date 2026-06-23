@@ -8,6 +8,20 @@ compatibility_date = "2025-06-01"
 directory = "./public"
 binding = "ASSETS"
 
+# ---- Cross-device sync (Cloudflare KV) -------------------------------------
+# The /api/state endpoint in worker.js needs a KV namespace bound as SYNC.
+# Until this is set up, sync just returns 503 and the app works fully offline.
+#
+# One-time setup (run in this repo, logged into the applelators account):
+#   1) npx wrangler kv namespace create SYNC
+#        → prints an id, e.g.  id = "abc123..."
+#   2) uncomment the block below and paste that id
+#   3) commit + push  (the Git-integration build picks up the binding)
+#
+# [[kv_namespaces]]
+# binding = "SYNC"
+# id = "PASTE_KV_NAMESPACE_ID_HERE"
+
 # Deploy to the applelators Cloudflare account:
 #   wrangler deploy
 # Local preview:

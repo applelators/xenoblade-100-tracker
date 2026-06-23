@@ -1079,6 +1079,7 @@
       search,
       view === "full" ? cat : null,
       el("div", { class: "data-buttons" }, [
+        syncButton(),
         el("button", { class: "btn small", onclick: doExport }, ["Export"]),
         el("button", { class: "btn small", onclick: doImport }, ["Import"]),
         el("button", { class: "btn small danger", onclick: doReset }, ["Reset"])
@@ -1122,6 +1123,60 @@
   function doReset() {
     if (confirm("Reset ALL progress (checks + revealed areas)? Export first if you want a backup.")) { Store.resetAll(); render(); }
   }
+
+  // ---------- cross-device sync (KV via /api/state) ----------
+  let syncMsg = "", syncTimer = null, pulling = false;
+  let lastPushedAt = (window.Store ? Store.getUpdatedAt() : 0); // suppress auto-push until reconciled
+  function syncReason(r) {
+    return ({ "sync-not-configured": "sync isn't set up on the server yet", "passphrase-too-short": "passphrase too short", network: "network error", nokey: "no passphrase", "too-large": "data too large", "bad-json": "bad data" })[r] || r || "error";
+  }
+  function syncButton() {
+    const on = Store.syncEnabled();
+    return el("button", {
+      class: "btn small" + (on ? " synced" : ""),
+      title: on ? "Cross-device sync is ON — click to re-sync, change passphrase, or turn off" : "Turn on cross-device sync (saves your progress to the cloud, shared by passphrase)",
+      onclick: openSync
+    }, ["☁ " + (on ? (syncMsg || "Synced") : "Sync off")]);
+  }
+  async function openSync() {
+    const cur = Store.getSyncKey();
+    const p = prompt(
+      "Cross-device sync\n\nEnter a passphrase to save your progress and share it across devices — use the SAME passphrase on every device. Minimum 6 characters.\nAnyone who knows this passphrase can read and overwrite your data, so make it unique (not a password you use elsewhere).\n\nLeave it blank and press OK to turn sync OFF on this device (your local progress stays).",
+      cur || ""
+    );
+    if (p == null) return;                                  // cancelled
+    const key = p.trim();
+    if (key === "") { Store.setSyncKey(""); syncMsg = ""; render(); return; }   // disconnect
+    if (key.length < 6) { alert("Passphrase must be at least 6 characters."); return; }
+    Store.setSyncKey(key);
+    syncMsg = "Connecting…"; render();
+    const pull = await Store.syncPull();
+    if (!pull.ok) { syncMsg = "⚠ " + syncReason(pull.reason); render(); return; }
+    if (pull.changed) render();                             // adopted newer remote
+    const push = await Store.syncPush();                    // make sure remote has our latest
+    lastPushedAt = Store.getUpdatedAt();
+    syncMsg = push.ok ? "Synced ✓" : ("⚠ " + syncReason(push.reason));
+    render();
+  }
+  // debounced push after local changes (called at the end of every render)
+  function scheduleSyncPush() {
+    if (!Store.syncEnabled() || Store.getUpdatedAt() <= lastPushedAt) return;
+    if (syncTimer) clearTimeout(syncTimer);
+    syncTimer = setTimeout(async () => {
+      const at = Store.getUpdatedAt();
+      const res = await Store.syncPush();
+      if (res.ok) { lastPushedAt = at; syncMsg = "Synced ✓"; } else { syncMsg = "⚠ " + syncReason(res.reason); }
+      render();
+    }, 1500);
+  }
+  // pull when the tab regains focus, so another device's edits show up
+  function syncOnFocus() {
+    if (!Store.syncEnabled() || pulling || document.hidden) return;
+    pulling = true;
+    Store.syncPull().then((res) => { pulling = false; if (res && res.changed) render(); }).catch(() => { pulling = false; });
+  }
+  document.addEventListener("visibilitychange", syncOnFocus);
+  window.addEventListener("focus", syncOnFocus);
 
   // ---------- spoiler reveal (event delegation; don't toggle the step checkbox) ----------
   document.addEventListener("click", (e) => {
@@ -1199,6 +1254,8 @@
     if (settleTimer) { clearTimeout(settleTimer); settleTimer = null; }
     const next = Store.soonestSettle();
     if (next) settleTimer = setTimeout(render, Math.max(250, next - Date.now() + 50));
+
+    scheduleSyncPush(); // push local changes to the cloud (debounced) if sync is on
   }
   let settleTimer = null;
 
@@ -1213,6 +1270,16 @@
       if (DATA.arcs && DATA.arcs.length && !Store.isReached(DATA.arcs[0].id)) Store.markReached(DATA.arcs[0].id);
       ensureFloats();
       render();
+      // reconcile with the cloud on startup (adopt remote if newer, else push local)
+      if (Store.syncEnabled()) {
+        lastPushedAt = Store.getUpdatedAt();
+        Store.syncPull().then(async (res) => {
+          if (!res.ok) { syncMsg = "⚠ " + syncReason(res.reason); render(); return; }
+          if (res.changed) { lastPushedAt = Store.getUpdatedAt(); render(); }
+          else { const push = await Store.syncPush(); if (push.ok) lastPushedAt = Store.getUpdatedAt(); }
+          syncMsg = "Synced ✓"; render();
+        });
+      }
     })
     .catch((err) => {
       $("#app").innerHTML = '<div class="error">Failed to load checklist data: ' + esc(err.message) +
