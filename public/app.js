@@ -512,6 +512,13 @@
       body
     ]);
   }
+  // a section is "complete" when it has checkable items and they're all checked
+  function sectionComplete(s) {
+    const ids = [];
+    ["quests", "ums", "hths", "colony6", "landmarks", "locations", "records", "affinitySteps"].forEach((k) => (s[k] || []).forEach((i) => ids.push(i.id)));
+    (s.guide || []).forEach((g) => ids.push(g.id));
+    return ids.length > 0 && ids.every((id) => Store.isChecked(id));
+  }
   function walkView() {
     const wrap = el("div", { class: "view" });
     const secs = DATA.walkthrough || [];
@@ -526,7 +533,18 @@
       el("div", { class: "muted small", text: "🔒 Spoiler wall is ON — nothing past this Part is shown. Browse this Part freely." })
     ]));
 
-    secs.filter((s) => arcReached(s.arc)).forEach((s) => wrap.appendChild(sectionCard(s)));
+    const visible = secs.filter((s) => arcReached(s.arc));
+    const completed = visible.filter(sectionComplete);
+    const active = visible.filter((s) => !sectionComplete(s));
+
+    // fully-checked sections collapse into a "Completed sections" area at the top
+    if (completed.length) {
+      wrap.appendChild(el("details", { class: "completed-area" }, [
+        el("summary", { class: "completed-summary" }, ["✓ Completed sections — " + completed.length]),
+        el("div", { class: "completed-body" }, completed.map(sectionCard))
+      ]));
+    }
+    active.forEach((s) => wrap.appendChild(sectionCard(s)));
 
     // sealed wall for the next Part
     const nextArc = arcs.find((a) => !arcReached(a.id));
