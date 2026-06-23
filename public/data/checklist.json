@@ -2445,7 +2445,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -4768,7 +4768,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -7049,6 +7049,12 @@
           "label": "Rho Oasis",
           "missable": false,
           "confidence": "high"
+        },
+        {
+          "id": "wloc-4.5-5",
+          "label": "Escape Pod Bay",
+          "missable": false,
+          "confidence": "high"
         }
       ],
       "records": [
@@ -8916,6 +8922,12 @@
           "label": "Raguel Bridge: North",
           "missable": false,
           "confidence": "high"
+        },
+        {
+          "id": "wlm-4.6-4",
+          "label": "Jacob's Rock Rest Area",
+          "missable": false,
+          "confidence": "high"
         }
       ],
       "locations": [
@@ -9000,6 +9012,12 @@
         {
           "id": "wloc-4.6-13",
           "label": "Kisk Cave",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.6-14",
+          "label": "Tirkin Headquarters",
           "missable": false,
           "confidence": "high"
         }
@@ -9472,6 +9490,12 @@
           "label": "Kasharpa Falls",
           "missable": false,
           "confidence": "high"
+        },
+        {
+          "id": "wloc-4.7-2",
+          "label": "Maguel Road",
+          "missable": false,
+          "confidence": "high"
         }
       ],
       "affinitySteps": [
@@ -9905,6 +9929,18 @@
           "label": "Central Pit: Base Level",
           "missable": false,
           "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-10",
+          "label": "Freight Road",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.9-11",
+          "label": "Misty Path",
+          "missable": false,
+          "confidence": "high"
         }
       ],
       "locations": [
@@ -9965,6 +10001,12 @@
         {
           "id": "wloc-4.9-9",
           "label": "Central Pit: Level 3",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.9-10",
+          "label": "Pod Depot",
           "missable": false,
           "confidence": "high"
         }
@@ -11189,6 +11231,18 @@
           "label": "Sparkling Pool",
           "missable": false,
           "confidence": "high"
+        },
+        {
+          "id": "wlm-4.13-10",
+          "label": "Windmill Pavilion",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.13-11",
+          "label": "Glowmoss Trihenge",
+          "missable": false,
+          "confidence": "high"
         }
       ],
       "locations": [
@@ -11225,6 +11279,48 @@
         {
           "id": "wloc-4.13-5",
           "label": "Contaminated Area",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.13-6",
+          "label": "Great Makna Falls",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.13-7",
+          "label": "Clear Waterfall",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.13-8",
+          "label": "Yellow Flower Grove",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.13-9",
+          "label": "Decayed Forest",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.13-10",
+          "label": "Abyss Basin",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.13-11",
+          "label": "Precipice Bridge",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wloc-4.13-12",
+          "label": "Hode Lair",
           "missable": false,
           "confidence": "high"
         }
@@ -12852,36 +12948,42 @@
       "landmarks": [
         {
           "id": "wlm-4.17-0",
-          "label": "Tomb Approach",
+          "label": "High Entia Tomb",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-1",
-          "label": "Sealed Chamber",
+          "label": "Tomb Approach",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-2",
-          "label": "Ceremony Hall",
+          "label": "Sealed Chamber",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-3",
-          "label": "Tomb Robber Pool",
+          "label": "Ceremony Hall",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-4",
-          "label": "Valley Of Emperors",
+          "label": "Tomb Robber Pool",
           "missable": false,
           "confidence": "high"
         },
         {
           "id": "wlm-4.17-5",
+          "label": "Valley Of Emperors",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.17-6",
           "label": "Tower of Trials: Bridge",
           "missable": false,
           "confidence": "high"
@@ -13066,6 +13168,30 @@
         {
           "id": "wlm-4.18-7",
           "label": "Faras Cave",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.18-8",
+          "label": "Imperial Villa",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.18-9",
+          "label": "Pod Landing Site",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.18-10",
+          "label": "Valak Pass",
+          "missable": false,
+          "confidence": "high"
+        },
+        {
+          "id": "wlm-4.18-11",
+          "label": "King Agni's Tomb",
           "missable": false,
           "confidence": "high"
         }

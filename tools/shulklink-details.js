@@ -22,10 +22,10 @@ module.exports = {
         { step: "Use the Quests column — each item's details give the giver, exact location, objective and reward; unique-monster spots and the 'which to pick' notes for mutually-exclusive quests are in their own details." },
         { step: "⏱ The Refugee Camp timed quests can be left for now, but they ALL lock when you start Colony 6 reconstruction (§4.11) — don't trigger that until they're done." }
       ],
-      landmarks: ["Tranquil Square", "Observation Platform", "Raguel Bridge: South", "Raguel Bridge: North"],
+      landmarks: ["Tranquil Square", "Observation Platform", "Raguel Bridge: South", "Raguel Bridge: North", "Jacob's Rock Rest Area"],
       locations: ["Agora Shore", "Anti-Air Battery 2", "Anti-Air Battery 3", "Hazzai Cape", "Cliff Lake",
         "Volff Lair", "Viliera Hill", "Sky Stage", "Daksha Shrine", "Raguel Lake", "Tranquil Grotto",
-        "Windy Cave", "Crevasse Waterfall", "Kisk Cave"],
+        "Windy Cave", "Crevasse Waterfall", "Kisk Cave", "Tirkin Headquarters"],
       records: [
         "Equivalent Exchange — first successful trade with an NPC",
         "Lazybones — skip-travel 50 times",
@@ -61,7 +61,7 @@ module.exports = {
         { step: "When everything's done, quick-travel to the Bask Cave Passage and head southeast to the next region, Colony 6." }
       ],
       landmarks: ["Spiral Valley", "Bask Cave Passage", "Zax Guidepost", "Believer's Paradise"],
-      locations: ["Traveller's Rest", "Kasharpa Falls"],
+      locations: ["Traveller's Rest", "Kasharpa Falls", "Maguel Road"],
       records: [
         "Explorer — discover the Observation Platform",
         "A generous friend — complete A Young Captain's Rise",
@@ -111,8 +111,8 @@ module.exports = {
         { step: "Climb back up and hit the Freight Elevator's start button for a rematch with a weaker {{Xord}}." },
         { step: "After escaping the mine you're thrown into a forced fight; reinforcements arrive to help. Then grab the Pod Depot and Misty Path, and head south to the next region, Satorl Marsh." }
       ],
-      landmarks: ["Drainage Tunnel", "Drainage Control Room", "Mining Base", "Central Pit: Entrance", "Personnel Lift 2", "Regulation Piston", "Personnel Lift 3", "Freight Elevator", "Glowmoss Lake", "Central Pit: Base Level"],
-      locations: ["Test Pit 1", "Test Pit 2", "Test Pit 3", "Test Pit 4", "Storage Depot", "Central Terminal", "Observation Point", "Central Pit: Level 1", "Central Pit: Level 2", "Central Pit: Level 3"],
+      landmarks: ["Drainage Tunnel", "Drainage Control Room", "Mining Base", "Central Pit: Entrance", "Personnel Lift 2", "Regulation Piston", "Personnel Lift 3", "Freight Elevator", "Glowmoss Lake", "Central Pit: Base Level", "Freight Road", "Misty Path"],
+      locations: ["Test Pit 1", "Test Pit 2", "Test Pit 3", "Test Pit 4", "Storage Depot", "Central Terminal", "Observation Point", "Central Pit: Level 1", "Central Pit: Level 2", "Central Pit: Level 3", "Pod Depot"],
       records: [
         "Fire It Up — (Dark Kisling fight at the fire ether deposits)",
         "Unbreakable Bond",
@@ -195,7 +195,7 @@ module.exports = {
           notes: ["Sharla joins as your first healer."] }
       ],
       landmarks: ["Spring Of Grief", "Vilia Lake", "Leg Pass", "Raginar Canyon Path", "Refugee Camp", "Kamos Guidepost"],
-      locations: ["Tephra Cavern", "Arachno Queen's Nest", "Kneecap Hill", "Gaur Plain", "Rho Oasis"],
+      locations: ["Tephra Cavern", "Arachno Queen's Nest", "Kneecap Hill", "Gaur Plain", "Rho Oasis", "Escape Pod Bay"],
       records: ["Titan's Gift — farm your first ether crystals", "Learning The Craft — first gem craft", "Blossoming Friendship — reach green party affinity", "Bug Off — defeat 30 insects"],
       notaBene: ["Boss: Arachno Queen (Lv. 12) — focus her with arts; use Shield (leveled ≥ her talent art) when a vision warns of it.", "Sharla joins (your first healer). Quick-travel returns after you reach the camp's north marker."]
     },
@@ -230,8 +230,8 @@ module.exports = {
           notes: ["Melia joins after this fight — start building her party affinity (pair her with Sharla for an upcoming quest)."] },
         { step: "Finish exploring what you can, then head to the Village Entrance to enter Frontier Village." }
       ],
-      landmarks: ["Makna Path", "Agni Tablet", "Lakeside", "Divine Sanctuary", "Seahorse Islet", "Waypoint Beacon", "Nopon Arch", "Twisted Tree Gate", "Village Entrance", "Sparkling Pool"],
-      locations: ["Bridge One", "Bridge Two", "Bridge Three", "Sap Cave", "Eks' Watering Hole", "Contaminated Area"],
+      landmarks: ["Makna Path", "Agni Tablet", "Lakeside", "Divine Sanctuary", "Seahorse Islet", "Waypoint Beacon", "Nopon Arch", "Twisted Tree Gate", "Village Entrance", "Sparkling Pool", "Windmill Pavilion", "Glowmoss Trihenge"],
+      locations: ["Bridge One", "Bridge Two", "Bridge Three", "Sap Cave", "Eks' Watering Hole", "Contaminated Area", "Great Makna Falls", "Clear Waterfall", "Yellow Flower Grove", "Decayed Forest", "Abyss Basin", "Precipice Bridge", "Hode Lair"],
       records: ["One Step Further — learn an intermediate art from a manual", "Time For New Glasses — telethia fight", "Trailblazer — discover Seahorse Islet"],
       notaBene: ["Buy & learn ALL the art manuals from the Ether Light shop (Colony 9) for an edge.", "Melia joins after the telethia fight — start her party affinity (pair with Sharla for an upcoming quest)."]
     },
@@ -281,7 +281,7 @@ module.exports = {
         { step: "You play the early rooms solo as Melia — approach the gaps to form light bridges, and clear the forced fights. The rest of the party joins via a trapdoor; work both groups east to the Ceremony Hall." },
         { step: "Boss: {{Solidium Telethia and Tyrea (Lv. 38)}} — fight one at a time, Purge the telethia's aura, and topple Tyrea to damage her." }
       ],
-      landmarks: ["Tomb Approach", "Sealed Chamber", "Ceremony Hall", "Tomb Robber Pool", "Valley Of Emperors", "Tower of Trials: Bridge"],
+      landmarks: ["High Entia Tomb", "Tomb Approach", "Sealed Chamber", "Ceremony Hall", "Tomb Robber Pool", "Valley Of Emperors", "Tower of Trials: Bridge"],
       locations: ["Hall Of Spirits", "Hall Of Trials", "Second Treasury"],
       records: ["The Final Step — use the art book from the Second Treasury"]
     },
@@ -294,7 +294,7 @@ module.exports = {
           notes: ["After the big Prison Island event, your Monado arts unlock up to level X and faced Mechon can be damaged like regular Mechon (topple or Enchant)."] },
         { step: "When you regain control, head for Valak Mountain via the Makna transporter (Pod Landing Site → Valak Pass)." }
       ],
-      landmarks: ["High Entia Transporter", "Prison Gate", "Prison Terrace", "Central Seal Island", "Khatorl Seal Island", "Soltnar Seal Island", "Ether Plant", "Faras Cave"],
+      landmarks: ["High Entia Transporter", "Prison Gate", "Prison Terrace", "Central Seal Island", "Khatorl Seal Island", "Soltnar Seal Island", "Ether Plant", "Faras Cave", "Imperial Villa", "Pod Landing Site", "Valak Pass", "King Agni's Tomb"],
       locations: ["Hovering Reef 5", "Hovering Reef 6", "Hovering Reef 7", "Hovering Reef 8", "Hovering Reef 9", "Hovering Reef 10", "Ether Crystal Deposit", "Hode Refuge", "Bionis' Occipital", "Sleeping Dragon Isle", "Anu Shore", "Secluded Island", "Kromar Coast", "Central Hall", "Great Canyon"],
       records: ["Jaws Of Defeat — (Khatorl seal release)"],
       notaBene: ["No collectables or unique monsters on this first visit.", "After Zanza's release: Monado arts level up to X, and faced Mechon can now be damaged like normal Mechon (topple or Enchant)."]
