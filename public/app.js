@@ -67,16 +67,17 @@
     "Final Cross": "⚔️", "Air Fang": "⚔️", "Lock-On": "🌀", "Zero Gravity": "⚔️", "Spear Blade": "⚔️", "Double Blade": "⚔️", "Power Drain": "💚", "Double Wind": "⚔️", "Ether Drain": "🔮", "Cross Impact": "⚔️"
   };
   const artIcon = (n) => ART_ICON[n] || "⚔️";
-  // arts whose actual in-game icon we host locally (public/icons/arts/<slug>.webp,
-  // from the Xenoblade Wiki). The rest fall back to the role emoji above.
-  const ART_HAVE_ICON = new Set(["air-fang", "armor", "back-slash", "battle-soul", "berserker", "bitey-bitey", "burninate", "buster", "covert-stance", "cross-impact", "cure-round", "dive-sobat", "electric-gutbuster", "ether-drain", "final-cross", "freezinate", "gale-slash", "happy-happy", "head-shot", "heal-blast", "heal-round", "lariat", "lock-on", "lurgy", "magnum-charge", "mind-blast", "power-drain", "reflection", "serene-heart", "shield", "shield-bash", "sneaky", "spirit-breath", "summon-bolt", "summon-copy", "summon-earth", "summon-flare", "summon-ice", "summon-wind", "sword-drive", "tantrum", "war-swing", "you-can-do-it", "zero-gravity"]);
+  // actual in-game art icons hosted locally (public/icons/arts/<slug>.png), pulled
+  // from the Game8 best-arts tier list — the source of truth for these icons.
+  const ART_HAVE_ICON = new Set(["air-fang", "air-slash", "armor", "back-slash", "battle-soul", "berserker", "bitey-bitey", "burninate", "buster", "covert-stance", "cross-impact", "cure-round", "dive-sobat", "double-blade", "double-wind", "electric-gutbuster", "ether-drain", "final-cross", "freezinate", "gale-slash", "happy-happy", "head-shot", "heal-blast", "heal-bullet", "heal-round", "heat-haze", "hero-time", "lariat", "light-heal", "lock-on", "lurgy", "magnum-charge", "mind-blast", "peerless", "power-drain", "reflection", "serene-heart", "shadow-eye", "shield", "shield-bash", "slit-edge", "sneaky", "soaring-tempest", "spear-blade", "spirit-breath", "steel-strike", "stream-edge", "summon-bolt", "summon-copy", "summon-earth", "summon-flare", "summon-ice", "summon-wind", "sword-drive", "tantrum", "war-swing", "wild-down", "worldly-slash", "you-can-do-it", "zero-gravity"]);
   const artSlug = (n) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-  const artsList = (arr) => el("span", { class: "arts-list" }, arr.map((n) => {
+  // one art per row (icon + name) so each is easy to parse at a glance
+  const artsList = (arr) => el("div", { class: "arts-list" }, arr.map((n) => {
     const sl = artSlug(n);
     const ic = ART_HAVE_ICON.has(sl)
-      ? el("img", { class: "art-ic-img", src: "icons/arts/" + sl + ".webp", alt: "", loading: "lazy" })
+      ? el("img", { class: "art-ic-img", src: "icons/arts/" + sl + ".png", alt: "", loading: "lazy" })
       : el("span", { class: "art-ic", text: artIcon(n) });
-    return el("span", { class: "art" }, [ic, document.createTextNode(" " + n)]);
+    return el("div", { class: "art" }, [ic, el("span", { class: "art-name", text: n })]);
   }));
   let SECTION_RANK = {};      // section code -> chronological index (for party-by-section)
   // who is in the party at a given section (spoiler-gated by arc reveal anyway)
@@ -726,13 +727,15 @@
     }
     // best-arts panel is NOT inlined per section — a single floating card (managed
     // by updateArtsFloat) follows the scroll and shows only the active section.
+    const secEst = (PT_EST && PT_EST.ok && !sectionComplete(s)) ? PT_EST.byCode[s.code] : null;
     const playtimeRow = el("div", { class: "playtime-row" }, [
       el("span", { class: "playtime-label", text: "⏱ In-game hours when you reached here:" }),
       el("input", {
         class: "playtime-input", type: "number", min: "0", step: "0.1", placeholder: "e.g. 12.5",
         ...(Store.getPlaytime(s.code) != null ? { value: Store.getPlaytime(s.code) } : {}),
         onchange: (e) => { Store.setPlaytime(s.code, e.target.value); render(); }
-      })
+      }),
+      secEst ? el("span", { class: "pt-sec-est", text: "📊 est. ~" + secEst.dur.toFixed(1) + " h here" + (secEst.afterLast ? " · reach ≈ " + secEst.arrival.toFixed(1) + " h in-game" : "") }) : null
     ]);
     return el("section", { class: "area-card", "data-code": s.code }, [
       el("div", { class: "area-head" }, [
@@ -836,6 +839,7 @@
     (s.guide || []).forEach((g) => ids.push(g.id));
     return ids.length > 0 && ids.every((id) => Store.isChecked(id));
   }
+  let PT_EST = null; // current-Part pace + per-section estimates (set in walkView)
   // a section's "size" = its checkable workload (quests/items) + route length,
   // used to weight the time estimate (big errata sections count for more).
   function sectionWeight(s) {
@@ -844,32 +848,46 @@
     w += (s.guide || []).length; // route steps ≈ how long the section runs
     return w;
   }
-  // estimate of in-game hours left in the current Part, from logged section times,
-  // weighted by each section's quest/item count + route length (not raw count).
-  function playtimeEstimate(cur) {
-    if (!cur) return null;
+  // Pace + per-section time estimates for the current Part. Uses ALL logged
+  // section times via a least-squares fit of in-game hours against cumulative
+  // section weight (quest/item count + route length). Memoised per render in PT_EST.
+  function computePtEst(cur) {
+    const res = { ok: false, byCode: {}, lastLogged: null, partName: cur ? (cur.title || "this Part").split("—")[0].trim() : "this Part" };
+    if (!cur) return res;
     const arcSecs = (DATA.walkthrough || []).filter((s) => s.arc === cur.id);
-    const partName = (cur.title || "this Part").split("—")[0].trim();
     const weights = arcSecs.map(sectionWeight);
     const elapsed = []; let run = 0;
     for (let i = 0; i < arcSecs.length; i++) { elapsed[i] = run; run += weights[i]; } // work done BEFORE reaching section i
-    const totalW = run;
+    res.totalW = run;
     const pts = arcSecs.map((s, i) => ({ i, code: s.code, h: Store.getPlaytime(s.code) })).filter((p) => p.h != null && !isNaN(p.h));
-    if (!pts.length) {
-      return el("div", { class: "muted small pt-est" }, ["⏱ Tip: enter your in-game hours when you reach a section (in its card) and I'll estimate the time left in " + partName + "."]);
+    res.lastLogged = pts.length ? pts[pts.length - 1] : null;
+    if (pts.length < 2) return res;
+    let n = pts.length, sx = 0, sy = 0, sxx = 0, sxy = 0;
+    pts.forEach((p) => { const x = elapsed[p.i], y = p.h; sx += x; sy += y; sxx += x * x; sxy += x * y; });
+    const denom = n * sxx - sx * sx;
+    if (denom === 0) return res;                         // all logged at same point
+    let b = (n * sxy - sx * sy) / denom;                  // hours per work-unit (uses every point)
+    if (b < 0) b = 0;
+    const last = res.lastLogged;
+    res.ok = true; res.pace = b;
+    arcSecs.forEach((s, i) => {
+      res.byCode[s.code] = { dur: b * weights[i], arrival: last.h + b * (elapsed[i] - elapsed[last.i]), afterLast: i >= last.i };
+    });
+    res.estLeft = Math.max(0, b * (res.totalW - elapsed[last.i]));
+    res.projTotal = last.h + res.estLeft;
+    return res;
+  }
+  function playtimeBanner(e) {
+    if (!e) return null;
+    if (!e.lastLogged) {
+      return el("div", { class: "muted small pt-est" }, ["⏱ Tip: enter your in-game hours when you reach a section (in its card) and I'll estimate the time left in " + e.partName + " — and a per-section breakdown."]);
     }
-    const last = pts[pts.length - 1];
-    if (pts.length < 2) {
-      return el("div", { class: "muted small pt-est" }, ["⏱ Logged " + last.h + " h at §" + last.code + ". Log your hours at one more section to estimate the time left in " + partName + "."]);
+    if (!e.ok) {
+      return el("div", { class: "muted small pt-est" }, ["⏱ Logged " + e.lastLogged.h + " h at §" + e.lastLogged.code + ". Log your hours at one more section to estimate the time left in " + e.partName + "."]);
     }
-    const first = pts[0];
-    const dW = elapsed[last.i] - elapsed[first.i];
-    let estLeft;
-    if (dW > 0) { estLeft = Math.max(0, ((last.h - first.h) / dW) * (totalW - elapsed[last.i])); }
-    else { estLeft = Math.max(0, ((last.h - first.h) / (last.i - first.i || 1)) * ((arcSecs.length - 1) - last.i)); }
     return el("div", { class: "pt-est" }, [
-      el("strong", { text: "⏱ ~" + estLeft.toFixed(1) + " h left in " + partName }),
-      el("span", { class: "muted small", text: " — projected " + partName + " total ≈ " + (last.h + estLeft).toFixed(0) + " h (paced by your logged times, weighted by each section's quest/item count; " + last.h + " h logged at §" + last.code + ")." })
+      el("strong", { text: "⏱ ~" + e.estLeft.toFixed(1) + " h left in " + e.partName }),
+      el("span", { class: "muted small", text: " — projected " + e.partName + " total ≈ " + e.projTotal.toFixed(0) + " h (fit over all your logged times, weighted by each section's quest/item count). Per-section estimates are shown in each card below." })
     ]);
   }
   function walkView() {
@@ -878,13 +896,14 @@
     const arcs = DATA.arcs || [];
     const reached = arcs.filter((a) => arcReached(a.id));
     const cur = reached[reached.length - 1] || arcs[0];
+    PT_EST = computePtEst(cur); // pace + per-section estimates, used by section cards too
 
     // current-Part header + spoiler-wall status + playtime estimate
     wrap.appendChild(el("div", { class: "arc-banner" }, [
       el("div", { class: "arc-title", text: "📖 " + (cur ? cur.title : "Walkthrough") }),
       cur && cur.blurb ? el("div", { class: "muted", text: cur.blurb }) : null,
       el("div", { class: "muted small", text: "🔒 Spoiler wall is ON — nothing past this Part is shown. Browse this Part freely." }),
-      playtimeEstimate(cur)
+      playtimeBanner(PT_EST)
     ]));
 
     const visible = secs.filter((s) => arcReached(s.arc));

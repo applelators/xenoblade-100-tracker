@@ -127,6 +127,7 @@ details.area-collapsible:not([open]) > summary.area-head { margin: 0; }
 .playtime-label { color: var(--muted); }
 .playtime-input { width: 92px; background: var(--bg2); border: 1px solid var(--line); color: var(--text); border-radius: 6px; padding: 4px 7px; font-size: 13px; }
 .playtime-input:focus { outline: none; border-color: var(--accent2); }
+.pt-sec-est { color: var(--accent2); font-size: 12px; font-weight: 600; }
 .pt-est { margin-top: 8px; padding-top: 8px; border-top: 1px solid #2c5b3f; line-height: 1.5; }
 .pt-est strong { color: var(--accent2); }
 
@@ -298,11 +299,12 @@ details.completion[open] > summary::before { content: "▾ "; }
 .arts-body { display: flex; flex-direction: column; gap: 9px; }
 .arts-char { font-size: 12.5px; }
 .arts-name { font-weight: 700; color: var(--accent2); margin-bottom: 2px; }
-.arts-tier { display: flex; gap: 6px; align-items: flex-start; line-height: 1.5; margin: 2px 0; }
-.arts-list { display: flex; flex-wrap: wrap; gap: 3px 6px; color: var(--text); }
-.art { white-space: nowrap; font-size: 11.5px; display: inline-flex; align-items: center; gap: 2px; }
-.art-ic { font-size: 11px; }
-.art-ic-img { width: 17px; height: 17px; object-fit: contain; vertical-align: middle; flex: 0 0 auto; }
+.arts-tier { display: flex; gap: 7px; align-items: flex-start; margin: 3px 0; }
+.arts-list { display: flex; flex-direction: column; gap: 3px; color: var(--text); min-width: 0; }
+.art { display: flex; align-items: center; gap: 7px; font-size: 12px; line-height: 1.2; }
+.art-ic { font-size: 14px; width: 22px; text-align: center; flex: 0 0 auto; }
+.art-ic-img { width: 22px; height: 22px; object-fit: contain; flex: 0 0 auto; background: rgba(0,0,0,.25); border-radius: 4px; }
+.art-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tl { font-weight: 800; font-size: 10.5px; padding: 0 5px; border-radius: 4px; flex: 0 0 auto; line-height: 1.5; }
 .tl.s { background: #5a1f2f; color: #ffd1dc; border: 1px solid #9d3550; }
 .tl.a { background: #2f3f1f; color: #d8f0b0; border: 1px solid #5a7d35; }
