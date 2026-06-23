@@ -9,14 +9,35 @@
     quests: "Quests",
     uniqueMonsters: "Unique Monsters",
     heartToHearts: "Heart-to-Hearts",
-    landmarks: "Landmarks & Locations",
+    landmarks: "Landmarks",
+    locations: "Locations",
     collectopaedia: "Collectopaedia",
     colony6: "Colony 6 Reconstruction",
     other: "Other Missables",
     achievements: "Achievements",
     futureConnected: "Future Connected"
   };
-  const CATEGORY_ORDER = ["quests", "uniqueMonsters", "heartToHearts", "landmarks", "collectopaedia", "colony6", "other"];
+  const CATEGORY_ORDER = ["quests", "uniqueMonsters", "heartToHearts", "landmarks", "locations", "collectopaedia", "colony6", "other"];
+
+  // Collectopaedia type-bands, in the game's in-game order. Items are classified
+  // by their head noun (last word); within a band the source (= in-game) order
+  // is preserved. Heuristic at the band boundaries; within-band order is exact.
+  const COLLECT_CAT_ORDER = ["Plants", "Flowers", "Insects", "Animals", "Materials"];
+  const COLLECT_CAT_ICON = { Plants: "🌿", Flowers: "🌸", Insects: "🐛", Animals: "🐾", Materials: "⛏️" };
+  const COLLECT_HEAD = {
+    // insects
+    Ant: "Insects", Beetle: "Insects", Boatman: "Insects", Bug: "Insects", Butterfly: "Insects", Caterpillar: "Insects", Centipede: "Insects", Cockroach: "Insects", Cricket: "Insects", Crawler: "Insects", Dragonfly: "Insects", Earwig: "Insects", Firefly: "Insects", Hornet: "Insects", Ladybird: "Insects", Locust: "Insects", Mantis: "Insects", Scarab: "Insects", Stonefly: "Insects", Tarantula: "Insects", Worm: "Insects", Nipper: "Insects",
+    // animals
+    Abron: "Animals", Bat: "Animals", Bird: "Animals", Bream: "Animals", Cat: "Animals", Cucumber: "Animals", Dobercorgi: "Animals", Duck: "Animals", Elephant: "Animals", Fish: "Animals", Fox: "Animals", Frog: "Animals", Gecko: "Animals", Gentleclam: "Animals", Lizard: "Animals", Lurker: "Animals", Mole: "Animals", Monkey: "Animals", Mouse: "Animals", Nanoceros: "Animals", Newt: "Animals", Oyster: "Animals", Panther: "Animals", Penguin: "Animals", Platypus: "Animals", Rabbit: "Animals", Rat: "Animals", Slug: "Animals", Songbird: "Animals", Squirrel: "Animals", Turtle: "Animals", Weasel: "Animals",
+    // flowers
+    Anemone: "Flowers", Belladonna: "Flowers", Blossom: "Flowers", Clematis: "Flowers", Clover: "Flowers", Coronation: "Flowers", Crocus: "Flowers", Daffodil: "Flowers", Dahlia: "Flowers", Daisy: "Flowers", Dandelion: "Flowers", Flower: "Flowers", "Forget-You-Not": "Flowers", Foxglove: "Flowers", Heather: "Flowers", Hollyhock: "Flowers", Hydrangea: "Flowers", Iris: "Flowers", Lily: "Flowers", Lotus: "Flowers", Mallow: "Flowers", Nettle: "Flowers", Orchid: "Flowers", Passion: "Flowers", Peony: "Flowers", Poppy: "Flowers", Rogue: "Flowers", Rose: "Flowers", Teasel: "Flowers", Tulip: "Flowers", Violet: "Flowers",
+    // plants / food
+    Almond: "Plants", Apple: "Plants", Asparagus: "Plants", Aubergine: "Plants", Banana: "Plants", Bean: "Plants", Beetroot: "Plants", Berry: "Plants", Blueberry: "Plants", Broccoli: "Plants", Burdock: "Plants", Cabbage: "Plants", Carrot: "Plants", Cherry: "Plants", Citrus: "Plants", Cob: "Plants", Courgette: "Plants", Durian: "Plants", Fig: "Plants", Fruit: "Plants", Gooseberry: "Plants", Gourd: "Plants", Gouseberry: "Plants", Grape: "Plants", Kilopumpkin: "Plants", Kiwi: "Plants", Lemon: "Plants", Lettuce: "Plants", Lime: "Plants", Lychee: "Plants", Mango: "Plants", Mangosteen: "Plants", Melon: "Plants", Mint: "Plants", Mushroom: "Plants", Nut: "Plants", Papaya: "Plants", Parsnip: "Plants", Pea: "Plants", Peach: "Plants", Pepper: "Plants", Plum: "Plants", Potato: "Plants", Radish: "Plants", Raspberry: "Plants", Rhubarb: "Plants", Root: "Plants", Sarsaparilla: "Plants", Steakplant: "Plants", Taro: "Plants", Turnip: "Plants", Vanilla: "Plants", Wasabi: "Plants", Wheat: "Plants"
+  };
+  function collectCategory(label) {
+    const w = String(label).trim().split(/\s+/);
+    return COLLECT_HEAD[w[w.length - 1]] || "Materials";
+  }
   // "Critical" missables shown upfront; collectables/landmarks tuck behind a collapsible.
   const CRITICAL_CATS = new Set(["quests", "uniqueMonsters", "heartToHearts", "colony6", "other", "achievements"]);
 
@@ -390,6 +411,30 @@
   }
 
   // ---------- FULL VIEW ----------
+  // landmarks + locations share one data array (kind: "Landmark"|"Location");
+  // surface them as two separate categories.
+  function listForCat(area, cat) {
+    const sec = area.sections || {};
+    if (cat === "landmarks") return (sec.landmarks || []).filter((i) => i.kind !== "Location");
+    if (cat === "locations") return (sec.landmarks || []).filter((i) => i.kind === "Location");
+    return sec[cat] || [];
+  }
+  // collectopaedia grouped into the game's type-bands (order preserved within band)
+  function collectGrouped(entries) {
+    const buckets = {};
+    entries.forEach((e) => { const c = collectCategory(e.item.label); (buckets[c] = buckets[c] || []).push(e); });
+    const wrap = el("div", { class: "collect-groups" });
+    COLLECT_CAT_ORDER.forEach((c) => {
+      const arr = buckets[c];
+      if (!arr || !arr.length) return;
+      const done = arr.filter((e) => Store.isChecked(e.item.id)).length;
+      wrap.appendChild(el("div", { class: "collect-group" }, [
+        el("div", { class: "collect-cat" }, [el("span", { text: COLLECT_CAT_ICON[c] + " " + c }), el("span", { class: "count", text: `${done}/${arr.length}` })]),
+        el("div", { class: "items" }, arr.map(itemRow))
+      ]));
+    });
+    return wrap;
+  }
   function areaCard(area) {
     const cutoff = area.locksAt ? CUTOFF_BY_ID[area.locksAt] : null;
     const lockBanner = cutoff
@@ -406,7 +451,7 @@
     let shown = 0;
     CATEGORY_ORDER.forEach((cat) => {
       if (catFilter !== "all" && catFilter !== cat) return;
-      const list = (area.sections && area.sections[cat]) || [];
+      const list = listForCat(area, cat);
       const entries = list
         .map((item) => ({ item, area, category: cat }))
         .filter((e) => matchesSearch(e.item))
@@ -414,12 +459,13 @@
       if (!entries.length) return;
       shown += entries.length;
       const done = entries.filter((e) => Store.isChecked(e.item.id)).length;
+      const inner = (cat === "collectopaedia") ? collectGrouped(entries) : el("div", { class: "items" }, entries.map(itemRow));
       body.appendChild(el("div", { class: "cat-block" }, [
         el("div", { class: "cat-head" }, [
           el("span", { text: CATEGORY_LABELS[cat] || cat }),
           el("span", { class: "count", text: `${done}/${entries.length}` })
         ]),
-        el("div", { class: "items" }, entries.map(itemRow))
+        inner
       ]));
     });
     if (!shown) body.appendChild(el("div", { class: "muted empty", text: "Nothing in this area for the current filters." }));
@@ -609,8 +655,9 @@
       el("div", { class: "route-head", text: "🧭 Route — what to do" }),
       el("ol", { class: "route-list" }, s.guide.map(routeStep))
     ]) : null;
-    const aside = artsAside(s);
-    const main = el("div", { class: "area-main" }, [
+    // best-arts panel is NOT inlined per section — a single floating card (managed
+    // by updateArtsFloat) follows the scroll and shows only the active section.
+    return el("section", { class: "area-card", "data-code": s.code }, [
       el("div", { class: "area-head" }, [
         el("h3", { text: s.title }),
         el("span", { class: "chip soft", text: "§" + s.code }),
@@ -621,7 +668,37 @@
       route,
       body
     ]);
-    return el("section", { class: "area-card" + (aside ? " has-aside" : "") }, aside ? [main, aside] : [main]);
+  }
+
+  // ----- floating best-arts card: surfaces only the section currently in view -----
+  let artsFloatEl = null, artsScrollBound = false;
+  function sectionByCode(code) { return (DATA.walkthrough || []).find((s) => s.code === code); }
+  function updateArtsFloat() {
+    if (!artsFloatEl) return;
+    if (Store.getPref("view") !== "walk") { artsFloatEl.style.display = "none"; return; }
+    const cards = document.querySelectorAll("#app .area-card[data-code]");
+    let best = null, bestTop = -Infinity, firstBelow = null;
+    cards.forEach((c) => {
+      const r = c.getBoundingClientRect();
+      if (r.height <= 0) return;                 // skip collapsed (completed) sections
+      if (r.top <= 170 && r.top > bestTop) { bestTop = r.top; best = c; }
+      if (!firstBelow && r.bottom > 170) firstBelow = c;
+    });
+    const active = best || firstBelow || cards[0];
+    const s = active && sectionByCode(active.getAttribute("data-code"));
+    const aside = s ? artsAside(s) : null;
+    artsFloatEl.innerHTML = "";
+    if (!aside) { artsFloatEl.style.display = "none"; return; }
+    artsFloatEl.appendChild(aside);
+    artsFloatEl.style.display = "";
+  }
+  function ensureArtsFloat() {
+    if (!artsFloatEl) { artsFloatEl = el("div", { id: "arts-float" }); document.body.appendChild(artsFloatEl); }
+    if (!artsScrollBound) {
+      window.addEventListener("scroll", updateArtsFloat, { passive: true });
+      window.addEventListener("resize", updateArtsFloat, { passive: true });
+      artsScrollBound = true;
+    }
   }
   const REGION_ORDER = ["Colony 9", "Tephra Cave", "Bionis' Leg", "Colony 6", "Ether Mine", "Satorl Marsh",
     "Bionis' Interior", "Makna Forest", "Frontier Village", "Eryth Sea", "Alcamoth", "High Entia Tomb",
@@ -712,13 +789,21 @@
         el("div", { class: "area-body" }, [el("div", { class: "items" }, entries.map(itemRow))])
       ]));
     });
-    if (Store.getPref("category") === "all") {
-      const rt = recordsTrialsCard();
-      if (rt) wrap.appendChild(rt);
-      wrap.appendChild(tail);
-    }
+    if (Store.getPref("category") === "all") wrap.appendChild(tail);
 
     if (!visible.length) wrap.insertBefore(el("div", { class: "muted empty", text: "No areas revealed yet — hit “Reveal next area” when you start playing." }), wrap.firstChild);
+    return wrap;
+  }
+
+  // ---------- RECORDS & TRIALS VIEW (own tab) ----------
+  function recordsView() {
+    const wrap = el("div", { class: "view" });
+    wrap.appendChild(el("div", { class: "arc-banner" }, [
+      el("div", { class: "arc-title", text: "🏅 Records & Trials" }),
+      el("div", { class: "muted", text: "The game tracks Records and Trials as two separate lists. These come from the Parts you've revealed in the Walkthrough tab; checks are shared with it." })
+    ]));
+    const card = recordsTrialsCard();
+    wrap.appendChild(card || el("div", { class: "empty muted", text: "No records or trials in revealed Parts yet." }));
     return wrap;
   }
 
@@ -742,10 +827,7 @@
     if (!blocks.length) return null;
     const sealed = (DATA.arcs || []).some((a) => !arcReached(a.id));
     return el("section", { class: "area-card" }, [
-      el("div", { class: "area-head" }, [el("h3", { text: "Records & Trials" })]),
-      el("div", { class: "muted", text: sealed
-        ? "🔒 From the Parts you've revealed only — more records & trials (some with spoiler-y names) appear as you reveal later Parts in the Walkthrough tab."
-        : "All Parts revealed." }),
+      sealed ? el("div", { class: "muted", text: "🔒 More records & trials (some with spoiler-y names) appear as you reveal later Parts in the Walkthrough tab." }) : null,
       el("div", { class: "area-body" }, blocks)
     ]);
   }
@@ -758,7 +840,8 @@
     const tabs = el("div", { class: "tabs" }, [
       el("button", { class: "tab" + (view === "walk" ? " active" : ""), onclick: () => { Store.setPref("view", "walk"); render(); } }, ["📖 Walkthrough"]),
       el("button", { class: "tab" + (view === "missable" ? " active" : ""), onclick: () => { Store.setPref("view", "missable"); render(); } }, ["⏱ Missable"]),
-      el("button", { class: "tab" + (view === "full" ? " active" : ""), onclick: () => { Store.setPref("view", "full"); render(); } }, ["Collectables"])
+      el("button", { class: "tab" + (view === "full" ? " active" : ""), onclick: () => { Store.setPref("view", "full"); render(); } }, ["Collectables"]),
+      el("button", { class: "tab" + (view === "records" ? " active" : ""), onclick: () => { Store.setPref("view", "records"); render(); } }, ["🏅 Records & Trials"])
     ]);
 
     const search = el("input", {
@@ -873,7 +956,7 @@
     root.appendChild(controls());
     const view = Store.getPref("view");
     if (view === "full") root.appendChild(expiresNextPanel());
-    root.appendChild(view === "walk" ? walkView() : view === "missable" ? missableView() : fullView());
+    root.appendChild(view === "walk" ? walkView() : view === "missable" ? missableView() : view === "records" ? recordsView() : fullView());
 
     root.appendChild(el("footer", { class: "app-footer" }, [
       el("div", { class: "muted", text: "Trust the in-game ⏱ stopwatch icon over any guide. Cross-check quest completeness on Fandom; read the area walkthroughs on ShulkLink." }),
@@ -884,6 +967,8 @@
       ]),
       el("div", { class: "muted small", text: `Data ${DATA.meta.version} · ⚠ Verify = double-check in-game. Collectopaedia/landmark bulk data is loaded progressively.` })
     ]));
+
+    updateArtsFloat(); // refresh the floating best-arts card for the new DOM
   }
 
   // ---------- boot ----------
@@ -895,6 +980,7 @@
       // auto-reveal the first area + Part 1 so the app isn't empty on first run
       if (DATA.areas && DATA.areas.length && !Store.isReached(DATA.areas[0].id)) Store.markReached(DATA.areas[0].id);
       if (DATA.arcs && DATA.arcs.length && !Store.isReached(DATA.arcs[0].id)) Store.markReached(DATA.arcs[0].id);
+      ensureArtsFloat();
       render();
     })
     .catch((err) => {
