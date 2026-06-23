@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Redesign preview — real markup, new styles.css</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="view-walk">
+  <main id="app">
+    <header class="app-header">
+      <div class="title-row">
+        <h1>Xenoblade Chronicles DE</h1>
+        <span class="subtitle">100% Completion Tracker</span>
+      </div>
+      <div class="meters">
+        <div class="progress-block">
+          <div class="progress-row"><span class="progress-label">Walkthrough progress</span><span class="progress-num">158 / 612</span></div>
+          <div class="progress"><div class="bar" style="width:26%"></div></div>
+        </div>
+        <div class="progress-block">
+          <div class="progress-row"><span class="progress-label">Full 100% · collectables</span><span class="progress-num">312 / 1840</span></div>
+          <div class="progress accent"><div class="bar" style="width:17%"></div></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="tabs">
+        <button class="tab active">📖 Walkthrough</button>
+        <button class="tab">⏱ Missable</button>
+        <button class="tab">Collectables</button>
+        <button class="tab">🏅 Records &amp; Trials</button>
+      </div>
+      <div class="toggles">
+        <label class="toggle"><input type="checkbox" checked /> Hide future areas</label>
+        <label class="toggle"><input type="checkbox" /> Hide completed</label>
+      </div>
+      <div class="controls-right">
+        <input class="search" placeholder="Search quests, monsters…" />
+      </div>
+    </div>
+
+    <!-- expires next -->
+    <div class="panel expires-next">
+      <div class="panel-title">⏱ Expires next — finish before you move on</div>
+      <div class="cutoff-head">
+        <strong>Point of no return: <span class="spoiler">Prison Island</span></strong>
+        <span class="chip">after §4.13</span>
+      </div>
+      <div class="expires-list">
+        <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Desperate Plea</span><div class="item-badges"><span class="badge timed">⏱ Timed</span></div></div></label>
+        <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">A Mother's Keepsake</span><div class="item-badges"><span class="badge mutex">⚄ Either/or</span></div></div></label>
+      </div>
+    </div>
+
+    <!-- active section -->
+    <div class="area-card">
+      <div class="area-head">
+        <h3>Bionis' Leg — Reach Colony 6</h3>
+        <span class="chip">§4.8</span>
+        <span class="count">2 / 10</span>
+      </div>
+      <div class="lock-banner danger">⏱ Timed quests here — finish before <span class="spoiler">Prison Island</span>.</div>
+
+      <details class="route" open>
+        <summary class="route-head">🧭 Route — what to do <span class="count">2 / 5</span></summary>
+        <ul class="route-list">
+          <li class="rli done"><label class="rstep"><input type="checkbox" checked /><span class="rstep-text">Discover the Raguel Lake landmark on the lower path.</span></label></li>
+          <li class="rli done"><label class="rstep"><input type="checkbox" checked /><span class="rstep-text">Talk to Juju at the Refugee Camp to trigger the story quest.</span></label></li>
+          <li class="rli"><label class="rstep"><input type="checkbox" /><span class="rstep-text">Cross the Strethe Bridge toward the Hidden Machina Village.</span></label></li>
+          <li class="rli"><label class="rstep"><input type="checkbox" /><span class="rstep-text">Defeat <span class="spoiler">Xord</span> at the Mechon ambush, then push to the camp.</span></label>
+            <ul class="rnotes"><li class="rnote-text">📝 A Territorial Rotbart (Lv 81) patrols the lake — superboss, return post-game.</li></ul>
+          </li>
+        </ul>
+      </details>
+
+      <div class="qum-row">
+        <details class="cat-block" open>
+          <summary class="cat-head">Quests <span class="count">1 / 3</span></summary>
+          <div class="items">
+            <label class="item done"><input type="checkbox" checked /><div class="item-body"><span class="item-label">The Bridge's Defense</span><div class="item-badges"><span class="badge story">📖 Story</span></div></div></label>
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Desperate Plea</span><div class="item-badges"><span class="badge timed">⏱ Timed</span></div></div></label>
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">A Mother's Keepsake</span><div class="item-badges"><span class="badge mutex">⚄ Either/or</span></div></div></label>
+          </div>
+        </details>
+        <details class="cat-block" open>
+          <summary class="cat-head">Unique Monsters <span class="count">0 / 2</span></summary>
+          <div class="items">
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Territorial Rotbart <span class="item-sub">Lv 81</span></span><div class="item-badges"><span class="badge ach">★ Missable</span></div></div></label>
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Festering Ardun <span class="item-sub">Lv 22</span></span></div></label>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- collectables area card w/ collectopaedia -->
+    <div class="area-card">
+      <div class="area-head"><h3>Bionis' Leg</h3><span class="chip">Reachable from §4.7</span><span class="count">23 / 64</span></div>
+      <div class="lock-banner danger">⏱ Locks: <span class="spoiler">Prison Island</span> <span class="chip">after §4.13</span></div>
+      <div class="area-links"><a class="link">📖 ShulkLink walkthrough ↗</a><a class="link">⏱ Timed Quest FAQ ↗</a></div>
+      <div class="places-row">
+        <div class="cat-block"><div class="cat-head">📍 Landmarks <span class="count">2 / 4</span></div><div class="items">
+          <label class="item done"><input type="checkbox" checked /><div class="item-body"><span class="item-label">"Raguel Lake"</span></div></label>
+          <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">"Strethe Bridge"</span></div></label>
+        </div></div>
+        <div class="cat-block"><div class="cat-head">📍 Locations <span class="count">1 / 2</span></div><div class="items">
+          <label class="item done"><input type="checkbox" checked /><div class="item-body"><span class="item-label">"Refugee Camp"</span></div></label>
+          <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">"Hidden Machina Village"</span></div></label>
+        </div></div>
+      </div>
+      <div class="cat-block" style="margin-top:14px"><div class="cat-head">Collectopaedia <span class="count">13 / 48</span></div>
+        <div class="collect-cols">
+          <div class="collect-col"><div class="collect-cat">🥬 Veg <span class="count">1/3</span></div>
+            <label class="item done"><input type="checkbox" checked /><div class="item-body"><span class="item-label">Bursting Lettuce</span></div></label>
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Sour Bean</span></div></label></div>
+          <div class="collect-col"><div class="collect-cat">🍎 Fruit <span class="count">2/3</span></div>
+            <label class="item done"><input type="checkbox" checked /><div class="item-body"><span class="item-label">Cute Orange</span></div></label>
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Juicy Banana</span></div></label></div>
+          <div class="collect-col"><div class="collect-cat">🐛 Bug <span class="count">0/3</span></div>
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Sunset Beetle</span></div></label></div>
+          <div class="collect-col"><div class="collect-cat">🌿 Nature <span class="count">0/3</span></div>
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Pretty Flower</span></div></label></div>
+          <div class="collect-col"><div class="collect-cat">⚙️ Parts <span class="count">0/3</span></div>
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Rusty Gear</span></div></label></div>
+          <div class="collect-col"><div class="collect-cat">✨ Strange <span class="count">0/2</span></div>
+            <label class="item"><input type="checkbox" /><div class="item-body"><span class="item-label">Lustrous Stone</span></div></label></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- spoiler gate -->
+    <div class="arc-wall">
+      <div class="arc-wall-title">Spoilers ahead — a later chapter</div>
+      <div class="muted small">Reveal this Part to load its quests, monsters, and missables.</div>
+      <button class="btn reveal">Reveal Part 5</button>
+    </div>
+
+    <details class="completed-area" open>
+      <summary>✓ Bionis' Leg arrival — 18 / 18 complete</summary>
+      <div class="completed-body"><div class="area-card"><div class="area-head"><h3>Bionis' Leg arrival</h3><span class="chip">§4.7</span></div></div></div>
+    </details>
+
+    <footer class="app-footer"><div class="footer-links"><a>Game8</a><a>RPG Site</a><a>ShulkLink</a></div></footer>
+  </main>
+
+  <!-- floats appended to body, exactly like app.js does -->
+  <div id="toc-float"><div class="toc-card">
+    <div class="sec-nav"><button class="sec-nav-btn">▲ Prev section</button><button class="sec-nav-btn">▼ Next section</button></div>
+    <div class="toc-head">🧭 Jump to area</div>
+    <div>
+      <button class="toc-link done">§4.5 Tephra Cave</button>
+      <button class="toc-link done">§4.6 Colony 9 Defence</button>
+      <button class="toc-link done">§4.7 Bionis' Leg arrival</button>
+      <button class="toc-link">§4.8 Reach Colony 6</button>
+      <button class="toc-link">§4.9 Ether Mine</button>
+      <button class="toc-link">§4.10 Colony 6 rebuild</button>
+    </div>
+  </div></div>
+
+  <div id="arts-float"><aside class="arts-aside">
+    <div class="arts-head"><span class="arts-title">⚔️ Best Arts to Level</span><span class="arts-sub">Current party · Game8 S/A tier</span></div>
+    <div class="arts-body">
+      <div class="arts-char"><div class="arts-name">Shulk</div>
+        <div class="arts-tier"><span class="tl s">S</span><div class="arts-list">
+          <div class="art"><span class="art-ic">⚔️</span><span class="art-name">Battle Soul</span><span class="art-lv">Lv 32</span></div>
+          <div class="art"><span class="art-ic">👁</span><span class="art-name">Shadow Eye</span><span class="art-lv">Lv 10</span></div>
+        </div></div>
+        <div class="arts-tier"><span class="tl a">A</span><div class="arts-list">
+          <div class="art"><span class="art-ic">💚</span><span class="art-name">Light Heal</span><span class="art-lv default">★</span></div>
+        </div></div>
+      </div>
+      <div class="arts-char"><div class="arts-name">Reyn</div>
+        <div class="arts-tier"><span class="tl s">S</span><div class="arts-list">
+          <div class="art"><span class="art-ic">🌀</span><span class="art-name">Lariat</span><span class="art-lv">Lv 43</span></div>
+        </div></div>
+      </div>
+    </div>
+    <a class="arts-src">Source: Game8 best-arts tier list ↗</a>
+  </aside></div>
+</body>
+</html>
