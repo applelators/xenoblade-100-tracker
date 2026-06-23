@@ -11,9 +11,14 @@
 
   const KEYS = {
     checked: "xbc100:checked",   // array of item ids
+    checkedAt: "xbc100:checkedAt", // id -> epoch ms when checked (for delayed collapse)
     reached: "xbc100:reached",   // array of area ids the player has reached
     prefs: "xbc100:prefs"        // ui preferences object
   };
+
+  // a checked quest only "settles" (collapses into the Completed area) after this
+  // grace period, so an accidental check can be undone before it tucks away.
+  const SETTLE_MS = 60 * 1000;
 
   const DEFAULT_PREFS = {
     view: "walk",                // "walk" | "missable" | "full"
@@ -41,6 +46,7 @@
 
   // In-memory mirrors (Sets for fast membership tests).
   let checked = new Set(read(KEYS.checked, []));
+  let checkedAt = read(KEYS.checkedAt, {}) || {};
   let reached = new Set(read(KEYS.reached, []));
   let prefs = Object.assign({}, DEFAULT_PREFS, read(KEYS.prefs, {}));
 
@@ -85,21 +91,44 @@
       return null;
     },
     setChecked(id, on) {
+      const now = Date.now();
+      const stamp = (x) => { checkedAt[x] = now; };
+      const unstamp = (x) => { delete checkedAt[x]; };
       const group = new Set([id, ...partnersOf(id)]); // the item + its cross-tab twins
-      group.forEach((x) => { if (on) checked.add(x); else checked.delete(x); });
+      group.forEach((x) => { if (on) { checked.add(x); stamp(x); } else { checked.delete(x); unstamp(x); } });
       if (on) {
         // completing this quest forfeits its mutually-exclusive partner(s) + their twins
         group.forEach((x) => mutexOf(x).forEach((p) => {
-          checked.delete(p);
-          (links[p] || []).forEach((pt) => checked.delete(pt));
+          checked.delete(p); unstamp(p);
+          (links[p] || []).forEach((pt) => { checked.delete(pt); unstamp(pt); });
         }));
         // ...and auto-checks anything it implies (e.g. its unique monster) + their twins
         group.forEach((x) => impliesOf(x).forEach((p) => {
-          checked.add(p);
-          (links[p] || []).forEach((pt) => checked.add(pt));
+          checked.add(p); stamp(p);
+          (links[p] || []).forEach((pt) => { checked.add(pt); stamp(pt); });
         }));
       }
       write(KEYS.checked, [...checked]);
+      write(KEYS.checkedAt, checkedAt);
+    },
+    // has this item been checked long enough to "settle" (tuck into Completed)?
+    // unchecked = settled; legacy checks with no timestamp = settled (long ago).
+    isSettled(id) {
+      if (!this.isChecked(id)) return true;
+      let ts = checkedAt[id];
+      if (ts == null) { const ps = links[id] || []; for (let i = 0; i < ps.length; i++) if (checkedAt[ps[i]] != null) { ts = checkedAt[ps[i]]; break; } }
+      return ts == null ? true : (Date.now() - ts >= SETTLE_MS);
+    },
+    // soonest future moment an un-settled checked item will settle (or null)
+    soonestSettle() {
+      const now = Date.now();
+      let best = null;
+      for (const k in checkedAt) {
+        if (!checked.has(k)) continue;
+        const when = checkedAt[k] + SETTLE_MS;
+        if (when > now && (best == null || when < best)) best = when;
+      }
+      return best;
     },
     toggleChecked(id) {
       if (!this.isChecked(id) && this.isMutexLocked(id)) return this.isChecked(id); // can't pick a forfeited quest
@@ -128,6 +157,7 @@
     exportState() {
       return {
         checked: [...checked],
+        checkedAt,
         reached: [...reached],
         prefs,
         exportedAt: new Date().toISOString()
@@ -136,18 +166,22 @@
     importState(obj) {
       if (!obj || typeof obj !== "object") return false;
       checked = new Set(Array.isArray(obj.checked) ? obj.checked : []);
+      checkedAt = (obj.checkedAt && typeof obj.checkedAt === "object") ? obj.checkedAt : {};
       reached = new Set(Array.isArray(obj.reached) ? obj.reached : []);
       prefs = Object.assign({}, DEFAULT_PREFS, obj.prefs || {});
       write(KEYS.checked, [...checked]);
+      write(KEYS.checkedAt, checkedAt);
       write(KEYS.reached, [...reached]);
       write(KEYS.prefs, prefs);
       return true;
     },
     resetAll() {
       checked = new Set();
+      checkedAt = {};
       reached = new Set();
       prefs = Object.assign({}, DEFAULT_PREFS);
       write(KEYS.checked, []);
+      write(KEYS.checkedAt, {});
       write(KEYS.reached, []);
       write(KEYS.prefs, prefs);
     }

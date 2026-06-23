@@ -221,8 +221,35 @@ details.completion[open] > summary::before { content: "▾ "; }
 /* floating best-arts card — follows the scroll, shows only the active section */
 #arts-float { position: fixed; top: 84px; right: 18px; width: 244px; z-index: 40; max-height: calc(100vh - 104px); overflow-y: auto; }
 #arts-float .arts-aside { margin: 0; }
-@media (max-width: 1240px) { #arts-float { display: none !important; } }
+@media (max-width: 1280px) { #arts-float { display: none !important; } }
 .arts-aside { background: linear-gradient(180deg, #1a1320, #14101c); border: 1px solid #4a2f5a; border-left: 3px solid #b06fd6; border-radius: var(--radius); padding: 11px 13px; }
+/* table-of-contents float — left side, mirrors the arts card; jump to areas */
+#toc-float { position: fixed; top: 84px; left: 18px; width: 200px; z-index: 40; max-height: calc(100vh - 104px); overflow-y: auto; }
+@media (max-width: 1280px) { #toc-float { display: none !important; } }
+/* on the walkthrough, narrow the main column so the side floats sit in the gutters */
+@media (min-width: 1281px) { body.view-walk #app { max-width: min(1200px, calc(100vw - 560px)); } }
+.toc-card { background: linear-gradient(180deg, #131f33, #101826); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 10px 8px; }
+.toc-head { font-weight: 800; font-size: 12.5px; color: var(--accent); padding: 0 4px 7px; margin-bottom: 4px; border-bottom: 1px solid var(--line); }
+.toc-link { display: block; width: 100%; text-align: left; background: none; border: none; color: var(--text); font-size: 13px; padding: 6px; border-radius: 6px; cursor: pointer; }
+.toc-link:hover { background: var(--card2); color: var(--accent2); }
+.toc-link.done { color: var(--muted); }
+.toc-link.done::after { content: " ✓"; color: var(--done); }
+
+/* Records & Trials — two columns with completed counts */
+.rt-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 760px) { .rt-cols { grid-template-columns: 1fr; } }
+.rt-col-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 6px; margin-bottom: 8px; }
+.rt-col-title { font-weight: 800; font-size: 15px; }
+.rt-col-count { font-size: 13px; font-weight: 700; color: var(--accent2); font-variant-numeric: tabular-nums; }
+
+/* completed quests tucked at the top of an area's Quests block */
+.completed-quests { margin: 2px 0 6px; border: 1px dashed #2c5b3f; border-radius: 8px; background: #0e1c16; }
+.completed-quests > summary { cursor: pointer; list-style: none; padding: 6px 10px; font-size: 12.5px; font-weight: 700; color: var(--done); }
+.completed-quests > summary::-webkit-details-marker { display: none; }
+.completed-quests > summary::before { content: "▸ "; }
+.completed-quests[open] > summary::before { content: "▾ "; }
+.completed-quests .items { padding: 0 8px 6px; }
+
 /* collectopaedia type-band groups */
 .collect-groups { display: flex; flex-direction: column; gap: 6px; }
 .collect-cat { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: var(--accent2); margin: 6px 0 1px; }

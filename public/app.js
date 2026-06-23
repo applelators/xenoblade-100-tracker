@@ -589,6 +589,30 @@
       el("div", { class: "items" }, visible.map((it) => walkRow(it, kind)))
     ]);
   }
+  // Quests block: settled-complete quests (checked > 60s ago) tuck into a collapsed
+  // "Completed" sub-section at the top; freshly-checked ones stay visible so an
+  // accidental check can be undone within the grace period.
+  function questBlock(list) {
+    const all = (list || []).filter((it) => matchesSearch(it));
+    if (!all.length) return null;
+    const done = all.filter((it) => Store.isChecked(it.id)).length;
+    const allDone = done === all.length;
+    const settled = all.filter((it) => Store.isChecked(it.id) && Store.isSettled(it.id));
+    const active = all.filter((it) => !(Store.isChecked(it.id) && Store.isSettled(it.id)));
+    const hideC = Store.getPref("hideCompleted");
+    const activeVisible = hideC ? active.filter((it) => !Store.isChecked(it.id)) : active;
+    if (!activeVisible.length && (hideC || !settled.length)) return null;
+    const completedSub = (!hideC && settled.length)
+      ? el("details", { class: "completed-quests" }, [
+          el("summary", { class: "completed-quests-head" }, ["✓ Completed — " + settled.length]),
+          el("div", { class: "items" }, settled.map((it) => walkRow(it, "q")))
+        ])
+      : null;
+    return el("details", { class: "cat-block" + (allDone ? " complete" : ""), ...(allDone ? {} : { open: "open" }) }, [
+      el("summary", { class: "cat-head" }, [el("span", { text: "Quests" }), el("span", { class: "count", text: `${done}/${all.length}` })]),
+      el("div", { class: "items" }, [completedSub, ...activeVisible.map((it) => walkRow(it, "q"))].filter(Boolean))
+    ]);
+  }
   // --- story-Part (arc) spoiler gating ---
   function arcReached(id) { return Store.isReached(id); }
   function ponrSectionArc(ponr) {
@@ -622,7 +646,7 @@
       const g = groups[r];
       const lmBlock = walkBlock("📍 Landmarks (discover here)", g.landmarks, "lm");
       const locBlock = walkBlock("📍 Locations (discover here)", g.locations, "loc");
-      const qBlock = walkBlock("Quests", g.quests, "q");
+      const qBlock = questBlock(g.quests);
       const umBlock = walkBlock("Unique Monsters", g.ums, "um");
       // quests + unique monsters sit side-by-side on wide screens
       const qumRow = (qBlock || umBlock) ? el("div", { class: "qum-row" }, [qBlock, umBlock].filter(Boolean)) : null;
@@ -631,7 +655,8 @@
       const all = [...g.landmarks, ...g.locations, ...g.quests, ...g.ums];
       const done = all.filter((i) => Store.isChecked(i.id)).length;
       const allDone = done === all.length;
-      return el("details", { class: "area-group" + (allDone ? " complete" : ""), ...(allDone ? {} : { open: "open" }) }, [
+      const agId = "ag-" + String(s.code).replace(/\./g, "-") + "-" + r.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      return el("details", { class: "area-group" + (allDone ? " complete" : ""), id: agId, "data-region": r, ...(allDone ? {} : { open: "open" }) }, [
         el("summary", { class: "area-group-head" }, [el("span", { text: "📂 " + r }), el("span", { class: "count", text: `${done}/${all.length}` })]),
         el("div", { class: "area-group-body" }, blocks)
       ]);
@@ -670,12 +695,11 @@
     ]);
   }
 
-  // ----- floating best-arts card: surfaces only the section currently in view -----
-  let artsFloatEl = null, artsScrollBound = false;
+  // ----- floating side cards: best-arts (right) + area table-of-contents (left),
+  //       both tracking the walkthrough section currently in view -----
+  let artsFloatEl = null, tocFloatEl = null, floatsBound = false;
   function sectionByCode(code) { return (DATA.walkthrough || []).find((s) => s.code === code); }
-  function updateArtsFloat() {
-    if (!artsFloatEl) return;
-    if (Store.getPref("view") !== "walk") { artsFloatEl.style.display = "none"; return; }
+  function activeSectionCard() {
     const cards = document.querySelectorAll("#app .area-card[data-code]");
     let best = null, bestTop = -Infinity, firstBelow = null;
     cards.forEach((c) => {
@@ -684,7 +708,11 @@
       if (r.top <= 170 && r.top > bestTop) { bestTop = r.top; best = c; }
       if (!firstBelow && r.bottom > 170) firstBelow = c;
     });
-    const active = best || firstBelow || cards[0];
+    return best || firstBelow || cards[0] || null;
+  }
+  function updateArtsFloat() {
+    if (!artsFloatEl) return;
+    const active = Store.getPref("view") === "walk" ? activeSectionCard() : null;
     const s = active && sectionByCode(active.getAttribute("data-code"));
     const aside = s ? artsAside(s) : null;
     artsFloatEl.innerHTML = "";
@@ -692,12 +720,31 @@
     artsFloatEl.appendChild(aside);
     artsFloatEl.style.display = "";
   }
-  function ensureArtsFloat() {
+  function updateTocFloat() {
+    if (!tocFloatEl) return;
+    const active = Store.getPref("view") === "walk" ? activeSectionCard() : null;
+    const groups = active ? active.querySelectorAll(".area-group[data-region]") : [];
+    if (!active || groups.length < 2) { tocFloatEl.style.display = "none"; return; }
+    const card = el("div", { class: "toc-card" }, [el("div", { class: "toc-head", text: "🧭 Jump to area" })]);
+    groups.forEach((g) => {
+      const region = g.getAttribute("data-region");
+      card.appendChild(el("button", {
+        class: "toc-link" + (g.classList.contains("complete") ? " done" : ""),
+        onclick: () => { g.open = true; g.scrollIntoView({ behavior: "smooth", block: "start" }); }
+      }, [region]));
+    });
+    tocFloatEl.innerHTML = "";
+    tocFloatEl.appendChild(card);
+    tocFloatEl.style.display = "";
+  }
+  function updateFloats() { updateArtsFloat(); updateTocFloat(); }
+  function ensureFloats() {
     if (!artsFloatEl) { artsFloatEl = el("div", { id: "arts-float" }); document.body.appendChild(artsFloatEl); }
-    if (!artsScrollBound) {
-      window.addEventListener("scroll", updateArtsFloat, { passive: true });
-      window.addEventListener("resize", updateArtsFloat, { passive: true });
-      artsScrollBound = true;
+    if (!tocFloatEl) { tocFloatEl = el("div", { id: "toc-float" }); document.body.appendChild(tocFloatEl); }
+    if (!floatsBound) {
+      window.addEventListener("scroll", updateFloats, { passive: true });
+      window.addEventListener("resize", updateFloats, { passive: true });
+      floatsBound = true;
     }
   }
   const REGION_ORDER = ["Colony 9", "Tephra Cave", "Bionis' Leg", "Colony 6", "Ether Mine", "Satorl Marsh",
@@ -813,22 +860,25 @@
   function recordsTrialsCard() {
     const secs = (DATA.walkthrough || []).filter((s) => arcReached(s.arc));
     const collect = (key) => { const out = []; secs.forEach((s) => (s[key] || []).forEach((it) => out.push(it))); return out; };
-    const block = (label, arr) => {
-      if (!arr.length) return null;
-      const visible = arr.filter(matchesSearch).filter((it) => !(Store.getPref("hideCompleted") && Store.isChecked(it.id)));
-      if (!visible.length) return null;
+    const recs = collect("records"), tris = collect("trials");
+    if (!recs.length && !tris.length) return null;
+    const column = (label, arr) => {
       const done = arr.filter((it) => Store.isChecked(it.id)).length;
-      return el("details", { class: "cat-block", open: "open" }, [
-        el("summary", { class: "cat-head" }, [el("span", { text: label }), el("span", { class: "count", text: `${done}/${arr.length}` })]),
-        el("div", { class: "items" }, visible.map(missRow))
+      const visible = arr.filter(matchesSearch).filter((it) => !(Store.getPref("hideCompleted") && Store.isChecked(it.id)));
+      return el("div", { class: "rt-col" }, [
+        el("div", { class: "rt-col-head" }, [
+          el("span", { class: "rt-col-title", text: label }),
+          el("span", { class: "rt-col-count", text: `${done} / ${arr.length} completed` })
+        ]),
+        visible.length
+          ? el("div", { class: "items" }, visible.map(missRow))
+          : el("div", { class: "muted empty", text: arr.length ? "All done here." : "None in revealed Parts yet." })
       ]);
     };
-    const blocks = [block("🏅 Records", collect("records")), block("🎯 Trials", collect("trials"))].filter(Boolean);
-    if (!blocks.length) return null;
     const sealed = (DATA.arcs || []).some((a) => !arcReached(a.id));
     return el("section", { class: "area-card" }, [
       sealed ? el("div", { class: "muted", text: "🔒 More records & trials (some with spoiler-y names) appear as you reveal later Parts in the Walkthrough tab." }) : null,
-      el("div", { class: "area-body" }, blocks)
+      el("div", { class: "rt-cols" }, [column("🏅 Records", recs), column("🎯 Trials", tris)])
     ]);
   }
 
@@ -938,6 +988,7 @@
   function render() {
     const root = $("#app");
     root.innerHTML = "";
+    document.body.classList.toggle("view-walk", Store.getPref("view") === "walk");
 
     const overall = progress(() => true);
     const missable = progress((i) => i.missable);
@@ -968,8 +1019,15 @@
       el("div", { class: "muted small", text: `Data ${DATA.meta.version} · ⚠ Verify = double-check in-game. Collectopaedia/landmark bulk data is loaded progressively.` })
     ]));
 
-    updateArtsFloat(); // refresh the floating best-arts card for the new DOM
+    updateFloats(); // refresh the floating best-arts + table-of-contents cards
+
+    // schedule a re-render when the next freshly-checked quest "settles" (so it
+    // tucks into Completed automatically ~60s after you check it)
+    if (settleTimer) { clearTimeout(settleTimer); settleTimer = null; }
+    const next = Store.soonestSettle();
+    if (next) settleTimer = setTimeout(render, Math.max(250, next - Date.now() + 50));
   }
+  let settleTimer = null;
 
   // ---------- boot ----------
   fetch("data/checklist.json")
@@ -980,7 +1038,7 @@
       // auto-reveal the first area + Part 1 so the app isn't empty on first run
       if (DATA.areas && DATA.areas.length && !Store.isReached(DATA.areas[0].id)) Store.markReached(DATA.areas[0].id);
       if (DATA.arcs && DATA.arcs.length && !Store.isReached(DATA.arcs[0].id)) Store.markReached(DATA.arcs[0].id);
-      ensureArtsFloat();
+      ensureFloats();
       render();
     })
     .catch((err) => {
