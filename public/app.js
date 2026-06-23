@@ -689,9 +689,10 @@
       const locBlock = walkBlock("📍 Locations (discover here)", g.locations, "loc");
       const qBlock = settleBlock("Quests", g.quests, "q");
       const umBlock = settleBlock("Unique Monsters", g.ums, "um");
-      // quests + unique monsters sit side-by-side on wide screens
+      // landmarks + locations side-by-side, then quests + unique monsters side-by-side (wide screens)
+      const placesRow = (lmBlock || locBlock) ? el("div", { class: "qum-row" }, [lmBlock, locBlock].filter(Boolean)) : null;
       const qumRow = (qBlock || umBlock) ? el("div", { class: "qum-row" }, [qBlock, umBlock].filter(Boolean)) : null;
-      const blocks = [lmBlock, locBlock, qumRow].filter(Boolean);
+      const blocks = [placesRow, qumRow].filter(Boolean);
       if (!blocks.length) return null;
       const all = [...g.landmarks, ...g.locations, ...g.quests, ...g.ums];
       const done = all.filter((i) => Store.isChecked(i.id)).length;
