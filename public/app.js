@@ -19,25 +19,12 @@
   };
   const CATEGORY_ORDER = ["quests", "uniqueMonsters", "heartToHearts", "landmarks", "locations", "collectopaedia", "colony6", "other"];
 
-  // Collectopaedia type-bands, in the game's in-game order. Items are classified
-  // by their head noun (last word); within a band the source (= in-game) order
-  // is preserved. Heuristic at the band boundaries; within-band order is exact.
-  const COLLECT_CAT_ORDER = ["Plants", "Flowers", "Insects", "Animals", "Materials"];
-  const COLLECT_CAT_ICON = { Plants: "🌿", Flowers: "🌸", Insects: "🐛", Animals: "🐾", Materials: "⛏️" };
-  const COLLECT_HEAD = {
-    // insects
-    Ant: "Insects", Beetle: "Insects", Boatman: "Insects", Bug: "Insects", Butterfly: "Insects", Caterpillar: "Insects", Centipede: "Insects", Cockroach: "Insects", Cricket: "Insects", Crawler: "Insects", Dragonfly: "Insects", Earwig: "Insects", Firefly: "Insects", Hornet: "Insects", Ladybird: "Insects", Locust: "Insects", Mantis: "Insects", Scarab: "Insects", Stonefly: "Insects", Tarantula: "Insects", Worm: "Insects", Nipper: "Insects",
-    // animals
-    Abron: "Animals", Bat: "Animals", Bird: "Animals", Bream: "Animals", Cat: "Animals", Cucumber: "Animals", Dobercorgi: "Animals", Duck: "Animals", Elephant: "Animals", Fish: "Animals", Fox: "Animals", Frog: "Animals", Gecko: "Animals", Gentleclam: "Animals", Lizard: "Animals", Lurker: "Animals", Mole: "Animals", Monkey: "Animals", Mouse: "Animals", Nanoceros: "Animals", Newt: "Animals", Oyster: "Animals", Panther: "Animals", Penguin: "Animals", Platypus: "Animals", Rabbit: "Animals", Rat: "Animals", Slug: "Animals", Songbird: "Animals", Squirrel: "Animals", Turtle: "Animals", Weasel: "Animals",
-    // flowers
-    Anemone: "Flowers", Belladonna: "Flowers", Blossom: "Flowers", Clematis: "Flowers", Clover: "Flowers", Coronation: "Flowers", Crocus: "Flowers", Daffodil: "Flowers", Dahlia: "Flowers", Daisy: "Flowers", Dandelion: "Flowers", Flower: "Flowers", "Forget-You-Not": "Flowers", Foxglove: "Flowers", Heather: "Flowers", Hollyhock: "Flowers", Hydrangea: "Flowers", Iris: "Flowers", Lily: "Flowers", Lotus: "Flowers", Mallow: "Flowers", Nettle: "Flowers", Orchid: "Flowers", Passion: "Flowers", Peony: "Flowers", Poppy: "Flowers", Rogue: "Flowers", Rose: "Flowers", Teasel: "Flowers", Tulip: "Flowers", Violet: "Flowers",
-    // plants / food
-    Almond: "Plants", Apple: "Plants", Asparagus: "Plants", Aubergine: "Plants", Banana: "Plants", Bean: "Plants", Beetroot: "Plants", Berry: "Plants", Blueberry: "Plants", Broccoli: "Plants", Burdock: "Plants", Cabbage: "Plants", Carrot: "Plants", Cherry: "Plants", Citrus: "Plants", Cob: "Plants", Courgette: "Plants", Durian: "Plants", Fig: "Plants", Fruit: "Plants", Gooseberry: "Plants", Gourd: "Plants", Gouseberry: "Plants", Grape: "Plants", Kilopumpkin: "Plants", Kiwi: "Plants", Lemon: "Plants", Lettuce: "Plants", Lime: "Plants", Lychee: "Plants", Mango: "Plants", Mangosteen: "Plants", Melon: "Plants", Mint: "Plants", Mushroom: "Plants", Nut: "Plants", Papaya: "Plants", Parsnip: "Plants", Pea: "Plants", Peach: "Plants", Pepper: "Plants", Plum: "Plants", Potato: "Plants", Radish: "Plants", Raspberry: "Plants", Rhubarb: "Plants", Root: "Plants", Sarsaparilla: "Plants", Steakplant: "Plants", Taro: "Plants", Turnip: "Plants", Vanilla: "Plants", Wasabi: "Plants", Wheat: "Plants"
-  };
-  function collectCategory(label) {
-    const w = String(label).trim().split(/\s+/);
-    return COLLECT_HEAD[w[w.length - 1]] || "Materials";
-  }
+  // Collectopaedia: the game's six in-game categories (per-item `cat` from the
+  // wiki data, set in build-data). Displayed as six columns in this order.
+  const COLLECT_CAT_ORDER = ["veg", "fruit", "bug", "nature", "parts", "strange"];
+  const COLLECT_CAT_LABEL = { veg: "🥬 Veg", fruit: "🍎 Fruit", bug: "🐛 Bug", nature: "🌿 Nature", parts: "⚙️ Parts", strange: "✨ Strange" };
+  // collectables tab shows only collectable-type categories (no quests/UMs/H2H/missables)
+  const COLLECT_VIEW_CATS = ["landmarks", "locations", "collectopaedia", "colony6"];
   // "Critical" missables shown upfront; collectables/landmarks tuck behind a collapsible.
   const CRITICAL_CATS = new Set(["quests", "uniqueMonsters", "heartToHearts", "colony6", "other", "achievements"]);
 
@@ -419,18 +406,27 @@
     if (cat === "locations") return (sec.landmarks || []).filter((i) => i.kind === "Location");
     return sec[cat] || [];
   }
-  // collectopaedia grouped into the game's type-bands (order preserved within band)
+  // a compact collectable row (no badges/notes — keeps the six columns tight)
+  function collectRow(entry) {
+    const item = entry.item;
+    const checked = Store.isChecked(item.id);
+    return el("label", { class: "item" + (checked ? " done" : ""), id: "item-" + item.id }, [
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (e) => { Store.setChecked(item.id, e.target.checked); render(); } }),
+      el("span", { class: "item-body" }, [el("span", { class: "item-label", text: item.label })])
+    ]);
+  }
+  // collectopaedia laid out as the game's six category columns
   function collectGrouped(entries) {
     const buckets = {};
-    entries.forEach((e) => { const c = collectCategory(e.item.label); (buckets[c] = buckets[c] || []).push(e); });
-    const wrap = el("div", { class: "collect-groups" });
+    entries.forEach((e) => { const c = e.item.cat || "strange"; (buckets[c] = buckets[c] || []).push(e); });
+    const wrap = el("div", { class: "collect-cols" });
     COLLECT_CAT_ORDER.forEach((c) => {
       const arr = buckets[c];
       if (!arr || !arr.length) return;
       const done = arr.filter((e) => Store.isChecked(e.item.id)).length;
-      wrap.appendChild(el("div", { class: "collect-group" }, [
-        el("div", { class: "collect-cat" }, [el("span", { text: COLLECT_CAT_ICON[c] + " " + c }), el("span", { class: "count", text: `${done}/${arr.length}` })]),
-        el("div", { class: "items" }, arr.map(itemRow))
+      wrap.appendChild(el("div", { class: "collect-col" }, [
+        el("div", { class: "collect-cat" }, [el("span", { text: COLLECT_CAT_LABEL[c] }), el("span", { class: "count", text: `${done}/${arr.length}` })]),
+        el("div", { class: "items" }, arr.map(collectRow))
       ]));
     });
     return wrap;
@@ -448,27 +444,30 @@
 
     const body = el("div", { class: "area-body" });
     const catFilter = Store.getPref("category");
-    let shown = 0;
-    CATEGORY_ORDER.forEach((cat) => {
-      if (catFilter !== "all" && catFilter !== cat) return;
-      const list = listForCat(area, cat);
-      const entries = list
+    const mkBlock = (cat) => {
+      if (catFilter !== "all" && catFilter !== cat) return null;
+      const entries = listForCat(area, cat)
         .map((item) => ({ item, area, category: cat }))
         .filter((e) => matchesSearch(e.item))
         .filter((e) => !(Store.getPref("hideCompleted") && Store.isChecked(e.item.id)));
-      if (!entries.length) return;
-      shown += entries.length;
+      if (!entries.length) return null;
       const done = entries.filter((e) => Store.isChecked(e.item.id)).length;
       const inner = (cat === "collectopaedia") ? collectGrouped(entries) : el("div", { class: "items" }, entries.map(itemRow));
-      body.appendChild(el("div", { class: "cat-block" }, [
+      return el("div", { class: "cat-block" + (cat === "collectopaedia" ? " collect-block" : "") }, [
         el("div", { class: "cat-head" }, [
           el("span", { text: CATEGORY_LABELS[cat] || cat }),
           el("span", { class: "count", text: `${done}/${entries.length}` })
         ]),
         inner
-      ]));
-    });
-    if (!shown) body.appendChild(el("div", { class: "muted empty", text: "Nothing in this area for the current filters." }));
+      ]);
+    };
+    // Landmarks + Locations side-by-side; then Collectopaedia (6 columns); then Colony 6.
+    const lm = mkBlock("landmarks"), loc = mkBlock("locations");
+    const placesRow = (lm || loc) ? el("div", { class: "places-row" }, [lm, loc].filter(Boolean)) : null;
+    const collo = mkBlock("collectopaedia");
+    const c6 = mkBlock("colony6");
+    [placesRow, collo, c6].filter(Boolean).forEach((b) => body.appendChild(b));
+    if (!placesRow && !collo && !c6) body.appendChild(el("div", { class: "muted empty", text: "Nothing in this area for the current filters." }));
 
     return el("section", { class: "area-card" }, [
       el("div", { class: "area-head" }, [
@@ -828,21 +827,7 @@
       }
     }
 
-    // achievements + future connected appended at the bottom of full view
-    const tail = el("div", { class: "view-tail" });
-    ["achievements", "futureConnected"].forEach((cat) => {
-      const list = (cat === "achievements" ? DATA.achievements : DATA.futureConnected) || [];
-      const entries = list.map((item) => ({ item, area: null, category: cat }))
-        .filter((e) => matchesSearch(e.item))
-        .filter((e) => !(Store.getPref("hideCompleted") && Store.isChecked(e.item.id)));
-      if (!entries.length) return;
-      tail.appendChild(el("section", { class: "area-card" }, [
-        el("div", { class: "area-head" }, [el("h3", { text: CATEGORY_LABELS[cat] })]),
-        el("div", { class: "area-body" }, [el("div", { class: "items" }, entries.map(itemRow))])
-      ]));
-    });
-    if (Store.getPref("category") === "all") wrap.appendChild(tail);
-
+    // (Achievements / Other Missables live on the Missable tab, not here.)
     if (!visible.length) wrap.insertBefore(el("div", { class: "muted empty", text: "No areas revealed yet — hit “Reveal next area” when you start playing." }), wrap.firstChild);
     return wrap;
   }
@@ -852,37 +837,72 @@
     const wrap = el("div", { class: "view" });
     wrap.appendChild(el("div", { class: "arc-banner" }, [
       el("div", { class: "arc-title", text: "🏅 Records & Trials" }),
-      el("div", { class: "muted", text: "The game tracks Records and Trials as two separate lists. These come from the Parts you've revealed in the Walkthrough tab; checks are shared with it." })
+      el("div", { class: "muted", text: "Numbered in wiki order, with the actual (spoiler-free) unlock condition for each. Records carry over in New Game+; Trials reset. Checks are shared with the Walkthrough tab." })
     ]));
     const card = recordsTrialsCard();
     wrap.appendChild(card || el("div", { class: "empty muted", text: "No records or trials in revealed Parts yet." }));
     return wrap;
   }
 
-  // Records & Trials, aggregated from REVEALED walkthrough sections only (spoiler
-  // gate — later-Part record/trial names can be spoilers). Checks share with the
-  // Walkthrough tab via the same wrec-/wtrial- ids.
+  // wiki lookup: normalised achievement name -> { type, n, cond, name }
+  let _wikiLUT = null;
+  function normAch(s) { return String(s).toLowerCase().replace(/^(a|an|the)\s+/, "").replace(/[^a-z0-9]+/g, ""); }
+  function wikiLUT() {
+    if (_wikiLUT) return _wikiLUT;
+    _wikiLUT = {};
+    const wa = DATA.wikiAchievements || { trials: [], records: [] };
+    (wa.records || []).forEach((r) => { _wikiLUT[normAch(r.name)] = { type: "record", n: r.n, cond: r.cond, name: r.name }; });
+    (wa.trials || []).forEach((t) => { _wikiLUT[normAch(t.name)] = { type: "trial", n: t.n, cond: t.cond, name: t.name }; });
+    return _wikiLUT;
+  }
+  function achRow(e) {
+    const checked = Store.isChecked(e.id);
+    return el("label", { class: "item" + (checked ? " done" : ""), id: "item-" + e.id }, [
+      el("input", { type: "checkbox", ...(checked ? { checked: "checked" } : {}), onchange: (ev) => { Store.setChecked(e.id, ev.target.checked); render(); } }),
+      el("span", { class: "item-body" }, [
+        el("span", { class: "item-label" }, [e.n < 9999 ? el("span", { class: "ach-num", text: "#" + e.n + " " }) : null, document.createTextNode(e.name)]),
+        e.cond ? el("span", { class: "item-note", text: e.cond }) : null
+      ])
+    ]);
+  }
+  // Records & Trials tab: built from the wiki list (number + condition, plot-free),
+  // classified by the wiki (not by guide context), from REVEALED Parts only.
   function recordsTrialsCard() {
+    const lut = wikiLUT();
     const secs = (DATA.walkthrough || []).filter((s) => arcReached(s.arc));
-    const collect = (key) => { const out = []; secs.forEach((s) => (s[key] || []).forEach((it) => out.push(it))); return out; };
-    const recs = collect("records"), tris = collect("trials");
+    const seen = { record: {}, trial: {} };
+    secs.forEach((s) => ["records", "trials"].forEach((k) => (s[k] || []).forEach((it) => {
+      const bare = String(it.label).split(" — ")[0].trim();
+      const w = lut[normAch(bare)];
+      if (w) { if (!seen[w.type][w.n]) seen[w.type][w.n] = { id: it.id, n: w.n, name: w.name, cond: w.cond }; }
+      else { // not in the wiki list — keep it under its stored kind, unnumbered
+        const type = k === "trials" ? "trial" : "record";
+        seen[type]["x" + bare] = { id: it.id, n: 9999, name: bare, cond: null };
+      }
+    })));
+    const sortNum = (a, b) => a.n - b.n || a.name.localeCompare(b.name);
+    const recs = Object.values(seen.record).sort(sortNum);
+    const tris = Object.values(seen.trial).sort(sortNum);
     if (!recs.length && !tris.length) return null;
+    const q = (Store.getPref("search") || "").trim().toLowerCase();
     const column = (label, arr) => {
-      const done = arr.filter((it) => Store.isChecked(it.id)).length;
-      const visible = arr.filter(matchesSearch).filter((it) => !(Store.getPref("hideCompleted") && Store.isChecked(it.id)));
+      const done = arr.filter((e) => Store.isChecked(e.id)).length;
+      const visible = arr
+        .filter((e) => !q || e.name.toLowerCase().includes(q) || (e.cond || "").toLowerCase().includes(q))
+        .filter((e) => !(Store.getPref("hideCompleted") && Store.isChecked(e.id)));
       return el("div", { class: "rt-col" }, [
         el("div", { class: "rt-col-head" }, [
           el("span", { class: "rt-col-title", text: label }),
           el("span", { class: "rt-col-count", text: `${done} / ${arr.length} completed` })
         ]),
         visible.length
-          ? el("div", { class: "items" }, visible.map(missRow))
+          ? el("div", { class: "items" }, visible.map(achRow))
           : el("div", { class: "muted empty", text: arr.length ? "All done here." : "None in revealed Parts yet." })
       ]);
     };
     const sealed = (DATA.arcs || []).some((a) => !arcReached(a.id));
     return el("section", { class: "area-card" }, [
-      sealed ? el("div", { class: "muted", text: "🔒 More records & trials (some with spoiler-y names) appear as you reveal later Parts in the Walkthrough tab." }) : null,
+      sealed ? el("div", { class: "muted", text: "🔒 More records & trials appear as you reveal later Parts in the Walkthrough tab." }) : null,
       el("div", { class: "rt-cols" }, [column("🏅 Records", recs), column("🎯 Trials", tris)])
     ]);
   }
@@ -915,7 +935,7 @@
       class: "cat-select",
       onchange: (e) => { Store.setPref("category", e.target.value); render(); }
     }, [el("option", { value: "all" }, ["All categories"])].concat(
-      CATEGORY_ORDER.map((c) => el("option", Object.assign({ value: c }, Store.getPref("category") === c ? { selected: "selected" } : {}), [CATEGORY_LABELS[c]]))
+      COLLECT_VIEW_CATS.map((c) => el("option", Object.assign({ value: c }, Store.getPref("category") === c ? { selected: "selected" } : {}), [CATEGORY_LABELS[c]]))
     ));
     if (Store.getPref("category") !== "all") cat.value = Store.getPref("category");
 
@@ -1011,7 +1031,6 @@
 
     root.appendChild(controls());
     const view = Store.getPref("view");
-    if (view === "full") root.appendChild(expiresNextPanel());
     root.appendChild(view === "walk" ? walkView() : view === "missable" ? missableView() : view === "records" ? recordsView() : fullView());
 
     root.appendChild(el("footer", { class: "app-footer" }, [

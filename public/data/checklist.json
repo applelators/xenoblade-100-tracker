@@ -97,102 +97,119 @@
           {
             "id": "col-area-colony9-sweet-wasabi",
             "label": "Sweet Wasabi",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-cool-potato",
             "label": "Cool Potato",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-red-lettuce",
             "label": "Red Lettuce",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-chewy-radish",
             "label": "Chewy Radish",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-dance-apple",
             "label": "Dance Apple",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-black-kiwi",
             "label": "Black Kiwi",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-strong-dandelion",
             "label": "Strong Dandelion",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-moon-flower",
             "label": "Moon Flower",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-dawn-hydrangea",
             "label": "Dawn Hydrangea",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-prairie-dragonfly",
             "label": "Prairie Dragonfly",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-giant-hornet",
             "label": "Giant Hornet",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-white-beetle",
             "label": "White Beetle",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-sorrow-beetle",
             "label": "Sorrow Beetle",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-blue-chain",
             "label": "Blue Chain",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-rabbit-diode",
             "label": "Rabbit Diode",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-plate-snow",
             "label": "Plate Snow",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony9-rainbow-zirconia",
             "label": "Rainbow Zirconia",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -366,102 +383,119 @@
           {
             "id": "col-area-tephra-cave-clear-almond",
             "label": "Clear Almond",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-bright-fig",
             "label": "Bright Fig",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-dark-grape",
             "label": "Dark Grape",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-insanity-mint",
             "label": "Insanity Mint",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-night-tulip",
             "label": "Night Tulip",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-shin-newt",
             "label": "Shin Newt",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-cave-rat",
             "label": "Cave Rat",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-shin-gecko",
             "label": "Shin Gecko",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-happy-rabbit",
             "label": "Happy Rabbit",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-brown-butterfly",
             "label": "Brown Butterfly",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-gold-caterpillar",
             "label": "Gold Caterpillar",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-rumble-stonefly",
             "label": "Rumble Stonefly",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-kneecap-rock",
             "label": "Kneecap Rock",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-confusion-ivy",
             "label": "Confusion Ivy",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-clarity-moss",
             "label": "Clarity Moss",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-leaf-mystery",
             "label": "Leaf Mystery",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-tephra-cave-steel-silk",
             "label": "Steel Silk",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -643,132 +677,154 @@
           {
             "id": "col-area-bionis-leg-hot-taro",
             "label": "Hot Taro",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-juicy-broccoli",
             "label": "Juicy Broccoli",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-spicy-cabbage",
             "label": "Spicy Cabbage",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-hard-lotus",
             "label": "Hard Lotus",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-sour-gouseberry",
             "label": "Sour Gouseberry",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-red-durian",
             "label": "Red Durian",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-walnut-grape",
             "label": "Walnut Grape",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-humming-plum",
             "label": "Humming Plum",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-white-ladybird",
             "label": "White Ladybird",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-hill-firefly",
             "label": "Hill Firefly",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-moth-crawler",
             "label": "Moth Crawler",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-queen-locust",
             "label": "Queen Locust",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-fire-tarantula",
             "label": "Fire Tarantula",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-mat-ice",
             "label": "Mat Ice",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-bluesky-bark",
             "label": "Bluesky Bark",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-pione-stone",
             "label": "Pione Stone",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-rusty-bolt",
             "label": "Rusty Bolt",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-winding-gear",
             "label": "Winding Gear",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-gold-dust-illusion",
             "label": "Gold Dust Illusion",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-devious-gravity",
             "label": "Devious Gravity",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-white-songbird",
             "label": "White Songbird",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-leg-death-bangle",
             "label": "Death Bangle",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -1162,48 +1218,56 @@
           {
             "id": "col-area-colony6-cute-orchid",
             "label": "Cute Orchid",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony6-sirius-anemone",
             "label": "Sirius Anemone",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony6-spirit-clematis",
             "label": "Spirit Clematis",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony6-pyro-lizard",
             "label": "Pyro Lizard",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony6-amblygon-turtle",
             "label": "Amblygon Turtle",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony6-dobercorgi",
             "label": "Dobercorgi",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony6-verdant-eternity",
             "label": "Verdant Eternity",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-colony6-white-night-rod",
             "label": "White Night Rod",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -1300,6 +1364,7 @@
           {
             "id": "col-area-ether-mine-light-bat",
             "label": "Light Bat",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1307,6 +1372,7 @@
           {
             "id": "col-area-ether-mine-black-frog",
             "label": "Black Frog",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1314,6 +1380,7 @@
           {
             "id": "col-area-ether-mine-yellow-cat",
             "label": "Yellow Cat",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1321,6 +1388,7 @@
           {
             "id": "col-area-ether-mine-black-beetle",
             "label": "Black Beetle",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1328,6 +1396,7 @@
           {
             "id": "col-area-ether-mine-rubber-mantis",
             "label": "Rubber Mantis",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1335,6 +1404,7 @@
           {
             "id": "col-area-ether-mine-mystery-firefly",
             "label": "Mystery Firefly",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1342,6 +1412,7 @@
           {
             "id": "col-area-ether-mine-charcoal-leg",
             "label": "Charcoal Leg",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1349,6 +1420,7 @@
           {
             "id": "col-area-ether-mine-ether-pebble",
             "label": "Ether Pebble",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1356,6 +1428,7 @@
           {
             "id": "col-area-ether-mine-rumble-coal",
             "label": "Rumble Coal",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1363,6 +1436,7 @@
           {
             "id": "col-area-ether-mine-black-chip",
             "label": "Black Chip",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1370,6 +1444,7 @@
           {
             "id": "col-area-ether-mine-ready-coil",
             "label": "Ready Coil",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1377,6 +1452,7 @@
           {
             "id": "col-area-ether-mine-love-crane",
             "label": "Love Crane",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1384,6 +1460,7 @@
           {
             "id": "col-area-ether-mine-fire-abron",
             "label": "Fire Abron",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -1555,132 +1632,154 @@
           {
             "id": "col-area-satorl-marsh-blue-turnip",
             "label": "Blue Turnip",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-cute-parsnip",
             "label": "Cute Parsnip",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-poisonous-gourd",
             "label": "Poisonous Gourd",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-humming-cabbage",
             "label": "Humming Cabbage",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-sunflower-rogue",
             "label": "Sunflower Rogue",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-merry-coronation",
             "label": "Merry Coronation",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-ether-rose",
             "label": "Ether Rose",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-orb-daisy",
             "label": "Orb Daisy",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-forget-you-not",
             "label": "Forget-You-Not",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-chimera-rabbit",
             "label": "Chimera Rabbit",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-venom-platypus",
             "label": "Venom Platypus",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-humming-cat",
             "label": "Humming Cat",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-mist-tree",
             "label": "Mist Tree",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-lemon-stone",
             "label": "Lemon Stone",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-feather-leaf",
             "label": "Feather Leaf",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-water-log",
             "label": "Water Log",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-wool-rock",
             "label": "Wool Rock",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-blue-gear-shard",
             "label": "Blue Gear Shard",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-rumble-part",
             "label": "Rumble Part",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-paupers-cup",
             "label": "Pauper's Cup",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-happy-carnival",
             "label": "Happy Carnival",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-satorl-marsh-dawn-dice",
             "label": "Dawn Dice",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -1854,132 +1953,154 @@
           {
             "id": "col-area-makna-forest-schorl-mushroom",
             "label": "Schorl Mushroom",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-kelp-mushroom",
             "label": "Kelp Mushroom",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-honey-rhubarb",
             "label": "Honey Rhubarb",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-dark-mango",
             "label": "Dark Mango",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-pure-cherry",
             "label": "Pure Cherry",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-bitter-kiwi",
             "label": "Bitter Kiwi",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-juicy-grape",
             "label": "Juicy Grape",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-enigma-lotus",
             "label": "Enigma Lotus",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-humming-nettle",
             "label": "Humming Nettle",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-princess-daffodil",
             "label": "Princess Daffodil",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-black-iris",
             "label": "Black Iris",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-ash-fox",
             "label": "Ash Fox",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-soft-sea-cucumber",
             "label": "Soft Sea Cucumber",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-fossil-monkey",
             "label": "Fossil Monkey",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-venomous-lizard",
             "label": "Venomous Lizard",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-scarlet-ladybird",
             "label": "Scarlet Ladybird",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-shield-bug",
             "label": "Shield Bug",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-hades-beetle",
             "label": "Hades Beetle",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-benign-cricket",
             "label": "Benign Cricket",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-lemonade-sky",
             "label": "Lemonade Sky",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-forest-of-gossip",
             "label": "Forest of Gossip",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-makna-forest-gravel-disk",
             "label": "Gravel Disk",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -2254,36 +2375,42 @@
           {
             "id": "col-area-frontier-village-spicy-nut",
             "label": "Spicy Nut",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-frontier-village-crimson-citrus",
             "label": "Crimson Citrus",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-frontier-village-rainbow-bug",
             "label": "Rainbow Bug",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-frontier-village-empress-beetle",
             "label": "Empress Beetle",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-frontier-village-rumble-box",
             "label": "Rumble Box",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-frontier-village-black-panel",
             "label": "Black Panel",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -2445,7 +2572,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-bionis-interior",
@@ -2459,42 +2586,49 @@
           {
             "id": "col-area-bionis-interior-sarsaparilla",
             "label": "Sarsaparilla",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-interior-black-liver-bean",
             "label": "Black Liver Bean",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-interior-blood-worm",
             "label": "Blood Worm",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-interior-azure-mouse",
             "label": "Azure Mouse",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-interior-happy-duck",
             "label": "Happy Duck",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-interior-tap-tap-tap",
             "label": "Tap Tap Tap",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-interior-high-entia-jewel",
             "label": "High Entia Jewel",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -2619,42 +2753,49 @@
           {
             "id": "col-area-high-entia-tomb-green-earwig",
             "label": "Green Earwig",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-high-entia-tomb-blue-ladybird",
             "label": "Blue Ladybird",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-high-entia-tomb-white-tube",
             "label": "White Tube",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-high-entia-tomb-green-diode",
             "label": "Green Diode",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-high-entia-tomb-spiral-lamp",
             "label": "Spiral Lamp",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-high-entia-tomb-tasty-sausage",
             "label": "Tasty Sausage",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-high-entia-tomb-macro-passion",
             "label": "Macro Passion",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -2751,102 +2892,119 @@
           {
             "id": "col-area-eryth-sea-pink-asparagus",
             "label": "Pink Asparagus",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-tropical-radish",
             "label": "Tropical Radish",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-dolphin-carrot",
             "label": "Dolphin Carrot",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-gold-burdock",
             "label": "Gold Burdock",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-sea-berry",
             "label": "Sea Berry",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-despair-clover",
             "label": "Despair Clover",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-doomsday-poppy",
             "label": "Doomsday Poppy",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-night-lily",
             "label": "Night Lily",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-razor-teasel",
             "label": "Razor Teasel",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-sea-frog",
             "label": "Sea Frog",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-mane-cat",
             "label": "Mane Cat",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-white-tail",
             "label": "White Tail",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-marine-marble",
             "label": "Marine Marble",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-oil-branch",
             "label": "Oil Branch",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-dilemma-rock",
             "label": "Dilemma Rock",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-high-violet",
             "label": "High Violet",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-eryth-sea-steel-hauyne",
             "label": "Steel Hauyne",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -3257,6 +3415,7 @@
           {
             "id": "col-area-alcamoth-cool-lemon",
             "label": "Cool Lemon",
+            "cat": "fruit",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -3264,6 +3423,7 @@
           {
             "id": "col-area-alcamoth-heart-peach",
             "label": "Heart Peach",
+            "cat": "fruit",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -3271,6 +3431,7 @@
           {
             "id": "col-area-alcamoth-mystic-dahlia",
             "label": "Mystic Dahlia",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -3278,6 +3439,7 @@
           {
             "id": "col-area-alcamoth-stardrop",
             "label": "Stardrop",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -3285,6 +3447,7 @@
           {
             "id": "col-area-alcamoth-ha-ha-ha",
             "label": "Ha Ha Ha",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -3292,6 +3455,7 @@
           {
             "id": "col-area-alcamoth-thunder-atmos",
             "label": "Thunder Atmos",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -3397,102 +3561,119 @@
           {
             "id": "col-area-prison-island-dry-lemon",
             "label": "Dry Lemon",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-death-lychee",
             "label": "Death Lychee",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-hell-raspberry",
             "label": "Hell Raspberry",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-deadly-kiwi",
             "label": "Deadly Kiwi",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-dancing-squirrel",
             "label": "Dancing Squirrel",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-lightning-weasel",
             "label": "Lightning Weasel",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-angry-monkey",
             "label": "Angry Monkey",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-se-orita-scarab",
             "label": "Señorita Scarab",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-emperor-beetle",
             "label": "Emperor Beetle",
+            "cat": "bug",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-absurd-branch",
             "label": "Absurd Branch",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-insanity-moss",
             "label": "Insanity Moss",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-white-cover",
             "label": "White Cover",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-modern-resistor",
             "label": "Modern Resistor",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-green-cam",
             "label": "Green Cam",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-strong-screw",
             "label": "Strong Screw",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-blue-glow",
             "label": "Blue Glow",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-prison-island-blue-blood",
             "label": "Blue Blood",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -3556,132 +3737,154 @@
           {
             "id": "col-area-valak-mountain-sour-radish",
             "label": "Sour Radish",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-ice-cabbage",
             "label": "Ice Cabbage",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-girl-courgette",
             "label": "Girl Courgette",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-amethyst-vanilla",
             "label": "Amethyst Vanilla",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-ether-plum",
             "label": "Ether Plum",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-fire-apple",
             "label": "Fire Apple",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-ruby-mangosteen",
             "label": "Ruby Mangosteen",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-sour-grape",
             "label": "Sour Grape",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-fortune-mallow",
             "label": "Fortune Mallow",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-black-peony",
             "label": "Black Peony",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-fatal-belladonna",
             "label": "Fatal Belladonna",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-wet-rat",
             "label": "Wet Rat",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-ice-monkey",
             "label": "Ice Monkey",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-crystal-frog",
             "label": "Crystal Frog",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-mud-squirrel",
             "label": "Mud Squirrel",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-gypsum-branch",
             "label": "Gypsum Branch",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-black-ash",
             "label": "Black Ash",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-emerald-snow",
             "label": "Emerald Snow",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-rabbit-stone",
             "label": "Rabbit Stone",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-broom-icicle",
             "label": "Broom Icicle",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-frost-glass",
             "label": "Frost Glass",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-valak-mountain-large-handcuffs",
             "label": "Large Handcuffs",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -3981,6 +4184,7 @@
           {
             "id": "col-area-sword-valley-galahad-fire-pepper",
             "label": "Fire Pepper",
+            "cat": "veg",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -3988,6 +4192,7 @@
           {
             "id": "col-area-sword-valley-galahad-meaty-carrot",
             "label": "Meaty Carrot",
+            "cat": "veg",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -3995,6 +4200,7 @@
           {
             "id": "col-area-sword-valley-galahad-bitter-broccoli",
             "label": "Bitter Broccoli",
+            "cat": "veg",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4002,6 +4208,7 @@
           {
             "id": "col-area-sword-valley-galahad-bitter-melon",
             "label": "Bitter Melon",
+            "cat": "fruit",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4009,6 +4216,7 @@
           {
             "id": "col-area-sword-valley-galahad-citron-gooseberry",
             "label": "Citron Gooseberry",
+            "cat": "fruit",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4016,6 +4224,7 @@
           {
             "id": "col-area-sword-valley-galahad-juicy-melon",
             "label": "Juicy Melon",
+            "cat": "fruit",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4023,6 +4232,7 @@
           {
             "id": "col-area-sword-valley-galahad-amethyst-melon",
             "label": "Amethyst Melon",
+            "cat": "fruit",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4030,6 +4240,7 @@
           {
             "id": "col-area-sword-valley-galahad-jujube-silver",
             "label": "Jujube Silver",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4037,6 +4248,7 @@
           {
             "id": "col-area-sword-valley-galahad-black-blossom",
             "label": "Black Blossom",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4044,6 +4256,7 @@
           {
             "id": "col-area-sword-valley-galahad-abyss-heather",
             "label": "Abyss Heather",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4051,6 +4264,7 @@
           {
             "id": "col-area-sword-valley-galahad-delerium-foxglove",
             "label": "Delerium Foxglove",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4058,6 +4272,7 @@
           {
             "id": "col-area-sword-valley-galahad-gold-condenser",
             "label": "Gold Condenser",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4065,6 +4280,7 @@
           {
             "id": "col-area-sword-valley-galahad-purple-lamp",
             "label": "Purple Lamp",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4072,6 +4288,7 @@
           {
             "id": "col-area-sword-valley-galahad-crimson-gear",
             "label": "Crimson Gear",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4079,6 +4296,7 @@
           {
             "id": "col-area-sword-valley-galahad-red-frontier",
             "label": "Red Frontier",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4086,6 +4304,7 @@
           {
             "id": "col-area-sword-valley-galahad-darkness-bottle",
             "label": "Darkness Bottle",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4093,6 +4312,7 @@
           {
             "id": "col-area-sword-valley-galahad-bud-of-eternity",
             "label": "Bud of Eternity",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4100,6 +4320,7 @@
           {
             "id": "col-area-sword-valley-galahad-galahad-wheel-lurker",
             "label": "Galahad: Wheel Lurker",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4107,6 +4328,7 @@
           {
             "id": "col-area-sword-valley-galahad-galahad-ultramarine-ant",
             "label": "Galahad: Ultramarine Ant",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4114,6 +4336,7 @@
           {
             "id": "col-area-sword-valley-galahad-galahad-locust-spring",
             "label": "Galahad: Locust Spring",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4121,6 +4344,7 @@
           {
             "id": "col-area-sword-valley-galahad-galahad-art-core-coil",
             "label": "Galahad: Art Core Coil",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4128,6 +4352,7 @@
           {
             "id": "col-area-sword-valley-galahad-galahad-tail-antenna",
             "label": "Galahad: Tail Antenna",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4135,6 +4360,7 @@
           {
             "id": "col-area-sword-valley-galahad-galahad-hunger-crash",
             "label": "Galahad: Hunger Crash",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4142,6 +4368,7 @@
           {
             "id": "col-area-sword-valley-galahad-galahad-splish-splash",
             "label": "Galahad: Splish Splash",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4481,90 +4708,105 @@
           {
             "id": "col-area-fallen-arm-machina-sour-turnip",
             "label": "Sour Turnip",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-golden-beetroot",
             "label": "Golden Beetroot",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-white-plum",
             "label": "White Plum",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-ice-kiwi-fruit",
             "label": "Ice Kiwi Fruit",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-spicy-papaya",
             "label": "Spicy Papaya",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-large-mango",
             "label": "Large Mango",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-oil-oyster",
             "label": "Oil Oyster",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-dark-fish",
             "label": "Dark Fish",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-ether-penguin",
             "label": "Ether Penguin",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-rainbow-slug",
             "label": "Rainbow Slug",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-poisonous-coral",
             "label": "Poisonous Coral",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-poison-ivy",
             "label": "Poison Ivy",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-amber-leaf",
             "label": "Amber Leaf",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-warning-lamp",
             "label": "Warning Lamp",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-fallen-arm-machina-digital-filament",
             "label": "Digital Filament",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           }
@@ -4768,7 +5010,7 @@
           }
         ]
       },
-      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
+      "note": "Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff. Revisitable area — but its timed (⏱) quests still expire at a cutoff."
     },
     {
       "id": "area-mechonis-field",
@@ -4813,6 +5055,7 @@
           {
             "id": "col-area-mechonis-field-juicy-steakplant",
             "label": "Juicy Steakplant",
+            "cat": "veg",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4820,6 +5063,7 @@
           {
             "id": "col-area-mechonis-field-acerola-pea",
             "label": "Acerola Pea",
+            "cat": "veg",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4827,6 +5071,7 @@
           {
             "id": "col-area-mechonis-field-energy-aubergine",
             "label": "Energy Aubergine",
+            "cat": "veg",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4834,6 +5079,7 @@
           {
             "id": "col-area-mechonis-field-sweet-pepper",
             "label": "Sweet Pepper",
+            "cat": "veg",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4841,6 +5087,7 @@
           {
             "id": "col-area-mechonis-field-azure-hollyhock",
             "label": "Azure Hollyhock",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4848,6 +5095,7 @@
           {
             "id": "col-area-mechonis-field-utopia-crocus",
             "label": "Utopia Crocus",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4855,6 +5103,7 @@
           {
             "id": "col-area-mechonis-field-scarlet-crawler",
             "label": "Scarlet Crawler",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4862,6 +5111,7 @@
           {
             "id": "col-area-mechonis-field-shiny-scarab",
             "label": "Shiny Scarab",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4869,6 +5119,7 @@
           {
             "id": "col-area-mechonis-field-water-boatman",
             "label": "Water Boatman",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4876,6 +5127,7 @@
           {
             "id": "col-area-mechonis-field-ivy-nest",
             "label": "Ivy Nest",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4883,6 +5135,7 @@
           {
             "id": "col-area-mechonis-field-mossy-panel",
             "label": "Mossy Panel",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4890,6 +5143,7 @@
           {
             "id": "col-area-mechonis-field-bronze-wood",
             "label": "Bronze Wood",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4897,6 +5151,7 @@
           {
             "id": "col-area-mechonis-field-retro-diode",
             "label": "Retro Diode",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4904,6 +5159,7 @@
           {
             "id": "col-area-mechonis-field-modern-blue-gear",
             "label": "Modern Blue Gear",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4911,6 +5167,7 @@
           {
             "id": "col-area-mechonis-field-snow-transistor",
             "label": "Snow Transistor",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4918,6 +5175,7 @@
           {
             "id": "col-area-mechonis-field-tweet-tweet",
             "label": "Tweet Tweet",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -4925,6 +5183,7 @@
           {
             "id": "col-area-mechonis-field-flame-frame",
             "label": "Flame Frame",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5277,6 +5536,7 @@
           {
             "id": "col-area-agniratha-juicy-blueberry",
             "label": "Juicy Blueberry",
+            "cat": "fruit",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5284,6 +5544,7 @@
           {
             "id": "col-area-agniratha-sweet-lime",
             "label": "Sweet Lime",
+            "cat": "fruit",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5291,6 +5552,7 @@
           {
             "id": "col-area-agniratha-spicy-banana",
             "label": "Spicy Banana",
+            "cat": "fruit",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5298,6 +5560,7 @@
           {
             "id": "col-area-agniratha-lewisia-silver",
             "label": "Lewisia Silver",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5305,6 +5568,7 @@
           {
             "id": "col-area-agniratha-freesia-cyst",
             "label": "Freesia Cyst",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5312,6 +5576,7 @@
           {
             "id": "col-area-agniratha-bellflower-crystal",
             "label": "Bellflower Crystal",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5319,6 +5584,7 @@
           {
             "id": "col-area-agniratha-electric-cricket",
             "label": "Electric Cricket",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5326,6 +5592,7 @@
           {
             "id": "col-area-agniratha-scissor-bug",
             "label": "Scissor Bug",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5333,6 +5600,7 @@
           {
             "id": "col-area-agniratha-missing-tree",
             "label": "Missing Tree",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5340,6 +5608,7 @@
           {
             "id": "col-area-agniratha-fortune-feather",
             "label": "Fortune Feather",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5347,6 +5616,7 @@
           {
             "id": "col-area-agniratha-fancy-bolt",
             "label": "Fancy Bolt",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5354,6 +5624,7 @@
           {
             "id": "col-area-agniratha-blue-light-amp",
             "label": "Blue Light Amp",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5361,6 +5632,7 @@
           {
             "id": "col-area-agniratha-fairy-tale-diode",
             "label": "Fairy Tale Diode",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5368,6 +5640,7 @@
           {
             "id": "col-area-agniratha-grape-spring",
             "label": "Grape Spring",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5375,6 +5648,7 @@
           {
             "id": "col-area-agniratha-eryth-blue",
             "label": "Eryth Blue",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5382,6 +5656,7 @@
           {
             "id": "col-area-agniratha-dramatic-night",
             "label": "Dramatic Night",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5580,6 +5855,7 @@
           {
             "id": "col-area-central-factory-meaty-potato",
             "label": "Meaty Potato",
+            "cat": "veg",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5587,6 +5863,7 @@
           {
             "id": "col-area-central-factory-blue-root",
             "label": "Blue Root",
+            "cat": "veg",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5594,6 +5871,7 @@
           {
             "id": "col-area-central-factory-prism-centipede",
             "label": "Prism Centipede",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5601,6 +5879,7 @@
           {
             "id": "col-area-central-factory-cable-mouse",
             "label": "Cable Mouse",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5608,6 +5887,7 @@
           {
             "id": "col-area-central-factory-oil-fox",
             "label": "Oil Fox",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5615,6 +5895,7 @@
           {
             "id": "col-area-central-factory-dew-beetle",
             "label": "Dew Beetle",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5622,6 +5903,7 @@
           {
             "id": "col-area-central-factory-glider-cockroach",
             "label": "Glider Cockroach",
+            "cat": "bug",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5629,6 +5911,7 @@
           {
             "id": "col-area-central-factory-white-styrene",
             "label": "White Styrene",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5636,6 +5919,7 @@
           {
             "id": "col-area-central-factory-black-styrene",
             "label": "Black Styrene",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5643,6 +5927,7 @@
           {
             "id": "col-area-central-factory-blood-oil",
             "label": "Blood Oil",
+            "cat": "nature",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5650,6 +5935,7 @@
           {
             "id": "col-area-central-factory-angel-engine-x",
             "label": "Angel Engine X",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5657,6 +5943,7 @@
           {
             "id": "col-area-central-factory-leaf-coil",
             "label": "Leaf Coil",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5664,6 +5951,7 @@
           {
             "id": "col-area-central-factory-warrior-screw",
             "label": "Warrior Screw",
+            "cat": "parts",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5671,6 +5959,7 @@
           {
             "id": "col-area-central-factory-smoke-cylinder",
             "label": "Smoke Cylinder",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5678,6 +5967,7 @@
           {
             "id": "col-area-central-factory-sacred-panther",
             "label": "Sacred Panther",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5685,6 +5975,7 @@
           {
             "id": "col-area-central-factory-parts-noble",
             "label": "Parts Noble",
+            "cat": "strange",
             "missable": true,
             "confidence": "verify",
             "note": "May be tradeable later, but grab before the area locks to be safe."
@@ -5874,120 +6165,140 @@
           {
             "id": "col-area-bionis-shoulder-fc-rainbow-carrot",
             "label": "Rainbow Carrot",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-high-leaf",
             "label": "High Leaf",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-cream-wheat",
             "label": "Cream Wheat",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-morrow-cob",
             "label": "Morrow Cob",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-kilopumpkin",
             "label": "Kilopumpkin",
+            "cat": "veg",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-angel-bream",
             "label": "Angel Bream",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-gentleclam",
             "label": "Gentleclam",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-sky-mole",
             "label": "Sky Mole",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-blade-bird",
             "label": "Blade Bird",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-palmtop-elephant",
             "label": "Palmtop Elephant",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-half-part",
             "label": "Half Part",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-snare-wire",
             "label": "Snare Wire",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-subzero-steel",
             "label": "Subzero Steel",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-blaze-chain",
             "label": "Blaze Chain",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-congenial-cogs",
             "label": "Congenial Cogs",
+            "cat": "parts",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-swirly-slash",
             "label": "Swirly Slash",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-hero-nipper",
             "label": "Hero Nipper",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-highlightning",
             "label": "Highlightning",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-dubious-sculpture",
             "label": "Dubious Sculpture",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-bionis-shoulder-fc-shimmertumble",
             "label": "Shimmertumble",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -6343,48 +6654,56 @@
           {
             "id": "col-area-alcamoth-fc-cool-lemon",
             "label": "Cool Lemon",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-alcamoth-fc-heart-peach",
             "label": "Heart Peach",
+            "cat": "fruit",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-alcamoth-fc-mystic-dahlia",
             "label": "Mystic Dahlia",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-alcamoth-fc-stardrop",
             "label": "Stardrop",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-alcamoth-fc-nanoceros",
             "label": "Nanoceros",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-alcamoth-fc-mane-cat",
             "label": "Mane Cat",
+            "cat": "nature",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-alcamoth-fc-ha-ha-ha",
             "label": "Ha Ha Ha",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           },
           {
             "id": "col-area-alcamoth-fc-thunder-atmos",
             "label": "Thunder Atmos",
+            "cat": "strange",
             "missable": false,
             "confidence": "high"
           }
@@ -21610,5 +21929,1011 @@
         }
       ]
     }
-  ]
+  ],
+  "wikiAchievements": {
+    "trials": [
+      {
+        "n": 1,
+        "name": "Hunter-in-Training",
+        "cond": "Defeated your first unique monster"
+      },
+      {
+        "n": 2,
+        "name": "Pro Hunter",
+        "cond": "Defeated 10 unique monsters"
+      },
+      {
+        "n": 3,
+        "name": "Master Hunter",
+        "cond": "Defeated 100 unique monsters"
+      },
+      {
+        "n": 4,
+        "name": "First Steps",
+        "cond": "Discovered a Landmark for the first time"
+      },
+      {
+        "n": 5,
+        "name": "A Corner of the World",
+        "cond": "Discovered 10 Landmarks"
+      },
+      {
+        "n": 6,
+        "name": "Seasoned Traveller",
+        "cond": "Discovered 40 Landmarks"
+      },
+      {
+        "n": 7,
+        "name": "Globetrotter",
+        "cond": "Discovered 80 Landmarks"
+      },
+      {
+        "n": 8,
+        "name": "Worldly Wise",
+        "cond": "Discovered 150 Landmarks"
+      },
+      {
+        "n": 9,
+        "name": "Explorer",
+        "cond": "Discovered a Secret Area for the first time"
+      },
+      {
+        "n": 10,
+        "name": "Trailblazer",
+        "cond": "Discovered 6 Secret Areas"
+      },
+      {
+        "n": 11,
+        "name": "Pioneer",
+        "cond": "Discovered 12 Secret Areas"
+      },
+      {
+        "n": 12,
+        "name": "Your First Friend",
+        "cond": "Got to know a named person for the first time"
+      },
+      {
+        "n": 13,
+        "name": "Friend Number Ten",
+        "cond": "Registered 10 people on the Affinity Chart"
+      },
+      {
+        "n": 14,
+        "name": "Fifty Fine Friends",
+        "cond": "Registered 50 people on the Affinity Chart"
+      },
+      {
+        "n": 15,
+        "name": "Friend of the World",
+        "cond": "Registered 120 people on the Affinity Chart"
+      },
+      {
+        "n": 16,
+        "name": "The Brave Protectors",
+        "cond": "Got to know all Defence Force soldiers in Colony 9"
+      },
+      {
+        "n": 17,
+        "name": "Network of Knowledge",
+        "cond": "Got to know many Nopon outside populated areas"
+      },
+      {
+        "n": 18,
+        "name": "The Hopeful Survivors",
+        "cond": "Got to know a lot of people in Colony 6"
+      },
+      {
+        "n": 19,
+        "name": "Know So Many Nopon!",
+        "cond": "Got to know the Nopon living in Frontier Village"
+      },
+      {
+        "n": 20,
+        "name": "Wings of Nobility",
+        "cond": "Got to know many High Entia with small headwings"
+      },
+      {
+        "n": 21,
+        "name": "A Village of Machines",
+        "cond": "Got to know the numerous Machina in the Hidden Village"
+      },
+      {
+        "n": 22,
+        "name": "The Strongest Tie",
+        "cond": "Helped two people form a deep Affinity"
+      },
+      {
+        "n": 23,
+        "name": "Constellation",
+        "cond": "Helped people form an Affinity 10 times"
+      },
+      {
+        "n": 24,
+        "name": "Spider's Web",
+        "cond": "Helped people form an Affinity 50 times"
+      },
+      {
+        "n": 25,
+        "name": "Neural Network",
+        "cond": "Helped people form an Affinity 100 times"
+      },
+      {
+        "n": 26,
+        "name": "Roots Across the World",
+        "cond": "Helped almost everyone form Affinities (200 links)"
+      },
+      {
+        "n": 27,
+        "name": "Colony 9 Celeb",
+        "cond": "Achieved a 3-star Affinity rating for Colony 9"
+      },
+      {
+        "n": 28,
+        "name": "Colony 6 Celeb",
+        "cond": "Achieved a 3-star Affinity rating for Colony 6"
+      },
+      {
+        "n": 29,
+        "name": "Honorary Nopon",
+        "cond": "Achieved a 3-star Affinity rating for Frontier Village"
+      },
+      {
+        "n": 30,
+        "name": "Honorary High Entia",
+        "cond": "Achieved a 3-star Affinity rating for Alcamoth"
+      },
+      {
+        "n": 31,
+        "name": "Honorary Machina",
+        "cond": "Achieved a 3-star Affinity rating for the Hidden Village"
+      },
+      {
+        "n": 32,
+        "name": "Local Hero",
+        "cond": "Developed 5-star Affinity with the people of any area"
+      },
+      {
+        "n": 33,
+        "name": "World Hero",
+        "cond": "Developed 5-star Affinity with everyone"
+      },
+      {
+        "n": 34,
+        "name": "Heartwarming",
+        "cond": "Had a Heart-to-Heart go as smoothly as possible"
+      },
+      {
+        "n": 35,
+        "name": "Heartbreaking",
+        "cond": "Had a Heart-to-Heart go as badly as possible"
+      },
+      {
+        "n": 36,
+        "name": "Pouring Out Your Heart",
+        "cond": "Had 20 Heart-to-Hearts"
+      },
+      {
+        "n": 37,
+        "name": "The Heart of the Matter",
+        "cond": "Had 40 Heart-to-Hearts"
+      },
+      {
+        "n": 38,
+        "name": "Ace of Hearts",
+        "cond": "Had every possible Heart-to-Heart"
+      },
+      {
+        "n": 39,
+        "name": "Problem Solved!",
+        "cond": "Completed a quest for the first time"
+      },
+      {
+        "n": 40,
+        "name": "Helpful Stranger",
+        "cond": "Completed 10 quests"
+      },
+      {
+        "n": 41,
+        "name": "Generous Friend",
+        "cond": "Completed 100 quests"
+      },
+      {
+        "n": 42,
+        "name": "Charitable Ally",
+        "cond": "Completed 200 quests"
+      },
+      {
+        "n": 43,
+        "name": "Selfless Giver",
+        "cond": "Completed 300 quests"
+      },
+      {
+        "n": 44,
+        "name": "Shaping History",
+        "cond": "Changed someone's life through your actions"
+      },
+      {
+        "n": 45,
+        "name": "Drawing a Crowd",
+        "cond": "Increased Colony 6's population to 50"
+      },
+      {
+        "n": 46,
+        "name": "Building a Community",
+        "cond": "Increased Colony 6's population to 100"
+      },
+      {
+        "n": 47,
+        "name": "Bursting at the Seams",
+        "cond": "Filled Colony 6 with 150 people"
+      },
+      {
+        "n": 48,
+        "name": "A Fixer-Upper",
+        "cond": "Started reconstructing Colony 6"
+      },
+      {
+        "n": 49,
+        "name": "A Fix on the Solution",
+        "cond": "Made 50% progress in Colony 6 reconstruction"
+      },
+      {
+        "n": 50,
+        "name": "Good and Fixed",
+        "cond": "Finished reconstructing Colony 6"
+      }
+    ],
+    "records": [
+      {
+        "n": 1,
+        "name": "Bone Breaker",
+        "cond": "Dealt 3,000+ damage in a single attack"
+      },
+      {
+        "n": 2,
+        "name": "Rock Smasher",
+        "cond": "Dealt 25,000+ damage in a single attack"
+      },
+      {
+        "n": 3,
+        "name": "World Shaker",
+        "cond": "Dealt 50,000+ damage in a single attack"
+      },
+      {
+        "n": 4,
+        "name": "Beginner's Luck",
+        "cond": "Defeated 50 enemies"
+      },
+      {
+        "n": 5,
+        "name": "Tough Guy, Eh?",
+        "cond": "Defeated 200 enemies"
+      },
+      {
+        "n": 6,
+        "name": "No Stopping You",
+        "cond": "Defeated 1,000 enemies"
+      },
+      {
+        "n": 7,
+        "name": "Please! No More!",
+        "cond": "Defeated 5,000 enemies"
+      },
+      {
+        "n": 8,
+        "name": "Time for New Glasses",
+        "cond": "Attempted 100 attacks that missed"
+      },
+      {
+        "n": 9,
+        "name": "Some Help You Are!",
+        "cond": "Won a battle without doing anything"
+      },
+      {
+        "n": 10,
+        "name": "Machine Mishaps",
+        "cond": "Defeated 30 Mechon"
+      },
+      {
+        "n": 11,
+        "name": "Machine Mayhem",
+        "cond": "Defeated 100 Mechon"
+      },
+      {
+        "n": 12,
+        "name": "Machine Meltdown",
+        "cond": "Defeated 250 Mechon"
+      },
+      {
+        "n": 13,
+        "name": "Ground Down",
+        "cond": "Defeated 30 ground monsters"
+      },
+      {
+        "n": 14,
+        "name": "Ground Up",
+        "cond": "Defeated 100 ground monsters"
+      },
+      {
+        "n": 15,
+        "name": "Ground to a Pulp",
+        "cond": "Defeated 250 ground monsters"
+      },
+      {
+        "n": 16,
+        "name": "Airing Grievances",
+        "cond": "Defeated 30 aerial monsters"
+      },
+      {
+        "n": 17,
+        "name": "Clearing the Air",
+        "cond": "Defeated 100 aerial monsters"
+      },
+      {
+        "n": 18,
+        "name": "Anti-Air Battering",
+        "cond": "Defeated 250 aerial monsters"
+      },
+      {
+        "n": 19,
+        "name": "Bug Off",
+        "cond": "Defeated 30 insects"
+      },
+      {
+        "n": 20,
+        "name": "Walking Insecticide",
+        "cond": "Defeated 100 insects"
+      },
+      {
+        "n": 21,
+        "name": "Elementary!",
+        "cond": "Defeated 30 ether-based monsters"
+      },
+      {
+        "n": 22,
+        "name": "Braving the Elements",
+        "cond": "Defeated 100 ether-based monsters"
+      },
+      {
+        "n": 23,
+        "name": "Telethia Tracker",
+        "cond": "Defeated 30 Telethia"
+      },
+      {
+        "n": 24,
+        "name": "Telethia Triumph",
+        "cond": "Defeated 100 Telethia"
+      },
+      {
+        "n": 25,
+        "name": "Fish for Compliments",
+        "cond": "Defeated 30 aquatic monsters"
+      },
+      {
+        "n": 26,
+        "name": "Smashing!",
+        "cond": "Smashed a vision tag for the first time"
+      },
+      {
+        "n": 27,
+        "name": "Simply Smashing!",
+        "cond": "Smashed 100 vision tags"
+      },
+      {
+        "n": 28,
+        "name": "Smashing...to Pieces!",
+        "cond": "Smashed 1,000 vision tags"
+      },
+      {
+        "n": 29,
+        "name": "Not Gonna Happen!",
+        "cond": "Changed the future by defeating an enemy (first time)"
+      },
+      {
+        "n": 30,
+        "name": "I'll Change the Future!",
+        "cond": "Changed the future 20 times"
+      },
+      {
+        "n": 31,
+        "name": "The Future is Ours!",
+        "cond": "Changed the future 50 times"
+      },
+      {
+        "n": 32,
+        "name": "Second Wind",
+        "cond": "Revived party members 10 times"
+      },
+      {
+        "n": 33,
+        "name": "Can't Keep 'Em Down",
+        "cond": "Revived party members 100 times"
+      },
+      {
+        "n": 34,
+        "name": "Down But Never Out",
+        "cond": "Revived party members 500 times"
+      },
+      {
+        "n": 35,
+        "name": "Critical Thinking",
+        "cond": "Delivered 50 critical hits"
+      },
+      {
+        "n": 36,
+        "name": "Critical Condition",
+        "cond": "Delivered 1,500 critical hits"
+      },
+      {
+        "n": 37,
+        "name": "Critical Mass",
+        "cond": "Delivered 5,000 critical hits"
+      },
+      {
+        "n": 38,
+        "name": "Let's Fight!",
+        "cond": "Achieved Battle Start Affinity for the first time"
+      },
+      {
+        "n": 39,
+        "name": "Let's Go, Everyone!",
+        "cond": "Achieved Battle Start Affinity 100 times"
+      },
+      {
+        "n": 40,
+        "name": "Yeah! We Can Do It!",
+        "cond": "Achieved Battle Start Affinity 1,000 times"
+      },
+      {
+        "n": 41,
+        "name": "Turn It Up",
+        "cond": "Entered High Tension for the first time"
+      },
+      {
+        "n": 42,
+        "name": "Fire It Up",
+        "cond": "Entered High Tension 50 times"
+      },
+      {
+        "n": 43,
+        "name": "Burn It Up",
+        "cond": "Entered High Tension 200 times"
+      },
+      {
+        "n": 44,
+        "name": "Go Team!",
+        "cond": "Used a chain attack for the first time"
+      },
+      {
+        "n": 45,
+        "name": "Tip Top Team-Up",
+        "cond": "Used a chain attack 50 times"
+      },
+      {
+        "n": 46,
+        "name": "A Team Like No Other",
+        "cond": "Used a chain attack 200 times"
+      },
+      {
+        "n": 47,
+        "name": "Team With a Capital T",
+        "cond": "Used a chain attack 1,000 times"
+      },
+      {
+        "n": 48,
+        "name": "Killer Combo",
+        "cond": "Used a chain attack to deal 3,000 total damage"
+      },
+      {
+        "n": 49,
+        "name": "Cosmic Killer Combo",
+        "cond": "Used a chain attack to deal 30,000 total damage"
+      },
+      {
+        "n": 50,
+        "name": "Quantum Killer Combo",
+        "cond": "Used a chain attack to deal 100,000 total damage"
+      },
+      {
+        "n": 51,
+        "name": "Chain Gang",
+        "cond": "Performed a chain attack with 4+ links"
+      },
+      {
+        "n": 52,
+        "name": "Off the Chain",
+        "cond": "Performed a chain attack with 5+ links"
+      },
+      {
+        "n": 53,
+        "name": "Back-Stabber",
+        "cond": "Performed a back attack for the first time"
+      },
+      {
+        "n": 54,
+        "name": "Rear Admiral",
+        "cond": "Performed 50 back attacks"
+      },
+      {
+        "n": 55,
+        "name": "Ninja Skillz",
+        "cond": "Attacked from behind and defeated an enemy in one strike"
+      },
+      {
+        "n": 56,
+        "name": "Jaws of Defeat",
+        "cond": "Won a battle while at 10% HP or less"
+      },
+      {
+        "n": 57,
+        "name": "Come On, Cheer Up!",
+        "cond": "Felt the pain of Incapacitation for the first time"
+      },
+      {
+        "n": 58,
+        "name": "Phoenix",
+        "cond": "Been wiped out 50 times"
+      },
+      {
+        "n": 59,
+        "name": "Art Practice",
+        "cond": "Used Arts 1,000 times across the party"
+      },
+      {
+        "n": 60,
+        "name": "The Art of War",
+        "cond": "Used Arts 10,000 times across the party"
+      },
+      {
+        "n": 61,
+        "name": "Right, Let's Do This!",
+        "cond": "Used the first character's Arts 100 times"
+      },
+      {
+        "n": 62,
+        "name": "Reyn Time, Baby!",
+        "cond": "Used the second character's Arts 100 times"
+      },
+      {
+        "n": 63,
+        "name": "I Can Beat Anyone!",
+        "cond": "Used another character's Arts 100 times"
+      },
+      {
+        "n": 64,
+        "name": "Attack Me if You Dare!",
+        "cond": "Used another character's Arts 100 times"
+      },
+      {
+        "n": 65,
+        "name": "Things Are Heating Up!",
+        "cond": "Used another character's Arts 100 times"
+      },
+      {
+        "n": 66,
+        "name": "Riki Use Arts!",
+        "cond": "Used a later character's Arts 100 times"
+      },
+      {
+        "n": 67,
+        "name": "Who Dares Defy Me?",
+        "cond": "Used a later character's Arts 100 times"
+      },
+      {
+        "n": 68,
+        "name": "One Step Further",
+        "cond": "Unlocked the intermediate Art level"
+      },
+      {
+        "n": 69,
+        "name": "The Final Step",
+        "cond": "Unlocked the advanced Art level"
+      },
+      {
+        "n": 70,
+        "name": "Art School",
+        "cond": "Levelled up an Art to level 2"
+      },
+      {
+        "n": 71,
+        "name": "A Work of Art",
+        "cond": "Raised an Art to level 5"
+      },
+      {
+        "n": 72,
+        "name": "Perfecting the Art",
+        "cond": "Raised an Art to maximum level"
+      },
+      {
+        "n": 73,
+        "name": "Down to a Fine Art",
+        "cond": "Raised 5 of one character's Arts to max"
+      },
+      {
+        "n": 74,
+        "name": "Art-to-Art",
+        "cond": "Raised 10 of one character's Arts to max"
+      },
+      {
+        "n": 75,
+        "name": "State of the Art",
+        "cond": "Raised all of one character's Arts to max"
+      },
+      {
+        "n": 76,
+        "name": "Sharing the Knowledge",
+        "cond": "Received shared skills from every character"
+      },
+      {
+        "n": 77,
+        "name": "Specialist",
+        "cond": "Fully developed one Skill Branch"
+      },
+      {
+        "n": 78,
+        "name": "Honest Insight",
+        "cond": "Fully developed 3 of the first character's Skill Branches"
+      },
+      {
+        "n": 79,
+        "name": "Raging Stalwart",
+        "cond": "Fully developed 3 of one character's Skill Branches"
+      },
+      {
+        "n": 80,
+        "name": "Spirited Adventurer",
+        "cond": "Fully developed 3 of one character's Skill Branches"
+      },
+      {
+        "n": 81,
+        "name": "Gallant Hero",
+        "cond": "Fully developed 3 of one character's Skill Branches"
+      },
+      {
+        "n": 82,
+        "name": "Unyielding Devotion",
+        "cond": "Fully developed 3 of one character's Skill Branches"
+      },
+      {
+        "n": 83,
+        "name": "Adorable Randomness",
+        "cond": "Fully developed 3 of one character's Skill Branches"
+      },
+      {
+        "n": 84,
+        "name": "Serene Candour",
+        "cond": "Fully developed 3 of one character's Skill Branches"
+      },
+      {
+        "n": 85,
+        "name": "Secret Weapon",
+        "cond": "Fully developed one character's Skill Branches"
+      },
+      {
+        "n": 86,
+        "name": "Dream Team",
+        "cond": "Fully developed every character's Skill Branches"
+      },
+      {
+        "n": 87,
+        "name": "Turning it Around",
+        "cond": "Successfully achieved Burst Affinity"
+      },
+      {
+        "n": 88,
+        "name": "Changing Course",
+        "cond": "Used Burst Affinity 300 times"
+      },
+      {
+        "n": 89,
+        "name": "Complete 180",
+        "cond": "Achieved Burst Affinity 2,000 times"
+      },
+      {
+        "n": 90,
+        "name": "Looking For Trouble",
+        "cond": "Defeated an enemy 5+ levels higher"
+      },
+      {
+        "n": 91,
+        "name": "Beating the Odds",
+        "cond": "Defeated an enemy 10+ levels higher"
+      },
+      {
+        "n": 92,
+        "name": "Unlucky Sixes",
+        "cond": "Performed an attack dealing exactly 666 damage"
+      },
+      {
+        "n": 93,
+        "name": "Lucky Sevens",
+        "cond": "Performed an attack dealing exactly 777 damage"
+      },
+      {
+        "n": 94,
+        "name": "Skip It",
+        "cond": "Used Skip Travel for the first time"
+      },
+      {
+        "n": 95,
+        "name": "Lazybones",
+        "cond": "Used Skip Travel 50 times"
+      },
+      {
+        "n": 96,
+        "name": "Hunting for Treasure",
+        "cond": "Obtained 10 Rare Treasure Chests"
+      },
+      {
+        "n": 97,
+        "name": "Hoarding Treasure",
+        "cond": "Obtained 50 Rare Treasure Chests"
+      },
+      {
+        "n": 98,
+        "name": "Ooh, Shiny",
+        "cond": "Obtained a Super Rare Treasure Chest (first time)"
+      },
+      {
+        "n": 99,
+        "name": "It Hasn't Lost its Lustre",
+        "cond": "Obtained 10 Super Rare Treasure Chests"
+      },
+      {
+        "n": 100,
+        "name": "Need...More...Treasure",
+        "cond": "Obtained 50 Super Rare Treasure Chests"
+      },
+      {
+        "n": 101,
+        "name": "Treasure Trove",
+        "cond": "Obtained 1,000 Rare/Super Rare Treasure Chests"
+      },
+      {
+        "n": 102,
+        "name": "Titan's Gift",
+        "cond": "Harvested an ether crystal for the first time"
+      },
+      {
+        "n": 103,
+        "name": "Titan's Generosity",
+        "cond": "Harvested ether crystals 50 times"
+      },
+      {
+        "n": 104,
+        "name": "Titan's Greatness",
+        "cond": "Harvested ether crystals 500 times"
+      },
+      {
+        "n": 105,
+        "name": "Raring to Go",
+        "cond": "Obtained a rare ether crystal for the first time"
+      },
+      {
+        "n": 106,
+        "name": "Medium Rare",
+        "cond": "Obtained 7 rare ether crystals"
+      },
+      {
+        "n": 107,
+        "name": "In Rare Form",
+        "cond": "Obtained 77 rare ether crystals"
+      },
+      {
+        "n": 108,
+        "name": "Crystallised Luck",
+        "cond": "Mined a rank V ether crystal"
+      },
+      {
+        "n": 109,
+        "name": "That Hits the Slot",
+        "cond": "Filled a gem slot for the first time"
+      },
+      {
+        "n": 110,
+        "name": "Truly Outrageous",
+        "cond": "Filled all 8 gem slots at once for any character"
+      },
+      {
+        "n": 111,
+        "name": "Learning the Craft",
+        "cond": "Practised Gem Crafting and received a Synergy Bonus"
+      },
+      {
+        "n": 112,
+        "name": "Getting Crafty",
+        "cond": "Received a Synergy Bonus 250+ times"
+      },
+      {
+        "n": 113,
+        "name": "Crafting Your Destiny",
+        "cond": "Received a Synergy Bonus 500+ times"
+      },
+      {
+        "n": 114,
+        "name": "Craftacular!",
+        "cond": "Entered the Fever state while Gem Crafting"
+      },
+      {
+        "n": 115,
+        "name": "Craftstravaganza!",
+        "cond": "Entered the Fever state 3 times"
+      },
+      {
+        "n": 116,
+        "name": "Lending a Hand",
+        "cond": "Received a Support Bonus while crafting"
+      },
+      {
+        "n": 117,
+        "name": "Crafting Friendships",
+        "cond": "Received a Support Bonus for every character"
+      },
+      {
+        "n": 118,
+        "name": "Firing on All Cylinders",
+        "cond": "Filled the Cylinder Gauge 9 times in one session"
+      },
+      {
+        "n": 119,
+        "name": "Happy New Year!",
+        "cond": "Witnessed the 366th in-game sunrise"
+      },
+      {
+        "n": 120,
+        "name": "Terminal Velocity",
+        "cond": "Fell to your demise from a great height"
+      },
+      {
+        "n": 121,
+        "name": "Making Waves",
+        "cond": "Fell into water from 200+ metres"
+      },
+      {
+        "n": 122,
+        "name": "One is Never Enough",
+        "cond": "Recorded an item in the Collectopaedia (first time)"
+      },
+      {
+        "n": 123,
+        "name": "Collector's Mentality",
+        "cond": "Completed a page in the Collectopaedia"
+      },
+      {
+        "n": 124,
+        "name": "Stamp of Insanity",
+        "cond": "Completed every page in the Collectopaedia"
+      },
+      {
+        "n": 125,
+        "name": "Study Aids",
+        "cond": "Gave the first character 20 machinery pieces as gifts"
+      },
+      {
+        "n": 126,
+        "name": "Auber the Top",
+        "cond": "Gave the second character Energy Aubergine as a gift"
+      },
+      {
+        "n": 127,
+        "name": "Aim for the Heart!",
+        "cond": "Had one character give 20 gifts to the first character"
+      },
+      {
+        "n": 128,
+        "name": "Thanks But No Thanks",
+        "cond": "Gave a character a gift they truly hated"
+      },
+      {
+        "n": 129,
+        "name": "Fruitful Gifts",
+        "cond": "Gave one character fruit as a gift 20 times"
+      },
+      {
+        "n": 130,
+        "name": "You May Have This",
+        "cond": "Had one character give 30 gifts"
+      },
+      {
+        "n": 131,
+        "name": "Not Just Riki Eat!",
+        "cond": "Had one character give insects as gifts 30 times"
+      },
+      {
+        "n": 132,
+        "name": "Love at First Bite",
+        "cond": "Gave a Love Source as a present"
+      },
+      {
+        "n": 133,
+        "name": "Ear to the Ground",
+        "cond": "Talked to people 100 times"
+      },
+      {
+        "n": 134,
+        "name": "Social Butterfly",
+        "cond": "Talked to people 1,000 times"
+      },
+      {
+        "n": 135,
+        "name": "Breaking the Ice",
+        "cond": "Had a party member step into a conversation"
+      },
+      {
+        "n": 136,
+        "name": "Idle Chit-Chat",
+        "cond": "Had party members step into conversations 50 times"
+      },
+      {
+        "n": 137,
+        "name": "Chatting the Day Away",
+        "cond": "Had party members step into conversations 300 times"
+      },
+      {
+        "n": 138,
+        "name": "Blossoming Friendship",
+        "cond": "Improved the Affinity between two party members"
+      },
+      {
+        "n": 139,
+        "name": "Unshakeable Trust",
+        "cond": "Improved two party members' Affinity further"
+      },
+      {
+        "n": 140,
+        "name": "Unbreakable Bond",
+        "cond": "Formed the deepest Affinity between two party members"
+      },
+      {
+        "n": 141,
+        "name": "Get the Party Started",
+        "cond": "Deepened Affinity between all party members"
+      },
+      {
+        "n": 142,
+        "name": "Party's in Full Swing",
+        "cond": "Formed the deepest Affinity between all party members"
+      },
+      {
+        "n": 143,
+        "name": "Equivalent Exchange",
+        "cond": "Successfully traded items with someone"
+      },
+      {
+        "n": 144,
+        "name": "Tradesman",
+        "cond": "Traded items 20 times"
+      },
+      {
+        "n": 145,
+        "name": "Master Tradesman",
+        "cond": "Traded items 100 times"
+      },
+      {
+        "n": 146,
+        "name": "Mysterious Mantis",
+        "cond": "Obtained Minute Mantis through trading"
+      },
+      {
+        "n": 147,
+        "name": "Shining Impracticality",
+        "cond": "Obtained Golden Cog through trading"
+      },
+      {
+        "n": 148,
+        "name": "Indigo Belligerence",
+        "cond": "Obtained Love Beetle through trading"
+      },
+      {
+        "n": 149,
+        "name": "Stormy Outlook",
+        "cond": "Obtained Thunder Compass through trading"
+      },
+      {
+        "n": 150,
+        "name": "Angelic Imitation",
+        "cond": "Obtained Angel Engine Y through trading"
+      }
+    ]
+  }
 }

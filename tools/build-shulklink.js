@@ -987,6 +987,13 @@ data.missables = missables;
 // ---- attach + write ---------------------------------------------------------
 data.pointsOfNoReturn = PONR;
 data.walkthrough = sections;
+try {
+  const wa = require("./wiki-achievements.js");
+  data.wikiAchievements = {
+    trials: wa.trials.map(([n, name, cond]) => ({ n, name, cond })),
+    records: wa.records.map(([n, name, cond]) => ({ n, name, cond }))
+  };
+} catch (e) { console.warn("(no wiki-achievements.js — Records & Trials tab will fall back to guide text)"); }
 data.meta.version = "0.5.1";
 data.meta.sourceOfTruth = "ShulkLink0624 GameFAQs walkthrough (faqs/76615) — structure + factual data only, no prose. 40 chronological sections (4.1–4.40) with quest/UM/HTH numbering and 5 points of no return.";
 

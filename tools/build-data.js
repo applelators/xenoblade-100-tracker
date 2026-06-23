@@ -43,6 +43,20 @@ const COLLECT = {
   "Alcamoth (FC)": ["Cool Lemon","Heart Peach","Mystic Dahlia","Stardrop","Nanoceros","Mane Cat","Ha Ha Ha","Thunder Atmos"]
 };
 
+// Collectopaedia categories (in-game 6: Veg, Fruit, Bug, Nature, Parts, Strange).
+// Sourced from Game8's per-area collectopaedia (Flowers + Animals fold into Nature).
+const CAT = {
+  veg: ["Sweet Wasabi", "Cool Potato", "Red Lettuce", "Chewy Radish", "Hot Taro", "Juicy Broccoli", "Spicy Cabbage", "Hard Lotus", "Blue Turnip", "Cute Parsnip", "Poisonous Gourd", "Humming Cabbage", "Sarsaparilla", "Black Liver Bean", "Schorl Mushroom", "Kelp Mushroom", "Honey Rhubarb", "Pink Asparagus", "Tropical Radish", "Dolphin Carrot", "Gold Burdock", "Sour Radish", "Ice Cabbage", "Girl Courgette", "Amethyst Vanilla", "Fire Pepper", "Meaty Carrot", "Bitter Broccoli", "Sour Turnip", "Golden Beetroot", "Juicy Steakplant", "Acerola Pea", "Energy Aubergine", "Sweet Pepper", "Meaty Potato", "Blue Root", "Rainbow Carrot", "High Leaf", "Cream Wheat", "Morrow Cob", "Kilopumpkin"],
+  fruit: ["Dance Apple", "Black Kiwi", "Clear Almond", "Bright Fig", "Dark Grape", "Sour Gouseberry", "Red Durian", "Walnut Grape", "Humming Plum", "Dark Mango", "Pure Cherry", "Bitter Kiwi", "Juicy Grape", "Spicy Nut", "Crimson Citrus", "Cool Lemon", "Heart Peach", "Ether Plum", "Fire Apple", "Ruby Mangosteen", "Sour Grape", "Bitter Melon", "Citron Gooseberry", "Juicy Melon", "Amethyst Melon", "White Plum", "Ice Kiwi Fruit", "Spicy Papaya", "Large Mango", "Juicy Blueberry", "Sweet Lime", "Spicy Banana", "Dry Lemon", "Death Lychee", "Hell Raspberry", "Deadly Kiwi"],
+  bug: ["Prairie Dragonfly", "Giant Hornet", "White Beetle", "Sorrow Beetle", "Brown Butterfly", "Gold Caterpillar", "Rumble Stonefly", "White Ladybird", "Hill Firefly", "Moth Crawler", "Queen Locust", "Fire Tarantula", "Black Beetle", "Rubber Mantis", "Mystery Firefly", "Scarlet Ladybird", "Shield Bug", "Hades Beetle", "Benign Cricket", "Rainbow Bug", "Empress Beetle", "Green Earwig", "Blue Ladybird", "Wheel Lurker", "Ultramarine Ant", "Scarlet Crawler", "Shiny Scarab", "Water Boatman", "Dew Beetle", "Glider Cockroach", "Electric Cricket", "Scissor Bug", "Señorita Scarab", "Emperor Beetle", "Minute Mantis", "Love Beetle"],
+  nature: ["Mat Ice", "Bluesky Bark", "Pione Stone", "Strong Dandelion", "Moon Flower", "Dawn Hydrangea", "Insanity Mint", "Night Tulip", "Shin Newt", "Cave Rat", "Shin Gecko", "Happy Rabbit", "Kneecap Rock", "Confusion Ivy", "Clarity Moss", "Cute Orchid", "Sirius Anemone", "Spirit Clematis", "Pyro Lizard", "Amblygon Turtle", "Dobercorgi", "Light Bat", "Black Frog", "Yellow Cat", "Charcoal Leg", "Ether Pebble", "Rumble Coal", "Sunflower Rogue", "Merry Coronation", "Ether Rose", "Orb Daisy", "Forget-You-Not", "Chimera Rabbit", "Venom Platypus", "Humming Cat", "Mist Tree", "Lemon Stone", "Feather Leaf", "Water Log", "Wool Rock", "Blood Worm", "Azure Mouse", "Happy Duck", "Enigma Lotus", "Humming Nettle", "Princess Daffodil", "Black Iris", "Ash Fox", "Soft Sea Cucumber", "Fossil Monkey", "Venomous Lizard", "Sea Berry", "Despair Clover", "Doomsday Poppy", "Night Lily", "Razor Teasel", "Sea Frog", "Mane Cat", "White Tail", "Marine Marble", "Oil Branch", "Dilemma Rock", "Mystic Dahlia", "Stardrop", "Fortune Mallow", "Black Peony", "Fatal Belladonna", "Wet Rat", "Ice Monkey", "Crystal Frog", "Mud Squirrel", "Gypsum Branch", "Black Ash", "Emerald Snow", "Rabbit Stone", "Broom Icicle", "Jujube Silver", "Black Blossom", "Abyss Heather", "Delerium Foxglove", "Oil Oyster", "Dark Fish", "Ether Penguin", "Rainbow Slug", "Poisonous Coral", "Poison Ivy", "Amber Leaf", "Azure Hollyhock", "Utopia Crocus", "Ivy Nest", "Mossy Panel", "Bronze Wood", "Prism Centipede", "Cable Mouse", "Oil Fox", "White Styrene", "Black Styrene", "Blood Oil", "Lewisia Silver", "Freesia Cyst", "Bellflower Crystal", "Missing Tree", "Fortune Feather", "Dancing Squirrel", "Lightning Weasel", "Angry Monkey", "Absurd Branch", "Insanity Moss", "Angel Bream", "Gentleclam", "Sky Mole", "Blade Bird", "Palmtop Elephant", "Nanoceros"],
+  parts: ["Blue Chain", "Rabbit Diode", "Rusty Bolt", "Winding Gear", "Black Chip", "Ready Coil", "Blue Gear Shard", "Rumble Part", "White Tube", "Green Diode", "Spiral Lamp", "Gold Condenser", "Purple Lamp", "Crimson Gear", "Locust Spring", "Art Core Coil", "Tail Antenna", "Warning Lamp", "Digital Filament", "Retro Diode", "Modern Blue Gear", "Snow Transistor", "Angel Engine X", "Leaf Coil", "Warrior Screw", "Fancy Bolt", "Blue Light Amp", "Fairy Tale Diode", "Grape Spring", "White Cover", "Modern Resistor", "Green Cam", "Strong Screw", "Golden Cog", "Angel Engine Y", "Thunder Compass", "Half Part", "Snare Wire", "Subzero Steel", "Blaze Chain", "Congenial Cogs"],
+  strange: ["Plate Snow", "Rainbow Zirconia", "Leaf Mystery", "Steel Silk", "Gold Dust Illusion", "Devious Gravity", "White Songbird", "Death Bangle", "Verdant Eternity", "White Night Rod", "Love Crane", "Fire Abron", "Pauper's Cup", "Happy Carnival", "Dawn Dice", "Tap Tap Tap", "High Entia Jewel", "Lemonade Sky", "Forest of Gossip", "Gravel Disk", "Rumble Box", "Black Panel", "High Violet", "Steel Hauyne", "Ha Ha Ha", "Thunder Atmos", "Tasty Sausage", "Macro Passion", "Frost Glass", "Large Handcuffs", "Red Frontier", "Darkness Bottle", "Bud of Eternity", "Hunger Crash", "Splish Splash", "Tweet Tweet", "Flame Frame", "Smoke Cylinder", "Sacred Panther", "Parts Noble", "Eryth Blue", "Dramatic Night", "Blue Glow", "Blue Blood", "Coin of Fortune", "Love Source", "Swirly Slash", "Hero Nipper", "Highlightning", "Dubious Sculpture", "Shimmertumble"]
+};
+const CAT_OF = {};
+Object.keys(CAT).forEach((c) => CAT[c].forEach((n) => { CAT_OF[n] = c; }));
+const catMisses = [];
+
 const LAND = {
   "Colony 9": { l: ["Gem Man's Stall","Mechon Wreckage Site","Main Entrance","Ether Light","Central Plaza","Fortress Entrance","Tranquil Square","Outlook Park","Tephra Cave Entrance","Cylinder Hangar"], loc: ["Commercial District","Military District","Weapon Dev Lab","Residential District","Anti-Air Battery 1","Anti-Air Battery 2","Anti-Air Battery 3","Tephra Hill","Cliff Lake","Agora Shore","Hazzai Cape","Dunban's House"] },
   "Tephra Cave": { l: ["Tephra Path","Mag Mell Ruins","Rear Entrance","Spring of Grief","Vilia Lake","Heavenly Window","Bafalgar Tomb","Leg Pass"], loc: ["Caterpile Nest","Warehouse 2","Escape Pod Bay","Tephra Cavern","Hidden Warehouse","Forgotten Cave","Emergency Warehouse","Soothsayer's Crypt","Prayer Room","Bone Corridor","Arachno Queen's Nest","Kneecap Hill","Trader's Stopover","Arachno Feeding Lair","Path of Absolution"] },
@@ -156,13 +170,17 @@ AREA_PLAN.forEach((plan) => {
   // collectopaedia
   const cols = COLLECT[plan.canon] || [];
   if (cols.length) {
-    setSection(area, "collectopaedia", cols.map((n) => ({
-      id: "col-" + slug(area.id + "-" + prefix + n),
-      label: prefix + n,
-      missable: locks,                       // tradeable-debate: in locking areas, grab to be safe
-      confidence: locks ? "verify" : "high",
-      note: locks ? "May be tradeable later, but grab before the area locks to be safe." : undefined
-    })));
+    setSection(area, "collectopaedia", cols.map((n) => {
+      if (!CAT_OF[n]) catMisses.push(n);
+      return {
+        id: "col-" + slug(area.id + "-" + prefix + n),
+        label: prefix + n,
+        cat: CAT_OF[n] || "strange",           // in-game collectopaedia category
+        missable: locks,                       // tradeable-debate: in locking areas, grab to be safe
+        confidence: locks ? "verify" : "high",
+        note: locks ? "May be tradeable later, but grab before the area locks to be safe." : undefined
+      };
+    }));
   }
 
   // landmarks (+ locations)
@@ -198,6 +216,8 @@ data.futureConnected = [];
 
 data.meta.version = "0.2.0";
 data.meta.scope = "Full 100%: missable spine + full Collectopaedia + all landmarks/locations + Future Connected. Non-missable bulk data tagged confidence high (Game8-sourced); double-check completeness against the in-game map %.";
+
+if (catMisses.length) console.warn("(collectopaedia) uncategorised names → defaulted to 'strange':", [...new Set(catMisses)].join(", "));
 
 fs.writeFileSync(FILE, JSON.stringify(data, null, 2) + "\n");
 console.log("Wrote", FILE);
