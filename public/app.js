@@ -71,13 +71,20 @@
   // from the Game8 best-arts tier list — the source of truth for these icons.
   const ART_HAVE_ICON = new Set(["air-fang", "air-slash", "armor", "back-slash", "battle-soul", "berserker", "bitey-bitey", "burninate", "buster", "covert-stance", "cross-impact", "cure-round", "dive-sobat", "double-blade", "double-wind", "electric-gutbuster", "ether-drain", "final-cross", "freezinate", "gale-slash", "happy-happy", "head-shot", "heal-blast", "heal-bullet", "heal-round", "heat-haze", "hero-time", "lariat", "light-heal", "lock-on", "lurgy", "magnum-charge", "mind-blast", "peerless", "power-drain", "reflection", "serene-heart", "shadow-eye", "shield", "shield-bash", "slit-edge", "sneaky", "soaring-tempest", "spear-blade", "spirit-breath", "steel-strike", "stream-edge", "summon-bolt", "summon-copy", "summon-earth", "summon-flare", "summon-ice", "summon-wind", "sword-drive", "tantrum", "war-swing", "wild-down", "worldly-slash", "you-can-do-it", "zero-gravity"]);
   const artSlug = (n) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-  // one art per row (icon + name) so each is easy to parse at a glance
+  // level each art is learned at (Game8 arts list #289258). 0 = no level: learned
+  // by default / via story (Shulk's Monado arts, talent arts).
+  const ART_LEVEL = { "Battle Soul": 32, "Shadow Eye": 10, "Air Slash": 14, "Back Slash": 1, "Slit Edge": 3, "Stream Edge": 5, "Light Heal": 1, "Armor": 0, "Shield": 0, "Buster": 0, "Lariat": 43, "Berserker": 19, "Sword Drive": 16, "Wild Down": 1, "Dive Sobat": 31, "Magnum Charge": 35, "Shield Bash": 27, "War Swing": 8, "Cure Round": 46, "Head Shot": 42, "Heal Round": 18, "Heal Bullet": 1, "Covert Stance": 26, "Heal Blast": 14, "Soaring Tempest": 44, "Heat Haze": 36, "Serene Heart": 28, "Steel Strike": 1, "Worldly Slash": 1, "Peerless": 1, "Gale Slash": 1, "Spirit Breath": 22, "Electric Gutbuster": 1, "Summon Earth": 47, "Summon Copy": 38, "Summon Flare": 1, "Summon Bolt": 1, "Mind Blast": 0, "Summon Wind": 41, "Reflection": 50, "Summon Ice": 56, "Freezinate": 31, "Burninate": 43, "You Can Do It": 27, "Hero Time": 1, "Lurgy": 1, "Sneaky": 1, "Bitey Bitey": 1, "Tantrum": 40, "Happy Happy": 1, "Final Cross": 0, "Air Fang": 1, "Lock-On": 46, "Zero Gravity": 1, "Spear Blade": 1, "Double Blade": 1, "Power Drain": 58, "Double Wind": 42, "Ether Drain": 1, "Cross Impact": 1 };
+  // one art per row (icon + name + learn-level) so each is easy to parse at a glance
   const artsList = (arr) => el("div", { class: "arts-list" }, arr.map((n) => {
     const sl = artSlug(n);
     const ic = ART_HAVE_ICON.has(sl)
       ? el("img", { class: "art-ic-img", src: "icons/arts/" + sl + ".png", alt: "", loading: "lazy" })
       : el("span", { class: "art-ic", text: artIcon(n) });
-    return el("div", { class: "art" }, [ic, el("span", { class: "art-name", text: n })]);
+    const lv = ART_LEVEL[n];
+    const lvl = (lv === 0)
+      ? el("span", { class: "art-lv default", title: "Learned by default / via story (Monado or talent art)" }, ["★"])
+      : (lv != null ? el("span", { class: "art-lv", title: "Learned at level " + lv }, ["Lv " + lv]) : null);
+    return el("div", { class: "art" }, [ic, el("span", { class: "art-name", text: n }), lvl]);
   }));
   let SECTION_RANK = {};      // section code -> chronological index (for party-by-section)
   // who is in the party at a given section (spoiler-gated by arc reveal anyway)

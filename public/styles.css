@@ -304,7 +304,9 @@ details.completion[open] > summary::before { content: "▾ "; }
 .art { display: flex; align-items: center; gap: 7px; font-size: 12px; line-height: 1.2; }
 .art-ic { font-size: 14px; width: 22px; text-align: center; flex: 0 0 auto; }
 .art-ic-img { width: 22px; height: 22px; object-fit: contain; flex: 0 0 auto; background: rgba(0,0,0,.25); border-radius: 4px; }
-.art-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.art-name { flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.art-lv { flex: 0 0 auto; font-size: 10px; font-weight: 700; color: var(--accent); background: #11243a; border: 1px solid #2c5b7d; border-radius: 4px; padding: 0 4px; font-variant-numeric: tabular-nums; }
+.art-lv.default { color: #e0b6f5; background: #2a1f3a; border-color: #5a3f7d; }
 .tl { font-weight: 800; font-size: 10.5px; padding: 0 5px; border-radius: 4px; flex: 0 0 auto; line-height: 1.5; }
 .tl.s { background: #5a1f2f; color: #ffd1dc; border: 1px solid #9d3550; }
 .tl.a { background: #2f3f1f; color: #d8f0b0; border: 1px solid #5a7d35; }
