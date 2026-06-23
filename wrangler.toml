@@ -18,9 +18,9 @@ binding = "ASSETS"
 #   2) uncomment the block below and paste that id
 #   3) commit + push  (the Git-integration build picks up the binding)
 #
-# [[kv_namespaces]]
-# binding = "SYNC"
-# id = "PASTE_KV_NAMESPACE_ID_HERE"
+[[kv_namespaces]]
+binding = "SYNC"
+id = "97a70cc7e1f34c87a2e3c5f105eae3ea"
 
 # Deploy to the applelators Cloudflare account:
 #   wrangler deploy
