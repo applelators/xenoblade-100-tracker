@@ -987,6 +987,39 @@ const missables = MISS_DEF.map((def) => {
 data.missables = missables;
 
 // ---- attach + write ---------------------------------------------------------
+// ---- correct every Heart-to-Heart's region (source: RPG Site H2H guide) --------
+// The guide's section region was being used as a fallback, which was wrong for
+// multi-region sections (e.g. §4.6) and a few mislabelled ones (e.g. True Natures).
+const HTH_REGION_SRC = {
+  "Colony 9": ["Sunrise in the Park", "Enduring Friendship", "Fiora's Cooking", "Overlooking the Colony", "Ancient Wreckage", "A Heropon's Perspective", "Watching Over Them"],
+  "Tephra Cave": ["Glowing in the Night", "The Legend of the Spider", "A Scene Revisited"],
+  "Bionis' Leg": ["What Visions May Bring", "Heir to the Monado", "What's on Reyn's Mind", "Geography Lesson", "Revisiting the Past"],
+  "Colony 6": ["One Year On", "Recovery and Reflection", "Dunban's Right Arm", "Quiet Time", "Renewed Determination", "Strength of Heart", "The Colony Reborn"],
+  "Ether Mine": ["A Broken Watch", "A Wistful Glow"],
+  "Satorl Marsh": ["The Shimmering Marsh", "High Entia History", "Atop the Crown Tree"],
+  "Makna Forest": ["Fallen Brethren", "No Boys Allowed", "Riki's Crazy Plan", "Riki's Crazy Crystal Plan"],
+  "Frontier Village": ["At the Pollen Works", "True Natures", "Mysterious Sanctuary", "A Mysterious Sanctuary", "Reawakened Memories", "A Day Like Any Other", "Life's Hard for a Heropon"],
+  "Eryth Sea": ["Fish Fly! Fish Fly!", "A Gift for a Loved One", "A Gift?!", "Flowers of Eryth Sea", "Riki Have Question"],
+  "Alcamoth": ["Brother and Sister", "The Forefathers", "Melia's Imperial Villa", "The Imperial Villa", "So Close Yet So Far", "Ancient Astrology", "A Breathtaking Sight"],
+  "High Entia Tomb": ["Echoes of Ancient Times", "Hopes and Plans"],
+  "Valak Mountain": ["In Ose Tower", "First Sight of Snow", "A Snowy Hot Spring"],
+  "Fallen Arm": ["A Night-Time Chat", "Just Like Old Times", "Camping Spots", "Those Waiting For You", "A Family of Two", "Overcoming the Pain", "Eternal Scars"],
+  "Bionis' Interior": ["Fiora's Body", "Kind Words"],
+  "Prison Island": ["Before the Final Battle", "The Final Battle", "Journey's End", "Untold Feelings"]
+};
+const hthNorm = (s) => String(s).toLowerCase().replace(/^(a|an|the)\s+/, "").replace(/[^a-z0-9]+/g, "");
+const HTH_REGION = {};
+Object.keys(HTH_REGION_SRC).forEach((reg) => HTH_REGION_SRC[reg].forEach((n) => { HTH_REGION[hthNorm(n)] = reg; }));
+let hthFixed = 0, hthMiss = [];
+sections.forEach((s) => (s.hths || []).forEach((h) => {
+  const name = h.label.replace(/\s*\(.*\)\s*$/, "").trim();
+  const reg = HTH_REGION[hthNorm(name)];
+  if (reg) { if (h.area !== reg) hthFixed++; h.area = reg; }
+  else hthMiss.push(name);
+}));
+if (hthMiss.length) console.warn("(H2H) no region match for:", [...new Set(hthMiss)].join(", "));
+console.log(`H2H regions corrected: ${hthFixed}`);
+
 data.pointsOfNoReturn = PONR;
 data.walkthrough = sections;
 try {
