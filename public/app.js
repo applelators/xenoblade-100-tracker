@@ -1235,13 +1235,21 @@
     });
     return [...out];
   }
+  // a quick one-shot "checked!" pulse on a row (restartable)
+  function pulseDone(row) {
+    row.classList.remove("just-done"); void row.offsetWidth; // restart the animation
+    row.classList.add("just-done");
+    setTimeout(() => row.classList.remove("just-done"), 520);
+  }
   // sync one item row (#item-<id>) to current Store state, without recreating it
   function syncRow(rid) {
     const row = document.getElementById("item-" + rid);
     if (!row) return null;
     const on = Store.isChecked(rid), locked = !on && Store.isMutexLocked(rid);
+    const wasDone = row.classList.contains("done");
     const box = row.querySelector("input[type=checkbox]");
     if (box) { box.checked = on; box.disabled = locked; }
+    if (on && !wasDone) pulseDone(row); // just completed → celebrate the tick
     row.classList.toggle("done", on);
     row.classList.toggle("locked", locked);
     const badges = row.querySelector(".item-badges");
@@ -1270,7 +1278,8 @@
           const complete = total > 0 && done === total;
           if (complete !== node.classList.contains("complete")) {
             node.classList.toggle("complete", complete);
-            node.open = !complete; // auto-collapse when complete, expand when not
+            if (complete) celebrateAndCollapse(node);   // 🎉 then a clean, quick fold
+            else node.open = true;                       // unchecked → expand again
           }
         }
       }
@@ -1287,13 +1296,41 @@
     setMeter(blocks[0], progress((i) => i.missable));
     setMeter(blocks[1], progress(() => true));
   }
+  // smoothly animate a <details> closed (height → 0) then set open=false
+  function animateCollapse(d, content) {
+    if (!content || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) { d.open = false; return; }
+    const h = content.scrollHeight;
+    content.style.overflow = "hidden"; content.style.height = h + "px"; content.style.opacity = "1";
+    void content.offsetHeight; // reflow so the transition takes
+    content.style.transition = "height .3s cubic-bezier(.4,0,.2,1), opacity .22s ease";
+    content.style.height = "0px"; content.style.opacity = "0";
+    const onEnd = () => {
+      content.removeEventListener("transitionend", onEnd);
+      d.open = false;
+      content.removeAttribute("style");
+    };
+    content.addEventListener("transitionend", onEnd);
+    setTimeout(onEnd, 380); // safety net if transitionend doesn't fire
+  }
+  // cute "all done" celebration on a completed block, then a clean quick collapse
+  function celebrateAndCollapse(d) {
+    const sum = d.querySelector(":scope > summary");
+    if (sum) {
+      sum.classList.add("celebrate");
+      const cue = el("span", { class: "done-cue", text: "🎉 All done!" });
+      sum.appendChild(cue);
+      setTimeout(() => { sum.classList.remove("celebrate"); cue.remove(); }, 1000);
+    }
+    const content = d.querySelector(":scope > .items, :scope > .area-group-body, :scope > .route-list");
+    setTimeout(() => animateCollapse(d, content), 440); // let the celebration register first
+  }
   function checkboxToggle(id, e) {
     Store.setChecked(id, e.target.checked);
     // "Hide completed" mode needs the row to actually appear/disappear → full render
     if (Store.getPref("hideCompleted")) { render(); return; }
     // route steps have no id-addressable row — handle the clicked one directly
     const rli = e.target.closest(".rli");
-    if (rli) { rli.classList.toggle("done", Store.isChecked(id)); refreshCountsUpward(e.target); }
+    if (rli) { const on = Store.isChecked(id); rli.classList.toggle("done", on); if (on) pulseDone(rli); refreshCountsUpward(e.target); }
     else {
       // sync the clicked row + everything it rippled to, and recount each block
       rippleIds(id).forEach((rid) => { const row = syncRow(rid); if (row) refreshCountsUpward(row); });

@@ -513,7 +513,25 @@ details.completion[open] > summary::before { content: "▾ "; }
 /* after first load, re-renders (e.g. ticking a checkbox) must NOT replay the
    entrance fade — otherwise every card flashes dark and animates back in */
 body.no-anim .panel, body.no-anim .area-card, body.no-anim .cutoff-card,
-body.no-anim .arc-banner, body.no-anim .completed-area, body.no-anim .item { animation: none; transition: none; }
+body.no-anim .arc-banner, body.no-anim .completed-area { animation: none; transition: none; }
+body.no-anim .item { transition: none; } /* suppress hover-transition replay, but keep item animations */
+
+/* ticking an item: a quick green flash + checkbox pop (one-shot, restartable) */
+@keyframes justDone { 0% { background-color: rgba(95,208,138,0); } 22% { background-color: rgba(95,208,138,.30); } 100% { background-color: rgba(95,208,138,0); } }
+.just-done { animation: justDone .5s ease; }
+@keyframes boxPop { 0% { transform: scale(1); } 38% { transform: scale(1.3); } 100% { transform: scale(1); } }
+.just-done input[type=checkbox], .just-done > input[type=checkbox] { animation: boxPop .42s cubic-bezier(.3,1.5,.5,1); }
+
+/* "all done" celebration on a completed block's summary, then it collapses */
+@keyframes celebratePulse { 0% { transform: scale(1); } 32% { transform: scale(1.035); } 100% { transform: scale(1); } }
+.cat-head.celebrate, .area-group-head.celebrate, .route-head.celebrate { animation: celebratePulse .55s ease; color: var(--done); position: relative; }
+.done-cue { position: absolute; left: 50%; top: -3px; font-size: 12px; font-weight: 700; color: var(--done); white-space: nowrap; pointer-events: none; text-shadow: 0 1px 6px rgba(95,208,138,.5); animation: cueFloat 1s cubic-bezier(.2,.7,.2,1) forwards; }
+@keyframes cueFloat {
+  0%   { opacity: 0; transform: translate(-50%, 7px) scale(.85); }
+  20%  { opacity: 1; transform: translate(-50%, -1px) scale(1); }
+  68%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -20px) scale(1); }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001s !important; animation-iteration-count: 1 !important; transition-duration: .001s !important; }
 }
