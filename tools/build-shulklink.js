@@ -986,6 +986,53 @@ const missables = MISS_DEF.map((def) => {
 });
 data.missables = missables;
 
+// ---- choice / branching quests: ShulkLink vs RPG Site recommendations --------
+// Surfaced (per Part) on the Missables tab. `c:true` = the two guides disagree.
+// ShulkLink picks are from his walkthrough; RPG Site picks from feature/9776.
+data.choices = [
+  // ---- Part 1 (Prologue – Ch. 10) ----
+  { part: 1, name: "Romantic Notions of a Boy / of a Girl", opt: "Andreas (boy) vs Erik (girl)", shulk: "Boy route (Andreas) — better affinity", rpg: "Either — no clear difference" },
+  { part: 1, name: "Financial Planning", opt: "Leopold (frame King Squeeze) vs Sylvaine (investigate)", shulk: "Sylvaine", rpg: "Sylvaine" },
+  { part: 1, name: "Pestering Paola / Out-Of-Luck Giorgio", opt: "Paola vs Giorgio (set by Overworked & Underpaid)", shulk: "Pestering Paola", rpg: "Out-Of-Luck Giorgio — better affinity", c: true },
+  { part: 1, name: "Jackson's Awakening → Jackson the Poet / the Cook", opt: "Poet (Kenny Rohan) vs Cook (Giorgio)", shulk: "Poet (Kenny Rohan)", rpg: "Poet (Kenny Rohan)" },
+  { part: 1, name: "A Mysterious Light", opt: "two routes", shulk: "No strong preference", rpg: "Either" },
+  { part: 1, name: "Out Like a Light?", opt: "Repair the lamp vs throw it away", shulk: "Throw it away (faster)", rpg: "Repair the lamp — better reward", c: true },
+  { part: 1, name: "Imaginations Tempered / Spirits Raised", opt: "mutually exclusive", shulk: "Imaginations Tempered (for the Lake Drop)", rpg: "Spirits Raised — more affinity + unlocks more later quests", c: true },
+  { part: 1, name: "Matryona's Answer", opt: "Lake drop vs nasty weed", shulk: "Lake drop", rpg: "Lake drop" },
+  { part: 1, name: "Desirée's Future", opt: "Soldier vs other career", shulk: "Soldier", rpg: "Soldier" },
+  { part: 1, name: "A Big Brother's Fight / A Little Brother's Fight", opt: "Zukazu (big) vs Jiroque (little)", shulk: "Big Brother (Zukazu)", rpg: "Little Brother (Jiroque) — slightly better affinity", c: true },
+  { part: 1, name: "A Young Captain's Challenge", opt: "Nopon Claymore (sword) vs Carbo Shield (shield)", shulk: "Nopon Claymore (slightly better area affinity)", rpg: "Either — near-identical rewards" },
+  { part: 1, name: "Popularity Premonition", opt: "Pepa vs other", shulk: "Pepa", rpg: "Either (Pepa adds a new affinity link)" },
+  { part: 1, name: "Sweet Seduction / Ingredients for a Brew", opt: "Bitter Kiwi vs Walnut Grapes", shulk: "Bitter Kiwi (sell Walnut Grapes first — glitch)", rpg: "Bitter Kiwis" },
+  { part: 1, name: "How Do I Feel? → Together Forever / I Love You No Matter What", opt: "Rozael vs Ricoth", shulk: "Rozael (speak to him first)", rpg: "Rozael" },
+  { part: 1, name: "Talia's Research / Investigating Satorl", opt: "mutually exclusive", shulk: "Talia's Research — only it benefits the affinity chart", rpg: "Either — no clear difference" },
+  { part: 1, name: "Valak Mountain Research", opt: "choice with no consequence", shulk: "No consequence", rpg: "Either" },
+  // ---- Part 2 (Ch. 11 – 15) ----
+  { part: 2, name: "The Master's Successor", opt: "Gadada vs Cherri (sets Distilling/Safer Energy later)", shulk: "Cherri", rpg: "Cherri" },
+  { part: 2, name: "Medical Advancements / Let's Make Fillings!", opt: "mutually exclusive (affinity identical)", shulk: "Let's Make Fillings (Yusa — better drop rates)", rpg: "Medical Advancements — more EXP/money", c: true },
+  { part: 2, name: "World's Strongest Flavour / Reversed Tastes", opt: "follows your Medical Advancements pick", shulk: "Follows the previous pick", rpg: "World's Strongest Flavour — better reward" },
+  { part: 2, name: "Getting Bigger! / Who Is Bigger?", opt: "Adidi vs other", shulk: "Adidi", rpg: "Adidi" },
+  { part: 2, name: "Cook-Off Showdown!", opt: "ingredient approach", shulk: "“Make food your customers like”", rpg: "“Make food your customers like”" },
+  { part: 2, name: "Unstoppable Berryjammy", opt: "Norara vs other", shulk: "Norara", rpg: "Norara" },
+  { part: 2, name: "Miss Sweetness Showdown!", opt: "Berryjammy vs Ma'crish", shulk: "Either (inconsequential)", rpg: "Either" },
+  { part: 2, name: "Adventurers in Peril / The Missing Partner", opt: "mutually exclusive", shulk: "Adventurers in Peril — only it benefits the affinity chart", rpg: "The Missing Partner — better EXP/gold", c: true },
+  { part: 2, name: "Looking For Freedom", opt: "Pure Perfume (route A) vs other", shulk: "Pure Perfume", rpg: "Not rated" },
+  { part: 2, name: "Cursed / Weak Berryjammy", opt: "set by which immigrant you recruited", shulk: "Follows your recruitment", rpg: "Follows your recruitment" },
+  { part: 2, name: "Betty's Gift / Desirée's Apology", opt: "set by Desirée's Future", shulk: "Follows Desirée's Future", rpg: "Follows Desirée's Future" },
+  // ---- Part 3 (Ch. 16 – 17 + Future Connected) ----
+  { part: 3, name: "Homs Determination / Nopon Determination", opt: "Perrine (Homs) vs Mefimefi (Nopon)", shulk: "Follows who you recruited", rpg: "Homs Determination (Perrine) — better reward" },
+  { part: 3, name: "A Maid's Concerns / A Butler's Concerns", opt: "Minana (Maid) vs Gowago (Butler)", shulk: "Follows who you recruited", rpg: "A Maid's Concerns (Minana) — higher affinity" },
+  { part: 3, name: "Distilling Active Ingredients / Safer Energy", opt: "set by The Master's Successor", shulk: "Follows the apprentice pick", rpg: "Follows the apprentice pick" },
+  { part: 3, name: "A Young Captain's Trust / A Young Captain's Revival", opt: "Sword vs Shield", shulk: "Slight gem difference only", rpg: "Either" },
+  { part: 3, name: "The Elite Captain's Anguish", opt: "Minnie vs other", shulk: "Minnie", rpg: "Minnie" },
+  { part: 3, name: "The Only Thing I Can Do / I Will Never Forget You", opt: "set by Believing Again", shulk: "Follows Believing Again", rpg: "Follows Believing Again" },
+  { part: 3, name: "Lifespan of a Machina", opt: "Machina Energy vs Pterix Eggs", shulk: "No explicit pick", rpg: "Machina Energy" },
+  { part: 3, name: "The Melody of Happiness / Dreams of a Poet", opt: "gloves vs greaves", shulk: "No explicit pick", rpg: "The Melody of Happiness (gloves)" },
+  { part: 3, name: "Bored Pelupelu", opt: "choice doesn't matter", shulk: "No difference", rpg: "Either" },
+  { part: 3, name: "Finding Happiness (Future Connected)", opt: "choice doesn't matter", shulk: "No difference", rpg: "Either" },
+  { part: 3, name: "Steady on, Grandad! (Future Connected)", opt: "choice doesn't matter", shulk: "No difference", rpg: "Either" }
+];
+
 // ---- attach + write ---------------------------------------------------------
 // ---- correct every Heart-to-Heart's region (source: RPG Site H2H guide) --------
 // The guide's section region was being used as a fallback, which was wrong for

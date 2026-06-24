@@ -345,6 +345,24 @@ details.cat-block.complete > summary.cat-head .count { color: var(--done); }
 .miss-extras { margin-top: 9px; border-top: 1px dashed var(--line); padding-top: 7px; }
 .miss-extras-head { font-size: 11px; font-weight: 700; color: var(--accent2); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 3px; }
 .cutoff-trigger { margin: 4px 0 8px; }
+
+/* choice / either-or quests — ShulkLink vs RPG Site recommendations */
+.choice-part { margin-top: 10px; }
+.choice-part-head { font-family: var(--font-display); font-weight: 700; font-size: 12px; color: var(--accent2); text-transform: uppercase; letter-spacing: .6px; margin: 6px 0 6px; }
+.choice-list { display: flex; flex-direction: column; gap: 8px; }
+.choice { background: var(--bg2); border: 1px solid var(--line); border-left: 3px solid var(--line); border-radius: var(--radius-sm); padding: 9px 11px; }
+.choice.conflict { border-color: #7d572c; border-left-color: var(--verify); background: #221a0f; }
+.choice-name { font-weight: 600; font-size: 13.5px; }
+.choice-flag { color: var(--verify); }
+.choice-opt { margin: 1px 0 7px; }
+.choice-recs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; }
+@media (max-width: 600px) { .choice-recs { grid-template-columns: 1fr; } }
+.choice-rec { display: flex; flex-direction: column; gap: 1px; }
+.rec-src { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+.choice-rec.sl .rec-src { color: var(--info); }
+.choice-rec.rs .rec-src { color: var(--choice); }
+.rec-val { color: var(--text); font-size: 12.5px; line-height: 1.35; }
+.choice.conflict .rec-val { color: var(--verify); }
 .cutoff-card.complete > .cutoff-head strong { color: var(--done); }
 
 .flash { animation: flash 1.6s ease; }

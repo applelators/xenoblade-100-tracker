@@ -74,6 +74,16 @@
   // level each art is learned at (Game8 arts list #289258). 0 = no level: learned
   // by default / via story (Shulk's Monado arts, talent arts).
   const ART_LEVEL = { "Battle Soul": 32, "Shadow Eye": 10, "Air Slash": 14, "Back Slash": 1, "Slit Edge": 3, "Stream Edge": 5, "Light Heal": 1, "Armor": 0, "Shield": 0, "Buster": 0, "Lariat": 43, "Berserker": 19, "Sword Drive": 16, "Wild Down": 1, "Dive Sobat": 31, "Magnum Charge": 35, "Shield Bash": 27, "War Swing": 8, "Cure Round": 46, "Head Shot": 42, "Heal Round": 18, "Heal Bullet": 1, "Covert Stance": 26, "Heal Blast": 14, "Soaring Tempest": 44, "Heat Haze": 36, "Serene Heart": 28, "Steel Strike": 1, "Worldly Slash": 1, "Peerless": 1, "Gale Slash": 1, "Spirit Breath": 22, "Electric Gutbuster": 1, "Summon Earth": 47, "Summon Copy": 38, "Summon Flare": 1, "Summon Bolt": 1, "Mind Blast": 0, "Summon Wind": 41, "Reflection": 50, "Summon Ice": 56, "Freezinate": 31, "Burninate": 43, "You Can Do It": 27, "Hero Time": 1, "Lurgy": 1, "Sneaky": 1, "Bitey Bitey": 1, "Tantrum": 40, "Happy Happy": 1, "Final Cross": 0, "Air Fang": 1, "Lock-On": 46, "Zero Gravity": 1, "Spear Blade": 1, "Double Blade": 1, "Power Drain": 58, "Double Wind": 42, "Ether Drain": 1, "Cross Impact": 1 };
+  // concise effect of each art (own wording; shown as a hover tooltip)
+  const ART_DESC = {
+    "Battle Soul": "Sacrifices half your HP to instantly fill the Talent Gauge.", "Shadow Eye": "Aura: lowers your aggro and boosts physical-art damage.", "Air Slash": "Inflicts Break; from the side may Slow.", "Back Slash": "Big damage when used from behind.", "Slit Edge": "From the side, lowers the enemy's physical defence.", "Stream Edge": "Frontal swing hitting multiple enemies; inflicts Break.", "Light Heal": "Restores HP to one ally.", "Armor": "Monado aura: reduces physical & ether damage taken.", "Shield": "Monado aura: blocks enemy Talent Arts of equal/lower level.", "Buster": "Monado: hits all enemies in a line for heavy damage.",
+    "Lariat": "Hits multiple enemies in front of Reyn.", "Berserker": "Aura: drops defence to maximise attack.", "Sword Drive": "Single-target stab; lowers physical defence.", "Wild Down": "Inflicts Topple (on a Broken enemy).", "Dive Sobat": "Kick that can Daze; lowers agility after Bone Upper.", "Magnum Charge": "Aura: raises Reyn's damage and draws aggro.", "Shield Bash": "Shield hit; Dazes a Toppled enemy.", "War Swing": "Full-circle swing hitting all nearby enemies.",
+    "Cure Round": "Clears party debuffs + brief debuff immunity.", "Head Shot": "Critical hit; Instant Death on a Dazed enemy.", "Heal Round": "Restores HP to the whole party.", "Heal Bullet": "Restores some HP to one ally.", "Covert Stance": "Aura: stops you gaining aggro.", "Heal Blast": "Restores a large amount of HP to one ally.",
+    "Soaring Tempest": "Leaping spin hitting all surrounding enemies.", "Heat Haze": "Aura: clears your aggro + boosts crit rate.", "Serene Heart": "Aura: big boost to accuracy & evasion.", "Steel Strike": "Inflicts Topple.", "Worldly Slash": "AoE; lowers phys. def (and strength after Gale Slash).", "Peerless": "Aura: cures Confuse + raises strength.", "Gale Slash": "Quick stab that inflicts Bleed.", "Spirit Breath": "Aura: removes debuffs + grants Haste.", "Electric Gutbuster": "Heavy kick; Breaks after Gale Slash.",
+    "Summon Earth": "Summon: cuts phys. damage; discharge Poisons.", "Summon Copy": "Re-summons your last elemental.", "Summon Flare": "Summon: raises strength; discharge Blazes.", "Summon Bolt": "Summon: raises ether; discharge for big damage.", "Mind Blast": "Seals the enemy's Arts.", "Summon Wind": "Summon: raises agility; discharge for area damage.", "Reflection": "Barrier that rebounds attacks onto the enemy.", "Summon Ice": "Summon: cuts ether damage; discharge Chills.",
+    "Freezinate": "Freezes an enemy.", "Burninate": "Scorches all enemies in range.", "You Can Do It": "Party heal — bigger the more debuffs they have.", "Hero Time": "Aura buff for Riki.", "Lurgy": "Poison cloud over enemies.", "Sneaky": "Big damage from behind.", "Bitey Bitey": "Inflicts Bleed (longer from behind).", "Tantrum": "Inflicts Break.", "Happy Happy": "Fills the Party Gauge.",
+    "Final Cross": "Massive ether wave that devastates enemies.", "Air Fang": "Inflicts Break.", "Lock-On": "Aura: focus on a single target.", "Zero Gravity": "Inflicts Paralysis.", "Spear Blade": "Heavy damage on a Toppled enemy.", "Double Blade": "Big damage when used from behind.", "Power Drain": "Field that drains enemy strength.", "Double Wind": "Dual-blade slash hitting enemies in front.", "Ether Drain": "Field that drains enemy ether.", "Cross Impact": "Cross kick that inflicts Daze."
+  };
   // one art per row (icon + name + learn-level) so each is easy to parse at a glance
   const artsList = (arr) => el("div", { class: "arts-list" }, arr.map((n) => {
     const sl = artSlug(n);
@@ -84,7 +94,7 @@
     const lvl = (lv === 0)
       ? el("span", { class: "art-lv default", title: "Learned by default / via story (Monado or talent art)" }, ["★"])
       : (lv != null ? el("span", { class: "art-lv", title: "Learned at level " + lv }, ["Lv " + lv]) : null);
-    return el("div", { class: "art" }, [ic, el("span", { class: "art-name", text: n }), lvl]);
+    return el("div", { class: "art", title: (ART_DESC[n] || "") + (lv > 0 ? "  ·  Learned at Lv " + lv : "") }, [ic, el("span", { class: "art-name", text: n }), lvl]);
   }));
   let SECTION_RANK = {};      // section code -> chronological index (for party-by-section)
   // who is in the party at a given section (spoiler-gated by arc reveal anyway)
@@ -397,6 +407,44 @@
   }
 
   // Missables tab — RPG Site checklist (data.missables), spoiler-gated by arc.
+  const CHOICE_ARC = { 1: "arc1", 2: "arc2", 3: "arc3" };
+  const CHOICE_PART = { 1: "Part 1 — Prologue to Ch. 10", 2: "Part 2 — Ch. 11 to 15", 3: "Part 3 — Ch. 16 to 17" };
+  function choiceRow(c) {
+    return el("div", { class: "choice" + (c.c ? " conflict" : "") }, [
+      el("div", { class: "choice-name" }, [c.c ? el("span", { class: "choice-flag", text: "⚠ ", title: "ShulkLink and RPG Site disagree" }) : null, document.createTextNode(c.name)]),
+      c.opt ? el("div", { class: "choice-opt muted small", text: c.opt }) : null,
+      el("div", { class: "choice-recs" }, [
+        el("div", { class: "choice-rec sl" }, [el("span", { class: "rec-src", text: "ShulkLink" }), el("span", { class: "rec-val", text: c.shulk })]),
+        el("div", { class: "choice-rec rs" }, [el("span", { class: "rec-src", text: "RPG Site" }), el("span", { class: "rec-val", text: c.rpg })])
+      ])
+    ]);
+  }
+  function choicesSection() {
+    const all = DATA.choices || [];
+    if (!all.length) return null;
+    const q = (Store.getPref("search") || "").trim().toLowerCase();
+    const groups = [];
+    [1, 2, 3].forEach((p) => {
+      if (!arcReached(CHOICE_ARC[p])) return; // spoiler-gate by revealed Part
+      let list = all.filter((c) => c.part === p);
+      if (q) list = list.filter((c) => (c.name + " " + c.shulk + " " + c.rpg + " " + c.opt).toLowerCase().includes(q));
+      if (!list.length) return;
+      groups.push(el("div", { class: "choice-part" }, [
+        el("div", { class: "choice-part-head", text: CHOICE_PART[p] }),
+        el("div", { class: "choice-list" }, list.map(choiceRow))
+      ]));
+    });
+    if (!groups.length) return null;
+    const conflicts = all.filter((c) => c.c && arcReached(CHOICE_ARC[c.part])).length;
+    return el("section", { class: "cutoff-card choices-card" }, [
+      el("div", { class: "cutoff-head" }, [
+        el("strong", { text: "⚖️ Either/or & choice quests" }),
+        conflicts ? el("span", { class: "badge mutex", title: "Quests where ShulkLink and RPG Site recommend different choices" }, ["⚠ " + conflicts + " disagree"]) : null
+      ]),
+      el("div", { class: "muted cutoff-trigger", text: "Quests whose outcome depends on a choice. Each shows the ShulkLink pick and the RPG Site pick — ⚠ marks where the two guides disagree. Only revealed Parts are shown." }),
+      ...groups
+    ]);
+  }
   function missableView() {
     const wrap = el("div", { class: "view" });
     wrap.appendChild(el("div", { class: "arc-banner" }, [
@@ -427,6 +475,9 @@
         ]) : null
       ]));
     });
+
+    const ch = choicesSection();
+    if (ch) { wrap.appendChild(ch); shown++; }
 
     if (!shown) wrap.appendChild(el("div", { class: "empty muted", text: "No missables in revealed Parts yet — they appear as you reveal Parts in the Walkthrough tab." }));
     return wrap;
