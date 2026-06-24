@@ -340,6 +340,9 @@ details.cat-block.complete > summary.cat-head .count { color: var(--done); }
 @media (max-width: 620px) { .ref-listw { grid-template-columns: 1fr; } }
 .item-note { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
 .item-sub { color: var(--muted); font-weight: 400; font-size: 12px; }
+.item-note.pick { border-radius: 6px; padding: 4px 9px; font-weight: 600; }
+.item-note.pick.mine { color: #06251a; background: var(--done); }
+.item-note.pick.other { color: var(--muted); background: #1a2336; border: 1px solid var(--line); font-weight: 500; }
 .item-note.rpg { color: var(--info); background: #11243a; border: 1px solid #2c5b7d; border-radius: 6px; padding: 4px 9px; }
 .item-note.rpg.conflict { color: var(--verify); background: #2c1f10; border-color: #7d572c; font-weight: 600; }
 .miss-extras { margin-top: 9px; border-top: 1px dashed var(--line); padding-top: 7px; }

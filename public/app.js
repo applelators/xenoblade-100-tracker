@@ -235,6 +235,23 @@
     buildCheckLinks();
     buildMutex();
     buildImplies();
+    buildChoiceIndex();
+  }
+  // map walkthrough quest ids -> the locked-in choice they belong to, so the
+  // user's picked path can be surfaced on the quest in the Walkthrough tab
+  let QUEST_CHOICE = {};
+  function buildChoiceIndex() {
+    QUEST_CHOICE = {};
+    const idByKey = {};
+    (DATA.walkthrough || []).forEach((s) => (s.quests || []).forEach((q) => { idByKey[s.code + ":" + q.code] = q.id; }));
+    (DATA.choices || []).forEach((c) => {
+      if (!c.qmap || !c.id) return;
+      const single = new Set(Object.values(c.qmap)).size === 1; // both options = same quest (route choice)
+      Object.entries(c.qmap).forEach(([option, key]) => {
+        const qid = idByKey[key];
+        if (qid) QUEST_CHOICE[qid] = { choiceId: c.id, option: single ? null : option, single, name: c.name };
+      });
+    });
   }
 
   // quest -> unique-monster auto-check links (quest.defeatsUM, matched by UM name)
@@ -687,6 +704,16 @@
     }
     return el("li", { class: "rli" + (checked ? " done" : "") }, kids);
   }
+  // surface the user's locked-in choice (set in the Missables tab) on its quest
+  function pickNote(item) {
+    const ch = QUEST_CHOICE[item.id];
+    if (!ch) return null;
+    const pick = Store.getChoicePick(ch.choiceId);
+    if (!pick) return null;
+    if (ch.single) return el("span", { class: "item-note pick mine", text: "🔒 Your locked-in route: " + pick });
+    if (pick === ch.option) return el("span", { class: "item-note pick mine", text: "🔒 Your locked-in pick — do this one" });
+    return el("span", { class: "item-note pick other", text: "↪ You chose the other path: " + pick });
+  }
   function walkRow(item, kind) {
     const checked = Store.isChecked(item.id);
     const locked = !checked && Store.isMutexLocked(item.id);
@@ -697,6 +724,7 @@
       el("span", { class: "item-body" }, [
         el("span", { class: "item-label" }, [item.code ? el("span", { class: "qcode", text: item.code + " " }) : null, document.createTextNode(item.label)]),
         el("span", { class: "item-badges" }, badgeEls),
+        pickNote(item),
         item.note ? el("span", { class: "item-note", text: item.note }) : null,
         (kind === "um" && IMPLIED_BY[item.id]) ? el("span", { class: "item-note implied", text: "↩ Auto-checks when you complete: " + IMPLIED_BY[item.id].join(", ") }) : null,
         item.rpgsite ? el("span", { class: "item-note rpg" + (item.rpgConflict ? " conflict" : ""), text: (item.rpgConflict ? "⚠ Guides disagree — " : "ℹ Second opinion — ") + item.rpgsite }) : null,
