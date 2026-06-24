@@ -237,22 +237,35 @@
     buildImplies();
     buildChoiceIndex();
   }
-  // map walkthrough quest ids -> the locked-in choice they belong to, so the
-  // user's picked path can be surfaced on the quest in the Walkthrough tab
-  let QUEST_CHOICE = {};
+  // map walkthrough quest ids -> the locked-in choice they belong to (pick path),
+  // the both-guides-agree quest, and per-choice quests (to detect completion)
+  let QUEST_CHOICE = {}, AGREE_QUEST = {};
   function buildChoiceIndex() {
-    QUEST_CHOICE = {};
-    const idByKey = {};
-    (DATA.walkthrough || []).forEach((s) => (s.quests || []).forEach((q) => { idByKey[s.code + ":" + q.code] = q.id; }));
+    QUEST_CHOICE = {}; AGREE_QUEST = {};
+    const norm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+    const idByKey = {}, idByLabel = {}, allQ = [];
+    (DATA.walkthrough || []).forEach((s) => (s.quests || []).forEach((q) => {
+      idByKey[s.code + ":" + q.code] = q.id;
+      const nl = norm(q.label); idByLabel[nl] = q.id;
+      allQ.push({ id: q.id, nl, mutex: q.mutexWith ? norm(q.mutexWith) : null });
+    }));
     (DATA.choices || []).forEach((c) => {
-      if (!c.qmap || !c.id) return;
-      const single = new Set(Object.values(c.qmap)).size === 1; // both options = same quest (route choice)
-      Object.entries(c.qmap).forEach(([option, key]) => {
-        const qid = idByKey[key];
-        if (qid) QUEST_CHOICE[qid] = { choiceId: c.id, option: single ? null : option, single, name: c.name };
-      });
+      const ids = new Set();
+      if (c.qmap) Object.values(c.qmap).forEach((k) => { if (idByKey[k]) ids.add(idByKey[k]); });
+      if (c.agreeKey && idByKey[c.agreeKey]) ids.add(idByKey[c.agreeKey]);
+      // auto-match this choice's quests by name (the choice name contains the quest
+      // name); include each match's mutex partner so a forfeited pick still counts
+      const cn = norm(c.name);
+      allQ.forEach((q) => { if (q.nl.length >= 8 && cn.includes(q.nl)) { ids.add(q.id); if (q.mutex && idByLabel[q.mutex]) ids.add(idByLabel[q.mutex]); } });
+      c._doneq = [...ids]; // quest ids whose completion means this choice is resolved
+      if (c.qmap && c.id) {
+        const single = new Set(Object.values(c.qmap)).size === 1;
+        Object.entries(c.qmap).forEach(([option, key]) => { const qid = idByKey[key]; if (qid) QUEST_CHOICE[qid] = { choiceId: c.id, option: single ? null : option, single, name: c.name }; });
+      }
+      if (c.agree && c.agreeKey && idByKey[c.agreeKey]) AGREE_QUEST[idByKey[c.agreeKey]] = { label: c.agree, name: c.name };
     });
   }
+  function choiceDone(c) { return (c._doneq || []).some((qid) => Store.isChecked(qid)); }
 
   // quest -> unique-monster auto-check links (quest.defeatsUM, matched by UM name)
   function buildImplies() {
@@ -470,6 +483,7 @@
     const kids = [
       el("div", { class: "choice-name" }, [c.c ? el("span", { class: "choice-flag", text: "⚠ ", title: "ShulkLink and RPG Site disagree" }) : null, document.createTextNode(c.name)]),
       c.opt ? el("div", { class: "choice-opt muted small", text: c.opt }) : null,
+      c.agree ? el("div", { class: "choice-agree" }, [el("span", { class: "agree-ic", text: "✅" }), document.createTextNode("Both guides agree — pick "), el("strong", { text: c.agree })]) : null,
       el("div", { class: "choice-recs" + (c.mine ? " three" : "") }, recs)
     ];
     if (c.picks && c.id) {
@@ -480,7 +494,7 @@
         ))
       ]));
     }
-    return el("div", { class: "choice" + (c.c ? " conflict" : "") + (pick ? " picked" : "") }, kids);
+    return el("div", { class: "choice" + (c.c ? " conflict" : "") + (c.agree ? " agree" : "") + (pick ? " picked" : "") }, kids);
   }
   function choicesSection() {
     const all = DATA.choices || [];
@@ -492,10 +506,15 @@
       let list = all.filter((c) => c.part === p);
       if (q) list = list.filter((c) => (c.name + " " + c.shulk + " " + c.rpg + " " + c.opt + " " + (c.mine || "")).toLowerCase().includes(q));
       if (!list.length) return;
-      groups.push(el("div", { class: "choice-part" }, [
-        el("div", { class: "choice-part-head", text: CHOICE_PART[p] }),
-        el("div", { class: "choice-list" }, list.map(choiceRow))
+      const active = list.filter((c) => !choiceDone(c));
+      const done = list.filter((c) => choiceDone(c));
+      const kids = [el("div", { class: "choice-part-head", text: CHOICE_PART[p] })];
+      if (active.length) kids.push(el("div", { class: "choice-list" }, active.map(choiceRow)));
+      if (done.length) kids.push(el("details", { class: "completed-quests" }, [
+        el("summary", { class: "completed-quests-head" }, ["✓ Completed — " + done.length]),
+        el("div", { class: "choice-list" }, done.map(choiceRow))
       ]));
+      groups.push(el("div", { class: "choice-part" }, kids));
     });
     if (!groups.length) return null;
     const conflicts = all.filter((c) => c.c && arcReached(CHOICE_ARC[c.part])).length;
@@ -724,6 +743,7 @@
       el("span", { class: "item-body" }, [
         el("span", { class: "item-label" }, [item.code ? el("span", { class: "qcode", text: item.code + " " }) : null, document.createTextNode(item.label)]),
         el("span", { class: "item-badges" }, badgeEls),
+        AGREE_QUEST[item.id] ? el("span", { class: "item-note agree", text: "✅ Both guides agree — do this" + (AGREE_QUEST[item.id].label ? " (" + AGREE_QUEST[item.id].label + ")" : "") }) : null,
         pickNote(item),
         item.note ? el("span", { class: "item-note", text: item.note }) : null,
         (kind === "um" && IMPLIED_BY[item.id]) ? el("span", { class: "item-note implied", text: "↩ Auto-checks when you complete: " + IMPLIED_BY[item.id].join(", ") }) : null,
