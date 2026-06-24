@@ -444,14 +444,26 @@
   const CHOICE_ARC = { 1: "arc1", 2: "arc2", 3: "arc3" };
   const CHOICE_PART = { 1: "Part 1 — Prologue to Ch. 10", 2: "Part 2 — Ch. 11 to 15", 3: "Part 3 — Ch. 16 to 17" };
   function choiceRow(c) {
-    return el("div", { class: "choice" + (c.c ? " conflict" : "") }, [
+    const pick = c.id ? Store.getChoicePick(c.id) : null;
+    const recs = [
+      el("div", { class: "choice-rec sl" }, [el("span", { class: "rec-src", text: "ShulkLink" }), el("span", { class: "rec-val", text: c.shulk })]),
+      el("div", { class: "choice-rec rs" }, [el("span", { class: "rec-src", text: "RPG Site" }), el("span", { class: "rec-val", text: c.rpg })]),
+      c.mine ? el("div", { class: "choice-rec me" }, [el("span", { class: "rec-src", text: "💡 My take" }), el("span", { class: "rec-val", text: c.mine })]) : null
+    ].filter(Boolean);
+    const kids = [
       el("div", { class: "choice-name" }, [c.c ? el("span", { class: "choice-flag", text: "⚠ ", title: "ShulkLink and RPG Site disagree" }) : null, document.createTextNode(c.name)]),
       c.opt ? el("div", { class: "choice-opt muted small", text: c.opt }) : null,
-      el("div", { class: "choice-recs" }, [
-        el("div", { class: "choice-rec sl" }, [el("span", { class: "rec-src", text: "ShulkLink" }), el("span", { class: "rec-val", text: c.shulk })]),
-        el("div", { class: "choice-rec rs" }, [el("span", { class: "rec-src", text: "RPG Site" }), el("span", { class: "rec-val", text: c.rpg })])
-      ])
-    ]);
+      el("div", { class: "choice-recs" + (c.mine ? " three" : "") }, recs)
+    ];
+    if (c.picks && c.id) {
+      kids.push(el("div", { class: "choice-pick" }, [
+        el("span", { class: "choice-pick-label", text: pick ? "🔒 Your pick:" : "Lock in your pick:" }),
+        el("div", { class: "choice-pick-opts" }, c.picks.map((opt) =>
+          el("button", { class: "pick-btn" + (pick === opt ? " active" : ""), title: pick === opt ? "Click to unlock" : "Lock in this choice", onclick: () => { Store.setChoicePick(c.id, pick === opt ? "" : opt); render(); } }, [opt])
+        ))
+      ]));
+    }
+    return el("div", { class: "choice" + (c.c ? " conflict" : "") + (pick ? " picked" : "") }, kids);
   }
   function choicesSection() {
     const all = DATA.choices || [];
@@ -461,7 +473,7 @@
     [1, 2, 3].forEach((p) => {
       if (!arcReached(CHOICE_ARC[p])) return; // spoiler-gate by revealed Part
       let list = all.filter((c) => c.part === p);
-      if (q) list = list.filter((c) => (c.name + " " + c.shulk + " " + c.rpg + " " + c.opt).toLowerCase().includes(q));
+      if (q) list = list.filter((c) => (c.name + " " + c.shulk + " " + c.rpg + " " + c.opt + " " + (c.mine || "")).toLowerCase().includes(q));
       if (!list.length) return;
       groups.push(el("div", { class: "choice-part" }, [
         el("div", { class: "choice-part-head", text: CHOICE_PART[p] }),
@@ -475,7 +487,7 @@
         el("strong", { text: "⚖️ Either/or & choice quests" }),
         conflicts ? el("span", { class: "badge mutex", title: "Quests where ShulkLink and RPG Site recommend different choices" }, ["⚠ " + conflicts + " disagree"]) : null
       ]),
-      el("div", { class: "muted cutoff-trigger", text: "Quests whose outcome depends on a choice. Each shows the ShulkLink pick and the RPG Site pick — ⚠ marks where the two guides disagree. Only revealed Parts are shown." }),
+      el("div", { class: "muted cutoff-trigger", text: "Quests whose outcome depends on a choice. Each shows the ShulkLink pick and the RPG Site pick — ⚠ marks where they disagree (with my third opinion + a button to lock in your own pick). Only revealed Parts are shown." }),
       ...groups
     ]);
   }
@@ -486,7 +498,10 @@
       el("div", { class: "muted", text: "Grouped by point of no return (source: RPG Site's missables list). Later cutoffs stay sealed / genericised until you reveal that Part in the Walkthrough tab. Checks here are shared with the Walkthrough tab. Always trust the in-game ⏱ icon." })
     ]));
 
-    let shown = 0;
+    const choices = choicesSection();   // either/or & choice quests — pinned to the top
+    if (choices) wrap.appendChild(choices);
+
+    let shown = choices ? 1 : 0;
     (DATA.missables || []).forEach((m) => {
       const triggerRevealed = arcReached(m.triggerArc);
       const allVisible = m.items.filter((it) => arcReached(it.arc)).concat(m.extras.filter((e) => arcReached(e.arc)));
@@ -509,9 +524,6 @@
         ]) : null
       ]));
     });
-
-    const ch = choicesSection();
-    if (ch) { wrap.appendChild(ch); shown++; }
 
     if (!shown) wrap.appendChild(el("div", { class: "empty muted", text: "No missables in revealed Parts yet — they appear as you reveal Parts in the Walkthrough tab." }));
     return wrap;

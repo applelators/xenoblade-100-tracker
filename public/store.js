@@ -14,6 +14,7 @@
     checkedAt: "xbc100:checkedAt", // id -> epoch ms when checked (for delayed collapse)
     reached: "xbc100:reached",   // array of area ids the player has reached
     playtime: "xbc100:playtime", // section code -> in-game hours logged on arrival
+    choicePicks: "xbc100:choicePicks", // choice id -> the option you've locked in
     prefs: "xbc100:prefs",       // ui preferences object
     updatedAt: "xbc100:updatedAt", // epoch ms of the last data change (for sync conflict resolution)
     synckey: "xbc100:synckey"    // sync passphrase — DEVICE-LOCAL, never part of synced state
@@ -51,6 +52,7 @@
   let checked = new Set(read(KEYS.checked, []));
   let checkedAt = read(KEYS.checkedAt, {}) || {};
   let playtime = read(KEYS.playtime, {}) || {};
+  let choicePicks = read(KEYS.choicePicks, {}) || {};
   let reached = new Set(read(KEYS.reached, []));
   let updatedAt = read(KEYS.updatedAt, 0) || 0;
   let syncKey = read(KEYS.synckey, "") || "";
@@ -157,6 +159,13 @@
     },
     allPlaytime: () => Object.assign({}, playtime),
 
+    // ---- locked-in choices for either/or quests ----
+    getChoicePick: (id) => choicePicks[id],
+    setChoicePick(id, val) {
+      if (val == null || val === "") delete choicePicks[id]; else choicePicks[id] = val;
+      write(KEYS.choicePicks, choicePicks); touch();
+    },
+
     // ---- reached areas (progressive reveal) ----
     isReached: (areaId) => reached.has(areaId),
     markReached(areaId) {
@@ -179,6 +188,7 @@
         checked: [...checked],
         checkedAt,
         playtime,
+        choicePicks,
         reached: [...reached],
         prefs,
         updatedAt,
@@ -190,11 +200,13 @@
       checked = new Set(Array.isArray(obj.checked) ? obj.checked : []);
       checkedAt = (obj.checkedAt && typeof obj.checkedAt === "object") ? obj.checkedAt : {};
       playtime = (obj.playtime && typeof obj.playtime === "object") ? obj.playtime : {};
+      choicePicks = (obj.choicePicks && typeof obj.choicePicks === "object") ? obj.choicePicks : {};
       reached = new Set(Array.isArray(obj.reached) ? obj.reached : []);
       prefs = Object.assign({}, DEFAULT_PREFS, obj.prefs || {});
       write(KEYS.checked, [...checked]);
       write(KEYS.checkedAt, checkedAt);
       write(KEYS.playtime, playtime);
+      write(KEYS.choicePicks, choicePicks);
       write(KEYS.reached, [...reached]);
       write(KEYS.prefs, prefs);
       touch(); // a manual import is a fresh change → will push to sync if connected
@@ -209,18 +221,20 @@
     setSyncKey(k) { syncKey = (k || "").trim(); write(KEYS.synckey, syncKey); },
     syncEnabled: () => !!syncKey,
     syncSnapshot() {
-      return { checked: [...checked], checkedAt, playtime, reached: [...reached], updatedAt };
+      return { checked: [...checked], checkedAt, playtime, choicePicks, reached: [...reached], updatedAt };
     },
     syncApply(obj) {
       if (!obj || typeof obj !== "object") return false;
       checked = new Set(Array.isArray(obj.checked) ? obj.checked : []);
       checkedAt = (obj.checkedAt && typeof obj.checkedAt === "object") ? obj.checkedAt : {};
       playtime = (obj.playtime && typeof obj.playtime === "object") ? obj.playtime : {};
+      choicePicks = (obj.choicePicks && typeof obj.choicePicks === "object") ? obj.choicePicks : {};
       reached = new Set(Array.isArray(obj.reached) ? obj.reached : []);
       updatedAt = Number(obj.updatedAt) || Date.now();
       write(KEYS.checked, [...checked]);
       write(KEYS.checkedAt, checkedAt);
       write(KEYS.playtime, playtime);
+      write(KEYS.choicePicks, choicePicks);
       write(KEYS.reached, [...reached]);
       write(KEYS.updatedAt, updatedAt);
       return true;
@@ -256,11 +270,13 @@
       checked = new Set();
       checkedAt = {};
       playtime = {};
+      choicePicks = {};
       reached = new Set();
       prefs = Object.assign({}, DEFAULT_PREFS);
       write(KEYS.checked, []);
       write(KEYS.checkedAt, {});
       write(KEYS.playtime, {});
+      write(KEYS.choicePicks, {});
       write(KEYS.reached, []);
       write(KEYS.prefs, prefs);
       touch(); // a reset is a change too (will propagate to sync if connected)

@@ -356,13 +356,26 @@ details.cat-block.complete > summary.cat-head .count { color: var(--done); }
 .choice-flag { color: var(--verify); }
 .choice-opt { margin: 1px 0 7px; }
 .choice-recs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; }
-@media (max-width: 600px) { .choice-recs { grid-template-columns: 1fr; } }
+.choice-recs.three { grid-template-columns: 1fr 1fr; }
+.choice-recs.three .choice-rec.me { grid-column: 1 / -1; margin-top: 5px; padding-top: 7px; border-top: 1px dashed var(--line); }
+@media (max-width: 600px) { .choice-recs, .choice-recs.three { grid-template-columns: 1fr; } }
 .choice-rec { display: flex; flex-direction: column; gap: 1px; }
 .rec-src { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
 .choice-rec.sl .rec-src { color: var(--info); }
 .choice-rec.rs .rec-src { color: var(--choice); }
-.rec-val { color: var(--text); font-size: 12.5px; line-height: 1.35; }
-.choice.conflict .rec-val { color: var(--verify); }
+.choice-rec.me .rec-src { color: var(--accent2); }
+.rec-val { color: var(--text); font-size: 12.5px; line-height: 1.4; }
+.choice-rec.me .rec-val { color: var(--text); }
+
+/* lock-in your own pick */
+.choice-pick { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 9px; padding-top: 8px; border-top: 1px solid var(--line); }
+.choice-pick-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+.choice-pick-opts { display: flex; gap: 6px; flex-wrap: wrap; }
+.pick-btn { background: var(--card2); border: 1px solid var(--line); color: var(--text); font-size: 12px; font-weight: 600; padding: 5px 11px; border-radius: 99px; cursor: pointer; transition: border-color .14s, background .14s, color .14s; }
+.pick-btn:hover { border-color: var(--accent2); }
+.pick-btn.active { background: var(--accent2); border-color: var(--accent2); color: #06251a; }
+.choice.picked { border-left-color: var(--done); }
+.choice.picked .choice-pick-label { color: var(--done); }
 .cutoff-card.complete > .cutoff-head strong { color: var(--done); }
 
 .flash { animation: flash 1.6s ease; }
