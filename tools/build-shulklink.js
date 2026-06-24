@@ -140,8 +140,8 @@ q(S, "Q54a", "Financial Planning (Leopold route)", { a: "Colony 9", x: "Financia
 q(S, "Q54b", "Financial Planning (Sylvaine route)", { a: "Colony 9", x: "Financial Planning (Leopold route)", note: "Guide pick: Sylvaine." });
 um(S, "UM8", "Cellar Bugworm", 10, { a: "Tephra Cave" });
 q(S, "Q55", "Overworked And Underpaid", { a: "Colony 9" });
-q(S, "Q56a", "Pestering Paola", { a: "Colony 9", x: "Out-Of-Luck Giorgio" });
-q(S, "Q56b", "Out-Of-Luck Giorgio", { a: "Colony 9", x: "Pestering Paola", note: "Guide pick: Paola route." });
+q(S, "Q56a", "Pestering Paola", { a: "Colony 9", x: "Out-Of-Luck Giorgio", note: "Worse outcome (yellow 'wants to play'). You get this if you speak to Giorgio in 'Overworked and Underpaid' — speak to Paola instead for Out-Of-Luck Giorgio." });
+q(S, "Q56b", "Out-Of-Luck Giorgio", { a: "Colony 9", x: "Pestering Paola", note: "Guide pick. Speak to Paola during 'Overworked and Underpaid' to unlock this — it gives the better blue 'trusting family' link (vs Pestering Paola's yellow). Both ShulkLink and RPG Site prefer this." });
 q(S, "Q57", "The Plan: Preparation", { a: "Colony 9" });
 q(S, "Q58", "The Plan: The Night Before", { a: "Colony 9" });
 q(S, "Q59", "The Plan: Execution", { a: "Colony 9" });
@@ -993,7 +993,7 @@ data.choices = [
   // ---- Part 1 (Prologue – Ch. 10) ----
   { part: 1, name: "Romantic Notions of a Boy / of a Girl", opt: "Andreas (boy) vs Erik (girl)", shulk: "Boy route (Andreas) — better affinity", rpg: "Either — no clear difference" },
   { part: 1, name: "Financial Planning", opt: "Leopold (frame King Squeeze) vs Sylvaine (investigate)", shulk: "Sylvaine", rpg: "Sylvaine" },
-  { part: 1, name: "Pestering Paola / Out-Of-Luck Giorgio", opt: "Paola vs Giorgio (set by Overworked & Underpaid)", shulk: "Pestering Paola", rpg: "Out-Of-Luck Giorgio — better affinity", c: true },
+  { part: 1, name: "Pestering Paola / Out-Of-Luck Giorgio", opt: "decided in Overworked & Underpaid — talk to Paola → unlocks Out-Of-Luck Giorgio (blue 'trusting family'); talk to Giorgio → Pestering Paola (yellow)", shulk: "Out-Of-Luck Giorgio (talk to Paola in Overworked & Underpaid) — the better, blue link", rpg: "Out-Of-Luck Giorgio — better affinity" },
   { part: 1, name: "Jackson's Awakening → Jackson the Poet / the Cook", opt: "Poet (Kenny Rohan) vs Cook (Giorgio)", shulk: "Poet (Kenny Rohan)", rpg: "Poet (Kenny Rohan)" },
   { part: 1, name: "A Mysterious Light", opt: "two routes", shulk: "No strong preference", rpg: "Either" },
   { part: 1, name: "Out Like a Light?", opt: "Repair the lamp vs throw it away", shulk: "Throw it away (faster)", rpg: "Repair the lamp — better reward", c: true },

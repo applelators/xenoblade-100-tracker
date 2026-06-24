@@ -883,8 +883,8 @@ module.exports = {
   // RPG Site recommends a DIFFERENT route than ShulkLink (a real disagreement).
   rpgsite: {
     // --- hard conflicts (ShulkLink pick ≠ RPG Site pick) ---
-    "4.6:Q56a": { conflict: true, text: "RPG Site picks the OTHER route — Out-Of-Luck Giorgio (better affinity). ShulkLink picks Pestering Paola. The guides disagree." },
-    "4.6:Q56b": { conflict: true, text: "RPG Site picks THIS route — Out-Of-Luck Giorgio (better affinity). ShulkLink instead picks Pestering Paola." },
+    "4.6:Q56a": { conflict: false, text: "Both guides prefer the OTHER route — Out-Of-Luck Giorgio (talk to Paola in Overworked & Underpaid; gives the better blue 'trusting family' link). This one only gives yellow." },
+    "4.6:Q56b": { conflict: false, text: "Both ShulkLink and RPG Site prefer THIS route — talk to Paola in Overworked & Underpaid to unlock it (blue 'trusting family', their best)." },
     "4.6:Q87a": { conflict: true, text: "RPG Site picks the OTHER route — Spirits Raised (higher affinity + unlocks more quests later). ShulkLink picks Imaginations Tempered (for the Lake Drop)." },
     "4.6:Q87b": { conflict: true, text: "RPG Site picks THIS route — Spirits Raised (higher affinity + more later quests). ShulkLink instead picks Imaginations Tempered." },
     "4.7:Q96": { conflict: true, text: "RPG Site says REPAIR the lamp (better reward). ShulkLink throws it away (faster). The guides disagree." },
