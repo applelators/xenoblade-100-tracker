@@ -94,8 +94,42 @@
     const lvl = (lv === 0)
       ? el("span", { class: "art-lv default", title: "Learned by default / via story (Monado or talent art)" }, ["★"])
       : (lv != null ? el("span", { class: "art-lv", title: "Learned at level " + lv }, ["Lv " + lv]) : null);
-    return el("div", { class: "art", title: (ART_DESC[n] || "") + (lv > 0 ? "  ·  Learned at Lv " + lv : "") }, [ic, el("span", { class: "art-name", text: n }), lvl]);
+    return el("div", { class: "art", "data-art": n }, [ic, el("span", { class: "art-name", text: n }), lvl]);
   }));
+  // pretty hover popup describing an art (delegated, so it survives float rebuilds)
+  let artPop = null;
+  function showArtPop(artEl) {
+    const name = artEl.getAttribute("data-art"); if (!name) return;
+    if (!artPop) { artPop = el("div", { id: "art-pop" }); document.body.appendChild(artPop); }
+    const sl = artSlug(name), lv = ART_LEVEL[name];
+    artPop.innerHTML = "";
+    artPop.appendChild(el("div", { class: "art-pop-head" }, [
+      ART_HAVE_ICON.has(sl) ? el("img", { class: "art-pop-ic", src: "icons/arts/" + sl + ".png", alt: "" }) : el("span", { class: "art-pop-ic emoji", text: artIcon(name) }),
+      el("div", null, [
+        el("div", { class: "art-pop-name", text: name }),
+        el("div", { class: "art-pop-lv", text: lv === 0 ? "★ Learned by default / via story" : (lv != null ? "Learned at Lv " + lv : "") })
+      ])
+    ]));
+    artPop.appendChild(el("div", { class: "art-pop-desc", text: ART_DESC[name] || "" }));
+    const r = artEl.getBoundingClientRect();
+    const pw = artPop.offsetWidth, ph = artPop.offsetHeight;
+    let left = r.left - pw - 12;
+    if (left < 8) left = Math.min(r.right + 12, window.innerWidth - pw - 8); // flip if no room left
+    let top = Math.max(8, Math.min(r.top + r.height / 2 - ph / 2, window.innerHeight - ph - 8));
+    artPop.style.left = left + "px"; artPop.style.top = top + "px";
+    artPop.classList.add("show");
+  }
+  function hideArtPop() { if (artPop) artPop.classList.remove("show"); }
+  document.addEventListener("mouseover", (e) => {
+    const a = e.target.closest && e.target.closest(".art[data-art]");
+    if (a) showArtPop(a);
+  });
+  document.addEventListener("mouseout", (e) => {
+    const a = e.target.closest && e.target.closest(".art[data-art]");
+    if (!a) return;
+    const to = e.relatedTarget;
+    if (!to || !(to.closest && to.closest(".art[data-art]"))) hideArtPop();
+  });
   let SECTION_RANK = {};      // section code -> chronological index (for party-by-section)
   // who is in the party at a given section (spoiler-gated by arc reveal anyway)
   function partyFor(code) {
